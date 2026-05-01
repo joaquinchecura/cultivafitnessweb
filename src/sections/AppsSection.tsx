@@ -15,7 +15,7 @@ const apps = [
     features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
     link: 'https://bodymind.cultivafitness.app/',
     icon: (
-      <img src="/logobodymind.png" alt="Descripción" className="w-7 h-7 object-contain" />
+      <img src="/images/logobodymind.png" alt="Descripción" className="w-7 h-7 object-contain" />
     ),
   },
   {
