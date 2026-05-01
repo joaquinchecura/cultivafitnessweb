@@ -12,7 +12,6 @@ const features = [
     iconColor: '#4ADE80',
     title: 'Tracking Inteligente',
     desc: 'Cada métrica importa. Desde repeticiones hasta variabilidad de frecuencia cardíaca, nuestro sistema de tracking aprende de ti y se adapta.',
-    image: '/images/Screenshot_20260420-113822.png',
   },
   {
     icon: FlaskConical,
@@ -20,7 +19,6 @@ const features = [
     iconColor: '#60A5FA',
     title: 'Base Científica',
     desc: 'No seguimos modas. Seguimos evidencia. Cada protocolo está respaldado por literatura científica revisada por expertos.',
-    image: '/images/app-nutrition.jpg',
   },
   {
     icon: Smartphone,
@@ -28,7 +26,6 @@ const features = [
     iconColor: '#2DD4BF',
     title: 'Diseño Intuitivo',
     desc: 'Experiencia fluida que no te distrae de lo importante: tu entrenamiento, tu comida, tu práctica mental.',
-    image: '/images/app-mind.jpg',
   },
   {
     icon: Users,
