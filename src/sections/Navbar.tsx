@@ -38,7 +38,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cultiva-green to-cultiva-green-dark flex items-center justify-center">
-              <Leaf className="w-4 h-4 text-cultiva-bg" />
+          <img src="/logo2.png" alt="Cultiva Fitness" className="w-6 h-6 object-contain" />
             </div>
             <div className="flex flex-col">
               <span className="text-cultiva-text font-bold text-lg leading-none tracking-tight">
