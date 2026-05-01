@@ -20,6 +20,7 @@ const socials = [
     icon: Instagram,
     iconColor: '#E4405F',
     cta: 'seguir',
+    url: 'https://www.instagram.com/cultivafitness/',
   },
   {
     name: 'TikTok',
