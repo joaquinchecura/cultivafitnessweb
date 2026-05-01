@@ -87,7 +87,7 @@ export function SocialSection() {
             Crecemos juntos
           </h2>
           <p className="text-cultiva-secondary text-base sm:text-lg">
-            Síguenos para contenido diario, retos en vivo y una dosis de ciencia aplicada a tu bienestar.
+            Síguenos para contenido diario y una dosis de ciencia aplicada a tu bienestar.
           </p>
         </div>
 
