@@ -11,7 +11,7 @@ const apps = [
     tag: 'FITNESS',
     tagColor: '#4ADE80',
     gradient: 'from-cultiva-green to-cultiva-green-dark',
-    desc: 'Entrenamientos personalizados con seguimiento de progreso. Desde fuerza hasta movilidad, adaptados a tu nivel.',
+    desc: 'La App de bienestar integral que combina entrenamiento, nutrición y neurociencia para mejorar tu cuerpo, mente y rendimiento.',
     features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
     link: 'https://bodymind.cultivafitness.app/',
     icon: (
