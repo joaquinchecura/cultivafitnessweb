@@ -23,7 +23,7 @@ const apps = [
     tag: 'NUTRICIÓN',
     tagColor: '#60A5FA',
     gradient: 'from-cultiva-blue to-blue-600',
-    desc: 'Tu asistente de nutrición inteligente que combina planes personalizados, seguimiento con IA y recetas saludables en una experiencia minimalista y motivadora.',
+    desc: 'Tu asistente de nutrición inteligente que combina planes personalizados, seguimiento con IA y recetas saludables en una experiencia motivadora.',
     features: ['Contador de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: 'supply.cultivafitness.app',
     icon: (
