@@ -125,24 +125,25 @@ export function SocialSection() {
                 </p>
 
                 {/* CTA */}
-                {social.name === 'YouTube' ? (
-                 <a
-                   href="https://www.youtube.com/@CULTIVAFITNESS"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-300 hover:bg-white/5"
-                   style={{ borderColor: `${social.iconColor}30`, color: social.iconColor }}
-                 >
-                   {social.cta}
-                 </a>
-                 ) : (
-                   <button
-                    className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-300 hover:bg-white/5"
-                    style={{ borderColor: `${social.iconColor}30`, color: social.iconColor }}
-                 >
-                   {social.cta}
-                 </button>
-               )}
+{social.url ? (
+  <a
+    href={social.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-300 hover:bg-white/5"
+    style={{ borderColor: `${social.iconColor}30`, color: social.iconColor }}
+  >
+    {social.cta}
+  </a>
+) : (
+  <button
+    className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border text-sm font-medium transition-all duration-300 hover:bg-white/5"
+    style={{ borderColor: `${social.iconColor}30`, color: social.iconColor }}
+  >
+    {social.cta}
+  </button>
+)}
+             
               </div>
             );
           })}
