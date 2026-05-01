@@ -19,18 +19,15 @@ const apps = [
     ),
   },
   {
-    name: 'Cultiva Nutre',
+    name: 'SUPPLY',
     tag: 'NUTRICIÓN',
     tagColor: '#60A5FA',
     gradient: 'from-cultiva-blue to-blue-600',
-    desc: 'Planificación nutricional inteligente basada en tus objetivos. Macros, micros y timing optimizado.',
-    features: ['Contador de macros', 'Recetas personalizadas', 'Sincronización con entrenos'],
+    desc: 'Tu asistente de nutrición inteligente que combina planes personalizados, seguimiento con IA y recetas saludables en una experiencia minimalista y motivadora.',
+    features: ['Contador de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: '#',
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-7 h-7">
-        <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" />
-        <path d="M12 6v6l4 2" />
-      </svg>
+     <img src="/images/logosupply.png" alt="Descripción" className="w-15 h-15 object-contain" />
     ),
   },
   {
