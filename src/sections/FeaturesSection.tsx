@@ -127,9 +127,4 @@ export function FeaturesSection() {
                   </p>
                 </div>
              );
-          })}
-        </div>
-      </div>
-    </section>
-  );
 }
