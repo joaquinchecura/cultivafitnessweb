@@ -12,13 +12,14 @@ const socials = [
     icon: Youtube,
     iconColor: '#FF0000',
     cta: 'Suscribirse',
+    url: 'https://www.youtube.com/@CULTIVAFITNESS',
   },
   {
     name: 'Instagram',
     handle: '@cultivafitness',
     icon: Instagram,
     iconColor: '#E4405F',
-    cta: 'https://www.youtube.com/@CULTIVAFITNESS',
+    cta: 'seguir',
   },
   {
     name: 'TikTok',
