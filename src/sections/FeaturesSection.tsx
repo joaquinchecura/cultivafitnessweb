@@ -126,12 +126,7 @@ export function FeaturesSection() {
                     {feature.desc}
                   </p>
                 </div>
-
-              
-                  </div>
-                </div>
-              </div>
-            );
+             );
           })}
         </div>
       </div>
