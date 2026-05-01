@@ -11,13 +11,11 @@ const apps = [
     tag: 'FITNESS',
     tagColor: '#4ADE80',
     gradient: 'from-cultiva-green to-cultiva-green-dark',
-    desc: 'La App de bienestar integral que combina entrenamiento, nutrición y neurociencia para mejorar tu cuerpo, mente y rendimiento.',
+    desc: 'La App de bienestar integral que combina entrenamiento, nutrición y neurociencia para mejorar tu rendimiento.',
     features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
     link: 'https://bodymind.cultivafitness.app/',
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-7 h-7">
-        <path d="M6.5 6.5h11M6.5 17.5h11M6 12h12M4 12a8 8 0 0116 0 8 8 0 01-16 0z" />
-      </svg>
+      <img src="/logobodymind.png" alt="Descripción" className="w-7 h-7 object-contain" />
     ),
   },
   {
