@@ -20,7 +20,7 @@ export function Footer() {
                 <span className="text-cultiva-text font-bold text-lg leading-none tracking-tight">
                   CULTIVA
                 </span>
-                <span className="text-cultiva-muted font-mono text-[10px] leading-none tracking-widest">
+                <span className="text-cultiva-muted font-mono text-[16px] leading-none tracking-widest">
                   FITNESS
                 </span>
               </div>
