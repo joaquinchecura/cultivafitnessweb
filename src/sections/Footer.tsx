@@ -90,8 +90,9 @@ export function Footer() {
       </a>
     </li>
   </ul>
-</div>
-
+      </div>
+          </div>
+        </div>
         {/* Bottom Row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cultiva-green/[0.06]">
           <p className="text-cultiva-muted text-sm">
