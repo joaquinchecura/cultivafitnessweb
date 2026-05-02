@@ -87,15 +87,6 @@ export function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a
-              href="https://cultivafitness.base44.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center justify-center gap-2 bg-cultiva-green text-cultiva-bg px-6 py-3 rounded-full text-sm font-semibold"
-            >
-              Usar WebApp
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
           </div>
         </div>
       )}
