@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import { useEffect, useState } from 'react';
 import { Leaf, Menu, X } from 'lucide-react';
 
@@ -14,12 +15,14 @@ export function Navbar() {
   const navLinks = [
     { label: 'Apps', href: '#apps' },
     { label: 'Características', href: '#features' },
+    { label: 'Ejercicios', href: '/ejercicios', isRoute: true },
     { label: 'Blog', href: '#blog' },
     { label: 'Comunidad', href: '#comunidad' },
   ];
 
-  const scrollTo = (href: string) => {
+  const scrollTo = (href: string, isRoute?: boolean) => {
     setMobileOpen(false);
+    if (isRoute) return;
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
@@ -52,15 +55,25 @@ export function Navbar() {
 
           {/* Desktop Links + Contact Icons */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollTo(link.href)}
-                className="text-cultiva-secondary hover:text-cultiva-text text-sm font-medium transition-colors duration-300"
-              >
-                {link.label}
-              </button>
-            ))}
+          {navLinks.map((link) => (
+  link.isRoute ? (
+    <Link
+      key={link.href}
+      to={link.href}
+      className="text-cultiva-secondary hover:text-cultiva-text text-sm font-medium transition-colors duration-300"
+    >
+      {link.label}
+    </Link>
+  ) : (
+    <button
+      key={link.href}
+      onClick={() => scrollTo(link.href)}
+      className="text-cultiva-secondary hover:text-cultiva-text text-sm font-medium transition-colors duration-300"
+    >
+      {link.label}
+    </button>
+  )
+))}
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-cultiva-green/20">
               <a 
                 href="https://wa.me/5491123970926" 
@@ -100,15 +113,26 @@ export function Navbar() {
         <div className="fixed inset-0 z-40 md:hidden">
           <div className="absolute inset-0 bg-cultiva-bg/95 backdrop-blur-xl" onClick={() => setMobileOpen(false)} />
           <div className="absolute right-0 top-0 bottom-0 w-[280px] bg-cultiva-surface border-l border-cultiva-green/10 p-8 pt-24 flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollTo(link.href)}
-                className="text-cultiva-text text-lg font-medium text-left hover:text-cultiva-green transition-colors"
-              >
-                {link.label}
-              </button>
-            ))}
+          {navLinks.map((link) => (
+  link.isRoute ? (
+    <Link
+      key={link.href}
+      to={link.href}
+      onClick={() => setMobileOpen(false)}
+      className="text-cultiva-text text-lg font-medium text-left hover:text-cultiva-green transition-colors"
+    >
+      {link.label}
+    </Link>
+  ) : (
+    <button
+      key={link.href}
+      onClick={() => scrollTo(link.href)}
+      className="text-cultiva-text text-lg font-medium text-left hover:text-cultiva-green transition-colors"
+    >
+      {link.label}
+    </button>
+  )
+))}
             
             {/* Contact Links in Mobile Drawer */}
             <div className="mt-4 pt-6 border-t border-cultiva-green/10 flex flex-col gap-4">
