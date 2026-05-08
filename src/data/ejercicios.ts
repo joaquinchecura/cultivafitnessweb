@@ -948,7 +948,7 @@ export const categorias: Categoria[] = [
         nombre: "Stretching Pasivo",
         ejercicios: [
           {
-            nombre: "Estirameinto de pantorrilla",
+            nombre: "Estiramiento de pantorrilla",
             imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Estirameinto de pantorrilla.jpeg",
             descripcion: "Ejercicio de estirameinto de pantorrilla para mejorar tu rendimiento físico.",
           },
