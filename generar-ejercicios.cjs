@@ -37,7 +37,7 @@ const CATEGORIAS = {
     }
   },
   "Regulación y descarga": {
-    slug: "Regulación descarga",
+    slug: "Regulación y descarga",
     subtitulo: "Relaja el cuerpo y reduce el estrés",
     descripcion: "Técnicas de recuperación activa y relajación para el bienestar general.",
     subcategorias: {
