@@ -948,7 +948,7 @@ export const categorias: Categoria[] = [
         nombre: "Stretching Pasivo",
         ejercicios: [
           {
-            nombre: "Estiramiento de pantorrilla",
+            nombre: "Estirameinto de pantorrilla",
             imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Estirameinto de pantorrilla.jpeg",
             descripcion: "Ejercicio de estirameinto de pantorrilla para mejorar tu rendimiento físico.",
           },
@@ -1128,18 +1128,133 @@ export const categorias: Categoria[] = [
         slug: "Movimiento-restaurativo",
         nombre: "Movimiento Restaurativo",
         ejercicios: [
+          {
+            nombre: "Gato vaca",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Gato vaca.jpeg",
+            descripcion: "Ejercicio de gato vaca para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movilidad general",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Movilidad general.jpeg",
+            descripcion: "Ejercicio de movilidad general para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimiento de cadera 90º",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Movimiento de cadera 90º.jpeg",
+            descripcion: "Ejercicio de movimiento de cadera 90º para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimiento de cobra",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Movimiento de cobra.jpeg",
+            descripcion: "Ejercicio de movimiento de cobra para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimiento lateral de rodillas",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Movimiento lateral de rodillas.jpeg",
+            descripcion: "Ejercicio de movimiento lateral de rodillas para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimiento ondulante de columna",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Movimiento ondulante de columna.jpeg",
+            descripcion: "Ejercicio de movimiento ondulante de columna para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimientos lateral contra pared",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Movimientos lateral contra pared.jpeg",
+            descripcion: "Ejercicio de movimientos lateral contra pared para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimientos pélvicos",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Movimientos pélvicos.jpeg",
+            descripcion: "Ejercicio de movimientos pélvicos para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rolamientos",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Rolamientos.jpeg",
+            descripcion: "Ejercicio de rolamientos para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Sentadilla profunda conteniendo respiración",
+            imagen: "/images/ejercicios/Regulación y descarga/Movimiento restaurativo/Sentadilla profunda conteniendo respiración.jpeg",
+            descripcion: "Ejercicio de sentadilla profunda conteniendo respiración para mejorar tu rendimiento físico.",
+          }
         ],
       },
       {
         slug: "Conciencia-corporal",
         nombre: "Conciencia Corporal",
         ejercicios: [
+          {
+            nombre: "Caminata lenta",
+            imagen: "/images/ejercicios/Regulación y descarga/Conciencia corporal/Caminata lenta.jpeg",
+            descripcion: "Ejercicio de caminata lenta para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Equilibrio en una pierna",
+            imagen: "/images/ejercicios/Regulación y descarga/Conciencia corporal/Equilibrio en una pierna.jpeg",
+            descripcion: "Ejercicio de equilibrio en una pierna para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimiento articular controlado",
+            imagen: "/images/ejercicios/Regulación y descarga/Conciencia corporal/Movimiento articular controlado.jpeg",
+            descripcion: "Ejercicio de movimiento articular controlado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimiento con ojos cerrados",
+            imagen: "/images/ejercicios/Regulación y descarga/Conciencia corporal/Movimiento con ojos cerrados.jpeg",
+            descripcion: "Ejercicio de movimiento con ojos cerrados para mejorar tu rendimiento físico.",
+          }
         ],
       },
       {
         slug: "Respiración",
         nombre: "Respiración",
         ejercicios: [
+          {
+            nombre: "Respiración 4 7 8",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración 4-7-8.jpeg",
+            descripcion: "Ejercicio de respiración 4 7 8 para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración abdominal acostado",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración abdominal acostado.jpeg",
+            descripcion: "Ejercicio de respiración abdominal acostado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración con pausa",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración con pausa.jpeg",
+            descripcion: "Ejercicio de respiración con pausa para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración consciente",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración consciente.jpeg",
+            descripcion: "Ejercicio de respiración consciente para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración decúbito ventral",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración decúbito ventral.jpeg",
+            descripcion: "Ejercicio de respiración decúbito ventral para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración difragmática",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración difragmática.jpeg",
+            descripcion: "Ejercicio de respiración difragmática para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración lenta y profunda",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración lenta y profunda.jpeg",
+            descripcion: "Ejercicio de respiración lenta y profunda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración nasal",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración nasal.jpeg",
+            descripcion: "Ejercicio de respiración nasal para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Respiración prolongada",
+            imagen: "/images/ejercicios/Regulación y descarga/Respiración/Respiración prolongada.jpeg",
+            descripcion: "Ejercicio de respiración prolongada para mejorar tu rendimiento físico.",
+          }
         ]
       }
     ],
