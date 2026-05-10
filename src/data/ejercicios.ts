@@ -1257,6 +1257,452 @@ export const categorias: Categoria[] = [
           }
         ]
       }
+    ],
+  },
+  {
+    slug: "Rehabilitación y correctivos",
+    titulo: "Rehabilitación y correctivos",
+    subtitulo: "Recupera movilidad y previene lesiones",
+    descripcion: "Ejercicios terapéuticos para la recuperación y prevención de lesiones.",
+    subcategorias: [
+      {
+        slug: "cuello",
+        nombre: "Cuello",
+        ejercicios: [
+          {
+            nombre: "Empuje contra la cabeza",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Empuje contra la cabeza.jpeg",
+            descripcion: "Ejercicio de empuje contra la cabeza para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Empuje contra la frente",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Empuje contra la frente.jpeg",
+            descripcion: "Ejercicio de empuje contra la frente para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de trapecio",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Estiramiento de Trapecio.jpeg",
+            descripcion: "Ejercicio de estiramiento de trapecio para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de elevador de escápula",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Estiramiento de elevador de escápula.jpeg",
+            descripcion: "Ejercicio de estiramiento de elevador de escápula para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Presión lateral sobre cabeza",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Presión lateral sobre cabeza.jpeg",
+            descripcion: "Ejercicio de presión lateral sobre cabeza para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Retracción cervical",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Retracción cervical.jpeg",
+            descripcion: "Ejercicio de retracción cervical para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Retracción de mentón con ayuda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Retracción de mentón con ayuda.jpeg",
+            descripcion: "Ejercicio de retracción de mentón con ayuda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Retracción de mentón",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Retracción de mentón.jpeg",
+            descripcion: "Ejercicio de retracción de mentón para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotaciones de cuello",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Rotaciones de cuello.jpeg",
+            descripcion: "Ejercicio de rotaciones de cuello para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación de cuello controlada",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Rotación de cuello controlada.jpeg",
+            descripcion: "Ejercicio de rotación de cuello controlada para mejorar tu rendimiento físico.",
+          }
+        ],
+      },
+      {
+        slug: "hombros",
+        nombre: "Hombros",
+        ejercicios: [
+          {
+            nombre: "Apertura con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Apertura con banda.jpeg",
+            descripcion: "Ejercicio de apertura con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Círculos controlados de hombros",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Círculos controlados de hombros.jpeg",
+            descripcion: "Ejercicio de círculos controlados de hombros para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Deslizamientos contra pared",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Deslizamientos contra pared.jpeg",
+            descripcion: "Ejercicio de deslizamientos contra pared para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento con rotación interna acostado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Estiramiento con rotación interna acostado.jpeg",
+            descripcion: "Ejercicio de estiramiento con rotación interna acostado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Extensión de hombros con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Extensión de Hombros con banda.jpeg",
+            descripcion: "Ejercicio de extensión de hombros con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Flexión de hombro",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Flexión de hombro.jpeg",
+            descripcion: "Ejercicio de flexión de hombro para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Protracción escapular",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Protracción escapular.jpeg",
+            descripcion: "Ejercicio de protracción escapular para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación controlada de hombro",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Rotación controlada de hombro.jpeg",
+            descripcion: "Ejercicio de rotación controlada de hombro para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación externa con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Rotación externa con banda.jpeg",
+            descripcion: "Ejercicio de rotación externa con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación externa de brazo",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Rotación externa de brazo.jpeg",
+            descripcion: "Ejercicio de rotación externa de brazo para mejorar tu rendimiento físico.",
+          }
+        ],
+      },
+      {
+        slug: "escapulas",
+        nombre: "Escápulas",
+        ejercicios: [
+          {
+            nombre: "Apertura escapular con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Apertura escapular con banda.jpeg",
+            descripcion: "Ejercicio de apertura escapular con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Depresión escapular",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Depresión escapular.jpeg",
+            descripcion: "Ejercicio de depresión escapular para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Deslizamiento escapular en pared",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Deslizamiento escapular en pared.jpeg",
+            descripcion: "Ejercicio de deslizamiento escapular en pared para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Deslizamiento escapular",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Deslizamiento escapular.jpeg",
+            descripcion: "Ejercicio de deslizamiento escapular para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Empuje escapular acostado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Empuje escapular acostado.jpeg",
+            descripcion: "Ejercicio de empuje escapular acostado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Encojimiento de escápulas",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Encojimiento de escápulas.jpeg",
+            descripcion: "Ejercicio de encojimiento de escápulas para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rechazo escapular",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Rechazo escapular.jpeg",
+            descripcion: "Ejercicio de rechazo escapular para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Retracción escapular",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Retracción escapular.jpeg",
+            descripcion: "Ejercicio de retracción escapular para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotaciones escapulares",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/escapulas/Rotaciones escapulares.jpeg",
+            descripcion: "Ejercicio de rotaciones escapulares para mejorar tu rendimiento físico.",
+          }
+        ],
+      },
+      {
+        slug: "columna-toracica",
+        nombre: "Columna Torácica",
+        ejercicios: [
+          {
+            nombre: "Alcance frontal sobre roller",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Alcance frontal sobre roller.jpeg",
+            descripcion: "Ejercicio de alcance frontal sobre roller para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Extensión contra pared",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Extensión contra pared.jpeg",
+            descripcion: "Ejercicio de extensión contra pared para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Extensión torácica sobre roller",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Extensión torácica sobre roller.jpeg",
+            descripcion: "Ejercicio de extensión torácica sobre roller para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Flexión de columna sentado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Flexión de columna sentado.jpeg",
+            descripcion: "Ejercicio de flexión de columna sentado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Flexión y extensión de columna",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Flexión y extensión de columna.jpeg",
+            descripcion: "Ejercicio de flexión y extensión de columna para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación controlada de columna",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Rotación controlada de columna.jpeg",
+            descripcion: "Ejercicio de rotación controlada de columna para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación de columna con brazo",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Rotación de columna con brazo.jpeg",
+            descripcion: "Ejercicio de rotación de columna con brazo para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación lateral de columna acostado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Rotación lateral de columna acostado.jpeg",
+            descripcion: "Ejercicio de rotación lateral de columna acostado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación lateral de columna sentado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Rotación lateral de columna sentado.jpeg",
+            descripcion: "Ejercicio de rotación lateral de columna sentado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación torácica arrodillado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna toracica/Rotación torácica arrodillado.jpeg",
+            descripcion: "Ejercicio de rotación torácica arrodillado para mejorar tu rendimiento físico.",
+          }
+        ],
+      },
+      {
+        slug: "columna-lumbar",
+        nombre: "Columna Lumbar",
+        ejercicios: [
+          {
+            nombre: "Bicho muerto",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Bicho muerto.jpeg",
+            descripcion: "Ejercicio de bicho muerto para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Bisagra de cadera",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Bisagra de cadera.jpeg",
+            descripcion: "Ejercicio de bisagra de cadera para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Elevación de torso",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Elevación de torso.jpeg",
+            descripcion: "Ejercicio de elevación de torso para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento lumbar",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Estiramiento Lumbar.jpeg",
+            descripcion: "Ejercicio de estiramiento lumbar para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de zona lumbar",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Estiramiento de zona Lumbar.jpeg",
+            descripcion: "Ejercicio de estiramiento de zona lumbar para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Gato vaca",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Gato Vaca.jpeg",
+            descripcion: "Ejercicio de gato vaca para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movimientos pélvicos",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Movimientos Pélvicos.jpeg",
+            descripcion: "Ejercicio de movimientos pélvicos para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Perro ave",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Perro ave.jpeg",
+            descripcion: "Ejercicio de perro ave para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Plancha lateral",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Plancha lateral.jpeg",
+            descripcion: "Ejercicio de plancha lateral para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Puente de glúteos",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/columna lumbar/Puente de Glúteos.jpeg",
+            descripcion: "Ejercicio de puente de glúteos para mejorar tu rendimiento físico.",
+          }
+        ],
+      },
+      {
+        slug: "cadera",
+        nombre: "Cadera",
+        ejercicios: [
+          {
+            nombre: "Almeja",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Almeja.jpeg",
+            descripcion: "Ejercicio de almeja para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Cuadrupedia",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Cuadrupedia.jpeg",
+            descripcion: "Ejercicio de cuadrupedia para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Elevación de cadera",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Elevación de cadera.jpeg",
+            descripcion: "Ejercicio de elevación de cadera para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de adductores",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Estiramiento de Adductores.jpeg",
+            descripcion: "Ejercicio de estiramiento de adductores para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de flexores de cadera",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Estiramiento de flexores de cadera.jpeg",
+            descripcion: "Ejercicio de estiramiento de flexores de cadera para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotaciones a 90º",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotaciones a 90º.jpeg",
+            descripcion: "Ejercicio de rotaciones a 90º para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación controlada de cadera",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotación controlada de cadera.jpeg",
+            descripcion: "Ejercicio de rotación controlada de cadera para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación de cadera en equilibrio",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotación de cadera en equilibrio.jpeg",
+            descripcion: "Ejercicio de rotación de cadera en equilibrio para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación de cadera unipodal",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotación de cadera unipodal.jpeg",
+            descripcion: "Ejercicio de rotación de cadera unipodal para mejorar tu rendimiento físico.",
+          }
+        ],
+      },
+      {
+        slug: "rodillas",
+        nombre: "Rodillas",
+        ejercicios: [
+          {
+            nombre: "Cuadriceps isométrico",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Cuadriceps isométrico.jpeg",
+            descripcion: "Ejercicio de cuadriceps isométrico para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Descenso desde cajón",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Descenso desde cajón.jpeg",
+            descripcion: "Ejercicio de descenso desde cajón para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estocada isométrica",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Estocada isométrica.jpeg",
+            descripcion: "Ejercicio de estocada isométrica para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Extensión de rodilla con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Extensión de Rodilla con banda.jpeg",
+            descripcion: "Ejercicio de extensión de rodilla con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Puente con foco en isquiotibiales",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Puente con foco en Isquiotibiales.jpeg",
+            descripcion: "Ejercicio de puente con foco en isquiotibiales para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación controlada de rodilla",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Rotación controlada de Rodilla.jpeg",
+            descripcion: "Ejercicio de rotación controlada de rodilla para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Sentadilla asistida",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Sentadilla asistida.jpeg",
+            descripcion: "Ejercicio de sentadilla asistida para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Sentadilla con talones elevados",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Sentadilla con talones elevados.jpeg",
+            descripcion: "Ejercicio de sentadilla con talones elevados para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Sentadilla contra pared",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Sentadilla contra pared.jpeg",
+            descripcion: "Ejercicio de sentadilla contra pared para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Subidas en reversa al step",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Subidas en reversa al step.jpeg",
+            descripcion: "Ejercicio de subidas en reversa al step para mejorar tu rendimiento físico.",
+          }
+        ],
+      },
+      {
+        slug: "tobillo",
+        nombre: "Tobillo",
+        ejercicios: [
+          {
+            nombre: "Apertura dedos del pie",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Apertura dedos del pie.jpeg",
+            descripcion: "Ejercicio de apertura dedos del pie para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Contracción arco plantar sentado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Contracción arco plantar sentado.jpeg",
+            descripcion: "Ejercicio de contracción arco plantar sentado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Contracción arco plantar",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Contracción arco plantar.jpeg",
+            descripcion: "Ejercicio de contracción arco plantar para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Equilibrio en un pie",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Equilibrio en un pie.jpeg",
+            descripcion: "Ejercicio de equilibrio en un pie para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de gemelos",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Estiramiento de Gemelos.jpeg",
+            descripcion: "Ejercicio de estiramiento de gemelos para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de tobillo",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Estiramiento de tobillo.jpeg",
+            descripcion: "Ejercicio de estiramiento de tobillo para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Extensión plantar",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Extensión plantar.jpeg",
+            descripcion: "Ejercicio de extensión plantar para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Movilidad de tobillo con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Movilidad de tobillo con banda.jpeg",
+            descripcion: "Ejercicio de movilidad de tobillo con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Puntas de pies",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Puntas de pies.jpeg",
+            descripcion: "Ejercicio de puntas de pies para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotaciones de tobillo",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/tobillo/Rotaciones de tobillo.jpeg",
+            descripcion: "Ejercicio de rotaciones de tobillo para mejorar tu rendimiento físico.",
+          }
+        ]
+      }
     ]
   }
 ];
