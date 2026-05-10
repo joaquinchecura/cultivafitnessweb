@@ -1260,7 +1260,7 @@ export const categorias: Categoria[] = [
     ],
   },
   {
-    slug: "rehabilitacion-correctivos",
+    slug: "Rehabilitación correctivos",
     titulo: "Rehabilitación y correctivos",
     subtitulo: "Recupera movilidad y previene lesiones",
     descripcion: "Ejercicios terapéuticos para la recuperación y prevención de lesiones.",
