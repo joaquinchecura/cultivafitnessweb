@@ -1269,12 +1269,112 @@ export const categorias: Categoria[] = [
         slug: "cuello",
         nombre: "Cuello",
         ejercicios: [
+          {
+            nombre: "Empuje contra la cabeza",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Empuje contra la cabeza.jpeg",
+            descripcion: "Ejercicio de empuje contra la cabeza para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Empuje contra la frente",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Empuje contra la frente.jpeg",
+            descripcion: "Ejercicio de empuje contra la frente para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de trapecio",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Estiramiento de Trapecio.jpeg",
+            descripcion: "Ejercicio de estiramiento de trapecio para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de elevador de escápula",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Estiramiento de elevador de escápula.jpeg",
+            descripcion: "Ejercicio de estiramiento de elevador de escápula para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Presión lateral sobre cabeza",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Presión lateral sobre cabeza.jpeg",
+            descripcion: "Ejercicio de presión lateral sobre cabeza para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Retracción cervical",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Retracción cervical.jpeg",
+            descripcion: "Ejercicio de retracción cervical para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Retracción de mentón con ayuda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Retracción de mentón con ayuda.jpeg",
+            descripcion: "Ejercicio de retracción de mentón con ayuda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Retracción de mentón",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Retracción de mentón.jpeg",
+            descripcion: "Ejercicio de retracción de mentón para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotaciones de cuello",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Rotaciones de cuello.jpeg",
+            descripcion: "Ejercicio de rotaciones de cuello para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación de cuello controlada",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cuello/Rotación de cuello controlada.jpeg",
+            descripcion: "Ejercicio de rotación de cuello controlada para mejorar tu rendimiento físico.",
+          }
         ],
       },
       {
         slug: "hombros",
         nombre: "Hombros",
         ejercicios: [
+          {
+            nombre: "Apertura con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Apertura con banda.jpeg",
+            descripcion: "Ejercicio de apertura con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Círculos controlados de hombros",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Círculos controlados de hombros.jpeg",
+            descripcion: "Ejercicio de círculos controlados de hombros para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Deslizamientos contra pared",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Deslizamientos contra pared.jpeg",
+            descripcion: "Ejercicio de deslizamientos contra pared para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento con rotación interna acostado",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Estiramiento con rotación interna acostado.jpeg",
+            descripcion: "Ejercicio de estiramiento con rotación interna acostado para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Extensión de hombros con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Extensión de Hombros con banda.jpeg",
+            descripcion: "Ejercicio de extensión de hombros con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Flexión de hombro",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Flexión de hombro.jpeg",
+            descripcion: "Ejercicio de flexión de hombro para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Protracción escapular",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Protracción escapular.jpeg",
+            descripcion: "Ejercicio de protracción escapular para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación controlada de hombro",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Rotación controlada de hombro.jpeg",
+            descripcion: "Ejercicio de rotación controlada de hombro para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación externa con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Rotación externa con banda.jpeg",
+            descripcion: "Ejercicio de rotación externa con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación externa de brazo",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/hombros/Rotación externa de brazo.jpeg",
+            descripcion: "Ejercicio de rotación externa de brazo para mejorar tu rendimiento físico.",
+          }
         ],
       },
       {
@@ -1299,12 +1399,107 @@ export const categorias: Categoria[] = [
         slug: "cadera",
         nombre: "Cadera",
         ejercicios: [
+          {
+            nombre: "Almeja",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Almeja.jpeg",
+            descripcion: "Ejercicio de almeja para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Cuadrupedia",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Cuadrupedia.jpeg",
+            descripcion: "Ejercicio de cuadrupedia para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Elevación de cadera",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Elevación de cadera.jpeg",
+            descripcion: "Ejercicio de elevación de cadera para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de adductores",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Estiramiento de Adductores.jpeg",
+            descripcion: "Ejercicio de estiramiento de adductores para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estiramiento de flexores de cadera",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Estiramiento de flexores de cadera.jpeg",
+            descripcion: "Ejercicio de estiramiento de flexores de cadera para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotaciones a 90º",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotaciones a 90º.jpeg",
+            descripcion: "Ejercicio de rotaciones a 90º para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación controlada de cadera",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotación controlada de cadera.jpeg",
+            descripcion: "Ejercicio de rotación controlada de cadera para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación de cadera en equilibrio",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotación de cadera en equilibrio.jpeg",
+            descripcion: "Ejercicio de rotación de cadera en equilibrio para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación de cadera unipodal",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/cadera/Rotación de cadera unipodal.jpeg",
+            descripcion: "Ejercicio de rotación de cadera unipodal para mejorar tu rendimiento físico.",
+          }
         ],
       },
       {
         slug: "rodillas",
         nombre: "Rodillas",
         ejercicios: [
+          {
+            nombre: "Cuadriceps isométrico",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Cuadriceps isométrico.jpeg",
+            descripcion: "Ejercicio de cuadriceps isométrico para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Descenso desde cajón",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Descenso desde cajón.jpeg",
+            descripcion: "Ejercicio de descenso desde cajón para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Estocada isométrica",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Estocada isométrica.jpeg",
+            descripcion: "Ejercicio de estocada isométrica para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Extensión de rodilla con banda",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Extensión de Rodilla con banda.jpeg",
+            descripcion: "Ejercicio de extensión de rodilla con banda para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Puente con foco en isquiotibiales",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Puente con foco en Isquiotibiales.jpeg",
+            descripcion: "Ejercicio de puente con foco en isquiotibiales para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Rotación controlada de rodilla",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Rotación controlada de Rodilla.jpeg",
+            descripcion: "Ejercicio de rotación controlada de rodilla para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Sentadilla asistida",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Sentadilla asistida.jpeg",
+            descripcion: "Ejercicio de sentadilla asistida para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Sentadilla con talones elevados",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Sentadilla con talones elevados.jpeg",
+            descripcion: "Ejercicio de sentadilla con talones elevados para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Sentadilla contra pared",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Sentadilla contra pared.jpeg",
+            descripcion: "Ejercicio de sentadilla contra pared para mejorar tu rendimiento físico.",
+          },
+          {
+            nombre: "Subidas en reversa al step",
+            imagen: "/images/ejercicios/Rehabilitación y correctivos/rodillas/Subidas en reversa al step.jpeg",
+            descripcion: "Ejercicio de subidas en reversa al step para mejorar tu rendimiento físico.",
+          }
         ],
       },
       {
