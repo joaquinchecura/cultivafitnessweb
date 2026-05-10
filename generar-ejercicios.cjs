@@ -48,7 +48,7 @@ const CATEGORIAS = {
     }
   },
   "Rehabilitación y correctivos": {
-    slug: "rehabilitacion-correctivos",
+    slug: "Rehabilitación y correctivos",
     subtitulo: "Recupera movilidad y previene lesiones",
     descripcion: "Ejercicios terapéuticos para la recuperación y prevención de lesiones.",
     subcategorias: {
