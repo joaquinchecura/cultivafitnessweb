@@ -1,11 +1,6 @@
-// app/privacidad/page.tsx (o pages/privacidad.tsx)
 import { Leaf, Shield, Lock, Eye, Database, Mail } from 'lucide-react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Política de Privacidad | Cultiva Fitness',
-  description: 'Cómo recopilamos, usamos y protegemos tu información personal en el ecosistema de apps de Cultiva Fitness.',
-};
+import { Navbar } from '../sections/Navbar';
+import { Footer } from '../sections/Footer';
 
 const sections = [
   {
@@ -70,67 +65,70 @@ Para ejercer estos derechos, contáctanos en cultivafitness@gmail.com. Respondem
 
 export default function PrivacidadPage() {
   return (
-    <main className="min-h-screen bg-cultiva-bg text-cultiva-text">
-      {/* Header */}
-      <div className="border-b border-cultiva-green/[0.08] bg-cultiva-bg/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-[1280px] mx-auto px-6 py-4 flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cultiva-green to-cultiva-green-dark flex items-center justify-center">
-            <Leaf className="w-4 h-4 text-cultiva-bg" />
-          </div>
-          <span className="font-bold text-lg tracking-tight">CULTIVA</span>
-        </div>
-      </div>
-
-      <div className="max-w-[800px] mx-auto px-6 py-16">
-        <div className="mb-12">
-          <h1 className="text-3xl font-bold mb-4">Política de Privacidad</h1>
-          <p className="text-cultiva-muted text-sm">
-            Última actualización: 18 de mayo de 2026
-          </p>
-        </div>
-
-        <div className="prose prose-invert max-w-none">
-          <p className="text-cultiva-muted leading-relaxed mb-8 text-base">
-            En Cultiva Fitness, tu privacidad es fundamental. Este documento explica cómo manejamos 
-            la información en todo nuestro ecosistema de apps (BodyMind, Supply, Neura, Running y Reckon). 
-            Al usar nuestras apps, aceptas las prácticas descritas aquí.
-          </p>
-
-          {sections.map((section) => (
-            <section key={section.title} className="mb-10">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-cultiva-green/10 flex items-center justify-center">
-                  <section.icon className="w-5 h-5 text-cultiva-green" />
-                </div>
-                <h2 className="text-xl font-semibold text-cultiva-text">{section.title}</h2>
-              </div>
-              <div className="pl-[52px]">
-                <p className="text-cultiva-muted leading-relaxed whitespace-pre-line text-sm">
-                  {section.content}
-                </p>
-              </div>
-            </section>
-          ))}
-
-          <section className="mt-12 pt-8 border-t border-cultiva-green/[0.08]">
-            <div className="flex items-center gap-3 mb-4">
-              <Mail className="w-5 h-5 text-cultiva-green" />
-              <h2 className="text-xl font-semibold">Contacto</h2>
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-cultiva-bg text-cultiva-text">
+        <div className="border-b border-cultiva-green/[0.08] bg-cultiva-bg/80 backdrop-blur-sm sticky top-0 z-10">
+          <div className="max-w-[1280px] mx-auto px-6 py-4 flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cultiva-green to-cultiva-green-dark flex items-center justify-center">
+              <Leaf className="w-4 h-4 text-cultiva-bg" />
             </div>
-            <p className="text-cultiva-muted leading-relaxed text-sm pl-8">
-              Si tienes preguntas sobre esta política o sobre cómo manejamos tus datos, 
-              escríbenos a{' '}
-              <a 
-                href="mailto:cultivafitness@gmail.com" 
-                className="text-cultiva-green hover:text-cultiva-secondary transition-colors"
-              >
-                cultivafitness@gmail.com
-              </a>
-              {' '}o por WhatsApp al +54 9 11 2397-0926.
-            </p>
-          </section>
+            <span className="font-bold text-lg tracking-tight">CULTIVA</span>
+          </div>
         </div>
-      </div>
-    </main>
+
+        <div className="max-w-[800px] mx-auto px-6 py-16">
+          <div className="mb-12">
+            <h1 className="text-3xl font-bold mb-4">Política de Privacidad</h1>
+            <p className="text-cultiva-muted text-sm">
+              Última actualización: 18 de mayo de 2026
+            </p>
+          </div>
+
+          <div className="prose prose-invert max-w-none">
+            <p className="text-cultiva-muted leading-relaxed mb-8 text-base">
+              En Cultiva Fitness, tu privacidad es fundamental. Este documento explica cómo manejamos 
+              la información en todo nuestro ecosistema de apps (BodyMind, Supply, Neura, Running y Reckon). 
+              Al usar nuestras apps, aceptas las prácticas descritas aquí.
+            </p>
+
+            {sections.map((section) => (
+              <section key={section.title} className="mb-10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-cultiva-green/10 flex items-center justify-center">
+                    <section.icon className="w-5 h-5 text-cultiva-green" />
+                  </div>
+                  <h2 className="text-xl font-semibold text-cultiva-text">{section.title}</h2>
+                </div>
+                <div className="pl-[52px]">
+                  <p className="text-cultiva-muted leading-relaxed whitespace-pre-line text-sm">
+                    {section.content}
+                  </p>
+                </div>
+              </section>
+            ))}
+
+            <section className="mt-12 pt-8 border-t border-cultiva-green/[0.08]">
+              <div className="flex items-center gap-3 mb-4">
+                <Mail className="w-5 h-5 text-cultiva-green" />
+                <h2 className="text-xl font-semibold">Contacto</h2>
+              </div>
+              <p className="text-cultiva-muted leading-relaxed text-sm pl-8">
+                Si tienes preguntas sobre esta política o sobre cómo manejamos tus datos, 
+                escríbenos a{' '}
+                <a 
+                  href="mailto:cultivafitness@gmail.com" 
+                  className="text-cultiva-green hover:text-cultiva-secondary transition-colors"
+                >
+                  cultivafitness@gmail.com
+                </a>
+                {' '}o por WhatsApp al +54 9 11 2397-0926.
+              </p>
+            </section>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
