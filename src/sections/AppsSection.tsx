@@ -109,7 +109,7 @@ const apps = [
 ];
 
 export function AppsSection() {
-  const sectionRef = useRef<<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
