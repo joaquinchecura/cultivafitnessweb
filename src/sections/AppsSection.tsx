@@ -6,16 +6,17 @@ import { ExternalLink, Check } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const apps = [
+  // FILA 1
   {
-    name: 'BODYMIND',
-    tag: 'FITNESS',
-    tagColor: '#4ADE80',
-    gradient: 'from-cultiva-green to-cultiva-green-dark',
-    desc: 'La App de bienestar integral que combina entrenamiento, nutrición y neurociencia para mejorar tu rendimiento.',
-    features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
-    link: 'https://bodymind.cultivafitness.app/',
+    name: 'RECKON',
+    tag: 'WELLNESS',
+    tagColor: '#fbbf24',
+    gradient: 'from-cultiva-yellow to-amber-500',
+    desc: 'Tu plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico y rehabilitación.',
+    features: ['Tracker de hábitos', 'Journaling diario', 'Balance semanal'],
+    link: 'https://reckon.cultivafitness.app',
     icon: (
-      <img src="/images/logobodymind.png" alt="Descripción" className="w-15 h-15 object-contain" />
+      <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />
     ),
   },
   {
@@ -27,7 +28,7 @@ const apps = [
     features: ['Contador de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: 'https://supply.cultivafitness.app',
     icon: (
-     <img src="/images/logosupply.png" alt="Descripción" className="w-15 h-15 object-contain" />
+      <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />
     ),
   },
   {
@@ -39,33 +40,84 @@ const apps = [
     features: ['Protocolos de focus', 'Meditación guiada', 'Análisis de hábitos'],
     link: 'https://neura.cultivafitness.app',
     icon: (
-      <img src="/images/logoneura.png" alt="Descripción" className="w-15 h-15 object-contain" />
+      <img src="/images/logoneura.png" alt="Neura" className="w-15 h-15 object-contain" />
+    ),
+  },
+  // FILA 2
+  {
+    name: 'BODYMIND',
+    tag: 'FITNESS',
+    tagColor: '#4ADE80',
+    gradient: 'from-cultiva-green to-cultiva-green-dark',
+    desc: 'La App de bienestar integral que combina entrenamiento, nutrición y neurociencia para mejorar tu rendimiento.',
+    features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
+    link: 'https://bodymind.cultivafitness.app/',
+    icon: (
+      <img src="/images/logobodymind.png" alt="Bodymind" className="w-15 h-15 object-contain" />
     ),
   },
   {
-    name: 'RUNNING',
-    tag: 'ENTRENAMIENTO',
-    tagColor: '#a78bfa',
-    gradient: 'from-cultiva-purple to-violet-600',
-    desc: 'Tu App de planificación Running adaptativa con planes personalizados según tu nivel o tu fecha de carrera.',
-    features: ['Tracking de sueño', 'Biomarcadores', 'Análisis HRV'],
-    link: 'https://running.cultivafitness.app',
+    name: 'MICROFIT',
+    tag: 'EFICIENCIA',
+    tagColor: '#FB923C',
+    gradient: 'from-orange-400 to-orange-600',
+    desc: 'Entrenamiento ultraeficiente para vidas ajetreadas. Rutinas personalizadas de 5, 10 o 15 minutos adaptadas a tu horario, energía y equipo disponible.',
+    features: ['Rutinas de 5-15 min', 'Adaptación por energía', 'Sin equipo necesario'],
+    link: 'https://microfit.cultivafitness.app',
     icon: (
-       <img src="/images/logorunning.png" alt="Descripción" className="w-15 h-15 object-contain" />
+      <img src="/images/logomicrofit.png" alt="Microfit" className="w-15 h-15 object-contain" />
     ),
   },
   {
-    name: 'RECKON',
-    tag: 'WELLNESS',
-    tagColor: '#fbbf24',
-    gradient: 'from-cultiva-yellow to-amber-500',
-    desc: 'Tu plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico y rehabilitación.',
-    features: ['Tracker de hábitos', 'Journaling diario', 'Balance semanal'],
-    link: 'https://reckon.cultivafitness.app',
+    name: 'DESKOUT',
+    tag: 'PRODUCTIVIDAD',
+    tagColor: '#818CF8',
+    gradient: 'from-indigo-400 to-indigo-600',
+    desc: 'Microrutinas de movimiento de 2-5 minutos diseñadas para integrarse discretamente en tu jornada laboral. Mantente activo sin abandonar tu escritorio.',
+    features: ['Rutinas de 2-5 min', 'Modo discreto', 'Alertas de sedentarismo'],
+    link: 'https://deskout.cultivafitness.app',
     icon: (
-      <img src="/images/logoreckon.png" alt="Descripción" className="w-15 h-15 object-contain" />
+      <img src="/images/logodeskout.png" alt="Deskout" className="w-15 h-15 object-contain" />
     ),
   },
+  // FILA 3
+  {
+    name: 'SILVER',
+    tag: 'LONGEVIDAD',
+    tagColor: '#94A3B8',
+    gradient: 'from-slate-400 to-slate-600',
+    desc: 'Rutinas guiadas de bienestar físico pensadas para adultos mayores, con navegación ultra accesible y apoyo familiar para mantenerse activos con confianza.',
+    features: ['Navegación accesible', 'Rutinas guiadas', 'Conexión familiar'],
+    link: 'https://silver.cultivafitness.app',
+    icon: (
+      <img src="/images/logosilver.png" alt="Silver" className="w-15 h-15 object-contain" />
+    ),
+  },
+  {
+    name: 'JUNIOR',
+    tag: 'EDUCACIÓN',
+    tagColor: '#A3E635',
+    gradient: 'from-lime-400 to-lime-600',
+    desc: 'Plataforma interactiva de Educación Física Integral para niños y jóvenes. Cultiva hábitos saludables y movimiento consciente mediante gamificación y aprendizaje cooperativo.',
+    features: ['Gamificación', 'Aprendizaje cooperativo', 'Hábitos saludables'],
+    link: 'https://junior.cultivafitness.app',
+    icon: (
+      <img src="/images/logojunior.png" alt="Junior" className="w-15 h-15 object-contain" />
+    ),
+  },
+  {
+    name: 'PRENATAL',
+    tag: 'MATERNIDAD',
+    tagColor: '#F472B6',
+    gradient: 'from-pink-400 to-pink-600',
+    desc: 'Compañero digital para un embarazo activo y saludable. Rutinas validadas médicamente, ejercicios de suelo pélvico y bienestar emocional adaptado a cada trimestre.',
+    features: ['Rutinas médicamente validadas', 'Suelo pélvico', 'Bienestar por trimestre'],
+    link: 'https://prenatal.cultivafitness.app',
+    icon: (
+      <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />
+    ),
+  },
+  // FILA 4 (TIMER sola centrada o al final)
   {
     name: 'TIMER',
     tag: 'UTILIDAD',
@@ -73,15 +125,15 @@ const apps = [
     gradient: 'from-cultiva-pink to-pink-500',
     desc: 'Un temporizador inteligente para tu entrenamiento físico, que ofrece ajustes preestablecidos personalizables y seguimiento de progreso.',
     features: ['Retos grupales', 'Leaderboards', 'Contenido exclusivo'],
-    link: 'https://TIMER.cultivafitness.app',
+    link: 'https://timer.cultivafitness.app',
     icon: (
-      <img src="/images/logotimer.png" alt="Descripción" className="w-15 h-15 object-contain" />
+      <img src="/images/logotimer.png" alt="Timer" className="w-15 h-15 object-contain" />
     ),
   },
 ];
 
 export function AppsSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
