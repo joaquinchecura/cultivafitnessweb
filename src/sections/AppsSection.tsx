@@ -14,9 +14,7 @@ const apps = [
     desc: 'Tu plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico y rehabilitación.',
     features: ['Tracker de hábitos', 'Journaling diario', 'Balance semanal'],
     link: 'https://reckon.cultivafitness.app',
-    icon: (
-      <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'SUPPLY',
@@ -26,9 +24,7 @@ const apps = [
     desc: 'Tu asistente de nutrición inteligente que combina planes personalizados, seguimiento con IA y recetas saludables en una experiencia motivadora.',
     features: ['Contador de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: 'https://supply.cultivafitness.app',
-    icon: (
-      <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'NEURA',
@@ -38,9 +34,7 @@ const apps = [
     desc: 'Te ayuda a entender tu estado interno, regular tu sistema nervioso y conectar emociones con hábitos saludables.',
     features: ['Protocolos de focus', 'Meditación guiada', 'Análisis de hábitos'],
     link: 'https://neura.cultivafitness.app',
-    icon: (
-      <img src="/images/logoneura.png" alt="Neura" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logoneura.png" alt="Neura" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'BODYMIND',
@@ -50,9 +44,7 @@ const apps = [
     desc: 'La App de bienestar integral que combina entrenamiento, nutrición y neurociencia para mejorar tu rendimiento.',
     features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
     link: 'https://bodymind.cultivafitness.app/',
-    icon: (
-      <img src="/images/logobodymind.png" alt="Bodymind" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logobodymind.png" alt="Bodymind" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'MICROFIT',
@@ -62,9 +54,7 @@ const apps = [
     desc: 'Entrenamiento ultraeficiente para vidas ajetreadas. Rutinas personalizadas de 5, 10 o 15 minutos adaptadas a tu horario, energía y equipo disponible.',
     features: ['Rutinas de 5-15 min', 'Adaptación por energía', 'Sin equipo necesario'],
     link: 'https://microfit.cultivafitness.app',
-    icon: (
-      <img src="/images/logomicrofit.png" alt="Microfit" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logomicrofit.png" alt="Microfit" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'DESKOUT',
@@ -74,9 +64,7 @@ const apps = [
     desc: 'Microrutinas de movimiento de 2-5 minutos diseñadas para integrarse discretamente en tu jornada laboral. Mantente activo sin abandonar tu escritorio.',
     features: ['Rutinas de 2-5 min', 'Modo discreto', 'Alertas de sedentarismo'],
     link: 'https://deskout.cultivafitness.app',
-    icon: (
-      <img src="/images/logodeskout.png" alt="Deskout" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logodeskout.png" alt="Deskout" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'SILVER',
@@ -86,9 +74,7 @@ const apps = [
     desc: 'Rutinas guiadas de bienestar físico pensadas para adultos mayores, con navegación ultra accesible y apoyo familiar para mantenerse activos con confianza.',
     features: ['Navegación accesible', 'Rutinas guiadas', 'Conexión familiar'],
     link: 'https://silver.cultivafitness.app',
-    icon: (
-      <img src="/images/logosilver.png" alt="Silver" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logosilver.png" alt="Silver" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'JUNIOR',
@@ -98,9 +84,7 @@ const apps = [
     desc: 'Plataforma interactiva de Educación Física Integral para niños y jóvenes. Cultiva hábitos saludables y movimiento consciente mediante gamificación y aprendizaje cooperativo.',
     features: ['Gamificación', 'Aprendizaje cooperativo', 'Hábitos saludables'],
     link: 'https://junior.cultivafitness.app',
-    icon: (
-      <img src="/images/logojunior.png" alt="Junior" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logojunior.png" alt="Junior" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'PRENATAL',
@@ -110,9 +94,7 @@ const apps = [
     desc: 'Compañero digital para un embarazo activo y saludable. Rutinas validadas médicamente, ejercicios de suelo pélvico y bienestar emocional adaptado a cada trimestre.',
     features: ['Rutinas médicamente validadas', 'Suelo pélvico', 'Bienestar por trimestre'],
     link: 'https://prenatal.cultivafitness.app',
-    icon: (
-      <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />,
   },
   {
     name: 'TIMER',
@@ -122,9 +104,7 @@ const apps = [
     desc: 'Un temporizador inteligente para tu entrenamiento físico, que ofrece ajustes preestablecidos personalizables y seguimiento de progreso.',
     features: ['Retos grupales', 'Leaderboards', 'Contenido exclusivo'],
     link: 'https://timer.cultivafitness.app',
-    icon: (
-      <img src="/images/logotimer.png" alt="Timer" className="w-15 h-15 object-contain" />
-    ),
+    icon: <img src="/images/logotimer.png" alt="Timer" className="w-15 h-15 object-contain" />,
   },
 ];
 
@@ -164,7 +144,6 @@ export function AppsSection() {
       className="relative py-28 lg:py-36 px-6 bg-cultiva-bg"
     >
       <div className="max-w-[1280px] mx-auto">
-        {/* Header */}
         <div className="text-center max-w-[800px] mx-auto mb-16">
           <span className="font-mono-label text-cultiva-green tracking-[0.2em] block mb-4">
             TU ECOSISTEMA
@@ -177,7 +156,6 @@ export function AppsSection() {
           </p>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {apps.map((app, i) => (
             <div
@@ -185,14 +163,12 @@ export function AppsSection() {
               ref={(el) => { cardsRef.current[i] = el; }}
               className="group relative bg-cultiva-surface border border-cultiva-green/[0.08] rounded-[20px] p-8 transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_40px_rgba(74,222,128,0.08)]"
             >
-              {/* Icon */}
               <div
                 className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-cultiva-bg mb-5 transition-transform duration-300 group-hover:scale-105`}
               >
                 {app.icon}
               </div>
 
-              {/* Tag */}
               <span
                 className="inline-block px-3 py-1 rounded-full text-[11px] font-mono tracking-wider uppercase mb-3"
                 style={{ backgroundColor: `${app.tagColor}15`, color: app.tagColor }}
@@ -200,17 +176,14 @@ export function AppsSection() {
                 {app.tag}
               </span>
 
-              {/* Name */}
               <h3 className="text-xl font-semibold text-cultiva-text mb-3">
                 {app.name}
               </h3>
 
-              {/* Desc */}
               <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">
                 {app.desc}
               </p>
 
-              {/* Features */}
               <ul className="space-y-2 mb-6">
                 {app.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-cultiva-muted text-sm">
@@ -220,7 +193,6 @@ export function AppsSection() {
                 ))}
               </ul>
 
-              {/* CTA */}
               <a
                 href={app.link}
                 target={app.link.startsWith('http') ? '_blank' : undefined}
