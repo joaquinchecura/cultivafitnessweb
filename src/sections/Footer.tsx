@@ -3,7 +3,6 @@ import { Leaf, Heart } from 'lucide-react';
 export function Footer() {
   const appLinks = ['BodyMind', 'Supply', 'Neura', 'Running', 'Reckon'];
   const resourceLinks = ['Blog', 'Ciencia', 'FAQs', 'Guías'];
-  const legalLinks = ['Privacidad', 'Términos', 'Cookies'];
 
   return (
     <footer className="relative pt-20 pb-10 px-6 bg-cultiva-bg border-t border-cultiva-green/[0.08]">
@@ -56,62 +55,61 @@ export function Footer() {
                 ))}
               </ul>
             </div>
-
-<div>
-  <h4 className="text-cultiva-text text-sm font-semibold mb-4">Legal</h4>
-  <ul className="space-y-3">
-    <li>
-      <a 
-        href="/privacidad" 
-        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
-      >
-        Privacidad
-      </a>
-    </li>
-    <li>
-      <a 
-        href="/terminos" 
-        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
-      >
-        Términos
-      </a>
-    </li>
-    <li>
-      <a 
-        href="/cookies" 
-        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
-      >
-        Cookies
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  <h4 className="text-cultiva-text text-sm font-semibold mb-4">Contacto</h4>
-  <ul className="space-y-3">
-    <li>
-      <a 
-        href="mailto:cultivafitness@gmail.com" 
-        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
-      >
-        cultivafitness@gmail.com
-      </a>
-    </li>
-    <li>
-      <a 
-        href="https://wa.me/5491123970926" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
-      >
-        WhatsApp
-      </a>
-    </li>
-  </ul>
-      </div>
+            <div>
+              <h4 className="text-cultiva-text text-sm font-semibold mb-4">Legal</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a 
+                    href="/privacidad" 
+                    className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+                  >
+                    Privacidad
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/terminos" 
+                    className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+                  >
+                    Términos
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/cookies" 
+                    className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+                  >
+                    Cookies
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-cultiva-text text-sm font-semibold mb-4">Contacto</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a 
+                    href="mailto:cultivafitness@gmail.com" 
+                    className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+                  >
+                    cultivafitness@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://wa.me/5491123970926" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+                  >
+                    WhatsApp
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+
         {/* Bottom Row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cultiva-green/[0.06]">
           <p className="text-cultiva-muted text-sm">
