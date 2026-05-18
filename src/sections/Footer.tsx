@@ -56,19 +56,38 @@ export function Footer() {
                 ))}
               </ul>
             </div>
-            <div>
-              <h4 className="text-cultiva-text text-sm font-semibold mb-4">Legal</h4>
-              <ul className="space-y-3">
-                {legalLinks.map((link) => (
-                  <li key={link}>
-                    <span className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300 cursor-pointer">
-                      {link}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
+
+<div>
+  <h4 className="text-cultiva-text text-sm font-semibold mb-4">Legal</h4>
+  <ul className="space-y-3">
+    <li>
+      <a 
+        href="/privacidad" 
+        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+      >
+        Privacidad
+      </a>
+    </li>
+    <li>
+      <a 
+        href="/terminos" 
+        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+      >
+        Términos
+      </a>
+    </li>
+    <li>
+      <a 
+        href="/cookies" 
+        className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
+      >
+        Cookies
+      </a>
+    </li>
+  </ul>
+</div>
+
+
   <h4 className="text-cultiva-text text-sm font-semibold mb-4">Contacto</h4>
   <ul className="space-y-3">
     <li>
