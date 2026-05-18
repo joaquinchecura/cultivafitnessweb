@@ -6,7 +6,6 @@ import { ExternalLink, Check } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const apps = [
-  // FILA 1
   {
     name: 'RECKON',
     tag: 'WELLNESS',
@@ -43,7 +42,6 @@ const apps = [
       <img src="/images/logoneura.png" alt="Neura" className="w-15 h-15 object-contain" />
     ),
   },
-  // FILA 2
   {
     name: 'BODYMIND',
     tag: 'FITNESS',
@@ -80,7 +78,6 @@ const apps = [
       <img src="/images/logodeskout.png" alt="Deskout" className="w-15 h-15 object-contain" />
     ),
   },
-  // FILA 3
   {
     name: 'SILVER',
     tag: 'LONGEVIDAD',
@@ -117,7 +114,6 @@ const apps = [
       <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />
     ),
   },
-  // FILA 4 (TIMER sola centrada o al final)
   {
     name: 'TIMER',
     tag: 'UTILIDAD',
