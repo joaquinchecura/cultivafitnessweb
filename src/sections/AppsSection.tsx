@@ -103,7 +103,7 @@ const apps = [
     gradient: 'from-red-500 to-red-700',
     desc: 'App de Running con un plan personalizado acorde a tu perfil y objetivos específicos. Análisis de pie con IA y un GPS con streetmaps para guardar tu recorrido.',
     features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
-    link: '#',
+    link: 'https://running.cultivafitness.app',
     icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
   },
   {
