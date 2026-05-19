@@ -70,3 +70,133 @@
     box-shadow: 0 0 60px rgba(74, 222, 128, 0.3);
   }
 }
+/* Estilos para contenido Markdown del blog - integrados con tema Cultiva */
+@layer utilities {
+  .prose {
+    color: #8FA68A;
+  }
+
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F4F7F3;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+    line-height: 1.3;
+  }
+
+  .prose h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #F4F7F3;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .prose p {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    color: #8FA68A;
+  }
+
+  .prose strong {
+    color: #F4F7F3;
+    font-weight: 600;
+  }
+
+  .prose blockquote {
+    border-left: 3px solid #60A5FA;
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #8FA68A;
+  }
+
+  .prose ul {
+    margin: 1.25rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+    color: #8FA68A;
+  }
+
+  .prose li::marker {
+    color: #4ADE80;
+  }
+
+  .prose a {
+    color: #60A5FA;
+    text-decoration: none;
+    transition: color 0.2s;
+    border-bottom: 1px solid rgba(96, 165, 250, 0.3);
+  }
+
+  .prose a:hover {
+    color: #93c5fd;
+    border-bottom-color: #60A5FA;
+  }
+
+  .prose table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+  }
+
+  .prose th,
+  .prose td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(74, 222, 128, 0.15);
+  }
+
+  .prose th {
+    font-weight: 600;
+    color: #F4F7F3;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: #141C16;
+  }
+
+  .prose td {
+    color: #8FA68A;
+  }
+
+  .prose tr:hover td {
+    background: rgba(20, 28, 22, 0.5);
+  }
+
+  .prose hr {
+    border: none;
+    border-top: 1px solid rgba(74, 222, 128, 0.15);
+    margin: 2rem 0;
+  }
+
+  .prose code {
+    background: #141C16;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    color: #4ADE80;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .prose pre {
+    background: #141C16;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(74, 222, 128, 0.15);
+  }
+
+  .prose pre code {
+    background: none;
+    padding: 0;
+    color: #8FA68A;
+  }
+}
