@@ -97,6 +97,16 @@ const apps = [
     icon: <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />,
   },
   {
+    name: 'RUNNING',
+    tag: 'RUNNING',
+    tagColor: '#EF4444',
+    gradient: 'from-red-500 to-red-700',
+    desc: 'App de Running con un plan personalizado acorde a tu perfil y objetivos específicos. Análisis de pie con IA y un GPS con streetmaps para guardar tu recorrido.',
+    features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
+    link: '#',
+    icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
+  },
+  {
     name: 'TIMER',
     tag: 'UTILIDAD',
     tagColor: '#f472b6',
