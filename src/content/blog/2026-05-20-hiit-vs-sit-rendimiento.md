@@ -2,7 +2,7 @@
 title: "HIIT vs SIT: ¿Cuál es mejor para tu rendimiento?"
 slug: "hiit-vs-sit-rendimiento"
 category: "entrenamiento"
-date: "2026-05-26"
+date: "2026-05-20"
 readTime: "5 min"
 image: "/images/blog/hiit-vs-sit.jpeg"
 paperUrl: "https://journals.lww.com/nsca-jscr/abstract/2026/03000/effects_of_high_intensity_interval_training_versus.11.aspx"
