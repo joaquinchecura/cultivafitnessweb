@@ -22,9 +22,11 @@ excerpt: "Un meta-análisis con 460 sujetos compara HIIT y SIT para mejorar VO�
 
 ### ¿Por qué comparar HIIT y SIT?
 
-El rendimiento en deportes de resistencia depende en gran medida de tres parámetros fisiológicos: el **consumo máximo de oxígeno (VO₂máx)**, el umbral de lactato y la economía de carrera.
+El rendimiento en deportes de resistencia depende en gran medida de tres parámetros fisiológicos: el **consumo máximo de oxígeno (VO₂máx)**, el umbral de lactato y la economía de carrera. Mejorar estos indicadores es fundamental tanto para atletas competitivos como para cualquier persona que quiera potenciar su condición física.
+ 
+Tanto el HIIT como el SIT son herramientas populares en el entrenamiento intervalado, pero la literatura científica mostraba resultados contradictorios sobre cuál es más efectivo. Este estudio buscó resolver esa discrepancia con un análisis estadístico actualizado y metodológicamente más robusto.
 
-Aunque tanto el HIIT como el SIT son herramientas populares, existían resultados contradictorios sobre cuál es más efectivo. Este estudio buscó resolver esa discrepancia.
+**Pregunta central:** ¿Cuál produce mayores mejoras en el rendimiento aeróbico a largo plazo: el HIIT o el SIT?
 
 | | HIIT | SIT |
 |---|---|---|
@@ -37,7 +39,7 @@ Aunque tanto el HIIT como el SIT son herramientas populares, existían resultado
 
 ## 2. Diseño del estudio
 
-Se trata de una **revisión sistemática y meta-análisis** que siguió las guías PRISMA 2020.
+Se trata de una **revisión sistemática y meta-análisis** que siguió las guías PRISMA 2020, preregistrado en la base de datos PROSPERO. La búsqueda cubrió tres grandes bases de datos científicas (Web of Science, PubMed y SPORTDiscus) con registros hasta julio de 2025.
 
 | Métrica | Valor |
 |---------|-------|
@@ -46,11 +48,15 @@ Se trata de una **revisión sistemática y meta-análisis** que siguió las guí
 | Sujetos totales | 460 |
 | Duración | 2–10 semanas |
 
+Las poblaciones estudiadas incluyeron ciclistas, remeros, corredores de larga distancia, tenistas y adultos recreacionalmente activos. Aproximadamente el 58% de los sujetos fueron clasificados como bien entrenados y el 42% como moderadamente entrenados.
+
 &gt; **Innovación metodológica:** Usó un modelo meta-analítico de 3 niveles para manejar correctamente los múltiples grupos de intervención, aumentando la precisión estadística.
 
 ---
 
 ## 3. Variables principales
+
+El estudio evaluó cinco indicadores del rendimiento aeróbico:
 
 - **VO₂máx** — Consumo máximo de oxígeno
 - **Time Trial (TT)** — Prueba contrarreloj
