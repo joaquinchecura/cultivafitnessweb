@@ -10,7 +10,7 @@ import { getLatestPosts } from '../lib/blog';
 gsap.registerPlugin(ScrollTrigger);
 
 export function BlogSection() {
-  const sectionRef = useRef<<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const latestPosts = getLatestPosts(3);
 
@@ -65,7 +65,7 @@ export function BlogSection() {
           {latestPosts.map((post, i) => (
             <div
               key={post.slug}
-              ref={(el) => { cardsRef.current[i] = el; }}
+              ref={(el) => { if (el) cardsRef.current[i] = el; }}
             >
               <BlogCard post={post} />
             </div>

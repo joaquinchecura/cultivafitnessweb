@@ -170,7 +170,7 @@ export function AppsSection() {
           {apps.map((app, i) => (
             <div
               key={app.name}
-              ref={(el) => { cardsRef.current[i] = el; }}
+              ref={(el) => { if (el) cardsRef.current[i] = el; }}
               className="group relative bg-cultiva-surface border border-cultiva-green/[0.08] rounded-[20px] p-8 transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_40px_rgba(74,222,128,0.08)]"
             >
               <div

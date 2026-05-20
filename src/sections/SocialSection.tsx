@@ -98,7 +98,7 @@ export function SocialSection() {
             return (
               <div
                 key={social.name}
-                ref={(el) => { cardsRef.current[i] = el; }}
+                ref={(el) => { if (el) cardsRef.current[i] = el; }}
                 className="group relative bg-cultiva-surface/60 backdrop-blur-xl border border-white/5 rounded-[20px] p-10 text-center hover:border-white/10 transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Icon */}
