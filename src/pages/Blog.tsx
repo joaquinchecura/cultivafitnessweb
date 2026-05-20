@@ -17,8 +17,8 @@ export default function Blog() {
   const [activeCategory, setActiveCategory] = useState<string>('todos');
   const [isLoaded, setIsLoaded] = useState(false);
   
-  const sectionRef = useRef<<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<<HTMLDivElement>(null);  // ← null explícito
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);  // ← array vacío
   const categories = ['todos', ...getAllCategories()];
 
   useEffect(() => {
@@ -80,7 +80,6 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-cultiva-bg">
-      {/* Header */}
       <div className="bg-cultiva-surface border-b border-cultiva-green/10">
         <div className="max-w-[1280px] mx-auto px-6 py-8">
           <Link
@@ -100,10 +99,8 @@ export default function Blog() {
         </div>
       </div>
 
-      {/* Filters */}
       <div className="max-w-[1280px] mx-auto px-6 py-8">
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-cultiva-muted" />
             <input
@@ -115,7 +112,6 @@ export default function Blog() {
             />
           </div>
 
-          {/* Category filters */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0">
             <SlidersHorizontal className="w-4 h-4 text-cultiva-muted mr-1 flex-shrink-0" />
             {categories.map((cat) => {
@@ -143,13 +139,11 @@ export default function Blog() {
           </div>
         </div>
 
-        {/* Results count */}
         <p className="text-cultiva-muted text-sm mb-6 font-mono">
           {filteredPosts.length} {filteredPosts.length === 1 ? 'artículo' : 'artículos'}
           {activeCategory !== 'todos' && ` en ${getCategoryLabel(activeCategory).toLowerCase()}`}
         </p>
 
-        {/* Articles Grid */}
         {filteredPosts.length > 0 ? (
           <div
             ref={sectionRef}

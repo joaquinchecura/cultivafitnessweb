@@ -10,8 +10,8 @@ import { getLatestPosts } from '../lib/blog';
 gsap.registerPlugin(ScrollTrigger);
 
 export function BlogSection() {
-  const sectionRef = useRef<<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<<HTMLDivElement>(null);  // ← null explícito
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);  // ← array vacío
   const latestPosts = getLatestPosts(3);
 
   useEffect(() => {
@@ -47,7 +47,6 @@ export function BlogSection() {
       className="relative py-28 lg:py-36 px-6 bg-cultiva-bg"
     >
       <div className="max-w-[1280px] mx-auto">
-        {/* Header */}
         <div className="text-center max-w-[800px] mx-auto mb-16">
           <span className="font-mono-label text-cultiva-teal tracking-[0.2em] block mb-4">
             CONOCIMIENTO
@@ -60,7 +59,6 @@ export function BlogSection() {
           </p>
         </div>
 
-        {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {latestPosts.map((post, i) => (
             <div
@@ -72,7 +70,6 @@ export function BlogSection() {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center">
           <Link
             to="/blog"
