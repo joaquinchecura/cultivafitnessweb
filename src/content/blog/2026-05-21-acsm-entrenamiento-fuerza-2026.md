@@ -1,12 +1,12 @@
 ---
-title: "La guía definitiva sobre entrenamiento de Fuerza — lo que 137 estudios con 30,000 personas revelan"
+title: "La guía definitiva sobre entrenamiento de Fuerza: lo que 137 estudios con 30.000 personas revelan"
 slug: "acsm-entrenamiento-fuerza-2026"
 category: "entrenamiento"
 date: "2026-05-21"
 readTime: "5 min"
-image: "/images/blog/acsm-entrenamiento-resistencia-2026.jpeg"
+image: "/images/blog/acsm-entrenamiento-fuerza -2026.jpeg"
 paperUrl: "https://doi.org/10.1249/MSS.0000000000003897"
-videoUrl: "https://youtube.com/watch?v=ejemplo-acsm"
+videoUrl: "https://www.youtube.com/watch?v=5CzlBvFIm-Y"
 excerpt: "La American College of Sports Medicine publica su primera actualización en 17 años. 137 revisiones sistemáticas y 30,000+ participantes definen qué realmente funciona para ganar fuerza, hipertrofia y potencia."
 ---
 
@@ -14,11 +14,11 @@ excerpt: "La American College of Sports Medicine publica su primera actualizaci�
 
 ## 📄 Position Stand · Medicine & Science in Sports & Exercise · Abril 2026
 
-La American College of Sports Medicine (ACSM) acaba de publicar su primera actualización mayor en **17 años** sobre entrenamiento de fuerza. No es un estudio más: es un **umbrella review** que sintetiza **137 revisiones sistemáticas** con más de **30,000 participantes**. La conclusión es clara: gran parte de lo que la industria del fitness te ha vendido como "esencial" simplemente **no importa tanto como creías**.
+La American College of Sports Medicine (ACSM) acaba de publicar su primera actualización mayor en **17 años** sobre entrenamiento de fuerza. No es un estudio más: es un **umbrella review** que sintetiza **137 revisiones sistemáticas** con más de **30.000 participantes**. La conclusión es clara: gran parte de lo que la industria del fitness te ha vendido como "esencial" simplemente **no importa tanto como creías**.
 
 ---
 
-## 01 — Objetivo del estudio
+## 1. Objetivo del estudio
 
 ### ¿Por qué ahora?
 
@@ -30,14 +30,14 @@ Y lo hace con un método riguroso: en lugar de analizar estudios individuales, r
 
 ---
 
-## 02 — Diseño del estudio
+## 2. Diseño del estudio
 
 | Métrica | Valor |
 |---------|-------|
 | Tipo de revisión | Umbrella review (overview of reviews) |
 | Bases de datos | Ovid MEDLINE, Embase, Cochrane, SPORTDiscus, Web of Science |
 | Revisiones sistemáticas analizadas | **137** |
-| Participantes totales | **&gt;30,000** |
+| Participantes totales | **&gt;30.000** |
 | Duración de estudios incluidos | 6–52 semanas |
 | Población | Adultos sanos ≥18 años |
 | Fecha límite de búsqueda | Octubre 2024 |
@@ -53,7 +53,7 @@ El equipo de la ACSM, liderado por Stuart M. Phillips, aplicó criterios estrict
 
 ---
 
-## 03 — Variables principales analizadas
+## 3. Variables principales analizadas
 
 El estudio examinó **todas las variables de prescripción** (RTx) que la industria debate constantemente:
 
@@ -71,7 +71,7 @@ El estudio examinó **todas las variables de prescripción** (RTx) que la indust
 
 ---
 
-## 04 — Principales hallazgos
+## 4. Principales hallazgos
 
 ### Lo que SÍ funciona (evidencia sólida)
 
@@ -104,7 +104,7 @@ El estudio examinó **todas las variables de prescripción** (RTx) que la indust
 
 ---
 
-## 05 — Interpretación fisiológica
+## 5. Interpretación fisiológica
 
 ### La gran sorpresa: la hipertrofia no vive en la "zona de 8–12 repeticiones"
 
@@ -124,7 +124,7 @@ La potencia (power) no es solo fuerza: es **fuerza × velocidad**. Los protocolo
 
 ---
 
-## 06 — Hallazgos prácticos importantes
+## 6. Hallazgos prácticos importantes
 
 ### 1. El "mínimo efectivo" es más bajo de lo que pensás
 
@@ -146,14 +146,14 @@ El **home-based RT** (entrenamiento en casa con peso corporal, bandas elásticas
 
 ### 4. La seguridad es alta
 
-En un análisis de **&gt;38,000 participantes** (incluyendo &gt;11,000 adultos mayores):
+En un análisis de **&gt;38.000 participantes** (incluyendo &gt;11.000 adultos mayores):
 - El ejercicio **no aumentó** el riesgo de eventos adversos graves
 - La tasa de lesiones no fue diferente a la del entrenamiento aeróbico
-- Las complicaciones cardiovasculares no fatales fueron **mucho menos frecuentes** durante RT que durante ejercicio aeróbico
+- Las complicaciones cardiovasculares no fatales fueron **mucho menos frecuentes** durante entrenamiento de fuerza que durante ejercicio aeróbico
 
 ---
 
-## 07 — Limitaciones del estudio
+## 7. Limitaciones del estudio
 
 1. **Población limitada:** Solo adultos sanos ≥18 años. No incluye personas con enfermedades crónicas, lesiones o condiciones especiales.
 2. **Subrepresentación femenina:** La mayoría de estudios primarios tienen mayor proporción de hombres.
@@ -163,7 +163,7 @@ En un análisis de **&gt;38,000 participantes** (incluyendo &gt;11,000 adultos m
 
 ---
 
-## 08 — Conclusión final del artículo
+## 8. Conclusión final del artículo
 
 La ACSM concluye que el entrenamiento de fuerza es **seguro, efectivo y accesible** para adultos sanos de todas las edades. Las recomendaciones clave son:
 
@@ -173,7 +173,7 @@ El estudio desplaza el foco de la "optimización obsesiva" (buscar el programa p
 
 ---
 
-## 09 — Aplicación práctica para fitness y deporte
+## 9. Aplicación práctica para fitness y deporte
 
 ### Si tu objetivo es FUERZA
 
@@ -220,7 +220,7 @@ El estudio desplaza el foco de la "optimización obsesiva" (buscar el programa p
 
 ---
 
-## 10 — Mensaje clave del estudio
+## 10. Mensaje clave del estudio
 
 &gt; **"La consistencia vence a la complejidad. El cuerpo humano es mucho más flexible y tolerante de lo que las redes sociales sugieren. No necesitás el programa perfecto, el equipo perfecto o el momento perfecto. Necesitás empezar, esforzarte, y mantenerte."**
 
@@ -237,5 +237,3 @@ Justificar entrenamientos aleatorios sin progresión. Aunque el rango de lo que 
 ---
 
 *Fuente: Currier BS, D'Souza AC, Fiatarone Singh MA, et al. American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews. Medicine & Science in Sports & Exercise. 2026;58(4):e1-e35. [DOI: 10.1249/MSS.0000000000003897](https://doi.org/10.1249/MSS.0000000000003897)*
-
-*¿Querés un plan de entrenamiento personalizado basado en estas evidencias? Generalo en [cultivafitness.app](https://cultivafitness.app)*
