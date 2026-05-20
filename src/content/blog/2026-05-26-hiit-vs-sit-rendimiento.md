@@ -3,7 +3,7 @@ title: "HIIT vs SIT: ¿Cuál es mejor para tu rendimiento?"
 slug: "hiit-vs-sit-rendimiento"
 category: "entrenamiento"
 date: "2026-05-26"
-readTime: "10 min"
+readTime: "5 min"
 image: "/images/blog/hiit-vs-sit.jpeg"
 paperUrl: "https://journals.lww.com/nsca-jscr/abstract/2026/03000/effects_of_high_intensity_interval_training_versus.11.aspx"
 videoUrl: "https://www.youtube.com/watch?v=Xtlstr9Nzmw&t=30s"
@@ -18,7 +18,7 @@ excerpt: "Un meta-análisis con 460 sujetos compara HIIT y SIT para mejorar VO�
 
 ---
 
-## 01 — Objetivo del estudio
+## 1. Objetivo del estudio
 
 ### ¿Por qué comparar HIIT y SIT?
 
@@ -35,7 +35,7 @@ Aunque tanto el HIIT como el SIT son herramientas populares, existían resultado
 
 ---
 
-## 02 — Diseño del estudio
+## 2. Diseño del estudio
 
 Se trata de una **revisión sistemática y meta-análisis** que siguió las guías PRISMA 2020.
 
@@ -50,7 +50,7 @@ Se trata de una **revisión sistemática y meta-análisis** que siguió las guí
 
 ---
 
-## 03 — Variables principales
+## 3. Variables principales
 
 - **VO₂máx** — Consumo máximo de oxígeno
 - **Time Trial (TT)** — Prueba contrarreloj
@@ -60,7 +60,7 @@ Se trata de una **revisión sistemática y meta-análisis** que siguió las guí
 
 ---
 
-## 04 — Principales hallazgos
+## 4. Principales hallazgos
 
 | Variable | SMD (IC 95%) | p-valor | Veredicto |
 |----------|-------------|---------|-----------|
@@ -80,7 +80,7 @@ Se trata de una **revisión sistemática y meta-análisis** que siguió las guí
 
 ---
 
-## 05 — Interpretación fisiológica
+## 5. Interpretación fisiológica
 
 ### Adaptaciones centrales (HIIT)
 Los intervalos prolongados mantienen carga alta sobre el sistema cardiovascular, promoviendo aumentos en volumen sistólico y gasto cardíaco. Un protocolo 4×4 min eleva el VO₂máx un 8%.
@@ -92,7 +92,7 @@ Mejora la capacidad buffer muscular, enzimas oxidativas (+38% citrato sintasa) y
 
 ---
 
-## 06 — Hallazgos prácticos
+## 6. Hallazgos prácticos
 
 | Para... | Recomendación |
 |---------|---------------|
@@ -104,7 +104,7 @@ Mejora la capacidad buffer muscular, enzimas oxidativas (+38% citrato sintasa) y
 
 ---
 
-## 07 — Protocolos recomendados
+## 7 — Protocolos recomendados
 
 ### Nivel élite
 - 6 × 5 min al 90–95% MAV
@@ -125,7 +125,7 @@ Mejora la capacidad buffer muscular, enzimas oxidativas (+38% citrato sintasa) y
 
 ---
 
-## 08 — Limitaciones
+## 8 — Limitaciones
 
 1. **Calidad de evidencia baja** en la mayoría de variables
 2. **Alta heterogeneidad** en VO₂máx (I² = 87.3%)
@@ -136,7 +136,7 @@ Mejora la capacidad buffer muscular, enzimas oxidativas (+38% citrato sintasa) y
 
 ---
 
-## 09 — Conclusión
+## 9 — Conclusión
 
 Comparado con el SIT, el **HIIT tiende a producir mayores mejoras en capacidad aeróbica**, especialmente en VO₂máx y MAP/MAV. Los protocolos con intervalos de más de 4 minutos y programas de más de 8 semanas son especialmente efectivos.
 
