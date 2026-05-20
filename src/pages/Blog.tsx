@@ -17,7 +17,7 @@ export default function Blog() {
   const [activeCategory, setActiveCategory] = useState<string>('todos');
   const [isLoaded, setIsLoaded] = useState(false);
   
-  const sectionRef = useRef<<HTMLDivElement>(null);  // ← null explícito
+  const sectionRef = useRef<HTMLDivElement>(null);  // ← null explícito
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);  // ← array vacío
   const categories = ['todos', ...getAllCategories()];
 

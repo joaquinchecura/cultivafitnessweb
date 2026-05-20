@@ -10,7 +10,7 @@ import { getLatestPosts } from '../lib/blog';
 gsap.registerPlugin(ScrollTrigger);
 
 export function BlogSection() {
-  const sectionRef = useRef<<HTMLDivElement>(null);  // ← null explícito
+  const sectionRef = useRef<HTMLDivElement>(null);  // ← null explícito
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);  // ← array vacío
   const latestPosts = getLatestPosts(3);
 

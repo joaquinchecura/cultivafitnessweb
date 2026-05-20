@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Ejercicios from './pages/Ejercicios';
 import Categoria from './pages/Categoria';
 import Subcategoria from './pages/Subcategoria';
-import Blog from './pages/Blog';
+import Blog from './pages/blog';
 import BlogPost from './pages/BlogPost';
 import Privacidad from './pages/privacidad';
 import Terminos from './pages/terminos';
