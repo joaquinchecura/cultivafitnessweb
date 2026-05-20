@@ -1,49 +1,14 @@
-// src/sections/BlogSection.tsx
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
 import { BlogCard } from '../components/BlogCard';
 import { getLatestPosts } from '../lib/blog';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export function BlogSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);  // ← null explícito
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);  // ← array vacío
   const latestPosts = getLatestPosts(3);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const validCards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
-      if (validCards.length === 0) return;
-      
-      gsap.fromTo(
-        validCards,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.1,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-            once: true,
-          },
-        }
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
 
   return (
     <section
       id="blog"
-      ref={sectionRef}
       className="relative py-28 lg:py-36 px-6 bg-cultiva-bg"
     >
       <div className="max-w-[1280px] mx-auto">
@@ -60,13 +25,8 @@ export function BlogSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {latestPosts.map((post, i) => (
-            <div
-              key={post.slug}
-              ref={(el) => { cardsRef.current[i] = el; }}
-            >
-              <BlogCard post={post} />
-            </div>
+          {latestPosts.map((post) => (
+            <BlogCard key={post.slug} post={post} />
           ))}
         </div>
 

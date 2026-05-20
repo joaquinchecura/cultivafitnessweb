@@ -1,31 +1,22 @@
-// src/pages/Blog.tsx
-import { useState, useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState, useEffect } from 'react';
 import { Search, SlidersHorizontal, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router';
 import { BlogCard } from '../components/BlogCard';
 import { getAllPosts, getPostsByCategory, getAllCategories, getCategoryLabel, getCategoryColor } from '../lib/blog';
 import type { BlogPost } from '../lib/blog';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Blog() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('todos');
-  const [isLoaded, setIsLoaded] = useState(false);
   
-  const sectionRef = useRef<HTMLDivElement>(null);  // ← null explícito
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);  // ← array vacío
   const categories = ['todos', ...getAllCategories()];
 
   useEffect(() => {
     const allPosts = getAllPosts();
     setPosts(allPosts);
     setFilteredPosts(allPosts);
-    setIsLoaded(true);
   }, []);
 
   useEffect(() => {
@@ -49,34 +40,6 @@ export default function Blog() {
 
     setFilteredPosts(result);
   }, [activeCategory, searchQuery, posts]);
-
-  useEffect(() => {
-    if (!isLoaded || filteredPosts.length === 0) return;
-
-    const ctx = gsap.context(() => {
-      const validCards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
-      if (validCards.length === 0) return;
-
-      gsap.fromTo(
-        validCards,
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.08,
-          duration: 0.6,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 85%',
-            once: true,
-          },
-        }
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, [filteredPosts, isLoaded]);
 
   return (
     <div className="min-h-screen bg-cultiva-bg">
@@ -145,17 +108,9 @@ export default function Blog() {
         </p>
 
         {filteredPosts.length > 0 ? (
-          <div
-            ref={sectionRef}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {filteredPosts.map((post, i) => (
-              <div
-                key={post.slug}
-                ref={(el) => { cardsRef.current[i] = el; }}
-              >
-                <BlogCard post={post} />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredPosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
             ))}
           </div>
         ) : (
