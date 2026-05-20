@@ -5,8 +5,8 @@ category: "entrenamiento"
 date: "2026-05-26"
 readTime: "10 min"
 image: "/images/blog/hiit-vs-sit.jpeg"
-paperUrl: "https://doi.org/10.1519/JSC.0000000000005094"
-videoUrl: "https://youtube.com/watch?v=ejemplo-hiit"
+paperUrl: "https://journals.lww.com/nsca-jscr/abstract/2026/03000/effects_of_high_intensity_interval_training_versus.11.aspx"
+videoUrl: "https://www.youtube.com/watch?v=Xtlstr9Nzmw&t=30s"
 excerpt: "Un meta-análisis con 460 sujetos compara HIIT y SIT para mejorar VO₂máx, potencia aeróbica y rendimiento de resistencia."
 ---
 
