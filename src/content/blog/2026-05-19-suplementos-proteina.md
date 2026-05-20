@@ -3,10 +3,10 @@ title: "¿Realmente funcionan los suplementos de proteína? Lo que dice la cienc
 slug: "suplementos-proteina-ciencia"
 category: "nutricion"
 date: "2026-05-19"
-readTime: "8 min"
+readTime: "5 min"
 image: "/images/blog/Realmente funcionan los suplementos de proteína Lo que dice la ciencia (y lo que nadie te cuenta).jpeg"
 paperUrl: "https://doi.org/10.1080/15502783.2025.2605338"
-videoUrl: "https://youtube.com/watch?v=ejemplo-proteina"
+videoUrl: "https://youtube/SJckcOVCg0c"
 excerpt: "Un metaanálisis de 75 ensayos clínicos con 1.200+ atletas revela cuándo los suplementos de proteína realmente funcionan — y cuándo son solo marketing."
 ---
 
