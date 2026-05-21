@@ -38,35 +38,19 @@ const features = [
 
 export function FeaturesSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const rowsRef = useRef<HTMLDivElement[]>([]);
+  const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      rowsRef.current.forEach((row, i) => {
-        const textSide = row.querySelector('.feature-text') as HTMLElement;
-        const imgSide = row.querySelector('.feature-image') as HTMLElement;
-        const isEven = i % 2 === 1;
-
-        gsap.from(textSide, {
-          x: isEven ? 40 : -40,
+      cardsRef.current.forEach((card, i) => {
+        gsap.from(card, {
+          y: 40,
           opacity: 0,
           duration: 0.8,
+          delay: i * 0.1,
           ease: 'power3.out',
           scrollTrigger: {
-            trigger: row,
-            start: 'top 85%',
-            once: true,
-          },
-        });
-
-        gsap.from(imgSide, {
-          x: isEven ? -40 : 40,
-          opacity: 0,
-          duration: 0.8,
-          delay: 0.2,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: row,
+            trigger: card,
             start: 'top 85%',
             once: true,
           },
@@ -97,34 +81,28 @@ export function FeaturesSection() {
           </h2>
         </div>
 
-        {/* Feature Rows */}
-        <div className="space-y-24 lg:space-y-32">
+        {/* Features Grid - 2 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {features.map((feature, i) => {
             const Icon = feature.icon;
-            const isEven = i % 2 === 1;
 
             return (
               <div
                 key={feature.title}
-                ref={(el) => { if (el) rowsRef.current[i] = el; }}
-                className={`flex flex-col ${
-                  isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
-                } items-center gap-12 lg:gap-16`}
+                ref={(el) => { if (el) cardsRef.current[i] = el; }}
+                className="feature-card group p-8 lg:p-10 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-white/[0.07]"
               >
-                {/* Text */}
-                <div className="feature-text flex-1 max-w-[520px]">
-                  <div
-                    className={`w-12 h-12 rounded-xl ${feature.iconBg} flex items-center justify-center mb-6`}
-                  >
-                    <Icon className="w-6 h-6" style={{ color: feature.iconColor }} />
-                  </div>
-                  <h3 className="text-2xl lg:text-[28px] font-semibold text-cultiva-text mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-cultiva-secondary text-base lg:text-lg leading-relaxed">
-                    {feature.desc}
-                  </p>
+                <div
+                  className={`w-12 h-12 rounded-xl ${feature.iconBg} flex items-center justify-center mb-6`}
+                >
+                  <Icon className="w-6 h-6" style={{ color: feature.iconColor }} />
                 </div>
+                <h3 className="text-2xl lg:text-[28px] font-semibold text-cultiva-text mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-cultiva-secondary text-base lg:text-lg leading-relaxed">
+                  {feature.desc}
+                </p>
               </div>
             );
           })}
