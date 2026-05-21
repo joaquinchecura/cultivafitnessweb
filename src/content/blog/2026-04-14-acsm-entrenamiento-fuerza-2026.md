@@ -2,7 +2,7 @@
 title: "La guía definitiva sobre entrenamiento de Fuerza: lo que 137 estudios con 30.000 personas revelan"
 slug: "acsm-entrenamiento-fuerza-2026"
 category: "entrenamiento"
-date: "2026-05-21"
+date: "2026-04-14"
 readTime: "5 min"
 image: "/images/blog/acsm-entrenamiento-fuerza-2026.jpeg"
 paperUrl: "https://doi.org/10.1249/MSS.0000000000003897"
