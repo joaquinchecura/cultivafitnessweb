@@ -107,6 +107,16 @@ const apps = [
     icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
   },
   {
+    name: 'BIOMATCH',
+    tag: 'BIOMECANICA',
+    tagColor: '#C084FC',
+    gradient: 'from-purple-400 to-purple-600',
+    desc: 'Plataforma de matching biométrico que conecta tu perfil fisiológico único con programas de entrenamiento y nutrición hiperpersonalizados basados en datos reales.',
+    features: ['Análisis biomecánico', 'Matching', 'Programas hiperpersonalizados'],
+    link: 'https://biomatch.cultivafitness.app',
+    icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
+  },
+  {
     name: 'TIMER',
     tag: 'UTILIDAD',
     tagColor: '#f472b6',
