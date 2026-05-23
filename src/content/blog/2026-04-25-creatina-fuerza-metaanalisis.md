@@ -3,10 +3,10 @@ title: "Creatina: la evidencia definitiva de 14 estudios con 800+ personas sobre
 slug: "creatina-fuerza-metaanalisis"
 category: "nutricion"
 date: "2026-04-25"
-readTime: "10 min"
-image: "/images/blog/creatina-fuerza.jpg"
+readTime: "5 min"
+image: "/images/blog/creatina-fuerza-metaanalisis.jpeg"
 paperUrl: "https://doi.org/10.7717/peerj.20380"
-videoUrl: "https://youtube.com/watch?v=ejemplo-creatina"
+videoUrl: "https://www.youtube.com/watch?v=729f-8eqyfk"
 excerpt: "Un meta-análisis con Robust Variance Estimation analiza 14 RCTs y revela quién se beneficia más, cuánto tomar y con qué intensidad entrenar para maximizar ganancias de fuerza con creatina."
 ---
 
@@ -26,7 +26,7 @@ La creatina es el suplemento deportivo más estudiado de la historia. Pero los m
 
 Este estudio buscó responder con precisión:
 
-&gt; **¿Quién se beneficia más de la creatina? ¿Cuánto hay que tomar? ¿Y con qué intensidad entrenar?**
+**¿Quién se beneficia más de la creatina? ¿Cuánto hay que tomar? ¿Y con qué intensidad entrenar?**
 
 Y para eso usó **Robust Variance Estimation (RVE)**, un método que permite analizar estudios con múltiples resultados sin violar supuestos estadísticos.
 
@@ -75,7 +75,7 @@ Esto es clave: muchos estudios miden fuerza en varios ejercicios (sentadilla, pr
 | **Meta-análisis convencional** | SMD = 0.43 (IC 95%: 0.25–0.61) | Efecto pequeño-moderado, altamente significativo |
 | **RVE (más riguroso)** | SMD = 0.451 (IC 95%: 0.032–0.871) | Efecto confirmado, pero con intervalo más amplio |
 
-&gt; **En palabras simples:** La creatina mejora la fuerza, pero no es magia. El efecto es real, modesto, y depende mucho de quién la tome.
+**En palabras simples:** La creatina mejora la fuerza, pero no es magia. El efecto es real, modesto, y depende mucho de quién la tome.
 
 ### Los no entrenados se benefician MUCHO más
 
@@ -84,7 +84,7 @@ Esto es clave: muchos estudios miden fuerza en varios ejercicios (sentadilla, pr
 | **No entrenados** | 1.06 | 0.67–1.45 | &lt;0.01 | Efecto grande |
 | **Entrenados** | 0.32 | 0.00–0.63 | 0.05 | Efecto pequeño, al límite |
 
-&gt; **"Si nunca entrenaste, la creatina te puede dar un boost enorme. Si ya entrenás hace años, el beneficio es marginal."**
+**"Si nunca entrenaste, la creatina te puede dar un boost enorme. Si ya entrenás hace años, el beneficio es marginal."**
 
 ### La dosis baja funciona mejor que la alta
 
@@ -93,7 +93,7 @@ Esto es clave: muchos estudios miden fuerza en varios ejercicios (sentadilla, pr
 | **Baja (2.5–7.56 g/día)** | 0.88 | 0.29–1.46 | &lt;0.01 | ✅ Efecto significativo |
 | **Alta (19.5–23.55 g/día)** | 0.24 | -0.16–0.65 | 0.24 | ❌ No significativo |
 
-&gt; **"Más no es mejor. Tomar 20+ gramos por día no solo es innecesario — puede ser contraproducente."**
+**"Más no es mejor. Tomar 20+ gramos por día no solo es innecesario — puede ser contraproducente."**
 
 ### La intensidad importa
 
@@ -102,7 +102,7 @@ Esto es clave: muchos estudios miden fuerza en varios ejercicios (sentadilla, pr
 | **Moderada-alta (&gt;75% 1RM)** | 0.62 | 0.13–1.12 | 0.01 | ✅ Efecto significativo |
 | **Moderada-baja (&lt;75% 1RM)** | 0.51 | -0.04–1.06 | 0.07 | ⚠️ Al límite |
 
-&gt; **"La creatina potencia el entrenamiento intenso. Si entrenás suave, el beneficio se diluye."**
+**"La creatina potencia el entrenamiento intenso. Si entrenás suave, el beneficio se diluye."**
 
 ### Jóvenes vs. adultos mayores: empate técnico
 
@@ -111,7 +111,7 @@ Esto es clave: muchos estudios miden fuerza en varios ejercicios (sentadilla, pr
 | **Adultos mayores (49–69 años)** | 0.40 | 0.11–0.69 | &lt;0.01 |
 | **Jóvenes (19–23 años)** | 0.33 | 0.04–0.63 | 0.03 |
 
-&gt; **"Ambos grupos se benefician. No hay evidencia de que los jóvenes tengan ventaja clara — la creatina funciona a cualquier edad."**
+**"Ambos grupos se benefician. No hay evidencia de que los jóvenes tengan ventaja clara — la creatina funciona a cualquier edad."**
 
 ---
 
@@ -124,12 +124,12 @@ La creatina no "inyecta" fuerza. Actúa en tres mecanismos complementarios:
 | Mecanismo | ¿Qué hace? | Resultado |
 |-----------|-----------|-----------|
 | **Reserva de fosfocreatina (PCr)** | Acelera la resíntesis de ATP | Más repeticiones por set, más volumen total |
-| **Transporte de glucosa (GLUT-4)** | Mejora la captación de glucosa muscular | Mayor glicógeno, mejor recuperación |
+| **Transporte de glucosa (GLUT-4)** | Mejora la captación de glucosa muscular | Mayor glucógeno, mejor recuperación |
 | **Buffer de lactato** | Reduce la acidez muscular | Menos fatiga, más trabajo total |
 
 ### La paradoja de la dosis
 
-&gt; **"¿Por qué menos creatina funciona mejor?"**
+**"¿Por qué menos creatina funciona mejor?"**
 
 La respuesta está en la **saturación muscular**. Los músculos tienen un "techo" de almacenamiento de creatina (~160 mmol/kg de masa seca). Una dosis baja (3–5 g/día) durante semanas alcanza este techo de forma sostenida. Dosis altas (20+ g/día) solo aceleran la saturación inicial (fase de carga), pero no aumentan el techo final.
 
@@ -179,7 +179,7 @@ Tomar dosis altas crónicamente:
 
 ## 📝 Conclusión final del artículo
 
-&gt; **"La creatina mejora significativamente la fuerza muscular en la población general, pero sus características de efecto exhiben heterogeneidad multidimensional."**
+**"La creatina mejora significativamente la fuerza muscular en la población general, pero sus características de efecto exhiben heterogeneidad multidimensional."**
 
 Los hallazgos clave son:
 
@@ -221,7 +221,7 @@ Los hallazgos clave son:
 
 ## 💡 Mensaje clave del estudio
 
-&gt; **"La creatina no es magia, pero tampoco es placebo. Es una herramienta real, modesta, y altamente dependiente del contexto: funciona mejor para quienes recién empiezan, en dosis bajas, y combinada con entrenamiento intenso. El 90% de los beneficios viene de entrenar duro y consistentemente; la creatina aporta el último 10%."**
+**"La creatina no es magia, pero tampoco es placebo. Es una herramienta real, modesta, y altamente dependiente del contexto: funciona mejor para quienes recién empiezan, en dosis bajas, y combinada con entrenamiento intenso. El 90% de los beneficios viene de entrenar duro y consistentemente; la creatina aporta el último 10%."**
 
 La gran revelación de este meta-análisis es que **la individualización importa más que la suplementación en sí**. No hay una dosis única para todos. El contexto (entrenamiento, edad, experiencia) modula el efecto más que la cantidad de polvo que pongas en el shaker.
 
