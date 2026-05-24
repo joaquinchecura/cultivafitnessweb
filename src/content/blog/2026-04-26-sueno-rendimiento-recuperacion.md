@@ -28,7 +28,7 @@ El ejercicio físico es indiscutiblemente beneficioso para la salud. Pero existe
 
 Este estudio buscó responder:
 
-&gt; **¿Cómo interactúan el sueño, el rendimiento deportivo y la recuperación? ¿Y cómo podemos optimizar las tres cosas simultáneamente?**
+**¿Cómo interactúan el sueño, el rendimiento deportivo y la recuperación? ¿Y cómo podemos optimizar las tres cosas simultáneamente?**
 
 Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados, estudios observacionales y consensos de expertos en poblaciones generales y deportivas.
 
@@ -62,7 +62,7 @@ Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados
 
 ## 🔍 Principales hallazgos
 
-### Los atletas duermen mal — y es un problema serio
+### Los atletas duermen mal y es un problema serio
 
 | Población | Prevalencia de problemas de sueño |
 |-----------|----------------------------------|
@@ -70,18 +70,18 @@ Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados
 | **Atletas jóvenes (U14-U17)** | 61–64% tienen mala calidad de sueño |
 | **Atletas con ≤8h de sueño** | 1.7× más riesgo de lesiones musculoesqueléticas |
 
-&gt; **"Entrenar más duramente no compensa dormir peor. De hecho, el sobreentrenamiento sin sueño adecuado lleva a decrecimientos prolongados de rendimiento."**
+**"Entrenar más duramente no compensa dormir peor. De hecho, el sobreentrenamiento sin sueño adecuado lleva a decrecimientos prolongados de rendimiento."**
 
 ### La privación de sueño destruye el rendimiento
 
 | Tipo de privación | Efecto en el rendimiento |
 |-------------------|-------------------------|
 | **30 horas sin dormir** | ↓ Velocidad de sprint, ↓ glucógeno muscular |
-| **36 horas sin dormir** | ↓ Potencia, ↓ resistencia a la fatiga |
+| **36 horas sin dormir** | ↓ Potencia ↓ resistencia a la fatiga |
 | **64 horas sin dormir** | ↓ Fuerza muscular general |
 | **≤6h por noche (crónico)** | ↓ Fuerza, potencia, resistencia, habilidades técnicas |
 
-&gt; **Cada hora adicional de vigilia después de la pérdida de sueño reduce el rendimiento aproximadamente un 0.4%.**
+**Cada hora adicional de vigilia después de la pérdida de sueño reduce el rendimiento aproximadamente un 0.4%.**
 
 ### El sueño afecta el cerebro y los músculos
 
@@ -90,7 +90,7 @@ Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados
 | **Cerebro** | ↓ Metabolismo en corteza prefrontal, tálamo y cerebelo | Peor toma de decisiones, tiempo de reacción, memoria de trabajo |
 | **Músculos** | ↓ Liberación de hormona de crecimiento (GH) | Menor reparación tisular, menor síntesis proteica |
 | **Energía** | ↓ Repliegue de glucógeno | Menor disponibilidad energética para entrenamientos siguientes |
-| **Hormonal** | ↑ Cortisol (+21%), ↓ Testosterona (-24%) | Estado catabólico, menor recuperación |
+| **Hormonal** | ↑ Cortisol (+21%) ↓ Testosterona (-24%) | Estado catabólico, menor recuperación |
 | **Inflamación** | ↑ IL-6, TNF-α | Mayor inflamación crónica, mayor riesgo de overtraining |
 
 ### La extensión del sueño mejora el rendimiento
@@ -102,7 +102,7 @@ Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados
 | **Tenis** | ↑ Porcentaje de servicios exitosos |
 | **General** | ↑ Sprint, ↑ resistencia, ↓ fatiga |
 
-&gt; **"Aumentar el tiempo total de sueño (sleep extension) es una de las intervenciones más efectivas y subutilizadas para mejorar el rendimiento deportivo."**
+**"Aumentar el tiempo total de sueño (sleep extension) es una de las intervenciones más efectivas y subutilizadas para mejorar el rendimiento deportivo."**
 
 ### Las siestas: aliadas con reglas
 
@@ -113,7 +113,7 @@ Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados
 | **60 minutos** | Restaura fuerza y potencia tras privación parcial | Inercia del sueño moderada |
 | **&gt;90 minutos** | Riesgo de entrar en sueño profundo | Alta inercia, peor rendimiento inmediato |
 
-&gt; **"La siesta ideal para atletas: 20–30 minutos, entre las 13:00 y 15:00. Más allá de 30 minutos, el riesgo de inercia del sueño supera el beneficio."**
+**"La siesta ideal para atletas: 20–30 minutos, entre las 13:00 y 15:00. Más allá de 30 minutos, el riesgo de inercia del sueño supera el beneficio."**
 
 ---
 
@@ -135,7 +135,7 @@ Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados
 | **Vespertino (owl)** | Tardes (16:00–20:00) | Entrenar tarde, evitar competencias muy tempranas |
 | **Intermedio** | Mediodía | Flexible, pero mantener consistencia |
 
-&gt; **"Un atleta vespertino puede perder hasta un 10% de rendimiento si compite a las 8:00 de la mañana. La programación de competencias debe considerar el cronotipo."**
+**"Un atleta vespertino puede perder hasta un 10% de rendimiento si compite a las 8:00 de la mañana. La programación de competencias debe considerar el cronotipo."**
 
 ---
 
@@ -187,7 +187,7 @@ Y lo hizo analizando meta-análisis recientes, ensayos controlados aleatorizados
 
 ## 📝 Conclusión final del artículo
 
-&gt; **"El sueño constituye un pilar central de la salud mental, el rendimiento deportivo y la recuperación. La integración de estrategias de entrenamiento que consideren el sueño, los principios circadianos y programas de actividad física individualizados aparece esencial para optimizar los beneficios en salud, rendimiento y recuperación."**
+**"El sueño constituye un pilar central de la salud mental, el rendimiento deportivo y la recuperación. La integración de estrategias de entrenamiento que consideren el sueño, los principios circadianos y programas de actividad física individualizados aparece esencial para optimizar los beneficios en salud, rendimiento y recuperación."**
 
 La evidencia es clara: **no podés entrenar de más y dormir de menos**. El sueño no es un lujo ni un descanso pasivo. Es un estado activo de recuperación donde ocurren los procesos más importantes para la adaptación al entrenamiento.
 
@@ -226,7 +226,7 @@ La evidencia es clara: **no podés entrenar de más y dormir de menos**. El sue�
 
 ## 💡 Mensaje clave del estudio
 
-&gt; **"No entrenás cuando estás en el gimnasio. Entrenás cuando dormís. El gimnasio es el estímulo; el sueño es la adaptación. Sin uno, el otro no sirve."**
+**"No entrenás cuando estás en el gimnasio. Entrenás cuando dormís. El gimnasio es el estímulo; el sueño es la adaptación. Sin uno, el otro no sirve."**
 
 La gran paradoja del deporte moderno es que buscamos suplementos, tecnología y protocolos sofisticados mientras ignoramos la intervención más potente, gratuita y segura: **dormir suficiente y bien**.
 
