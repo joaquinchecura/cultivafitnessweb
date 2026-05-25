@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const MP_LINK = 'link.mercadopago.com.ar/cultivafitnessapp'; // ← REEMPLAZAR CON TU LINK REAL
+const MP_LINK = 'htpss://link.mercadopago.com.ar/cultivafitnessapp'; // ← REEMPLAZAR CON TU LINK REAL
 
 export function TipWidget() {
   const [isOpen, setIsOpen] = useState(false);
