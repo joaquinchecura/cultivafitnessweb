@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
-const MP_LINK = 'htpss://link.mercadopago.com.ar/cultivafitnessapp'; // ← REEMPLAZAR CON TU LINK REAL
+const MP_LINK = 'https://link.mercadopago.com.ar/cultivafitnessapp'; // ← REEMPLAZAR CON TU LINK REAL
 
 export function TipWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -187,7 +187,7 @@ export function TipWidget() {
                   fontWeight: 700,
                 }}
               >
-                ¿Te ayudó a entrenar?
+                ¿Te ayudó a sentirte mejor?
               </strong>
               <span
                 style={{
@@ -210,15 +210,15 @@ export function TipWidget() {
               margin: '0 0 18px 0',
             }}
           >
-            Usás mis webapps gratis para planificar tus entrenos. Si te aportan valor, podés dejarme un tip.
+            Usá mis webapps totalmente gratis para cultivar tu cuerpo y mente. Si te aportan valor, podés dejarme un tip.
           </p>
 
           {/* Montos */}
           <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
             {[
-              { amount: 500, label: '$500', featured: false },
-              { amount: 1000, label: '$1.000', featured: true },
-              { amount: 2000, label: '$2.000', featured: false },
+              { amount: 2500, label: '$500', featured: false },
+              { amount: 5000, label: '$1.000', featured: true },
+              { amount: 10000, label: '$2.000', featured: false },
             ].map((option) => (
               <a
                 key={option.amount}
