@@ -6,7 +6,7 @@ date: "2026-05-10"
 readTime: "5 min"
 image: ""
 paperUrl: "https://doi.org/10.3390/nu16173007"
-videoUrl: ""
+videoUrl: "https://www.youtube.com/watch?v=siXfnLfoNUA"
 excerpt: "Un meta-análisis en red de 78 ensayos clínicos con 5.219 participantes rankea las 4 combinaciones dieta+ejercicio más populares: restricción calórica, ayuno 16:8, ayuno 5:2 y cetogénica. Spoiler: no todas funcionan igual, y el género cambia todo."
 ---
 
@@ -139,7 +139,7 @@ Los propios autores son honestos sobre los límites:
 
 ## 📝 Conclusión final del artículo
 
-&gt; *"La restricción calórica combinada con ejercicio produce los mejores efectos generales en la reducción de peso, porcentaje de grasa y mantenimiento de masa magra, constituyendo la opción óptima para mejorar la composición corporal. Le sigue el ayuno con restricción horaria + ejercicio, que tiene un impacto ligeramente menor pero destaca como el método más efectivo para preservar masa magra en mujeres. Aunque la dieta cetogénica + ejercicio es efectiva para reducir peso, es comparativamente menos efectiva para disminuir el porcentaje de grasa y mantener masa magra, considerándose una opción subóptima."*
+*"La restricción calórica combinada con ejercicio produce los mejores efectos generales en la reducción de peso, porcentaje de grasa y mantenimiento de masa magra, constituyendo la opción óptima para mejorar la composición corporal. Le sigue el ayuno con restricción horaria + ejercicio, que tiene un impacto ligeramente menor pero destaca como el método más efectivo para preservar masa magra en mujeres. Aunque la dieta cetogénica + ejercicio es efectiva para reducir peso, es comparativamente menos efectiva para disminuir el porcentaje de grasa y mantener masa magra, considerándose una opción subóptima."*
 
 ---
 
