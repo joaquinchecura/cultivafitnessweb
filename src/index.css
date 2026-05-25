@@ -201,10 +201,10 @@
   }
 
   /* Animación del anillo pulsante del TipWidget */
-    @keyframes tipwidget-ping {
+  @keyframes tipwidget-ping {
     75%, 100% {
-    transform: scale(1.4);
-    opacity: 0;
+     transform: scale(1.4);
+     opacity: 0;
    }
   }
 }
