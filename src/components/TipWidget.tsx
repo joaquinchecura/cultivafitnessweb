@@ -216,9 +216,9 @@ export function TipWidget() {
           {/* Montos */}
           <div style={{ display: 'flex', gap: '8px', marginBottom: '16px' }}>
             {[
-              { amount: 2500, label: '$500', featured: false },
-              { amount: 5000, label: '$1.000', featured: true },
-              { amount: 10000, label: '$2.000', featured: false },
+              { amount: 2500, label: '$2.500', featured: false },
+              { amount: 5000, label: '$5.000', featured: true },
+              { amount: 10000, label: '$10.000', featured: false },
             ].map((option) => (
               <a
                 key={option.amount}
