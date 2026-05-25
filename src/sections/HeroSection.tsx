@@ -64,7 +64,7 @@ export function HeroSection() {
           ref={subtitleRef}
           className="opacity-0 text-cultiva-secondary text-lg sm:text-xl max-w-[640px] mx-auto mb-10 leading-relaxed"
         >
-          Un ecosistema de apps diseñadas para transformar tu estado físico, tu ingesta nutricional y tu sistema de emociones. Evaluaciones, planificaciones y entrenamientos hechos por humanos con asistencia de IA.
+          Un ecosistema de apps diseñadas para transformar tu estado físico y mental. Evaluación, planificación y entrenamiento hechos por profesionales humanos con asistencia de IA.
         </p>
 
         {/* CTA placeholder — listo para agregar botones */}
