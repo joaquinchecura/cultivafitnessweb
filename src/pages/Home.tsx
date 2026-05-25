@@ -9,6 +9,7 @@ import { FeaturesSection } from '../sections/FeaturesSection';
 import { BlogSection } from '../sections/BlogSection';
 import { SocialSection } from '../sections/SocialSection';
 import { Footer } from '../sections/Footer';
+import { TipWidget } from '../components/TipWidget';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,6 +48,9 @@ export default function Home() {
         <SocialSection />
       </main>
       <Footer />
+
+      {/* Widget flotante - siempre al final, fuera del flujo */}
+      <TipWidget />
     </div>
   );
 }
