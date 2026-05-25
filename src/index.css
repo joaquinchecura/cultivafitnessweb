@@ -199,4 +199,12 @@
     padding: 0;
     color: #8FA68A;
   }
+
+  /* Animación del anillo pulsante del TipWidget */
+    @keyframes tipwidget-ping {
+    75%, 100% {
+    transform: scale(1.4);
+    opacity: 0;
+   }
+  }
 }
