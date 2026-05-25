@@ -10,7 +10,7 @@ videoUrl: "https://www.youtube.com/watch?v=siXfnLfoNUA"
 excerpt: "Un meta-análisis en red de 78 ensayos clínicos con 5.219 participantes rankea las 4 combinaciones dieta+ejercicio más populares: restricción calórica, ayuno 16:8, ayuno 5:2 y cetogénica. Spoiler: no todas funcionan igual, y el género cambia todo."
 ---
 
-Si alguna vez te preguntaste si es mejor hacer ayuno intermitente, keto o simplemente comer un poco menos mientras entrenás, este artículo es para vos. Un estudio científico reciente analizó **78 ensayos clínicos con más de 5.000 personas** para responder exactamente eso — y los resultados sorprenden, especialmente si sos mujer o hombre.
+Si alguna vez te preguntaste si es mejor hacer ayuno intermitente, keto o simplemente comer un poco menos mientras entrenás, este artículo es para vos. Un estudio científico reciente analizó **78 ensayos clínicos con más de 5.000 personas** para responder exactamente eso y los resultados sorprenden, especialmente si sos mujer o hombre.
 
 ---
 
