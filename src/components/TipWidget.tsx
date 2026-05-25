@@ -7,8 +7,8 @@ const MP_LINK = 'link.mercadopago.com.ar/cultivafitnessapp'; // ← REEMPLAZAR C
 export function TipWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const panelRef = useRef<<HTMLDivElement>(null);
-  const triggerRef = useRef<<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   const toggleWidget = () => setIsOpen((prev) => !prev);
 
