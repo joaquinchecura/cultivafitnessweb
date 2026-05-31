@@ -115,7 +115,7 @@ De todos los tipos de proteína analizados, solo el **whey (suero de leche)** mo
 
 Aquí está el hallazgo más importante — y el que menos se menciona en las publicidades de suplementos:
 
-&gt; **Todos los efectos significativos encontrados provienen de estudios donde el grupo que tomó proteína consumió MÁS calorías que el grupo control.**
+**Todos los efectos significativos encontrados provienen de estudios donde el grupo que tomó proteína consumió MÁS calorías que el grupo control.**
 
 En los estudios donde ambos grupos comieron exactamente la misma cantidad de calorías, los beneficios de la proteína desaparecieron. Esto sugiere que parte del efecto positivo podría deberse simplemente a que el grupo proteína comió más, no a la proteína en sí misma.
 
@@ -169,7 +169,7 @@ No gastes en dosis altas. El punto de máxima eficiencia está en 1 g/kg/día de
 
 ## 💡 Mensaje clave del estudio
 
-&gt; La proteína no es magia. Pero tampoco es un mito. **Si tu alimentación ya es suficiente, el suplemento agrega poco. Si te falta proteína o calorías, puede hacer una diferencia real.** La clave está en conocer tu punto de partida y suplementar con inteligencia, no por moda.
+La proteína no es magia. Pero tampoco es un mito. **Si tu alimentación ya es suficiente, el suplemento agrega poco. Si te falta proteína o calorías, puede hacer una diferencia real.** La clave está en conocer tu punto de partida y suplementar con inteligencia, no por moda.
 
 El estudio refuerza algo que en Cultiva Fitness repetimos mucho: **los resultados vienen de la consistencia en el entrenamiento, la alimentación bien estructurada y el descanso** — los suplementos son solo el último escalón.
 
