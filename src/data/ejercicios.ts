@@ -723,7 +723,7 @@ export const categorias: Categoria[] = [
             descripcion: "Ejercicio de bicicleta fija para mejorar tu rendimiento físico.",
           },
           {
-            nombre: "Camina en escalador",
+            nombre: "Caminata en escalador",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Camina en escalador.jpeg",
             descripcion: "Ejercicio de camina en escalador para mejorar tu rendimiento físico.",
           },
@@ -753,7 +753,7 @@ export const categorias: Categoria[] = [
             descripcion: "Ejercicio de remo ergométrico para mejorar tu rendimiento físico.",
           },
           {
-            nombre: "Remos con máquina",
+            nombre: "Remo con máquina",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Remos con máquina.jpeg",
             descripcion: "Ejercicio de remos con máquina para mejorar tu rendimiento físico.",
           },
@@ -889,7 +889,7 @@ export const categorias: Categoria[] = [
             descripcion: "Ejercicio de sentadillas con brazos elevados para mejorar tu rendimiento físico.",
           },
           {
-            nombre: "Skipping a",
+            nombre: "Skipping alto",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Skipping A.jpeg",
             descripcion: "Ejercicio de skipping a para mejorar tu rendimiento físico.",
           },
