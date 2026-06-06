@@ -1,14 +1,10 @@
 import { Leaf, Heart } from 'lucide-react';
 
 export function Footer() {
-  const appLinks = ['BodyMind', 'Supply', 'Neura', 'Running', 'Reckon'];
-  const resourceLinks = ['Blog', 'Ciencia', 'FAQs', 'Guías'];
-
   return (
-    <footer className="relative pt-20 pb-10 px-6 bg-cultiva-bg border-t border-cultiva-green/[0.08]">
+    <footer className="relative pt-16 pb-8 px-6 bg-cultiva-bg border-t border-cultiva-green/[0.08]">
       <div className="max-w-[1280px] mx-auto">
-        {/* Top Row */}
-        <div className="flex flex-col lg:flex-row justify-between gap-12 mb-16">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
           {/* Brand */}
           <div className="max-w-[280px]">
             <div className="flex items-center gap-2 mb-4">
@@ -29,32 +25,8 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Link Columns */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-16">
-            <div>
-              <h4 className="text-cultiva-text text-sm font-semibold mb-4">Apps</h4>
-              <ul className="space-y-3">
-                {appLinks.map((link) => (
-                  <li key={link}>
-                    <span className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300 cursor-pointer">
-                      {link}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-cultiva-text text-sm font-semibold mb-4">Recursos</h4>
-              <ul className="space-y-3">
-                {resourceLinks.map((link) => (
-                  <li key={link}>
-                    <span className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300 cursor-pointer">
-                      {link}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Links: Legal + Contacto */}
+          <div className="grid grid-cols-2 gap-8 lg:gap-16">
             <div>
               <h4 className="text-cultiva-text text-sm font-semibold mb-4">Legal</h4>
               <ul className="space-y-3">
