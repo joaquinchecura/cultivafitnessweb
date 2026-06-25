@@ -54,7 +54,7 @@ export function HeroSection() {
           ref={titleRef}
           className="opacity-0 translate-y-10 text-5xl sm:text-6xl lg:text-7xl font-extrabold text-cultiva-text leading-tight tracking-tight mb-6"
         >
-          Cultiva tu{' '}
+          Cultiva {' '}
           <span className="gradient-text">CUERPO</span>{' '}
           y{' '}
           <span className="gradient-text">MENTE</span>
