@@ -3,7 +3,7 @@ title: "Obesidad y ejercicio: qué le pasa realmente a tu grasa, hígado y músc
 slug: "obesidad-ejercicio-organos-metabolicos"
 category: "salud-metabolica"
 date: "2026-05-16"
-readTime: "8 min"
+readTime: "5 min"
 image: "/images/blog/12.obesidad-ejercicio.jpeg"
 paperUrl: "https://doi.org/10.1210/endrev/bnaf017"
 videoUrl: "https://www.youtube.com/watch?v=tYmMdY4RNFY"
