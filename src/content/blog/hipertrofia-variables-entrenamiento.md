@@ -6,6 +6,7 @@ date: "2026-07-03"
 readTime: "6 min"
 image: "/images/blog/11.hipertrofia-entrenamiento.jpeg"
 paperUrl: "https://doi.org/10.3389/fspor.2022.949021"
+videoUrl: "https://www.youtube.com/watch?v=Ux73mq_XokQ&t=35s"
 excerpt: "Una umbrella review que resume 14 meta-análisis (178 estudios, 4.784 personas) responde las preguntas de siempre: ¿cuántas series por semana, con qué carga y cada cuántos días? Los resultados desarman varios mitos del gimnasio."
 ---
 
