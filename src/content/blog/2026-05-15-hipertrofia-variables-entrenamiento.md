@@ -2,7 +2,7 @@
 title: "¿Cuántas series necesitás para crecer? La ciencia repasó 178 estudios y esto es lo que encontró"
 slug: "hipertrofia-variables-entrenamiento"
 category: "entrenamiento"
-date: "2026-07-03"
+date: "2026-05-15"
 readTime: "6 min"
 image: "/images/blog/11.hipertrofia-entrenamiento.jpeg"
 paperUrl: "https://doi.org/10.3389/fspor.2022.949021"
