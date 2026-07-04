@@ -1,7 +1,7 @@
 ---
 title: "Osteosarcopenia: el combo silencioso de hueso y músculo débil que multiplica el riesgo de caídas"
 slug: "osteosarcopenia-hueso-musculo-caidas"
-category: "salud-metabolica"
+category: "salud"
 date: "2026-06-04"
 readTime: "5 min"
 image: "/images/blog/16.osteosarcopenia.jpeg"
