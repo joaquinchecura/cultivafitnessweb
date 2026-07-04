@@ -1,11 +1,12 @@
 ---
 title: "El ejercicio no solo te hace sentir mejor: frena 14 mecanismos moleculares del envejecimiento"
 slug: "ejercicio-hallmarks-envejecimiento"
-category: "salud-metabolica"
-date: "2026-07-03"
-readTime: "9 min"
+category: "salud"
+date: "2026-06-21"
+readTime: "5 min"
 image: "/images/blog/18.ejercicio-envejecimiento.jpeg"
 paperUrl: "https://doi.org/10.1016/j.jshs.2025.101108"
+videoUrl: "https://www.youtube.com/watch?v=8Cubj0Bo4go"
 excerpt: "Una revisión publicada en Journal of Sport and Health Science, con Guido Kroemer y Carlos López-Otín entre los autores —referentes mundiales en biología del envejecimiento—, repasa cómo el ejercicio actúa sobre los 14 mecanismos moleculares que definen el envejecimiento."
 ---
 
