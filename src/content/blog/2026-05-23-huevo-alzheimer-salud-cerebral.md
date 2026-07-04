@@ -1,7 +1,7 @@
 ---
 title: "¿El huevo protege tu cerebro? Un estudio de 15 años en 40.000 personas encontró un vínculo con el Alzheimer"
 slug: "huevo-alzheimer-salud-cerebral"
-category: "nutricion"
+category: "salud"
 date: "2026-05-23"
 readTime: "5 min"
 image: "/images/blog/14.huevo-alzheimer.jpeg"

@@ -1,7 +1,7 @@
 ---
 title: "¿Las pesas bajan la presión igual que correr? La verdad que no te contaron"
 slug: "fuerza-vs-aerobico-hipertension"
-category: "salud"
+category: "entrenamiento"
 date: "2026-05-05"
 readTime: "5 min"
 image: "/images/blog/9.fuerza vs aerobico.jpeg"
