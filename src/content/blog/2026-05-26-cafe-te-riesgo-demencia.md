@@ -2,7 +2,7 @@
 title: "Café y té: ¿cuánto es demasiado para tu cerebro? Un meta-análisis con más de 450.000 personas responde"
 slug: "cafe-te-riesgo-demencia"
 category: "nutricion"
-date: "2026-07-03"
+date: "2026-05-26"
 readTime: "6 min"
 image: "/images/blog/15.cafe-te-demencia.jpeg"
 paperUrl: "https://doi.org/10.1016/j.jeph.2026.203168"

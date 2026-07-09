@@ -2,7 +2,7 @@
 title: "¿Qué dieta reduce realmente la inflamación? Una umbrella review de 30 revisiones responde"
 slug: "dietas-antiinflamatorias-evidencia"
 category: "nutricion"
-date: "2026-07-03"
+date: "2026-07-08"
 readTime: "7 min"
 image: "/images/blog/20.dietas-antiinflamatorias.jpeg"
 paperUrl: "https://doi.org/10.1093/nutrit/nuaf104"
