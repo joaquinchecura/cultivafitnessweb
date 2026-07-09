@@ -110,26 +110,26 @@ Los autores concluyen que la osteosarcopenia debería considerarse un síndrome 
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si trabajás con clientes adultos mayores:**
-Priorizá el entrenamiento de fuerza progresivo combinado con ejercicios de equilibrio, al menos 2-3 veces por semana. Esta revisión confirma que es una de las pocas intervenciones con **efecto dual comprobado** sobre hueso y músculo al mismo tiempo.
+**Si sos un adulto mayor, o tenés padres o abuelos en esa etapa:**
+Priorizar el entrenamiento de fuerza progresivo combinado con ejercicios de equilibrio, al menos 2-3 veces por semana, es una de las pocas intervenciones con **efecto dual comprobado** sobre hueso y músculo al mismo tiempo.
 
-**Si programás nutrición para esta población:**
+**Para la parte nutricional:**
 Asegurate de cubrir proteína (1.2-1.5 g/kg/día), calcio adecuado y niveles suficientes de vitamina D — son los tres pilares nutricionales que la evidencia respalda para sostener ambos tejidos a la vez.
 
-**Si tenés clientes con antecedentes de fractura:**
-Tomalo como una señal de alerta importante: la prevalencia de osteosarcopenia en personas con fracturas previas es muy alta, así que vale la pena sugerir una evaluación médica que incluya densidad ósea *y* función muscular, no solo una de las dos.
+**Si tuviste una fractura en los últimos años:**
+Tomalo como una señal de alerta importante: la prevalencia de osteosarcopenia en personas con fracturas previas es muy alta, así que vale la pena consultar por una evaluación médica que incluya densidad ósea *y* función muscular, no solo una de las dos.
 
-**Para la comunicación con tu audiencia:**
-Es un buen ángulo para explicar por qué "hacer solo cardio" o "solo caminar" no alcanza a partir de cierta edad — el estímulo de carga y fuerza es el que realmente protege tanto al hueso como al músculo de forma simultánea.
+**Para entender por qué "solo caminar" no alcanza:**
+A partir de cierta edad, el estímulo de carga y fuerza es el que realmente protege tanto al hueso como al músculo de forma simultánea — el cardio de baja intensidad por sí solo no genera ese estímulo.
 
-**Si trabajás junto a otros profesionales de la salud:**
-Este marco conceptual es útil para justificar por qué recomendar entrenamiento de fuerza en adultos mayores no es solo una preferencia estética o de rendimiento, sino una intervención con respaldo clínico serio para prevenir caídas y fracturas.
+**Para conversar con tu médico o profesional de salud:**
+Este marco conceptual es útil para entender por qué el entrenamiento de fuerza en la adultez mayor no es una preferencia estética ni de rendimiento, sino una intervención con respaldo clínico serio para prevenir caídas y fracturas.
 
 ---
 
 ## 💡 Mensaje clave del estudio
 
-**Hueso y músculo envejecen juntos, y cuando ambos se debilitan al mismo tiempo, el riesgo de caídas y fracturas no se suma: se multiplica.** La buena noticia es que las herramientas para prevenirlo son simples y ya las conocemos bien desde el mundo del entrenamiento: fuerza progresiva, buena ingesta de proteína, calcio y vitamina D. Si trabajás con población adulta mayor, este es un argumento más —y con respaldo de uno de los mayores expertos mundiales en el tema— para que el entrenamiento de fuerza deje de ser "opcional" y pase a ser parte central de cualquier estrategia de salud a largo plazo.
+**Hueso y músculo envejecen juntos, y cuando ambos se debilitan al mismo tiempo, el riesgo de caídas y fracturas no se suma: se multiplica.** La buena noticia es que las herramientas para prevenirlo son simples y ya las conocemos bien desde el mundo del entrenamiento: fuerza progresiva, buena ingesta de proteína, calcio y vitamina D. Si estás en la adultez mayor —o pensando en cómo cuidar a alguien que lo está—, este es un argumento más —y con respaldo de uno de los mayores expertos mundiales en el tema— para que el entrenamiento de fuerza deje de ser "opcional" y pase a ser parte central de cualquier estrategia de salud a largo plazo.
 
 ---
 

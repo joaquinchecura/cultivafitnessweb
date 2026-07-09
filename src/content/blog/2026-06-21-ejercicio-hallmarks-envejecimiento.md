@@ -143,26 +143,26 @@ Los autores concluyen que la evidencia actual sugiere que el ejercicio modula fa
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si programás entrenamiento para adultos mayores:**
+**Si sos adulto mayor o estás pensando en tu entrenamiento a largo plazo:**
 La evidencia respalda combinar modalidades: fuerza, aeróbico, equilibrio y flexibilidad. Ningún tipo de ejercicio por sí solo cubre los 14 mecanismos igual de bien — la combinación es la estrategia con más sustento.
 
-**Si buscás fundamentar por qué "hay que entrenar" más allá de lo estético:**
-Este paper te da argumentos concretos y citables: el ejercicio reduce el daño al ADN, mejora la función mitocondrial, baja la inflamación crónica y hasta mejora la composición del microbioma intestinal — beneficios que ocurren "por dentro" incluso antes de notarse en el espejo.
+**Si buscás un motivo para entrenar más allá de lo estético:**
+Este paper te da argumentos concretos: el ejercicio reduce el daño al ADN, mejora la función mitocondrial, baja la inflamación crónica y hasta mejora la composición del microbioma intestinal — beneficios que ocurren "por dentro" incluso antes de notarse en el espejo.
 
-**Si tenés clientes que entrenan en exceso pensando que "más es mejor":**
-Es un buen momento para señalar la evidencia de relación en U: el exceso de volumen sin descanso adecuado puede generar efectos opuestos a los buscados, incluyendo mayor estrés oxidativo y peor función mitocondrial.
+**Si entrenás en exceso pensando que "más es mejor":**
+Vale la pena prestar atención a la evidencia de relación en U: el exceso de volumen sin descanso adecuado puede generar efectos opuestos a los buscados, incluyendo mayor estrés oxidativo y peor función mitocondrial.
 
-**Si querés incorporar HIIT en la programación de clientes mayores (con la supervisión adecuada):**
-Esta revisión destaca al HIIT como particularmente efectivo para la longitud telomérica, aunque siempre debe adaptarse a la condición física y cardiovascular individual.
+**Si estás pensando en incorporar HIIT a tu rutina (con la supervisión adecuada si tenés alguna condición previa):**
+Esta revisión destaca al HIIT como particularmente efectivo para la longitud telomérica, aunque siempre debe adaptarse a tu condición física y cardiovascular individual.
 
-**Para la comunicación con tu audiencia:**
-Es un excelente recurso para explicar que el "antienvejecimiento" real no viene de una crema o un suplemento milagroso, sino de un estímulo tan simple y accesible como el movimiento regular y bien programado.
+**Para pensar el concepto de "antienvejecimiento":**
+Es un excelente recurso para entender que el "antienvejecimiento" real no viene de una crema o un suplemento milagroso, sino de un estímulo tan simple y accesible como el movimiento regular y bien programado.
 
 ---
 
 ## 💡 Mensaje clave del estudio
 
-**El ejercicio es, hasta ahora, la intervención no farmacológica más completa que tenemos contra el envejecimiento biológico.** No actúa sobre un solo mecanismo: toca los 14 sellos distintivos que la ciencia identifica como responsables de que envejezcamos, desde el ADN de cada célula hasta el equilibrio de las bacterias en tu intestino. Si trabajás con clientes de cualquier edad, este es un argumento sólido —respaldado por algunos de los científicos más reconocidos del mundo en esta área— para posicionar el entrenamiento no como una opción estética, sino como una de las herramientas más potentes de medicina preventiva que existen hoy.
+**El ejercicio es, hasta ahora, la intervención no farmacológica más completa que tenemos contra el envejecimiento biológico.** No actúa sobre un solo mecanismo: toca los 14 sellos distintivos que la ciencia identifica como responsables de que envejezcamos, desde el ADN de cada célula hasta el equilibrio de las bacterias en tu intestino. A cualquier edad, este es un argumento sólido —respaldado por algunos de los científicos más reconocidos del mundo en esta área— para pensar el entrenamiento no como una opción estética, sino como una de las herramientas más potentes de medicina preventiva que existen hoy.
 
 ---
 

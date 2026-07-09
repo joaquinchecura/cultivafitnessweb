@@ -110,26 +110,26 @@ Los autores concluyen que el envejecimiento afecta profundamente al sistema nerv
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si trabajás con clientes adultos mayores:**
-No alcanza con "moverse" o hacer ejercicios livianos de mantenimiento. Para estimular realmente el sistema nervioso, es necesario incluir entrenamiento de fuerza con cargas que representen al menos el 60% de la fuerza máxima del cliente, progresando de forma segura hacia intensidades más altas.
+**Si sos adulto mayor, o estás pensando en cómo entrena alguien cercano en esa etapa:**
+No alcanza con "moverse" o hacer ejercicios livianos de mantenimiento. Para estimular realmente el sistema nervioso, es necesario incluir entrenamiento de fuerza con cargas que representen al menos el 60% de tu fuerza máxima, progresando de forma segura hacia intensidades más altas.
 
-**Si tenés un cliente con una lesión o inmovilización en un miembro:**
-El fenómeno de cross-education sugiere que entrenar el lado sano con intensidad puede ayudar a mantener parte de la capacidad neural del lado afectado — un dato útil para conversar con el equipo de rehabilitación.
+**Si tenés una lesión o inmovilización en un miembro:**
+El fenómeno de cross-education sugiere que entrenar el lado sano con intensidad puede ayudar a mantener parte de la capacidad neural del lado afectado — un dato útil para conversar con tu kinesiólogo o fisioterapeuta durante la rehabilitación.
 
-**Si programás para prevención de caídas y fragilidad:**
-Priorizá ejercicios que incluyan una fase concéntrica rápida o explosiva (dentro de lo seguro para cada persona), ya que el desarrollo de fuerza *rápida* (rate of force development) es tan importante como la fuerza máxima para reaccionar ante una pérdida de equilibrio.
+**Si te preocupa la prevención de caídas:**
+Priorizá ejercicios que incluyan una fase concéntrica rápida o explosiva (dentro de lo seguro para vos), ya que el desarrollo de fuerza *rápida* (rate of force development) es tan importante como la fuerza máxima para reaccionar ante una pérdida de equilibrio.
 
-**Para pensar la progresión a largo plazo:**
-Dado que parte del deterioro neural es irreversible una vez que ocurre, el mensaje para clientes de mediana edad es claro: **empezar a entrenar fuerza de forma seria antes de los 60-65 años** puede ser más valioso que intentar "recuperar" después de que el deterioro ya avanzó.
+**Si estás en la mediana edad y pensás "todavía no me hace falta entrenar fuerza en serio":**
+Dado que parte del deterioro neural es irreversible una vez que ocurre, el mensaje es claro: **empezar a entrenar fuerza de forma seria antes de los 60-65 años** puede ser más valioso que intentar "recuperar" después de que el deterioro ya avanzó.
 
-**Para la comunicación con tu audiencia:**
-Es un excelente argumento científico para desmontar la idea de que "a cierta edad ya no tiene sentido entrenar pesado". La evidencia sugiere exactamente lo contrario: es cuando más sentido tiene.
+**Para pensar el mito de "entrenar liviano por seguridad":**
+Este estudio es un excelente argumento científico para desmontar esa idea. La evidencia sugiere exactamente lo contrario: entrenar con cargas exigentes (con la técnica y progresión adecuadas) es cuando más sentido tiene, no menos.
 
 ---
 
 ## 💡 Mensaje clave del estudio
 
-**Perder fuerza con la edad no es solo perder músculo: es perder la capacidad del sistema nervioso de "encender" ese músculo de forma eficiente.** La buena noticia es que ese sistema nervioso conserva plasticidad incluso en la vejez, y responde al estímulo correcto — que no es cualquier ejercicio, sino entrenamiento de fuerza con cargas altas y, cuando sea posible, con intención de movimiento rápido. Si trabajás con población adulta o adulta mayor, este es un argumento sólido para dejar de lado el mito de "entrenar liviano por seguridad" y priorizar, con la progresión adecuada, cargas que realmente desafíen al sistema nervioso.
+**Perder fuerza con la edad no es solo perder músculo: es perder la capacidad del sistema nervioso de "encender" ese músculo de forma eficiente.** La buena noticia es que ese sistema nervioso conserva plasticidad incluso en la vejez, y responde al estímulo correcto — que no es cualquier ejercicio, sino entrenamiento de fuerza con cargas altas y, cuando sea posible, con intención de movimiento rápido. Si estás en la adultez o adultez mayor, este es un argumento sólido para dejar de lado el mito de "entrenar liviano por seguridad" y priorizar, con la progresión adecuada, cargas que realmente desafíen a tu sistema nervioso.
 
 ---
 

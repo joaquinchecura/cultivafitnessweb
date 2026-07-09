@@ -2,11 +2,11 @@
 title: "Café y té: ¿cuánto es demasiado para tu cerebro? Un meta-análisis con más de 450.000 personas responde"
 slug: "cafe-te-riesgo-demencia"
 category: "nutricion"
-date: "2026-05-26"
-readTime: "5 min"
+date: "2026-07-03"
+readTime: "6 min"
 image: "/images/blog/15.cafe-te-demencia.jpeg"
 paperUrl: "https://doi.org/10.1016/j.jeph.2026.203168"
-videourl: "https://www.youtube.com/watch?v=nuxj9qHIH6o"
+videoUrl: "https://www.youtube.com/watch?v=nuxj9qHIH6o"
 excerpt: "Un meta-análisis de dosis-respuesta que combinó 10 estudios de cohorte con más de 450.000 personas encontró que café y té no se comportan igual frente al riesgo de demencia: uno tiene un punto óptimo claro, el otro mejora cuanto más tomás."
 ---
 
@@ -104,14 +104,14 @@ Los autores concluyen que el consumo moderado de café no parece afectar el ries
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si tu cliente toma café como parte de su rutina de entrenamiento (pre-entreno natural):**
+**Si tomás café como parte de tu rutina de entrenamiento (pre-entreno natural):**
 La evidencia de este estudio no es un problema para el uso habitual de 2-3 tazas diarias — de hecho, es el rango asociado a menor riesgo. El punto de atención es evitar escalar mucho más allá de eso de forma sostenida.
 
 **Si buscás incorporar hábitos con respaldo para la salud cognitiva a largo plazo:**
 Sumar té (especialmente verde) de forma regular es una estrategia simple y accesible, con una relación dosis-respuesta que -según este estudio- se mantiene favorable incluso en consumos más altos que el café.
 
-**Si tenés clientes que consumen café en exceso "para rendir más":**
-Es un buen disparador de conversación: más allá del efecto agudo en el entrenamiento, sostener un consumo muy alto en el tiempo (3+ tazas diarias) podría no ser neutro para la salud cerebral a largo plazo, según esta evidencia.
+**Si sos de los que toma café en exceso "para rendir más":**
+Vale la pena hacer una pausa y pensarlo: más allá del efecto agudo en el entrenamiento, sostener un consumo muy alto en el tiempo (3+ tazas diarias) podría no ser neutro para la salud cerebral a largo plazo, según esta evidencia.
 
 **Para pensar la recomendación general:**
 No se trata de elegir entre café o té — podés pensarlos como complementarios: café en dosis moderada durante el día y té como parte de una rutina relajante por la tarde/noche, dentro de un estilo de vida que en general prioriza el movimiento y una buena alimentación.

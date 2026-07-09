@@ -110,7 +110,7 @@ Los autores concluyen que las fibras dietéticas cumplen un rol fundamental en m
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si sos atleta o entrenás fuerte de forma regular:**
+**Si entrenás fuerte de forma regular:**
 Hacé una autoevaluación simple: si comés menos de 20 g de fibra al día, es momento de subirla. Hacelo gradual, agregando fuentes como avena, legumbres, frutas y verduras, apuntando a ~30 g/día en 4-6 semanas.
 
 **Si tenés molestias digestivas antes de entrenar o competir:**
@@ -119,8 +119,8 @@ Es razonable bajar la fibra en las horas previas (elegir carbohidratos "más sim
 **Si estás en una fase de alta proteína (definición, ganancia muscular):**
 No sacrifiques la fibra para "hacer lugar" a la proteína. La evidencia sugiere que ambas pueden convivir bien, siempre que la fibra se mantenga en niveles adecuados.
 
-**Si programás nutrición para un cliente con intestino sensible:**
-Recordá que subir la fibra de golpe puede generar gases y distensión. Una rampa progresiva de varias semanas, con suficiente hidratación, es clave para la tolerancia.
+**Si tenés el intestino sensible:**
+Subir la fibra de golpe puede generar gases y distensión. Andá de a poco: una rampa progresiva de varias semanas, con suficiente hidratación, es clave para la tolerancia.
 
 **Si buscás un extra para rendimiento y recuperación:**
 Considerá incluir fuentes de beta-glucano (avena, cebada) apuntando a ~2 g diarios, ya que es una de las pocas fibras con evidencia específica en mejoras de fuerza, resistencia e inflamación post-ejercicio.

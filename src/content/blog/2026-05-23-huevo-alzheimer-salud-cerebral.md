@@ -109,17 +109,17 @@ Los autores concluyen que el consumo de huevo se asoció de forma inversa con la
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si programás nutrición para clientes mayores de 50-60 años:**
-Este estudio suma otro argumento a favor de incluir huevo con regularidad en la dieta, más allá de su ya conocido aporte proteico — pensándolo también como parte de una estrategia de salud cognitiva a largo plazo.
+**Si tenés más de 50-60 años:**
+Este estudio suma otro argumento a favor de incluir huevo con regularidad en tu dieta, más allá de su ya conocido aporte proteico — pensándolo también como parte de una estrategia de salud cognitiva a largo plazo.
 
-**Si tenés clientes que evitan el huevo por el mito del colesterol:**
-Vale la pena actualizar la conversación: la evidencia actual en nutrición ya no sostiene que el colesterol dietético del huevo sea un problema relevante para la mayoría de las personas sanas, y este estudio suma un beneficio adicional a considerar.
+**Si evitás el huevo por el mito del colesterol:**
+Vale la pena actualizar la información: la evidencia actual en nutrición ya no sostiene que el colesterol dietético del huevo sea un problema relevante para la mayoría de las personas sanas, y este estudio suma un beneficio adicional a considerar.
 
-**Si buscás variar las fuentes de colina en la dieta:**
-El huevo es una de las fuentes más concentradas y accesibles de colina. Combinarlo con otras fuentes (hígado, pescado, legumbres) puede ser una estrategia simple para sostener buenos niveles de este nutriente, poco discutido fuera de círculos especializados.
+**Si buscás variar tus fuentes de colina:**
+El huevo es una de las fuentes más concentradas y accesibles de este nutriente. Combinarlo con otras fuentes (hígado, pescado, legumbres) puede ser una estrategia simple para sostener buenos niveles, algo poco discutido fuera de círculos especializados.
 
-**Para la comunicación con tu audiencia:**
-Es un buen ejemplo para explicarle a tu comunidad la diferencia entre "asociación" y "causa" en ciencia — un estudio así no significa "comé huevo y no vas a tener Alzheimer", sino que suma evidencia a favor de un hábito dietético dentro de un estilo de vida saludable en general.
+**Para leer este tipo de estudios con criterio:**
+Es un buen ejemplo para entender la diferencia entre "asociación" y "causa" en ciencia — este estudio no significa "comé huevo y no vas a tener Alzheimer", sino que suma evidencia a favor de un hábito dietético dentro de un estilo de vida saludable en general.
 
 ---
 

@@ -104,17 +104,17 @@ Los autores concluyen que un enfoque integrador de entrenamiento, nutrición y d
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si programás entrenamiento para tus clientes:**
+**Si estás armando o ajustando tu rutina de entrenamiento:**
 Este paper es un buen recordatorio de que el volumen y las variables de entrenamiento (que ya vimos en el umbrella review de hipertrofia) siguen siendo el pilar con mejor evidencia — no descuides eso por perseguir estrategias más "novedosas" de nutrición o recuperación con menos respaldo.
 
-**Si asesorás sobre proteína a clientes:**
-Priorizá fuentes de proteína completa (carnes, huevo, lácteos, legumbres combinadas con cereales, o suplementos de proteína completa como whey o proteína vegetal mixta) por sobre suplementos de aminoácidos aislados si el objetivo es maximizar la síntesis proteica muscular.
+**Si estás pensando en tu ingesta de proteína:**
+Priorizá fuentes de proteína completa (carnes, huevo, lácteos, legumbres combinadas con cereales, o suplementos de proteína completa como whey o proteína vegetal mixta) por sobre suplementos de aminoácidos aislados si tu objetivo es maximizar la síntesis proteica muscular.
 
-**Si notás que un cliente entrena y come bien pero no progresa:**
-Preguntá por su sueño. La evidencia señala que dormir menos de lo necesario puede estar boicoteando silenciosamente todo el trabajo que hacés en el gimnasio y en el plan de alimentación — es una variable que rara vez se audita con el mismo rigor que las series o los macros.
+**Si entrenás y comés bien pero sentís que no progresás:**
+Revisá tu sueño. La evidencia señala que dormir menos de lo necesario puede estar boicoteando silenciosamente todo el trabajo que hacés en el gimnasio y en tu alimentación — es una variable que rara vez se audita con el mismo rigor que las series o los macros.
 
-**Para comunicar con rigor a tu audiencia:**
-Podés usar este marco (SORT) para explicarle a tu comunidad la diferencia entre "lo que sabemos con certeza" (series, carga, proteína total) y "lo que es lógico pero todavía se está terminando de probar" (protocolos específicos de sueño y recuperación) — una forma honesta de comunicar ciencia sin sobre-prometer.
+**Para entender qué tan sólida es cada recomendación:**
+Podés usar este marco (SORT) para distinguir entre "lo que sabemos con certeza" (series, carga, proteína total) y "lo que es lógico pero todavía se está terminando de probar" (protocolos específicos de sueño y recuperación) — una forma honesta de leer contenido de ciencia sin caer en promesas exageradas.
 
 ---
 

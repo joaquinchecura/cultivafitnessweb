@@ -6,6 +6,7 @@ date: "2026-07-03"
 readTime: "7 min"
 image: "/images/blog/20.dietas-antiinflamatorias.jpeg"
 paperUrl: "https://doi.org/10.1093/nutrit/nuaf104"
+videoUrl: "https://www.youtube.com/watch?v=YFyrxNgUkLs"
 excerpt: "Una umbrella review publicada en Nutrition Reviews evaluó 30 revisiones (225 estudios originales) para determinar qué patrones dietéticos completos —no nutrientes aislados— realmente bajan los marcadores de inflamación crónica. El resultado no es lo que todos venden como 'antiinflamatorio'."
 ---
 
@@ -99,20 +100,20 @@ Los autores concluyen que los patrones dietéticos mediterráneo y vegetariano p
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si asesorás nutrición para reducir inflamación crónica:**
-La dieta mediterránea es, hasta ahora, el patrón con mayor y más consistente respaldo científico específico para este objetivo — no un alimento aislado, sino el patrón completo (aceite de oliva, pescado, legumbres, frutas, verduras, cereales integrales, bajo consumo de ultraprocesados).
+**Si tu objetivo es reducir la inflamación crónica a través de la alimentación:**
+La dieta mediterránea es, hasta ahora, el patrón con mayor y más consistente respaldo científico específico para este objetivo — no se trata de sumar un alimento "milagroso", sino de sostener el patrón completo: aceite de oliva, pescado, legumbres, frutas, verduras, cereales integrales y bajo consumo de ultraprocesados.
 
-**Si tenés clientes veganos o vegetarianos:**
-Podés comunicarles que existe evidencia a favor de un efecto antiinflamatorio de su patrón alimentario, aunque con menor certeza que la dieta mediterránea — vale la pena seguir de cerca la investigación en esta área, que sigue creciendo.
+**Si seguís una dieta vegetariana o vegana:**
+Hay evidencia a favor de un efecto antiinflamatorio de este patrón, aunque con menor certeza que la dieta mediterránea. Es un área de investigación que sigue creciendo, así que vale la pena estar atento a estudios futuros.
 
-**Si un cliente te pregunta por la dieta keto "para bajar la inflamación":**
-Es importante ser honesto: la evidencia actual sobre keto y marcadores inflamatorios es todavía limitada e inconclusa. Podés recomendarla por otros motivos si corresponde, pero no como una estrategia antiinflamatoria comprobada.
+**Si estás pensando en la dieta keto "para bajar la inflamación":**
+Vale la pena ser honesto con las expectativas: la evidencia actual sobre keto y marcadores inflamatorios todavía es limitada e inconclusa. Puede tener sentido elegirla por otros motivos, pero no como una estrategia antiinflamatoria comprobada.
 
-**Para la comunicación con tu audiencia:**
-Este estudio es una excelente herramienta para desarmar el marketing de "superalimentos antiinflamatorios" y redirigir la conversación hacia lo que realmente tiene respaldo: el patrón de alimentación general, sostenido en el tiempo, por sobre cualquier alimento o suplemento aislado.
+**Si venís consumiendo contenido sobre "superalimentos antiinflamatorios":**
+Este estudio es un buen filtro para separar el marketing de la evidencia real: lo que muestra respaldo consistente no es un alimento puntual (cúrcuma, jengibre, bayas, etc.) sino el patrón de alimentación general, sostenido en el tiempo.
 
-**Para pensar la recomendación integral:**
-Conectá esto con lo que ya vimos en el artículo sobre obesidad y ejercicio: la dieta mediterránea y el ejercicio regular actúan sobre mecanismos inflamatorios similares (adiponectina, función del tejido graso), lo que sugiere que combinarlos podría tener un efecto sinérgico, aunque este estudio específico no evaluó esa combinación directamente.
+**Si además entrenás de forma regular:**
+Conectando esto con lo que vimos en el artículo sobre obesidad y ejercicio: la dieta mediterránea y el ejercicio regular actúan sobre mecanismos inflamatorios similares (adiponectina, función del tejido graso), lo que sugiere que combinarlos podría potenciar los resultados — aunque este estudio en particular no evaluó esa combinación de forma directa.
 
 ---
 

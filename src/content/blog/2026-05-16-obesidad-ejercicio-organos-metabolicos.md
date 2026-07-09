@@ -10,7 +10,7 @@ videoUrl: "https://www.youtube.com/watch?v=tYmMdY4RNFY"
 excerpt: "Una revisión publicada en Endocrine Reviews repasa décadas de estudios en animales y humanos sobre cómo la obesidad altera la grasa, el hígado y el músculo — y qué cambia exactamente cuando metés ejercicio en la ecuación."
 ---
 
-Si trabajás con clientes que buscan bajar de grasa y mejorar su salud metabólica, seguro te preguntaste alguna vez *qué está pasando por dentro* cuando entrenan. Esta revisión, publicada en **Endocrine Reviews** (una de las revistas más serias en endocrinología), junta la evidencia de estudios en animales y en humanos para explicar exactamente eso: cómo la obesidad daña tres órganos clave —grasa, hígado y músculo— y cómo el ejercicio puede revertir parte de ese daño a nivel molecular.
+Si buscás bajar de grasa y mejorar tu salud metabólica, seguro te preguntaste alguna vez *qué está pasando por dentro* cuando entrenás. Esta revisión, publicada en **Endocrine Reviews** (una de las revistas más serias en endocrinología), junta la evidencia de estudios en animales y en humanos para explicar exactamente eso: cómo la obesidad daña tres órganos clave —grasa, hígado y músculo— y cómo el ejercicio puede revertir parte de ese daño a nivel molecular.
 
 ---
 
@@ -108,17 +108,17 @@ Los propios autores resumen que la obesidad altera de forma profunda la función
 
 ## 🏋️ Aplicación práctica para fitness y deporte
 
-**Si trabajás con clientes en proceso de bajar de grasa:**
-No pienses el ejercicio solo como "quemar calorías". Explicarles que están mejorando la salud de su hígado, su grasa y su músculo a nivel molecular puede ser un gran motivador, más allá de lo que marque la balanza.
+**Si estás en proceso de bajar de grasa:**
+No pienses el ejercicio solo como "quemar calorías". Saber que estás mejorando la salud de tu hígado, tu grasa y tu músculo a nivel molecular puede ser un gran motivador, más allá de lo que marque la balanza.
 
-**Si tu cliente está usando un fármaco GLP-1 (Ozempic, Saxenda, etc.):**
+**Si estás usando un fármaco GLP-1 (Ozempic, Saxenda, etc.):**
 La evidencia respalda combinar el fármaco con entrenamiento, especialmente de fuerza, para proteger la masa muscular durante la pérdida de peso — algo que el fármaco solo no garantiza.
 
-**Si tu cliente tiene hígado graso o prediabetes:**
+**Si tenés hígado graso o prediabetes:**
 Incluso protocolos simples y accesibles (caminatas regulares, sentadillas y flexiones) mostraron beneficios reales sobre la grasa hepática. No hace falta un programa extremo para generar cambios metabólicos significativos.
 
-**Si programás entrenamiento de fuerza:**
-Recordá que el músculo no es solo "estética": es el órgano que más glucosa capta en el cuerpo. Priorizar el entrenamiento de fuerza en clientes con resistencia a la insulina tiene una justificación fisiológica clara, no es solo preferencia estética.
+**Si entrenás fuerza como parte de tu rutina:**
+Recordá que el músculo no es solo "estética": es el órgano que más glucosa capta en el cuerpo. Priorizar el entrenamiento de fuerza cuando hay resistencia a la insulina tiene una justificación fisiológica clara, no es solo preferencia estética.
 
 **Para pensar el enfoque general:**
 La combinación de ejercicio aeróbico + fuerza aparece una y otra vez en los estudios citados como la estrategia con mejores resultados metabólicos generales, por encima de un solo tipo de entrenamiento.
@@ -127,7 +127,7 @@ La combinación de ejercicio aeróbico + fuerza aparece una y otra vez en los es
 
 ## 💡 Mensaje clave del estudio
 
-**El ejercicio no solo te ayuda a "gastar calorías": repara, a nivel molecular, el daño que la obesidad genera en tu grasa, tu hígado y tu músculo.** La ciencia muestra que estos tres órganos "hablan" entre sí a través de hormonas y otros mensajeros, y que el ejercicio mejora esa comunicación en las tres direcciones. Si trabajás con clientes, este es un buen recordatorio de que los beneficios del entrenamiento van mucho más allá del espejo o la balanza: están pasando cosas importantes por dentro, incluso antes de que se note el cambio físico.
+**El ejercicio no solo te ayuda a "gastar calorías": repara, a nivel molecular, el daño que la obesidad genera en tu grasa, tu hígado y tu músculo.** La ciencia muestra que estos tres órganos "hablan" entre sí a través de hormonas y otros mensajeros, y que el ejercicio mejora esa comunicación en las tres direcciones. Los beneficios del entrenamiento van mucho más allá del espejo o la balanza: están pasando cosas importantes por dentro, incluso antes de que se note el cambio físico.
 
 ---
 
