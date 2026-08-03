@@ -57,7 +57,7 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 
 ## Artículo completado
 
-```markdown
+
 | **Office BP (consultorio)** | Efecto "bata blanca", variabilidad, sesgo | Limitada |
 | **Ambulatory BP (24h)** | Captura variabilidad diurna, sin sesgo | Gold standard |
 
@@ -90,7 +90,7 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 
 **"El ejercicio aeróbico es el único que demuestra reducciones significativas de presión arterial ambulatoria de 24 horas. El entrenamiento de fuerza, por sí solo, no."**
 
-### El entrenamiento combinado es superior
+El entrenamiento combinado es superior
 
 | Comparación | Resultado |
 |-------------|-----------|
@@ -98,9 +98,9 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | Combinado vs. Aeróbico solo | Combinado es aditivo (mejor) |
 | Combinado vs. Fuerza solo | Combinado es significativamente mejor |
 
-**"El entrenamiento combinado (aeróbico + fuerza) produce beneficios aditivos que no se logran con ningún modo por separado."**
+"El entrenamiento combinado (aeróbico + fuerza) produce beneficios aditivos que no se logran con ningún modo por separado."
 
-### La fuerza pura tiene beneficios, pero limitados
+La fuerza pura tiene beneficios, pero limitados
 
 | Beneficio de fuerza | Evidencia | Limitación |
 |---------------------------|-----------|------------|
@@ -109,11 +109,9 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | ↑ Sensibilidad a insulina | Moderada | Efecto metabólico, no hemodinámico |
 | ↓ Riesgo de caídas (adultos mayores) | Fuerte | Relevante, pero diferente objetivo |
 
----
+🧬 Interpretación fisiológica
 
-## 🧬 Interpretación fisiológica
-
-### ¿Por qué el aeróbico baja la presión y la fuerza no tanto?
+¿Por qué el aeróbico baja la presión y la fuerza no tanto?
 
 | Mecanismo | Aeróbico | Fuerza |
 |-----------|----------|-------------|
@@ -123,22 +121,20 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | **↑ Compliance arterial** | ✅ Mejora elasticidad | ❌ Mínimo efecto |
 | **↓ Volumen sistólico** | ❌ No | ⚠️ Puede aumentar PAS durante ejercicio |
 
-**"El ejercicio aeróbico reduce la resistencia vascular periférica de forma sostenida. La fuerza aumenta la presión intramuscular durante el esfuerzo, lo que puede elevar temporalmente la PA."**
+"El ejercicio aeróbico reduce la resistencia vascular periférica de forma sostenida. La fuerza aumenta la presión intramuscular durante el esfuerzo, lo que puede elevar temporalmente la PA."
 
-### El "efecto post-ejercicio" diferente
+El "efecto post-ejercicio" diferente
 
 | Tipo de ejercicio | Efecto post-ejercicio | Duración |
 |-------------------|----------------------|----------|
 | **Aeróbico** | ↓ PA por debajo basal (hipotensión post-ejercicio) | 4–16 horas |
 | **Fuerza** | ↑ PA temporal, luego retorno a basal | Minutos a horas |
 
-**"Después de correr, tu presión está más baja durante horas. Después de levantar pesas, puede estar más alta inicialmente."**
+"Después de correr, tu presión está más baja durante horas. Después de levantar pesas, puede estar más alta inicialmente."
 
----
+⚡ Hallazgos prácticos importantes
 
-## ⚡ Hallazgos prácticos importantes
-
-### Guía práctica según la evidencia
+Guía práctica según la evidencia
 
 | Objetivo | Prescripción recomendada |
 |----------|-------------------------|
@@ -147,7 +143,7 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | **Solo fuerza** | NO recomendado como tratamiento primario para PA |
 | **Adultos mayores** | Combinado: aeróbico + fuerza + equilibrio |
 
-### Dosis mínima efectiva
+Dosis mínima efectiva
 
 | Variable | Recomendación |
 |----------|---------------|
@@ -155,7 +151,7 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | **Fuerza** | 2–3 sesiones/semana, 1–3 sets, 8–12 reps, moderada |
 | **Combinado** | Mismo aeróbico + resistencia 2×/sem |
 
-### ¿Cuándo priorizar fuerza?
+¿Cuándo priorizar fuerza?
 
 | Situación | Acción |
 |-----------|--------|
@@ -164,9 +160,7 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | Osteoporosis | Fuerza + impacto (caminar, trotar) |
 | Prevención de caídas | Fuerza + equilibrio |
 
----
-
-## 🚧 Limitaciones del estudio
+🚧 Limitaciones del estudio
 
 1. **Mayoría de estudios en hombres:** Menos evidencia en mujeres
 2. **Población heterogénea:** Diferentes grados de hipertensión, edades, comorbilidades
@@ -175,17 +169,13 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 5. **Falta de estudios longitudinales:** Pocos;6 meses de seguimiento
 6. **PA ambulatoria costosa:** No siempre disponible en estudios clínicos
 
----
+📝 Conclusión final del artículo
 
-## 📝 Conclusión final del artículo
+"El ejercicio aeróbico sigue siendo el gold standard para reducir la presión arterial en personas con hipertensión. El entrenamiento de fuerza, aunque beneficioso para otras variables de salud, no demuestra efectos significativos sobre la presión arterial ambulatoria de 24 horas cuando se usa solo. El entrenamiento combinado (aeróbico + fuerza) ofrece beneficios aditivos y debería ser la recomendación preferida cuando sea posible."
 
-**"El ejercicio aeróbico sigue siendo el gold standard para reducir la presión arterial en personas con hipertensión. El entrenamiento de fuerza, aunque beneficioso para otras variables de salud, no demuestra efectos significativos sobre la presión arterial ambulatoria de 24 horas cuando se usa solo. El entrenamiento combinado (aeróbico + fuerza) ofrece beneficios aditivos y debería ser la recomendación preferida cuando sea posible."**
+🏋️ Aplicación práctica para fitness y deporte
 
----
-
-## 🏋️ Aplicación práctica para fitness y deporte
-
-### Si tenés hipertensión o riesgo cardiovascular
+Si tenés hipertensión o riesgo cardiovascular
 
 | Prioridad | Semana típica |
 |-----------|--------------|
@@ -197,7 +187,7 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | **Sábado** | Actividad recreativa (senderismo, deporte) |
 | **Domingo** | Descanso activo (caminata ligera) |
 
-### Si sos atleta de fuerza
+Si sos atleta de fuerza
 
 | Consideración | Acción |
 |-----------------|--------|
@@ -206,22 +196,19 @@ Y usaron la medida más rigurosa: **presión arterial ambulatoria de 24 horas**,
 | Cómo incorporarlo | 2–3 sesiones de 20–30 min post-entrenamiento o en días off |
 | Beneficio adicional | Mejor recuperación, menor fatiga, mejor sueño |
 
----
 
-## 💡 Mensaje clave del estudio
+💡 Mensaje clave del estudio
 
-**"No abandones el cardio por las pesas. Y no abandones las pesas por el cardio. La ciencia es clara: el corazón necesita aeróbico, los músculos necesitan fuerza, y tu presión arterial necesita ambos. El entrenamiento combinado no es un compromiso: es la estrategia ganadora."**
+"No abandones el cardio por las pesas. Y no abandones las pesas por el cardio. La ciencia es clara: el corazón necesita aeróbico, los músculos necesitan fuerza, y tu presión arterial necesita ambos. El entrenamiento combinado no es un compromiso: es la estrategia ganadora."
 
 La industria del fitness te vende "o esto o aquello". La ciencia te dice "ambos, en la dosis correcta, de forma consistente".
 
----
-
-**Usá esto para…**
+Usá esto para…
 Diseñar programas de ejercicio equilibrados que prioricen la salud cardiovascular sin sacrificar la masa muscular.
 
-**No uses esto para…**
+No uses esto para…
 Justificar que solo levantar pesas es "suficiente" para la salud del corazón. No lo es.
 
----
+
 
 *Fuente: Tanaka H, Ferrari R. Does Resistance Training Provide Benefits that Are Comparable to Aerobic Exercise in Hypertension? Current Hypertension Reports. 2026;28:22. [DOI: 10.1007/s11906-026-01369-4](https://doi.org/10.1007/s11906-026-01369-4)*
