@@ -13,10 +13,10 @@ export interface BlogPost {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  entrenamiento: '#a78bfa',      // cultiva-purple
-  nutricion: '#4ADE80',            // cultiva-green
-  neurociencias: '#60A5FA',        // cultiva-blue
-  salud: '#f472b6',                // cultiva-pink
+  entrenamiento: '#7C3AED',      // cultiva-purple
+  nutricion: '#16A34A',          // cultiva-green
+  neurociencias: '#2563EB',      // cultiva-blue
+  salud: '#DB2777',              // cultiva-pink
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -27,7 +27,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 };
 
 export function getCategoryColor(category: string): string {
-  return CATEGORY_COLORS[category] || '#60A5FA';
+  return CATEGORY_COLORS[category] || '#2563EB';
 }
 
 export function getCategoryLabel(category: string): string {

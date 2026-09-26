@@ -79,7 +79,7 @@ export default function Blog() {
             <SlidersHorizontal className="w-4 h-4 text-cultiva-muted mr-1 flex-shrink-0" />
             {categories.map((cat) => {
               const isActive = activeCategory === cat;
-              const color = cat === 'todos' ? '#60A5FA' : getCategoryColor(cat);
+              const color = cat === 'todos' ? '#2563EB' : getCategoryColor(cat);
               
               return (
                 <button
@@ -92,7 +92,7 @@ export default function Blog() {
                   }`}
                   style={{
                     backgroundColor: isActive ? color : 'transparent',
-                    border: `1px solid ${isActive ? color : 'rgba(74, 222, 128, 0.15)'}`,
+                    border: `1px solid ${isActive ? color : 'rgba(22, 163, 74, 0.15)'}`,
                   }}
                 >
                   {cat === 'todos' ? 'TODOS' : getCategoryLabel(cat)}

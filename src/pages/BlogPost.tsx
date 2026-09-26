@@ -115,7 +115,7 @@ export default function BlogPost() {
 
       {/* Content */}
       <div className="max-w-[800px] mx-auto px-6 py-12">
-        <article className="prose prose-invert prose-lg max-w-none">
+        <article className="prose max-w-none">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {post.content}
           </ReactMarkdown>
