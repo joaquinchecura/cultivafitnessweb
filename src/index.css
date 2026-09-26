@@ -6,34 +6,34 @@
 
 @layer base {
   :root {
-    --background: 100 20% 4%;
-    --foreground: 100 15% 95%;
-    --card: 130 18% 10%;
-    --card-foreground: 100 15% 95%;
-    --popover: 130 18% 10%;
-    --popover-foreground: 100 15% 95%;
-    --primary: 142 71% 58%;
-    --primary-foreground: 100 20% 4%;
-    --secondary: 130 18% 10%;
-    --secondary-foreground: 142 71% 58%;
-    --muted: 130 15% 15%;
-    --muted-foreground: 120 12% 50%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 100 20% 4%;
+    --background: 80 22% 98%;
+    --foreground: 140 25% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 140 25% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 25% 8%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 20% 95%;
+    --secondary-foreground: 142 76% 36%;
+    --muted: 120 15% 92%;
+    --muted-foreground: 136 10% 42%;
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 142 30% 15%;
-    --input: 142 30% 15%;
-    --ring: 142 71% 58%;
+    --border: 100 15% 89%;
+    --input: 100 15% 89%;
+    --ring: 142 76% 36%;
     --radius: 0.625rem;
-    --sidebar-background: 100 20% 4%;
-    --sidebar-foreground: 100 15% 95%;
-    --sidebar-primary: 142 71% 58%;
-    --sidebar-primary-foreground: 100 20% 4%;
-    --sidebar-accent: 130 18% 10%;
-    --sidebar-accent-foreground: 100 15% 95%;
-    --sidebar-border: 142 30% 15%;
-    --sidebar-ring: 142 71% 58%;
+    --sidebar-background: 80 22% 98%;
+    --sidebar-foreground: 140 25% 8%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 120 20% 95%;
+    --sidebar-accent-foreground: 140 25% 8%;
+    --sidebar-border: 100 15% 89%;
+    --sidebar-ring: 142 76% 36%;
   }
 }
 
@@ -58,28 +58,29 @@
     text-transform: uppercase;
   }
   .gradient-text {
-    background: linear-gradient(90deg, #4ADE80, #60A5FA);
+    background: linear-gradient(90deg, #16A34A, #2563EB);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   .glow-green {
-    box-shadow: 0 0 40px rgba(74, 222, 128, 0.15);
+    box-shadow: 0 0 40px rgba(22, 163, 74, 0.12);
   }
   .glow-green-strong {
-    box-shadow: 0 0 60px rgba(74, 222, 128, 0.3);
+    box-shadow: 0 0 60px rgba(22, 163, 74, 0.22);
   }
 }
-/* Estilos para contenido Markdown del blog - integrados con tema Cultiva */
+
+/* Estilos para contenido Markdown del blog - integrados con tema Cultiva claro */
 @layer utilities {
   .prose {
-    color: #8FA68A;
+    color: #4C5E51;
   }
 
   .prose h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #F4F7F3;
+    color: #101C14;
     margin-top: 2rem;
     margin-bottom: 1rem;
     letter-spacing: -0.025em;
@@ -89,7 +90,7 @@
   .prose h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #F4F7F3;
+    color: #101C14;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
     line-height: 1.4;
@@ -98,20 +99,20 @@
   .prose p {
     margin-bottom: 1.25rem;
     line-height: 1.75;
-    color: #8FA68A;
+    color: #4C5E51;
   }
 
   .prose strong {
-    color: #F4F7F3;
+    color: #101C14;
     font-weight: 600;
   }
 
   .prose blockquote {
-    border-left: 3px solid #60A5FA;
+    border-left: 3px solid #2563EB;
     padding-left: 1.25rem;
     margin: 1.5rem 0;
     font-style: italic;
-    color: #8FA68A;
+    color: #4C5E51;
   }
 
   .prose ul {
@@ -121,23 +122,23 @@
 
   .prose li {
     margin-bottom: 0.5rem;
-    color: #8FA68A;
+    color: #4C5E51;
   }
 
   .prose li::marker {
-    color: #4ADE80;
+    color: #16A34A;
   }
 
   .prose a {
-    color: #60A5FA;
+    color: #2563EB;
     text-decoration: none;
     transition: color 0.2s;
-    border-bottom: 1px solid rgba(96, 165, 250, 0.3);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.3);
   }
 
   .prose a:hover {
-    color: #93c5fd;
-    border-bottom-color: #60A5FA;
+    color: #1d4ed8;
+    border-bottom-color: #2563EB;
   }
 
   .prose table {
@@ -150,61 +151,53 @@
   .prose td {
     padding: 0.75rem;
     text-align: left;
-    border-bottom: 1px solid rgba(74, 222, 128, 0.15);
+    border-bottom: 1px solid rgba(22, 163, 74, 0.15);
   }
 
   .prose th {
     font-weight: 600;
-    color: #F4F7F3;
+    color: #101C14;
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    background: #141C16;
+    background: #F1F5EF;
   }
 
   .prose td {
-    color: #8FA68A;
+    color: #4C5E51;
   }
 
   .prose tr:hover td {
-    background: rgba(20, 28, 22, 0.5);
+    background: rgba(241, 245, 239, 0.7);
   }
 
   .prose hr {
     border: none;
-    border-top: 1px solid rgba(74, 222, 128, 0.15);
+    border-top: 1px solid rgba(22, 163, 74, 0.15);
     margin: 2rem 0;
   }
 
   .prose code {
-    background: #141C16;
+    background: #F1F5EF;
     padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
     font-size: 0.875em;
-    color: #4ADE80;
+    color: #16A34A;
     font-family: 'Space Mono', monospace;
   }
 
   .prose pre {
-    background: #141C16;
+    background: #F1F5EF;
     padding: 1rem;
     border-radius: 0.75rem;
     overflow-x: auto;
     margin: 1.5rem 0;
-    border: 1px solid rgba(74, 222, 128, 0.15);
+    border: 1px solid rgba(22, 163, 74, 0.15);
   }
 
   .prose pre code {
     background: none;
     padding: 0;
-    color: #8FA68A;
-  }
-
-  /* Animación del anillo pulsante del TipWidget */
-  @keyframes tipwidget-ping {
-    75%, 100% {
-     transform: scale(1.4);
-     opacity: 0;
-   }
+    color: #4C5E51;
   }
 }

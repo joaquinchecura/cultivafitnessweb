@@ -164,17 +164,18 @@ export function AppsSection() {
       className="relative py-28 lg:py-36 px-6 bg-cultiva-bg"
     >
       <div className="max-w-[1280px] mx-auto">
-        <div className="text-center max-w-[800px] mx-auto mb-16">
-          <span className="font-mono-label text-cultiva-green tracking-[0.2em] block mb-4">
-            TU ECOSISTEMA
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cultiva-text mb-4 tracking-tight">
-            Una app para cada dimensión de tu bienestar
-          </h2>
-          <p className="text-cultiva-secondary text-base sm:text-lg">
-            Desde fisiología hasta neurociencias, cada aplicación está diseñada con rigor científico y una experiencia intuitiva.
-          </p>
-        </div>
+      <div className="text-center max-w-[800px] mx-auto mb-16">
+  <span className="font-mono-label text-cultiva-green tracking-[0.2em] block mb-4">
+    PARA TUS CLIENTES
+  </span>
+  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cultiva-text mb-4 tracking-tight">
+    Sumale el ecosistema completo a tu servicio
+  </h2>
+  <p className="text-cultiva-secondary text-base sm:text-lg">
+    Estas apps ya están disponibles para cualquier persona — y como profesional en MANAGER
+    podés integrarlas al trabajo con tus clientes, sin costo extra.
+  </p>
+</div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {apps.map((app, i) => (

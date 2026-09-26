@@ -4,12 +4,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Navbar } from '../sections/Navbar';
 import { HeroSection } from '../sections/HeroSection';
-import { AppsSection } from '../sections/AppsSection';
 import { FeaturesSection } from '../sections/FeaturesSection';
+import { AppsSection } from '../sections/AppsSection';
 import { BlogSection } from '../sections/BlogSection';
 import { SocialSection } from '../sections/SocialSection';
 import { Footer } from '../sections/Footer';
-import { TipWidget } from '../components/TipWidget';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,15 +41,12 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        <AppsSection />
         <FeaturesSection />
+        <AppsSection />
         <BlogSection />
         <SocialSection />
       </main>
       <Footer />
-
-      {/* Widget flotante - siempre al final, fuera del flujo */}
-      <TipWidget />
     </div>
   );
 }

@@ -74,7 +74,7 @@ export function SocialSection() {
       ref={sectionRef}
       className="relative py-28 lg:py-36 px-6"
       style={{
-        background: 'linear-gradient(135deg, #0B0F0A 0%, #0A1F3D 50%, #0B0F0A 100%)',
+        background: 'linear-gradient(135deg, #F1F5EF 0%, #E8F0FB 50%, #F1F5EF 100%)',
       }}
     >
       <div className="max-w-[1280px] mx-auto">
