@@ -1,17 +1,30 @@
 import { Link } from 'react-router';
-import { useEffect, useState } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
+import { Menu, X, ArrowRight, ChevronDown, MessageCircle, Mail } from 'lucide-react';
 
-const CTA_URL = "https://wa.me/5491123970926?text=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER";
+const WHATSAPP_URL = "https://wa.me/5491123970926?text=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER";
+const EMAIL_URL = "mailto:cultivafitness@gmail.com?subject=Acceso%20anticipado%20a%20MANAGER&body=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER.";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [ctaOpen, setCtaOpen] = useState(false);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const onClickOutside = (e: MouseEvent) => {
+      if (ctaRef.current && !ctaRef.current.contains(e.target as Node)) {
+        setCtaOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', onClickOutside);
+    return () => document.removeEventListener('mousedown', onClickOutside);
   }, []);
 
   const navLinks = [
@@ -100,15 +113,39 @@ export function Navbar() {
               </a>
             </div>
 
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-cultiva-green text-white text-sm font-semibold shadow-[0_4px_14px_rgba(22,163,74,0.25)] hover:shadow-[0_6px_20px_rgba(22,163,74,0.35)] hover:-translate-y-0.5 transition-all duration-300"
-            >
-              Solicitar acceso
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            {/* CTA con dropdown WhatsApp / Email */}
+            <div ref={ctaRef} className="relative">
+              <button
+                onClick={() => setCtaOpen((v) => !v)}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-cultiva-green text-white text-sm font-semibold shadow-[0_4px_14px_rgba(22,163,74,0.25)] hover:shadow-[0_6px_20px_rgba(22,163,74,0.35)] hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Solicitar acceso
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${ctaOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {ctaOpen && (
+                <div className="absolute right-0 top-[calc(100%+8px)] w-56 bg-cultiva-surface border border-cultiva-border rounded-2xl shadow-[0_12px_32px_rgba(0,0,0,0.1)] p-2 overflow-hidden">
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setCtaOpen(false)}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-cultiva-text hover:bg-cultiva-elevated transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4 text-cultiva-green" />
+                    Por WhatsApp
+                  </a>
+                  <a
+                    href={EMAIL_URL}
+                    onClick={() => setCtaOpen(false)}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-cultiva-text hover:bg-cultiva-elevated transition-colors"
+                  >
+                    <Mail className="w-4 h-4 text-cultiva-blue" />
+                    Por Email
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Hamburger */}
@@ -126,16 +163,27 @@ export function Navbar() {
         <div className="fixed inset-0 z-40 md:hidden">
           <div className="absolute inset-0 bg-cultiva-bg/95 backdrop-blur-xl" onClick={() => setMobileOpen(false)} />
           <div className="absolute right-0 top-0 bottom-0 w-[280px] bg-cultiva-surface border-l border-cultiva-border p-8 pt-24 flex flex-col gap-6">
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-cultiva-green text-white text-sm font-semibold shadow-[0_4px_14px_rgba(22,163,74,0.25)] mb-2"
-            >
-              Solicitar acceso
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            {/* CTA: dos botones directos, sin dropdown */}
+            <div className="flex flex-col gap-2 mb-2">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-cultiva-green text-white text-sm font-semibold shadow-[0_4px_14px_rgba(22,163,74,0.25)]"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Solicitar acceso por WhatsApp
+              </a>
+              <a
+                href={EMAIL_URL}
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full border border-cultiva-border text-cultiva-text text-sm font-semibold"
+              >
+                <Mail className="w-4 h-4" />
+                Por Email
+              </a>
+            </div>
 
             {navLinks.map((link) => (
               link.isRoute ? (
