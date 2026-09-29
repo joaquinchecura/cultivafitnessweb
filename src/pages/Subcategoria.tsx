@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router';
 import { categorias } from '../data/ejercicios';
+import { getExerciseImageSrc } from '../lib/exerciseImage';
 
 export default function Subcategoria() {
   const { categoriaSlug, subcategoriaSlug } = useParams();
@@ -86,11 +87,13 @@ export default function Subcategoria() {
                 className="bg-cultiva-surface rounded-2xl border border-cultiva-green/10 overflow-hidden hover:border-cultiva-green/30 transition-all duration-300"
               >
                 <div className="bg-cultiva-bg relative">
-                  <img
-                    src={ej.imagen}
-                    alt={ej.nombre}
-                    className="w-full h-full object-cover"
-                  />
+                <img
+  src={getExerciseImageSrc(ej)}
+  alt={ej.nombre}
+  loading="lazy"
+  decoding="async"
+  className="w-full h-full object-cover"
+/>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{ej.nombre}</h3>

@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router';
 import { categorias } from '../data/ejercicios';
+import { getExerciseImageSrc } from '../lib/exerciseImage';
 
 export default function Categoria() {
   const { categoriaSlug } = useParams();
@@ -68,10 +69,12 @@ export default function Categoria() {
               <div className="bg-cultiva-bg relative overflow-hidden">
                 {sub.ejercicios[0]?.imagen ? (
                   <img
-                    src={sub.ejercicios[0].imagen}
-                    alt={sub.nombre}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  src={getExerciseImageSrc(sub.ejercicios[0])}
+                  alt={sub.nombre}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-cultiva-surface">
                     <span className="text-5xl">💪</span>
