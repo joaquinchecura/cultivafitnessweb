@@ -1,8 +1,28 @@
 import { Link } from 'react-router';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { Sparkles, ArrowRight, Move, Dumbbell, Flame, Wind, HeartPulse, Activity } from 'lucide-react';
 import { categorias } from '../data/ejercicios';
 
-const MANAGER_CTA = "https://wa.me/5491123970926?text=Hola!%20Vi%20la%20biblioteca%20de%20ejercicios%20y%20quiero%20saber%20m%C3%A1s%20de%20MANAGER";
+const MANAGER_CTA_WHATSAPP = "https://wa.me/5491123970926?text=Hola!%20Vi%20la%20biblioteca%20de%20ejercicios%20y%20quiero%20saber%20m%C3%A1s%20de%20MANAGER";
+const MANAGER_CTA_EMAIL = "mailto:cultivafitness@gmail.com?subject=Quiero%20saber%20m%C3%A1s%20de%20MANAGER&body=Hola!%20Vi%20la%20biblioteca%20de%20ejercicios%20y%20quiero%20saber%20m%C3%A1s%20de%20MANAGER.";
+
+const CATEGORY_STYLES = [
+  { color: '#16A34A', icon: Move },      // green
+  { color: '#2563EB', icon: Dumbbell },  // blue
+  { color: '#D97706', icon: Flame },     // amber
+  { color: '#0D9488', icon: Wind },      // teal
+  { color: '#DB2777', icon: HeartPulse },// pink
+  { color: '#7C3AED', icon: Activity },  // purple
+];
+
+function getCategoryStyle(titulo: string, index: number) {
+  const t = titulo.toLowerCase();
+  if (t.includes('movilidad')) return { color: '#16A34A', icon: Move };
+  if (t.includes('fuerza')) return { color: '#2563EB', icon: Dumbbell };
+  if (t.includes('metaból') || t.includes('metabol')) return { color: '#D97706', icon: Flame };
+  if (t.includes('regulaci')) return { color: '#0D9488', icon: Wind };
+  if (t.includes('rehabilit')) return { color: '#DB2777', icon: HeartPulse };
+  return CATEGORY_STYLES[index % CATEGORY_STYLES.length];
+}
 
 export default function Ejercicios() {
   return (
@@ -53,40 +73,62 @@ export default function Ejercicios() {
               </p>
             </div>
           </div>
-          <a
-            href={MANAGER_CTA}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cultiva-green text-white text-sm font-semibold whitespace-nowrap hover:bg-cultiva-green-dark transition-colors duration-300 flex-shrink-0"
-          >
-            Conocer MANAGER
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <div className="flex flex-col items-start sm:items-end gap-2 flex-shrink-0">
+            <a
+              href={MANAGER_CTA_WHATSAPP}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cultiva-green text-white text-sm font-semibold whitespace-nowrap hover:bg-cultiva-green-dark transition-colors duration-300"
+            >
+              Conocer MANAGER
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href={MANAGER_CTA_EMAIL}
+              className="text-cultiva-muted text-xs hover:text-cultiva-secondary transition-colors"
+            >
+              o escribinos a cultivafitness@gmail.com
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categorias.map((cat) => (
-            <Link
-              key={cat.slug}
-              to={`/ejercicios/${cat.slug}`}
-              className="group bg-cultiva-surface rounded-2xl border border-cultiva-border p-8 hover:border-cultiva-green/40 transition-all duration-300"
-            >
-              <h2 className="text-2xl font-semibold mb-2 group-hover:text-cultiva-green transition-colors">
-                {cat.titulo}
-              </h2>
-              <p className="text-cultiva-secondary text-sm mb-4">
-                {cat.subtitulo}
-              </p>
-              <p className="text-cultiva-secondary/70 text-sm">
-                {cat.subcategorias.length} subcategorías
-              </p>
-              <div className="mt-6 pt-4 border-t border-cultiva-border">
-                <span className="text-cultiva-green text-sm font-medium">
-                  Explorar →
-                </span>
-              </div>
-            </Link>
-          ))}
+          {categorias.map((cat, i) => {
+            const { color, icon: Icon } = getCategoryStyle(cat.titulo, i);
+            return (
+              <Link
+                key={cat.slug}
+                to={`/ejercicios/${cat.slug}`}
+                className="group relative bg-cultiva-surface rounded-2xl border border-cultiva-border overflow-hidden hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
+                style={{ borderTopColor: color, borderTopWidth: 3 }}
+              >
+                <div className="p-8">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                    style={{ backgroundColor: `${color}15` }}
+                  >
+                    <Icon className="w-6 h-6" style={{ color }} />
+                  </div>
+
+                  <h2 className="text-2xl font-semibold mb-2 transition-colors" style={{ color: 'inherit' }}>
+                    {cat.titulo}
+                  </h2>
+                  <p className="text-cultiva-secondary text-sm mb-4">
+                    {cat.subtitulo}
+                  </p>
+                  <p className="text-cultiva-secondary/70 text-sm">
+                    {cat.subcategorias.length} subcategorías
+                  </p>
+                  <div className="mt-6 pt-4 border-t border-cultiva-border">
+                    <span className="text-sm font-medium inline-flex items-center gap-1" style={{ color }}>
+                      Explorar
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </main>
     </div>
