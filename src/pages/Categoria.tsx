@@ -77,7 +77,7 @@ export default function Categoria() {
                 />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-cultiva-surface">
-                    <span className="text-5xl">💪</span>
+                   <span className="text-5xl" aria-hidden="true">💪</span>
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-cultiva-bg/60 to-transparent" />

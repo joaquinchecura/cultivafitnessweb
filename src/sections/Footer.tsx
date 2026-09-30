@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useId } from 'react';
 import { Leaf, Heart, ArrowRight, Youtube, Instagram, Music, Mail, Check, Globe, ChevronDown } from 'lucide-react';
 
 const CTA_URL = "https://wa.me/5491123970926?text=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER";
@@ -19,6 +19,7 @@ const socials = [
 function NewsletterForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const inputId = useId();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +29,6 @@ function NewsletterForm() {
     try {
       // TODO: conectar a un servicio real (Mailchimp / ConvertKit / Buttondown
       // o un endpoint propio tipo /api/newsletter/subscribe en Vercel Functions).
-      // Placeholder por ahora:
       await new Promise((resolve) => setTimeout(resolve, 700));
       setStatus('sent');
       setEmail('');
@@ -39,8 +39,8 @@ function NewsletterForm() {
 
   if (status === 'sent') {
     return (
-      <div className="flex items-center gap-2 text-cultiva-green text-sm font-medium">
-        <Check className="w-4 h-4" />
+      <div role="status" className="flex items-center gap-2 text-cultiva-green text-sm font-medium">
+        <Check className="w-4 h-4" aria-hidden="true" />
         ¡Listo! Ya estás suscripto.
       </div>
     );
@@ -48,7 +48,11 @@ function NewsletterForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 w-full max-w-sm">
+      <label htmlFor={inputId} className="sr-only">
+        Tu email para recibir el blog
+      </label>
       <input
+        id={inputId}
         type="email"
         required
         value={email}
@@ -70,6 +74,8 @@ function NewsletterForm() {
 function LanguageSelector() {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const englishRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onClickOutside = (e: MouseEvent) => {
@@ -79,27 +85,64 @@ function LanguageSelector() {
     return () => document.removeEventListener('mousedown', onClickOutside);
   }, []);
 
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && open) {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [open]);
+
+  // Al abrir con teclado, el foco salta directo a la primera opción real
+  // (Español está seleccionado, así que English es lo primero navegable)
+  useEffect(() => {
+    if (open) englishRef.current?.focus();
+  }, [open]);
+
   return (
     <div ref={ref} className="relative">
       <button
+        ref={buttonRef}
         onClick={() => setOpen((v) => !v)}
+        aria-haspopup="menu"
+        aria-expanded={open}
         className="inline-flex items-center gap-1.5 text-cultiva-muted hover:text-cultiva-text text-sm transition-colors"
       >
-        <Globe className="w-4 h-4" />
+        <Globe className="w-4 h-4" aria-hidden="true" />
         Español
-        <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
       </button>
 
       {open && (
-        <div className="absolute bottom-[calc(100%+8px)] left-0 w-44 bg-cultiva-surface border border-cultiva-border rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.1)] p-1.5 overflow-hidden">
-          <div className="flex items-center justify-between px-3 py-2 rounded-lg bg-cultiva-elevated text-sm text-cultiva-text font-medium">
+        <div
+          role="menu"
+          aria-label="Seleccionar idioma"
+          className="absolute bottom-[calc(100%+8px)] left-0 w-44 bg-cultiva-surface border border-cultiva-border rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.1)] p-1.5 overflow-hidden"
+        >
+          <button
+            type="button"
+            role="menuitemradio"
+            aria-checked="true"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg bg-cultiva-elevated text-sm text-cultiva-text font-medium"
+          >
             Español
-            <Check className="w-3.5 h-3.5 text-cultiva-green" />
-          </div>
-          <div className="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-cultiva-muted cursor-not-allowed">
+            <Check className="w-3.5 h-3.5 text-cultiva-green" aria-hidden="true" />
+          </button>
+          <button
+            ref={englishRef}
+            type="button"
+            role="menuitemradio"
+            aria-checked="false"
+            disabled
+            aria-disabled="true"
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm text-cultiva-muted cursor-not-allowed disabled:opacity-70"
+          >
             English
             <span className="text-[10px] font-mono uppercase tracking-wider">Próx.</span>
-          </div>
+          </button>
         </div>
       )}
     </div>
@@ -126,7 +169,7 @@ export function Footer() {
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-cultiva-green-dark font-semibold text-sm hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300"
             >
               Solicitar acceso anticipado
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -140,7 +183,7 @@ export function Footer() {
             <div className="max-w-[280px]">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cultiva-green to-cultiva-green-dark flex items-center justify-center">
-                  <Leaf className="w-4 h-4 text-white" />
+                  <Leaf className="w-4 h-4 text-white" aria-hidden="true" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-cultiva-text font-bold text-lg leading-none tracking-tight">
@@ -166,7 +209,7 @@ export function Footer() {
                       aria-label={social.name}
                       className="w-9 h-9 rounded-full bg-cultiva-elevated flex items-center justify-center hover:-translate-y-0.5 transition-transform duration-300"
                     >
-                      <Icon className="w-4 h-4" style={{ color: social.color }} />
+                      <Icon className="w-4 h-4" style={{ color: social.color }} aria-hidden="true" />
                     </a>
                   );
                 })}
@@ -175,7 +218,7 @@ export function Footer() {
                   aria-label="Email"
                   className="w-9 h-9 rounded-full bg-cultiva-elevated flex items-center justify-center hover:-translate-y-0.5 transition-transform duration-300"
                 >
-                  <Mail className="w-4 h-4 text-cultiva-muted" />
+                  <Mail className="w-4 h-4 text-cultiva-muted" aria-hidden="true" />
                 </a>
               </div>
             </div>
@@ -253,7 +296,7 @@ export function Footer() {
               <LanguageSelector />
             </div>
             <p className="text-cultiva-muted text-sm flex items-center gap-1.5">
-              Hecho con <Heart className="w-3.5 h-3.5 text-cultiva-green fill-cultiva-green" /> y ciencia
+              Hecho con <Heart className="w-3.5 h-3.5 text-cultiva-green fill-cultiva-green" aria-hidden="true" /> y ciencia
             </p>
           </div>
         </div>

@@ -56,7 +56,7 @@ module.exports = {
           border: "#E3E9E0",
           text: "#101C14",
           secondary: "#4C5E51",
-          muted: "#7E9186",
+          muted: "#647568",
           green: "#16A34A",
           "green-dark": "#15803D",
           blue: "#2563EB",

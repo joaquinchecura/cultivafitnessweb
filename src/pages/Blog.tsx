@@ -64,16 +64,20 @@ export default function Blog() {
 
       <div className="max-w-[1280px] mx-auto px-6 py-8">
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          <div className="relative flex-1 max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-cultiva-muted" />
-            <input
-              type="text"
-              placeholder="Buscar artículos..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-cultiva-surface border border-cultiva-green/10 rounded-xl text-cultiva-text placeholder:text-cultiva-muted focus:outline-none focus:border-cultiva-green/30 transition-colors"
-            />
-          </div>
+        <div className="relative flex-1 max-w-md">
+  <label htmlFor="blog-search" className="sr-only">
+    Buscar artículos del blog
+  </label>
+  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-cultiva-muted" aria-hidden="true" />
+  <input
+    id="blog-search"
+    type="text"
+    placeholder="Buscar artículos..."
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+    className="w-full pl-10 pr-4 py-3 bg-cultiva-surface border border-cultiva-green/10 rounded-xl text-cultiva-text placeholder:text-cultiva-muted focus:outline-none focus:border-cultiva-green/30 transition-colors"
+  />
+</div>
 
           <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0">
             <SlidersHorizontal className="w-4 h-4 text-cultiva-muted mr-1 flex-shrink-0" />
