@@ -5,7 +5,6 @@
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Preconnect + fuentes: se descubren y arrancan en paralelo, sin esperar al CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,14 +12,24 @@
       rel="stylesheet"
     />
 
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     <meta name="theme-color" content="#16A34A" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <title>CULTIVA Fitness</title>
+
+<!-- Open Graph (fallback estático — no cambia por página, ver limitación de SPA) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cultiva Fitness" />
+<meta property="og:title" content="Cultiva Fitness — MANAGER para profesionales de salud, fitness y deporte" />
+<meta property="og:description" content="Gestioná clientes, rutinas, pagos y agenda con MANAGER, y sumale a tus clientes un ecosistema de 12+ apps de bienestar." />
+<meta property="og:image" content="https://cultivafitness.app/images/og-cover.png" />
+<meta property="og:url" content="https://cultivafitness.app" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cultiva Fitness — MANAGER para profesionales de salud, fitness y deporte" />
+<meta name="twitter:description" content="Gestioná clientes, rutinas, pagos y agenda con MANAGER, y sumale a tus clientes un ecosistema de 12+ apps de bienestar." />
+<meta name="twitter:image" content="https://cultivafitness.app/images/og-cover.png" />
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9514539265752998"
