@@ -251,32 +251,32 @@ export const categorias: Categoria[] = [
           {
             nombre: "Abdominales con rueda",
             imagen: "/images/ejercicios/Fuerza/core/Abdominales con rueda.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de abdominales con rueda para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791232883/Woman_performing_core_exercise_20261005173502.jpg",
+            descripcion: "Sujeta los agarres de la rueda con ambas manos y colócala justo debajo de tus hombros, manteniendo los brazos estirados. Rueda hacia adelante de manera controlada y en línea recta. Desciende solo hasta el punto en que sientas que puedes mantener el abdomen firme y sin dolor lumbar. Exhala el aire y contrae con fuerza el abdomen para tirar de la rueda de regreso a la posición inicial.",
           },
           {
             nombre: "Abdominales cortos",
             imagen: "/images/ejercicios/Fuerza/core/Abdominales cortos.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de abdominales cortos para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791232885/Woman_performing_abdominal_exercise_20261005173505.jpg",
+            descripcion: "Contrae el abdomen y exhala el aire mientras elevas únicamente la cabeza, los hombros y la parte alta de la espalda del suelo. Mantén la mirada fija en un punto del techo para evitar doblar el cuello. Fase de bajada: Inhala mientras desciendes el torso de forma lenta y controlada hasta que los hombros toquen el suelo, manteniendo la tensión en el abdomen en todo momento.",
           },
           {
             nombre: "Abdominales en v",
             imagen: "/images/ejercicios/Fuerza/core/Abdominales en V.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de abdominales en v para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791232885/Woman_performing_core_exercise_20261005173508.jpg",
+            descripcion: "Eleva simultáneamente el torso y las piernas rectas hacia el techo, intentando tocar la punta de los pies con las manos. El cuerpo debe formar una V en el punto más alto, apoyándote solo sobre los glúteos. En el regreso baja los brazos y las piernas al mismo tiempo de forma controlada hasta volver a la posición inicial, sin arquear la espalda baja.",
           },
           {
             nombre: "Abdominales inferiores",
             imagen: "/images/ejercicios/Fuerza/core/Abdominales inferiores.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de abdominales inferiores para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791232884/Woman_performing_core_exercise_20261005173516.jpg",
+            descripcion: "Acuéstate boca arriba con las piernas estiradas y las manos bajo los glúteos para proteger la zona lumbar. Eleva las piernas juntas hasta formar un ángulo de 90 grados con el cuerpo. Baja las piernas lentamente sin que lleguen a tocar el suelo y vuelve a subir.",
           },
           {
             nombre: "Abdominales isométricos",
             imagen: "/images/ejercicios/Fuerza/core/Abdominales isométricos.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de abdominales isométricos para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791232884/Woman_performing_core_hollow_hold_20261005173511.jpg",
+            descripcion: "Contrae el abdomen y los glúteos para despegar simultáneamente los hombros, las escápulas y las piernas del suelo (a unos 10-15 centímetros de distancia). Mantén las piernas juntas, las puntas de los pies estiradas (en punta) y la mirada hacia el techo o tus pies. Respira de forma corta y controlada mientras sostienes la posición.",
           },
           {
             nombre: "Abdominales rodillas al pecho",
@@ -287,8 +287,8 @@ export const categorias: Categoria[] = [
           {
             nombre: "Adominales rotaciones con banda",
             imagen: "/images/ejercicios/Fuerza/core/Adominales rotaciones con banda.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de adominales rotaciones con banda para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791232885/cambiar_polea_por_una_banda_20261005174038.jpg",
+            descripcion: "Extiende los brazos frente a tu pecho. Gira el torso alejándote del punto de anclaje, manteniendo los brazos rectos. Aprieta el abdomen al rotar. Regresa a la posición inicial de forma lenta y controlada, resistiendo el tirón de la banda.",
           },
           {
             nombre: "Bicho muerto",
@@ -303,22 +303,10 @@ export const categorias: Categoria[] = [
             descripcion: "Desde posición de cuadrupedia (manos bajo hombros, rodillas bajo caderas), extendé el brazo derecho y la pierna izquierda simultáneamente hasta que queden paralelos al piso. Mantené la pelvis estable, la espalda neutra y evitá rotar el torso. Volvé controlado y alterná los lados.",
           },
           {
-            nombre: "Elevaciones de piernas",
-            imagen: "/images/ejercicios/Fuerza/core/Elevaciones de piernas.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de elevaciones de piernas para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Elevaciones de rodillas",
-            imagen: "/images/ejercicios/Fuerza/core/Elevaciones de rodillas.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de elevaciones de rodillas para mejorar tu rendimiento físico.",
-          },
-          {
             nombre: "Plancha con hombros",
             imagen: "/images/ejercicios/Fuerza/core/Plancha con hombros.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de plancha con hombros para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791233893/Woman_performing_shoulder_tap_plank_20261005175235.jpg",
+            descripcion: "Colócate en posición de plancha alta, con las manos alineadas justo debajo de los hombros y los pies ligeramente separados. Mantén el cuerpo en línea recta desde la cabeza hasta los talones. Despega una mano del suelo con un movimiento controlado para tocar el hombro contrario, evitando que la cadera se balancee o gire. Regresa la mano al suelo y repite el movimiento con el brazo opuesto.",
           },
           {
             nombre: "Plancha frontal",
