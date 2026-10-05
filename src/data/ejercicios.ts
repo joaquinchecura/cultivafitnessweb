@@ -33,7 +33,8 @@ export const categorias: Categoria[] = [
           {
             nombre: "Coordinación brazo y pierna",
             imagen: "/images/ejercicios/Movilidad Consciente/coordinacion/Coordinación brazo y pierna.jpeg",
-            descripcion: "Ejercicio de coordinación brazo y pierna para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788917032/Man_performing_bodyweight_exercise_202609082222_2.jpg",
+            descripcion: "Mové lentamente un brazo junto con la pierna contraria. Volvé al centro y repetí hacia el otro lado. Mantené el tronco estable y concentráte en coordinar ambos movimientos sin apurarte.",
           },
           {
             nombre: "Escalera de coordinación",
