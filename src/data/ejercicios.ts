@@ -39,7 +39,8 @@ export const categorias: Categoria[] = [
           {
             nombre: "Escalera de coordinación",
             imagen: "/images/ejercicios/Movilidad Consciente/coordinacion/Escalera de coordinación.jpeg",
-            descripcion: "Ejercicio de escalera de coordinación para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1790350918/Man_exercising_with_agility_ladder_20260925123820.jpg",
+            descripcion: "Parate frente a la escalera de coordinación. Avanzá colocando los pies dentro de los espacios siguiendo un patrón determinado. Mantené pasos rápidos pero controlados y mirá ocasionalmente hacia adelante para desarrollar mejor orientación espacial.",
           },
           {
             nombre: "Marcha coordinada",
