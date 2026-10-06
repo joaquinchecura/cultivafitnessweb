@@ -357,39 +357,29 @@ export const categorias: Categoria[] = [
             descripcion: "Colocate en plancha con una mancuerna en cada mano. Mantené el cuerpo alineado y remá una mancuerna hacia la cadera mientras la otra mano permanece apoyada. Bajá lentamente y alterná los lados sin rotar excesivamente el torso.",
           },
           {
-            nombre: "Sentadilla con empuje vertical",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Sentadilla con empuje vertical.jpeg",
-            descripcion: "Ejercicio de sentadilla con empuje vertical para mejorar tu rendimiento físico.",
-          },
-          {
             nombre: "Sentadilla con lanzamiento de pelota",
             imagen: "/images/ejercicios/Fuerza/fullbody/Sentadilla con lanzamiento de pelota.jpeg",
-            descripcion: "Ejercicio de sentadilla con lanzamiento de pelota para mejorar tu rendimiento físico.",
+            descripcion: "Desde el fondo de la sentadilla, empujá con las piernas y simultáneamente lanzá el balón hacia arriba contra la pared. El balón debe golpear la pared por encima de tu cabeza. Atrapá el balón al bajar absorbiendo el impacto con los brazos y bajá inmediatamente en la siguiente sentadilla. El movimiento debe ser fluido y continuo.",
           },
           {
             nombre: "Subidas al step con peso",
             imagen: "/images/ejercicios/Fuerza/fullbody/Subidas al step con peso.jpeg",
-            descripcion: "Ejercicio de subidas al step con peso para mejorar tu rendimiento físico.",
+            descripcion: "Sostené una mancuerna o kettlebell en cada mano a la altura de los hombros. Colocá un pie sobre el banco a la altura de la rodilla, empujá con esa pierna para subir completamente y al llegar arriba realizá un press de hombros extendiendo los brazos.",
           },
           {
             nombre: "Swing con pesa alternado",
             imagen: "/images/ejercicios/Fuerza/fullbody/Swing con pesa alternado.jpeg",
-            descripcion: "Ejercicio de swing con pesa alternado para mejorar tu rendimiento físico.",
+            descripcion: "Inclinate hacia adelante desde las caderas llevando la kettlebell hacia atrás entre las piernas (como si fueras a sentarte pero sin flexionar mucho las rodillas). De un impulso explosivo extendiendo las caderas hacia adelante para lanzar la kettlebell a la altura del pecho.",
           },
           {
             nombre: "Thruster con barra",
             imagen: "/images/ejercicios/Fuerza/fullbody/Thruster con barra.jpeg",
-            descripcion: "Ejercicio de thruster con barra para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Thruster con mancuerna",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Thruster con mancuerna.jpeg",
-            descripcion: "Ejercicio de thruster con mancuerna para mejorar tu rendimiento físico.",
+            descripcion: "Parate con los pies a la altura de los hombros. Bajá en sentadilla completa manteniendo el torso vertical y los codos altos. Desde el fondo de la sentadilla, empujá con las piernas para subir y aprovechá ese impulso para empujar la barra hacia arriba en un press de hombros hasta extender los brazos.",
           },
           {
             nombre: "Zancada con rotación",
             imagen: "/images/ejercicios/Fuerza/fullbody/Zancada con rotación.jpeg",
-            descripcion: "Ejercicio de zancada con rotación para mejorar tu rendimiento físico.",
+            descripcion: "Dá un paso largo hacia adelante con una pierna bajando en zancada hasta que ambas rodillas formen 90 grados. La rodilla delantera no debe pasar la punta del pie. En la posición más baja de la zancada, rotá el torso hacia la pierna de adelante llevando el peso al lado de la cadera. ",
           }
         ],
       },
