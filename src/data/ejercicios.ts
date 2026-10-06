@@ -327,44 +327,24 @@ export const categorias: Categoria[] = [
         nombre: "Full Body",
         ejercicios: [
           {
-            nombre: "Arranque de potencia",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Arranque de potencia.jpeg",
-            descripcion: "Ejercicio de arranque de potencia para mejorar tu rendimiento físico.",
-          },
-          {
             nombre: "Burpees",
             imagen: "/images/ejercicios/Fuerza/fullbody/Burpees.jpeg",
-            descripcion: "Ejercicio de burpees para mejorar tu rendimiento físico.",
+            descripcion: "Parate erguido. Bajá hasta apoyar las manos en el suelo y llevá los pies hacia atrás hasta la posición de plancha. Volvé a llevar los pies hacia adelante y realizá un salto vertical. Aterrizá suavemente y repetí manteniendo un ritmo controlado.",
           },
           {
             nombre: "Caminata con carga",
             imagen: "/images/ejercicios/Fuerza/fullbody/Caminata con carga.jpeg",
-            descripcion: "Ejercicio de caminata con carga para mejorar tu rendimiento físico.",
+            descripcion: "Sostené una mancuerna o kettlebell pesada en una sola mano a los costados del cuerpo, como si fuera una valija. Caminá manteniendo el torso completamente erguido, sin dejar que el peso te incline hacia ese lado. Mantené el core contraído y los hombros alineados. Cambiá de mano.",
           },
           {
             nombre: "Caminata de oso",
             imagen: "/images/ejercicios/Fuerza/fullbody/Caminata de Oso.jpeg",
-            descripcion: "Ejercicio de caminata de oso para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Caminata de granjero",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Caminata de granjero.jpeg",
-            descripcion: "Ejercicio de caminata de granjero para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Cargada y empuje vertical",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Cargada y empuje vertical.jpeg",
-            descripcion: "Ejercicio de cargada y empuje vertical para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Elevación de carga",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Elevación de carga.jpeg",
-            descripcion: "Ejercicio de elevación de carga para mejorar tu rendimiento físico.",
+            descripcion: "Comenzá en posición de cuadrupedia con las manos bajo los hombros y las rodillas flexionadas y elevadas del piso (a unos 5-10 cm). Movete hacia adelante moviendo la mano derecha con la pierna izquierda, luego la mano izquierda con la pierna derecha. Mantené las caderas bajas, la espalda recta y el core activo. Movete de forma lenta y controlada.",
           },
           {
             nombre: "Empuje vertical con mancuerna",
             imagen: "/images/ejercicios/Fuerza/fullbody/Empuje vertical con mancuerna.jpeg",
-            descripcion: "Ejercicio de empuje vertical con mancuerna para mejorar tu rendimiento físico.",
+            descripcion: "Sostené una mancuerna en cada mano a la altura de los hombros. Bajá en sentadilla y, al subir, utilizá la fuerza de las piernas para impulsar las mancuernas por encima de la cabeza. Bajá las cargas de forma controlada y repetí.",
           },
           {
             nombre: "Macho man",
@@ -380,11 +360,6 @@ export const categorias: Categoria[] = [
             nombre: "Remo en plancha",
             imagen: "/images/ejercicios/Fuerza/fullbody/Remo en plancha.jpeg",
             descripcion: "Ejercicio de remo en plancha para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Rodillas al pecho",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Rodillas al pecho.jpeg",
-            descripcion: "Ejercicio de rodillas al pecho para mejorar tu rendimiento físico.",
           },
           {
             nombre: "Sentadilla con empuje vertical",
@@ -405,11 +380,6 @@ export const categorias: Categoria[] = [
             nombre: "Swing con pesa alternado",
             imagen: "/images/ejercicios/Fuerza/fullbody/Swing con pesa alternado.jpeg",
             descripcion: "Ejercicio de swing con pesa alternado para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Swing con pesa rusa",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Swing con pesa rusa.jpeg",
-            descripcion: "Ejercicio de swing con pesa rusa para mejorar tu rendimiento físico.",
           },
           {
             nombre: "Thruster con barra",
