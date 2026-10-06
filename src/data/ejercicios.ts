@@ -347,19 +347,14 @@ export const categorias: Categoria[] = [
             descripcion: "Sostené una mancuerna en cada mano a la altura de los hombros. Bajá en sentadilla y, al subir, utilizá la fuerza de las piernas para impulsar las mancuernas por encima de la cabeza. Bajá las cargas de forma controlada y repetí.",
           },
           {
-            nombre: "Macho man",
-            imagen: "/images/ejercicios/Fuerza/fullbody/Macho man.jpeg",
-            descripcion: "Ejercicio de macho man para mejorar tu rendimiento físico.",
-          },
-          {
             nombre: "Pararse con peso",
             imagen: "/images/ejercicios/Fuerza/fullbody/Pararse con peso.jpeg",
-            descripcion: "Ejercicio de pararse con peso para mejorar tu rendimiento físico.",
+            descripcion: "Acostate boca arriba con una kettlebell en una mano, el brazo extendido verticalmente sobre el hombro. Flexioná la rodilla del mismo lado y mantené la otra pierna extendida en el piso. Con la mano libre, empujate del piso para sentarte sobre el glúteo. Deslizá la pierna extendida hacia atrás quedando en posición de rodilla. Levantate de pie llevando la pierna trasera hacia adelante.",
           },
           {
             nombre: "Remo en plancha",
             imagen: "/images/ejercicios/Fuerza/fullbody/Remo en plancha.jpeg",
-            descripcion: "Ejercicio de remo en plancha para mejorar tu rendimiento físico.",
+            descripcion: "Colocate en plancha con una mancuerna en cada mano. Mantené el cuerpo alineado y remá una mancuerna hacia la cadera mientras la otra mano permanece apoyada. Bajá lentamente y alterná los lados sin rotar excesivamente el torso.",
           },
           {
             nombre: "Sentadilla con empuje vertical",
