@@ -450,7 +450,6 @@ export const categorias: Categoria[] = [
           {
             nombre: "Sentadilla con barra",
             imagen: "/images/ejercicios/Fuerza/tren inferior/Sentadilla con barra.jpeg",
-            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788361322/Woman_lifting_barbell_in_gym_202608221941.jpg",
             descripcion: "Ejercicio de sentadilla con barra para mejorar tu rendimiento físico.",
           },
           {
