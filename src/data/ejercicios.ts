@@ -390,7 +390,7 @@ export const categorias: Categoria[] = [
           {
             nombre: "Abducción de cadera",
             imagen: "/images/ejercicios/Fuerza/tren inferior/Abducción de cadera.jpeg",
-            descripcion: "Ejercicio de abducción de cadera para mejorar tu rendimiento físico.",
+            descripcion: "Con la banda elástica sobre las rodillas, realizá abducciones laterales, caminata lateral o puente con abducción. Activá los abductores de cadera sintiendo la contracción en la parte lateral del glúteo. Mantené la tensión constante en la banda o mancuerna.",
           },
           {
             nombre: "Caminata lateral con banda",
