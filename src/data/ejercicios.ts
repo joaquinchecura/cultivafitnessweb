@@ -492,26 +492,20 @@ export const categorias: Categoria[] = [
           {
             nombre: "Bíceps con mancuernas",
             imagen: "/images/ejercicios/Fuerza/tren superior/Bíceps con mancuernas.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de bíceps con mancuernas para mejorar tu rendimiento físico.",
-          },
-          {
-            nombre: "Dominadas asistidas",
-            imagen: "/images/ejercicios/Fuerza/tren superior/Dominadas asistidas.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de dominadas asistidas para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788361387/Man_performing_bicep_curl_exercise_202608262226.jpg",
+            descripcion: "De pie con una mancuerna en cada mano, brazos extendidos a los costados con palmas hacia adentro. Girá una mancuerna hacia arriba mientras flexionás el codo llevándola hacia el hombro.",
           },
           {
             nombre: "Dominadas",
             imagen: "/images/ejercicios/Fuerza/tren superior/Dominadas.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de dominadas para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788361361/Woman_performing_pull-up_exercise_202608291536.jpg",
+            descripcion: "Colgate de una barra con las palmas hacia afuera (agarre prono) y las manos más anchas que los hombros. Desde la posición de brazos extendidos, tirá de tu cuerpo hacia arriba llevando los codos hacia abajo y atrás. ",
           },
           {
             nombre: "Elevaciones laterales con peso",
             imagen: "/images/ejercicios/Fuerza/tren superior/Elevaciones laterales con peso.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de elevaciones laterales con peso para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788361384/Man_lifting_dumbbells_in_gym_202608241501.jpg",
+            descripcion: "Elevá ambos brazos lateralmente simultáneamente hasta que queden paralelos al piso (altura de los hombros). Bajá lentamente sin dejar que las mancuernas choquen contra los muslos.",
           },
           {
             nombre: "Extensión de tríceps con polea",
