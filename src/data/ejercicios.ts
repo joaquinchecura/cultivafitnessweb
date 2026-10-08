@@ -673,88 +673,79 @@ export const categorias: Categoria[] = [
             descripcion: "Mantén el cuerpo en línea recta desde la cabeza hasta los talones, activando firmemente el abdomen y los glúteos. Despega una mano del suelo con un movimiento controlado para tocar el hombro contrario, evitando que la cadera se balancee o gire. ",
           },
           {
-            nombre: "Golpes con la soga",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Golpes con la soga.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de golpes con la soga para mejorar tu rendimiento físico.",
-          },
-          {
             nombre: "Marcha con rodillas elevadas",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Marcha con rodillas elevadas.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de marcha con rodillas elevadas para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788461619/Woman_performing_bodyweight_warm__202609031529.jpg",
+            descripcion: "Marchá en el lugar elevando las rodillas lo más alto posible. Activá flexores de cadera, cuádriceps y glúteos. Mantené la postura erguida y el core activado durante todo el movimiento.  ",
           },
-          {
-            nombre: "Medio burpee",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Medio burpee.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de medio burpee para mejorar tu rendimiento físico.",
-          },
+        
           {
             nombre: "Ondas con soga",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Ondas con soga.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de ondas con soga para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788736680/Man_performing_battle_ropes_exer__202608231913.jpg",
+            descripcion: "Sostené una cuerda en cada mano y adoptá una postura atlética. Mové los brazos alternativamente hacia arriba y abajo para generar ondas que recorran las cuerdas. Mantené el core firme y sostené un ritmo constante.",
           },
           {
             nombre: "Plancha con paso lateral",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Plancha con paso lateral.jpeg",
-            descripcion: "Ejercicio de plancha con paso lateral para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875394/Man_performing_core_plank_exercise_202609081046.jpg",
+            descripcion: "Colocate en plancha con las manos debajo de los hombros. Desplazá un pie hacia un lado y luego el otro para abrir la base. Volvé al centro siguiendo el mismo patrón. Mantené la cadera estable y el abdomen activo.",
           },
           {
             nombre: "Plancha con rodillas al pecho",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Plancha con rodillas al pecho.jpeg",
-            descripcion: "Ejercicio de plancha con rodillas al pecho para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1790350917/Woman_performing_mountain_climbe__20260925123749.jpg",
+            descripcion: "Desde posición de plancha alta, llevá una rodilla hacia el pecho de forma lenta y controlada, volvé a la posición inicial y alterná con la otra pierna. Mantené las caderas estables y la espalda neutra durante todo el movimiento.",
           },
           {
             nombre: "Remo en plancha",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Remo en plancha.jpeg",
-            descripcion: "Ejercicio de remo en plancha para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875395/Man_performing_dumbbell_row_exer__202609081046.jpg",
+            descripcion: "Colocate en plancha con una mancuerna en cada mano. Mantené el cuerpo alineado y remá una mancuerna hacia la cadera mientras la otra mano permanece apoyada. Bajá lentamente y alterná los lados sin rotar excesivamente el torso.",
           },
           {
             nombre: "Salto hacia delante",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Salto hacia delante.jpeg",
-            descripcion: "Ejercicio de salto hacia delante para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1790785585/Woman_performing_broad_jump_exer__20260930132525.jpg",
+            descripcion: "Saltá hacia adelante lo más lejos posible, extendiendo las caderas y las rodillas. Aterrizá con ambos pies y amortiguá el impacto flexionando las rodillas. Mantené el equilibrio al finalizar.",
           },
-          {
-            nombre: "Saltos al cajón",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Saltos al cajón.jpeg",
-            descripcion: "Ejercicio de saltos al cajón para mejorar tu rendimiento físico.",
-          },
+        
           {
             nombre: "Saltos con rodillas al pecho",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Saltos con rodillas al pecho.jpeg",
-            descripcion: "Ejercicio de saltos con rodillas al pecho para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788103320/Man_performing_tuck_jump_exercise_202608251413.jpg",
+            descripcion: "Impulsate explosivamente hacia arriba y, mientras estás en el aire, flexioná las caderas y llevá las rodillas lo más cerca posible del pecho. ",
           },
           {
             nombre: "Saltos con soga",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Saltos con soga.jpeg",
-            descripcion: "Ejercicio de saltos con soga para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875498/Woman_jumping_rope_in_gym_202609081046.jpg",
+            descripcion: "Sostené la soga con ambas manos y mantené los codos cerca del cuerpo. Girá la soga principalmente con las muñecas y realizá pequeños saltos cuando pase por debajo de los pies. Mantené un ritmo constante.",
           },
           {
             nombre: "Saltos con zancadas",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Saltos con zancadas.jpeg",
-            descripcion: "Ejercicio de saltos con zancadas para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875537/Woman_performing_lunge_exercise_202609081046.jpg",
+            descripcion: "Comenzá en posición de zancada. Impulsate hacia arriba y cambiá la posición de las piernas durante el salto. Aterrizá suavemente en una zancada con la pierna contraria adelante. Mantené el torso estable y controlá cada aterrizaje.",
           },
           {
             nombre: "Saltos desde sentadilla",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Saltos desde sentadilla.jpeg",
-            descripcion: "Ejercicio de saltos desde sentadilla para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875568/Woman_performing_squat_jumps_202609081046.jpg",
+            descripcion: "Parate con los pies separados al ancho de las caderas. Bajá en sentadilla y desde esa posición impulsate hacia arriba realizando un salto. Aterrizá suavemente con las rodillas flexionadas y enlazá la siguiente repetición.",
           },
           {
             nombre: "Saltos laterales",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Saltos laterales.jpeg",
-            descripcion: "Ejercicio de saltos laterales para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875364/Man_jumping_over_mini_hurdle_202609081046.jpg",
+            descripcion: "Parate con las rodillas ligeramente flexionadas. Saltá hacia un lado y aterrizá sobre ambos pies o sobre un pie según la variante. Absorbé el impacto flexionando las piernas y repetí hacia el otro lado manteniendo el control.",
           },
-          {
-            nombre: "Sentadilla contra pared",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Sentadilla contra pared.jpeg",
-            descripcion: "Ejercicio de sentadilla contra pared para mejorar tu rendimiento físico.",
-          },
+        
           {
             nombre: "Sentadillas con brazos elevados",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Sentadillas con brazos elevados.jpeg",
-            descripcion: "Ejercicio de sentadillas con brazos elevados para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875365/Man_performing_bodyweight_squat___202609081046.jpg",
+            descripcion: "Parate con los pies separados al ancho de las caderas. Bajá en sentadilla mientras llevás los brazos hacia arriba. Al subir, regresá los brazos a una posición cómoda. Mantené el movimiento fluido y controlado.",
           },
           {
             nombre: "Skipping alto",
@@ -765,43 +756,36 @@ export const categorias: Categoria[] = [
           {
             nombre: "Sprint con intervalos cortos",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Sprint con intervalos cortos.jpeg",
-            descripcion: "Ejercicio de sprint con intervalos cortos para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788466852/Woman_sprinting_on_running_track_202609031718_1.jpg",
+            descripcion: "Realizá un sprint corto a máxima intensidad durante el tiempo indicado. Después recuperá caminando o descansando antes de repetir. Concentrate en acelerar con potencia y mantener una técnica de carrera eficiente.",
           },
-          {
-            nombre: "Sprint cortos en pendiente",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Sprint cortos en pendiente.jpeg",
-            descripcion: "Ejercicio de sprint cortos en pendiente para mejorar tu rendimiento físico.",
-          },
+        
           {
             nombre: "Sprint en airbike",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Sprint en airbike.jpeg",
-            descripcion: "Ejercicio de sprint en airbike para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875479/Man_riding_stationary_exercise_bike_202609081046.jpg",
+            descripcion: "Ajustá el asiento a una posición cómoda y comenzá a pedalear. Durante el intervalo de trabajo aumentá la intensidad al máximo nivel que puedas sostener. Empujá y tirá de los brazos mientras pedaleás con fuerza.",
           },
           {
             nombre: "Step jacks",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Step jacks.jpeg",
-            descripcion: "Ejercicio de step jacks para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788434836/Man_performing_jumping_jacks_202608241501.jpg",
+            descripcion: "Saltá abriendo simultáneamente las piernas hacia los lados y levantando los brazos lateralmente por encima de la cabeza hasta que las manos casi se toquen. Volvé al centro llevando los pies juntos y bajando los brazos a los costados.",
           },
           {
             nombre: "Subidas al cajón",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Subidas al cajón.jpeg",
-            descripcion: "Ejercicio de subidas al cajón para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788736773/Woman_performing_box_jump_202609012022_2.jpg",
+            descripcion: "Parate frente al cajón. Apoyá un pie arriba y empujá con esa pierna para subir. Subí el otro pie y después bajá con control. Alterná las piernas y mantené un ritmo constante y seguro.",
           },
-          {
-            nombre: "Swing con balanceo",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Swing con balanceo.jpeg",
-            descripcion: "Ejercicio de swing con balanceo para mejorar tu rendimiento físico.",
-          },
+       
           {
             nombre: "Thruster",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Thruster.jpeg",
-            descripcion: "Ejercicio de thruster para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875519/Woman_performing_dumbbell_thrust__202609081046.jpg",
+            descripcion: "Sostené una mancuerna en cada mano a la altura de los hombros. Bajá en sentadilla y, al subir, utilizá la fuerza de las piernas para impulsar las mancuernas por encima de la cabeza. Bajá las cargas de forma controlada y repetí.",
           },
-          {
-            nombre: "Thrusters con cargada de mancuernas",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Thrusters con cargada de mancuernas.jpeg",
-            descripcion: "Ejercicio de thrusters con cargada de mancuernas para mejorar tu rendimiento físico.",
-          }
+          
         ]
       }
     ],
