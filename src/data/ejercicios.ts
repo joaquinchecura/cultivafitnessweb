@@ -649,51 +649,51 @@ export const categorias: Categoria[] = [
           {
             nombre: "Burpees",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Burpees.jpeg",
-            descripcion: "Ejercicio de burpees para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788394204/Woman_performing_burpee_push-up_202608311535.jpg",
+            descripcion: "Parate erguido. Bajá hasta apoyar las manos en el suelo y llevá los pies hacia atrás hasta la posición de plancha. Volvé a llevar los pies hacia adelante y realizá un salto vertical. Aterrizá suavemente y repetí manteniendo un ritmo controlado.",
           },
-          {
-            nombre: "Complex con barra",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Complex con barra.jpeg",
-            descripcion: "Ejercicio de complex con barra para mejorar tu rendimiento físico.",
-          },
+     
           {
             nombre: "Elevaciones de talones",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Elevaciones de talones.jpeg",
-            descripcion: "Ejercicio de elevaciones de talones para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788434829/Man_performing_butt_kicks_exercise_202608311958.jpg",
+            descripcion: "Corré en el lugar llevando los talones hacia los glúteos de forma alternada. Activá isquiotibiales y gemelos con movimientos dinámicos. Mantené el ritmo constante y aumentá progresivamente la velocidad..",
           },
-          {
-            nombre: "Empuje de trineo",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Empuje de trineo.jpeg",
-            descripcion: "Ejercicio de empuje de trineo para mejorar tu rendimiento físico.",
-          },
+       
           {
             nombre: "Estocadas laterales",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Estocadas laterales.jpeg",
-            descripcion: "Ejercicio de estocadas laterales para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788875536/Woman_performing_lateral_lunges_202609081046.jpg",
+            descripcion: "Parate con los pies juntos. Da un paso amplio hacia un lado y flexioná esa pierna llevando la cadera hacia atrás. La otra pierna queda más extendida. Empujá el suelo para volver al centro y repetí hacia el otro lado.",
           },
           {
             nombre: "Flexo extensión con toque de hombros",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Flexo extensión con toque de hombros.jpeg",
-            descripcion: "Ejercicio de flexo extensión con toque de hombros para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1791233893/Woman_performing_shoulder_tap_plank_20261005175235.jpg",
+            descripcion: "Mantén el cuerpo en línea recta desde la cabeza hasta los talones, activando firmemente el abdomen y los glúteos. Despega una mano del suelo con un movimiento controlado para tocar el hombro contrario, evitando que la cadera se balancee o gire. ",
           },
           {
             nombre: "Golpes con la soga",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Golpes con la soga.jpeg",
+            imagenCloudinaryId: "",
             descripcion: "Ejercicio de golpes con la soga para mejorar tu rendimiento físico.",
           },
           {
             nombre: "Marcha con rodillas elevadas",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Marcha con rodillas elevadas.jpeg",
+            imagenCloudinaryId: "",
             descripcion: "Ejercicio de marcha con rodillas elevadas para mejorar tu rendimiento físico.",
           },
           {
             nombre: "Medio burpee",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Medio burpee.jpeg",
+            imagenCloudinaryId: "",
             descripcion: "Ejercicio de medio burpee para mejorar tu rendimiento físico.",
           },
           {
             nombre: "Ondas con soga",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Ondas con soga.jpeg",
+            imagenCloudinaryId: "",
             descripcion: "Ejercicio de ondas con soga para mejorar tu rendimiento físico.",
           },
           {
@@ -759,7 +759,8 @@ export const categorias: Categoria[] = [
           {
             nombre: "Skipping alto",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/HIIT/Skipping A.jpeg",
-            descripcion: "Ejercicio de skipping a para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788461635/Woman_performing_knee_raise_exer__202609031529.jpg",
+            descripcion: "Comenzá a correr en el lugar llevando las rodillas lo más alto posible hacia el pecho, alternando rápidamente las piernas. Simultáneamente, balanceá los brazos en sincronía con las piernas como al correr, con los codos flexionados a 90°. ",
           },
           {
             nombre: "Sprint con intervalos cortos",
