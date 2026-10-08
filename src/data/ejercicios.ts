@@ -590,67 +590,55 @@ export const categorias: Categoria[] = [
           {
             nombre: "Aeróbicos de bajo impacto",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Aeróbicos de bajo impacto.jpeg",
-            descripcion: "Ejercicio de aeróbicos de bajo impacto para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
-          {
-            nombre: "Bicicleta de aire",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Bicicleta de aire.jpeg",
-            descripcion: "Ejercicio de bicicleta de aire para mejorar tu rendimiento físico.",
-          },
+       
           {
             nombre: "Bicicleta fija",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Bicicleta fija.jpeg",
-            descripcion: "Ejercicio de bicicleta fija para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
           {
             nombre: "Caminata en escalador",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Camina en escalador.jpeg",
-            descripcion: "Ejercicio de camina en escalador para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
           {
             nombre: "Caminata con inclinación",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Caminata con inclinación.jpeg",
-            descripcion: "Ejercicio de caminata con inclinación para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
           {
             nombre: "Caminata rápida",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Caminata rápida.jpeg",
-            descripcion: "Ejercicio de caminata rápida para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
           {
             nombre: "Elíptico",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Elíptico.jpeg",
-            descripcion: "Ejercicio de elíptico para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
-          {
-            nombre: "Escaleras",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Escaleras.jpeg",
-            descripcion: "Ejercicio de escaleras para mejorar tu rendimiento físico.",
-          },
+       
           {
             nombre: "Remo ergométrico",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Remo ergométrico.jpeg",
-            descripcion: "Ejercicio de remo ergométrico para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
-          {
-            nombre: "Remo con máquina",
-            imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Remos con máquina.jpeg",
-            descripcion: "Ejercicio de remos con máquina para mejorar tu rendimiento físico.",
-          },
+         
           {
             nombre: "Saltos con soga",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Saltos con soga.jpeg",
-            descripcion: "Ejercicio de saltos con soga para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
           {
             nombre: "Trote con intervalos",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Trote con intervalos.jpeg",
-            descripcion: "Ejercicio de trote con intervalos para mejorar tu rendimiento físico.",
+            descripcion: " ",
           },
           {
             nombre: "Trote continuo",
             imagen: "/images/ejercicios/Metabólico y condicionamiento/Cardio continuo/Trote continuo.jpeg",
-            descripcion: "Ejercicio de trote continuo para mejorar tu rendimiento físico.",
+            descripcion: " ",
           }
         ],
       },
