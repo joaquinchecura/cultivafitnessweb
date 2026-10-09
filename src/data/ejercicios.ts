@@ -912,47 +912,37 @@ export const categorias: Categoria[] = [
           },
        
           {
-            nombre: "Estiramiento lateral de columna",
+            nombre: "Estiramiento de columna",
             imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Estiramiento lateral de columna.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de estiramiento lateral de columna para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788631976/Woman_performing_lat_stretch_202609012022.jpg",
+            descripcion: "Bajá el torso hacia adelante y hacia abajo, dejando caer el pecho entre los brazos. Sentirás el estiramiento en los lados de la espalda, las axilas y la parte superior de los brazos.",
           },
           {
             nombre: "Estiramiento lateral de cuello",
             imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Estiramiento lateral de cuello.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de estiramiento lateral de cuello para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788652213/Woman_stretching_neck_muscles_202609052028.jpg",
+            descripcion: " Incliná lentamente la cabeza hacia un lado acercando la oreja al hombro sin levantar el hombro. Mantené el rostro mirando hacia adelante. Sentí un estiramiento suave en el lateral del cuello.",
           },
           {
             nombre: "Estiramiento lumbar con rotación",
             imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Estiramiento lumbar con rotación.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de estiramiento lumbar con rotación para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788694443/Man_performing_back_stretch_exer__202609052355.jpg",
+            descripcion: "Dejá caer lentamente ambas rodillas hacia un lado mientras mantenés los hombros en contacto con el suelo. Girá solo hasta sentir un estiramiento cómodo en la espalda baja y la cadera.",
           },
           {
             nombre: "Estiramiento lumbar",
             imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Estiramiento lumbar.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de estiramiento lumbar para mejorar tu rendimiento físico.",
+            imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788694463/Man_performing_lumbar_stretch_ex__202609052355.jpg",
+            descripcion: "Flexioná ambas rodillas y llevalas lentamente hacia el pecho. Abrazá las piernas con los brazos sin tirar con fuerza y mantené la espalda relajada contra el suelo.",
           },
-          {
-            nombre: "Flexo extensión de cuello",
-            imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Flexo extensión de cuello.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de flexo extensión de cuello para mejorar tu rendimiento físico.",
-          },
+     
           {
             nombre: "Postura de descanso",
             imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Postura de descanso.jpeg",
             imagenCloudinaryId: "https://res.cloudinary.com/ygpokmmn/image/upload/v1788566734/Woman_performing_child_s_pose_ex__202608291536.jpg",
             descripcion: "Inclinate hacia adelante hasta apoyar el torso sobre los muslos y extendé los brazos hacia adelante o dejalos relajados junto al cuerpo. Apoyá la frente en la colchoneta si llegás cómodamente.",
           },
-          {
-            nombre: "Rotación de cuello",
-            imagen: "/images/ejercicios/Regulación y descarga/Stretching pasivo/Rotación de cuello.jpeg",
-            imagenCloudinaryId: "",
-            descripcion: "Ejercicio de rotación de cuello para mejorar tu rendimiento físico.",
-          }
+       
         ],
       },
       {
