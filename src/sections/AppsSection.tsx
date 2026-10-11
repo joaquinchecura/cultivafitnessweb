@@ -151,7 +151,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
     if (hovered && hasScreenshots) {
       intervalRef.current = setInterval(() => {
         setScreenshotIndex((i) => (i + 1) % app.screenshots.length);
-      }, 1200);
+      }, 2500);
     } else {
       if (intervalRef.current) clearInterval(intervalRef.current);
       setScreenshotIndex(0);

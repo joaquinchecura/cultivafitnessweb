@@ -7,9 +7,24 @@ interface ManagerSlide {
   caption: string; // texto corto de la pestaña: "Clientes", "Rutinas", etc.
 }
 
-// Cargá acá las capturas de MANAGER (desktop, 16:10). Ejemplo:
-// { src: '/images/screenshots/manager-clientes.jpg', alt: 'Panel de clientes en MANAGER', caption: 'Clientes' },
-const slides: ManagerSlide[] = [];
+const slides: ManagerSlide[] = [
+
+{
+    src: '/images/screenshots/2.hiit-vs-sit.jpeg',
+    alt: 'Dashboard de MANAGER con resumen del negocio',
+    caption: 'Dashboard',
+  },
+  {
+    src: '/images/screenshots/7.sueño-rendimiento.jpeg',
+    alt: 'Panel de clientes en MANAGER',
+    caption: 'Clientes',
+  },
+  {
+    src: '/images/screenshots/13.fibra-nutricion-deportiva.jpeg',
+    alt: 'Generador de rutinas en MANAGER',
+    caption: 'Rutinas',
+  },
+];
 
 const AUTOPLAY_MS = 4500;
 
