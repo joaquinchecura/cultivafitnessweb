@@ -253,3 +253,60 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
     </div>
   );
 }
+
+export function AppsSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const validCards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
+      if (validCards.length === 0) return;
+      gsap.fromTo(
+        validCards,
+        { y: 60, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.08,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 80%',
+            once: true,
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section id="apps" ref={sectionRef} className="relative py-28 lg:py-36 px-6 bg-cultiva-bg">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="text-center max-w-[800px] mx-auto mb-16">
+          <span className="font-mono-label text-cultiva-green-dark tracking-[0.2em] block mb-4">
+            PARA TUS CLIENTES
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cultiva-text mb-4 tracking-tight">
+            Sumale el ecosistema completo a tu servicio
+          </h2>
+          <p className="text-cultiva-secondary text-base sm:text-lg">
+            Estas apps ya están disponibles para cualquier persona — y como profesional en MANAGER
+            podés integrarlas al trabajo con tus clientes, sin costo extra.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {apps.map((app, i) => (
+            <div key={app.name} ref={(el) => { if (el) cardsRef.current[i] = el; }}>
+              <AppCard app={app} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
