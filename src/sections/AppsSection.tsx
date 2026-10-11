@@ -15,6 +15,7 @@ const apps = [
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
+    screenshots: ['/images/screenshots/2.hiit-vs-sit.jpeg', '/images/screenshots/7.sueño-rendimiento.jpeg', '/images/screenshots/13.fibra-nutricion-deportiva.jpeg', '/images/screenshots/15.cafe-te-demencia.jpeg'],
   },
   {
     name: 'SUPPLY',
@@ -172,7 +173,7 @@ export function AppsSection() {
     Sumale el ecosistema completo a tu servicio
   </h2>
   <p className="text-cultiva-secondary text-base sm:text-lg">
-    Estas apps ya están disponibles para cualquier persona — y como profesional en MANAGER
+    Estas apps ya están disponibles y como profesional en MANAGER
     podés integrarlas al trabajo con tus clientes, sin costo extra.
   </p>
 </div>
