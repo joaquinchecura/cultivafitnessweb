@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Check } from 'lucide-react';
@@ -15,7 +15,7 @@ const apps = [
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
-    screenshots: ['/images/screenshots/2.hiit-vs-sit.jpeg', '/images/screenshots/7.sueño-rendimiento.jpeg', '/images/screenshots/13.fibra-nutricion-deportiva.jpeg', '/images/screenshots/15.cafe-te-demencia.jpeg'],
+    screenshots: ['/images/screenshots/2.hiit-vs-sit.jpeg', '/images/screenshots/7.sueño-rendimiento.jpeg'] as string[], // ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
   },
   {
     name: 'SUPPLY',
@@ -26,6 +26,7 @@ const apps = [
     features: ['Registro de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: 'https://supply.cultivafitness.app',
     icon: <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'NEURA',
@@ -36,6 +37,7 @@ const apps = [
     features: ['Control del sistema nervioso', 'Técnicas emocionales guiadas', 'Juegos para entrenar tu cerebro'],
     link: 'https://neura.cultivafitness.app',
     icon: <img src="/images/logoneura.png" alt="Neura" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'BODYMIND',
@@ -46,6 +48,7 @@ const apps = [
     features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
     link: 'https://bodymind.cultivafitness.app/',
     icon: <img src="/images/logobodymind.png" alt="Bodymind" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'MICROFIT',
@@ -56,6 +59,7 @@ const apps = [
     features: ['Rutinas de 5-15 min', 'Adaptación por energía', 'Sin equipo necesario'],
     link: 'https://microfit.cultivafitness.app',
     icon: <img src="/images/logomicrofit.png" alt="Microfit" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'DESKOUT',
@@ -66,6 +70,7 @@ const apps = [
     features: ['Rutinas de 2-5 min', 'Modo discreto', 'Alertas de sedentarismo'],
     link: 'https://deskout.cultivafitness.app',
     icon: <img src="/images/logodeskout.png" alt="Deskout" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'SILVER',
@@ -76,6 +81,7 @@ const apps = [
     features: ['Navegación accesible', 'Rutinas guiadas', 'Conexión familiar'],
     link: 'https://silver.cultivafitness.app',
     icon: <img src="/images/logosilver.png" alt="Silver" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'JUNIOR',
@@ -86,6 +92,7 @@ const apps = [
     features: ['Gamificación', 'Aprendizaje cooperativo', 'Hábitos saludables'],
     link: 'https://junior.cultivafitness.app',
     icon: <img src="/images/logojunior.png" alt="Junior" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'PRENATAL',
@@ -96,6 +103,7 @@ const apps = [
     features: ['Rutinas médicamente validadas', 'Suelo pélvico', 'Bienestar por trimestre'],
     link: 'https://prenatal.cultivafitness.app',
     icon: <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'RUNNING',
@@ -106,6 +114,7 @@ const apps = [
     features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
     link: 'https://running.cultivafitness.app',
     icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'BIOMATCH',
@@ -116,6 +125,7 @@ const apps = [
     features: ['Análisis biomecánico 3D', 'Rango de movimiento óptimo', 'Recomendaciones IA'],
     link: 'https://biomatch.cultivafitness.app',
     icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'TIMER',
@@ -126,108 +136,120 @@ const apps = [
     features: ['4 modos', '4 Sonidos', 'Modo oscuro'],
     link: 'https://timer.cultivafitness.app',
     icon: <img src="/images/logotimer.png" alt="Timer" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
 ];
 
-export function AppsSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+function AppCard({ app }: { app: (typeof apps)[number] }) {
+  const [hovered, setHovered] = useState(false);
+  const [screenshotIndex, setScreenshotIndex] = useState(0);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const hasScreenshots = app.screenshots.length > 0;
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const validCards = cardsRef.current.filter(Boolean) as HTMLDivElement[];
-      if (validCards.length === 0) return;
-      gsap.fromTo(
-        validCards,
-        { y: 60, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.08,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%',
-            once: true,
-          },
-        }
-      );
-    }, sectionRef);
+    if (hovered && hasScreenshots) {
+      intervalRef.current = setInterval(() => {
+        setScreenshotIndex((i) => (i + 1) % app.screenshots.length);
+      }, 1200);
+    } else {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      setScreenshotIndex(0);
+    }
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [hovered, hasScreenshots, app.screenshots.length]);
 
-    return () => ctx.revert();
-  }, []);
+  // Precarga las capturas en el primer hover para evitar parpadeos
+  useEffect(() => {
+    if (!hovered || !hasScreenshots) return;
+    app.screenshots.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, [hovered, hasScreenshots, app.screenshots]);
 
   return (
-    <section
-      id="apps"
-      ref={sectionRef}
-      className="relative py-28 lg:py-36 px-6 bg-cultiva-bg"
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="group relative bg-cultiva-surface border border-cultiva-border rounded-[20px] p-8 transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_40px_rgba(22,163,74,0.06)] overflow-hidden"
     >
-      <div className="max-w-[1280px] mx-auto">
-      <div className="text-center max-w-[800px] mx-auto mb-16">
-  <span className="font-mono-label text-cultiva-green tracking-[0.2em] block mb-4">
-    PARA TUS CLIENTES
-  </span>
-  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cultiva-text mb-4 tracking-tight">
-    Sumale el ecosistema completo a tu servicio
-  </h2>
-  <p className="text-cultiva-secondary text-base sm:text-lg">
-    Estas apps ya están disponibles y como profesional en MANAGER
-    podés integrarlas al trabajo con tus clientes, sin costo extra.
-  </p>
-</div>
+      {/* Carrusel de capturas al hover: toda la superficie lleva a la app */}
+      {hovered && hasScreenshots && (
+        <a
+          href={app.link}
+          target={app.link.startsWith('http') ? '_blank' : undefined}
+          rel={app.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+          aria-label={`Probar ${app.name}`}
+          className="absolute inset-0 z-10 block bg-cultiva-surface"
+        >
+          <img
+            src={app.screenshots[screenshotIndex]}
+            alt={`Captura de pantalla de ${app.name}`}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {apps.map((app, i) => (
-            <div
-              key={app.name}
-              ref={(el) => { if (el) cardsRef.current[i] = el; }}
-              className="group relative bg-cultiva-surface border border-cultiva-green/[0.08] rounded-[20px] p-8 transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_40px_rgba(74,222,128,0.08)]"
-            >
-              <div
-                className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-cultiva-bg mb-5 transition-transform duration-300 group-hover:scale-105`}
-              >
-                {app.icon}
-              </div>
+          <span className="absolute top-4 left-4 text-white font-semibold text-sm drop-shadow">
+            {app.name}
+          </span>
 
+          <span className="absolute bottom-10 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 px-4 py-2 rounded-full bg-white text-cultiva-text text-sm font-semibold shadow-md">
+            Probar ahora
+            <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+          </span>
+
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+            {app.screenshots.map((_, i) => (
               <span
-                className="inline-block px-3 py-1 rounded-full text-[11px] font-mono tracking-wider uppercase mb-3"
-                style={{ backgroundColor: `${app.tagColor}15`, color: app.tagColor }}
-              >
-                {app.tag}
-              </span>
+                key={i}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === screenshotIndex ? 'bg-white w-4' : 'bg-white/40 w-1.5'
+                }`}
+              />
+            ))}
+          </div>
+        </a>
+      )}
 
-              <h3 className="text-xl font-semibold text-cultiva-text mb-3">
-                {app.name}
-              </h3>
-
-              <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">
-                {app.desc}
-              </p>
-
-              <ul className="space-y-2 mb-6">
-                {app.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-cultiva-muted text-sm">
-                    <Check className="w-3.5 h-3.5 text-cultiva-green flex-shrink-0" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={app.link}
-                target={app.link.startsWith('http') ? '_blank' : undefined}
-                rel={app.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="inline-flex items-center gap-1 text-sm font-medium text-cultiva-green hover:translate-x-1 transition-transform duration-300"
-              >
-                {app.link === '#' ? 'Próximamente' : 'Probar Ahora'}
-                {app.link !== '#' && <ExternalLink className="w-3.5 h-3.5" />}
-              </a>
-            </div>
-          ))}
-        </div>
+      {/* Contenido normal de la card */}
+      <div
+        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-white mb-5 transition-transform duration-300 group-hover:scale-105`}
+      >
+        {app.icon}
       </div>
-    </section>
+
+      <span
+        className="inline-block px-3 py-1 rounded-full text-[11px] font-mono tracking-wider uppercase mb-3"
+        style={{ backgroundColor: `${app.tagColor}15`, color: app.tagColor }}
+      >
+        {app.tag}
+      </span>
+
+      <h3 className="text-xl font-semibold text-cultiva-text mb-3">{app.name}</h3>
+
+      <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">{app.desc}</p>
+
+      <ul className="space-y-2 mb-6">
+        {app.features.map((f) => (
+          <li key={f} className="flex items-center gap-2 text-cultiva-muted text-sm">
+            <Check className="w-3.5 h-3.5 text-cultiva-green flex-shrink-0" />
+            {f}
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href={app.link}
+        target={app.link.startsWith('http') ? '_blank' : undefined}
+        rel={app.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+        className="inline-flex items-center gap-1 text-sm font-medium text-cultiva-green-dark hover:translate-x-1 transition-transform duration-300"
+      >
+        {app.link === '#' ? 'Próximamente' : 'Probar Ahora'}
+        {app.link !== '#' && <ExternalLink className="w-3.5 h-3.5" />}
+      </a>
+    </div>
   );
 }
