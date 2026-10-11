@@ -41,7 +41,7 @@ export function HeroSection() {
           <div ref={labelRef} className="opacity-0 translate-y-5 mb-6">
             <span className="inline-flex items-center gap-2 font-mono-label text-cultiva-green-dark tracking-[0.2em] bg-cultiva-green/10 px-4 py-2 rounded-full">
               <Layers className="w-3.5 h-3.5" />
-              PARA PROFESIONALES DE SALUD, FITNESS Y DEPORTE
+              PARA PROFESIONALES DE LA SALUD, EL FITNESS Y EL DEPORTE
             </span>
           </div>
 
@@ -57,7 +57,7 @@ export function HeroSection() {
             ref={subtitleRef}
             className="opacity-0 translate-y-5 text-cultiva-secondary text-lg sm:text-xl max-w-[640px] mx-auto mb-10 leading-relaxed"
           >
-            MANAGER es la plataforma todo-en-uno para gestionar clientes, rutinas, pagos y agenda —
+            MANAGER es la plataforma todo en uno para gestionar clientes, rutinas, pagos y agendas —
             y sumarles a tus clientes un ecosistema de 12+ apps de bienestar, todo en un solo lugar.
           </p>
 

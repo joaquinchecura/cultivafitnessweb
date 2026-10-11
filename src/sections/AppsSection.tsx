@@ -185,11 +185,12 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
           aria-label={`Probar ${app.name}`}
           className="absolute inset-0 z-10 block bg-cultiva-surface"
         >
-          <img
-            src={app.screenshots[screenshotIndex]}
-            alt={`Captura de pantalla de ${app.name}`}
-            className="w-full h-full object-cover"
-          />
+         <img
+           key={screenshotIndex}
+           src={app.screenshots[screenshotIndex]}
+           alt={`Captura de pantalla de ${app.name}`}
+           className="w-full h-full object-cover animate-[fadeIn_0.6s_ease-out]"
+            />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
           <span className="absolute top-4 left-4 text-white font-semibold text-sm drop-shadow">

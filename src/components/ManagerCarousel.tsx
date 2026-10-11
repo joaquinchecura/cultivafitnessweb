@@ -10,17 +10,17 @@ interface ManagerSlide {
 const slides: ManagerSlide[] = [
 
 {
-    src: '/images/screenshots/2.hiit-vs-sit.jpeg',
+    src: '/images/screenshots/',
     alt: 'Dashboard de MANAGER con resumen del negocio',
     caption: 'Dashboard',
   },
   {
-    src: '/images/screenshots/7.sueño-rendimiento.jpeg',
+    src: '/images/screenshots/',
     alt: 'Panel de clientes en MANAGER',
     caption: 'Clientes',
   },
   {
-    src: '/images/screenshots/13.fibra-nutricion-deportiva.jpeg',
+    src: '/images/screenshots/',
     alt: 'Generador de rutinas en MANAGER',
     caption: 'Rutinas',
   },
