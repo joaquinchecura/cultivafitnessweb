@@ -28,7 +28,7 @@ const features: {
     title: 'Toda tu cartera, en un solo lugar',
     desc: 'Fichas de clientes, historial, evolución y notas. Dejá las planillas sueltas y los chats dispersos: cada cliente tiene su perfil completo, siempre a mano.',
     shots: [
-      // { src: '/images/screenshots/manager-clientes.webp', alt: 'Listado de clientes' },
+      { src: '/images/screenshots/2.hiit-vs-sit.jpeg', alt: 'Listado de clientes' },
       // { src: '/images/screenshots/manager-cliente-ficha.webp', alt: 'Ficha de un cliente' },
     ],
   },
