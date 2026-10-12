@@ -3,24 +3,24 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface ManagerSlide {
   src: string;
-  alt: string;
-  caption: string; // texto corto de la pestaña: "Clientes", "Rutinas", etc.
+  alt: string;      // descripción: se muestra como texto visible debajo de la imagen
+  caption: string;  // texto corto de la pestaña: "Clientes", "Rutinas", etc.
 }
 
+// Capturas 16:9 (ej: 1600×900). Las rutas empiezan con "/" y están dentro de /public.
 const slides: ManagerSlide[] = [
-
-{
-    src: '/images/screenshots/',
-    alt: 'Dashboard de MANAGER con resumen del negocio',
+  {
+    src: '/images/screenshots/manager-dashboard.webp',
+    alt: 'Dashboard de MANAGER con el resumen del negocio',
     caption: 'Dashboard',
   },
   {
-    src: '/images/screenshots/',
+    src: '/images/screenshots/manager-clientes.webp',
     alt: 'Panel de clientes en MANAGER',
     caption: 'Clientes',
   },
   {
-    src: '/images/screenshots/',
+    src: '/images/screenshots/manager-rutinas.webp',
     alt: 'Generador de rutinas en MANAGER',
     caption: 'Rutinas',
   },
@@ -61,58 +61,55 @@ export function ManagerCarousel() {
       aria-roledescription="carrusel"
       aria-label="Capturas de la plataforma MANAGER"
     >
-      {/* Marco tipo ventana de navegador */}
-      <div className="group relative rounded-2xl border border-cultiva-border bg-cultiva-surface shadow-[0_30px_80px_rgba(16,28,20,0.15)] overflow-hidden">
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-cultiva-border bg-cultiva-elevated">
-          <span className="w-2.5 h-2.5 rounded-full bg-red-400" aria-hidden="true" />
-          <span className="w-2.5 h-2.5 rounded-full bg-amber-400" aria-hidden="true" />
-          <span className="w-2.5 h-2.5 rounded-full bg-green-400" aria-hidden="true" />
-          <span className="ml-3 text-xs font-mono text-cultiva-muted">
-            MANAGER · {slides[index].caption}
-          </span>
-        </div>
+      {/* Sin marco: la captura 16:9 va directo, con bordes redondeados y sombra */}
+      <div className="group relative aspect-video rounded-2xl overflow-hidden bg-cultiva-elevated border border-cultiva-border shadow-[0_30px_80px_rgba(16,28,20,0.15)]">
+        {slides.map((slide, i) => (
+          <img
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+            aria-hidden={i !== index}
+            className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${
+              i === index ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        ))}
 
-        <div className="relative aspect-[16/10] bg-cultiva-elevated">
-          {slides.map((slide, i) => (
-            <img
-              key={slide.src}
-              src={slide.src}
-              alt={slide.alt}
-              loading={i === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-              aria-hidden={i !== index}
-              className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ${
-                i === index ? 'opacity-100' : 'opacity-0'
-              }`}
-            />
-          ))}
-
-          {count > 1 && (
-            <>
-              <button
-                type="button"
-                onClick={() => go(index - 1)}
-                aria-label="Captura anterior"
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-cultiva-text opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
-              >
-                <ChevronLeft className="w-5 h-5" aria-hidden="true" />
-              </button>
-              <button
-                type="button"
-                onClick={() => go(index + 1)}
-                aria-label="Captura siguiente"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-cultiva-text opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
-              >
-                <ChevronRight className="w-5 h-5" aria-hidden="true" />
-              </button>
-            </>
-          )}
-        </div>
+        {count > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={() => go(index - 1)}
+              aria-label="Captura anterior"
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-cultiva-text opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+            >
+              <ChevronLeft className="w-5 h-5" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              onClick={() => go(index + 1)}
+              aria-label="Captura siguiente"
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-cultiva-text opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+            >
+              <ChevronRight className="w-5 h-5" aria-hidden="true" />
+            </button>
+          </>
+        )}
       </div>
+
+      {/* Descripción visible de la captura actual (siempre debajo, nunca tapada) */}
+      <p
+        className="mt-5 text-center text-sm sm:text-base text-cultiva-secondary min-h-[1.5rem]"
+        aria-live="polite"
+      >
+        {slides[index].alt}
+      </p>
 
       {/* Pestañas con el nombre de cada pantalla */}
       {count > 1 && (
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+        <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
           {slides.map((slide, i) => (
             <button
               key={slide.caption}
