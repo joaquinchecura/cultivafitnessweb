@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Check } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { useRotatingIndex } from '../components/useRotatingIndex';
 
 
@@ -142,13 +142,20 @@ const apps = [
   },
 ];
 
+function chunkPairs(list: string[]): string[][] {
+  const pairs: string[][] = [];
+  for (let i = 0; i < list.length; i += 2) pairs.push(list.slice(i, i + 2));
+  return pairs;
+}
+ 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
   const [hovered, setHovered] = useState(false);
-  const hasScreenshots = app.screenshots.length > 0;
-  const screenshotIndex = useRotatingIndex(app.screenshots.length, hovered && hasScreenshots);
+  const pairs = chunkPairs(app.screenshots);
+  const hasScreenshots = pairs.length > 0;
+  const pairIndex = useRotatingIndex(pairs.length, hovered && hasScreenshots);
   const external = app.link.startsWith('http');
  
-  // Precarga las capturas en el primer hover para evitar parpadeos
+  // Precarga todas las capturas en el primer hover para evitar parpadeos
   useEffect(() => {
     if (!hovered || !hasScreenshots) return;
     app.screenshots.forEach((src) => {
@@ -163,37 +170,47 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
       onMouseLeave={() => setHovered(false)}
       className="group relative flex h-full flex-col bg-cultiva-surface border border-cultiva-border rounded-[20px] overflow-hidden transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_40px_rgba(22,163,74,0.06)]"
     >
-      {/* Zona visual 16:9: toda ella lleva a la app */}
+      {/* Zona visual 18:16 = dos capturas 9:16 pegadas. Toda ella lleva a la app */}
       <a
         href={app.link}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
         aria-label={`Probar ${app.name}`}
         tabIndex={-1}
-        className={`relative block aspect-video overflow-hidden bg-gradient-to-br ${app.gradient}`}
+        className={`relative block aspect-[18/16] overflow-hidden bg-gradient-to-br ${app.gradient}`}
       >
         {hasScreenshots ? (
-          <img
-            key={screenshotIndex}
-            src={app.screenshots[screenshotIndex]}
-            alt={`Captura de pantalla de ${app.name}`}
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 w-full h-full object-cover animate-[fadeIn_0.6s_ease-out]"
-          />
+          <div
+            key={pairIndex}
+            className="absolute inset-0 grid grid-cols-2 gap-px bg-white/70 animate-[fadeIn_0.6s_ease-out]"
+          >
+            {pairs[pairIndex].map((src, i) => (
+              <img
+                key={src}
+                src={src}
+                alt={`Captura ${pairIndex * 2 + i + 1} de ${app.name}`}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover object-top"
+              />
+            ))}
+          </div>
         ) : (
-          <span className="absolute inset-0 flex items-center justify-center text-white">
+          <span className="absolute inset-0 flex items-center justify-center text-white [&_img]:w-28 [&_img]:h-28 [&_img]:object-contain">
             {app.icon}
           </span>
         )}
  
-        {hasScreenshots && app.screenshots.length > 1 && (
-          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5" aria-hidden="true">
-            {app.screenshots.map((_, i) => (
+        {pairs.length > 1 && (
+          <span
+            className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 rounded-full bg-black/30 px-2 py-1"
+            aria-hidden="true"
+          >
+            {pairs.map((_, i) => (
               <span
                 key={i}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === screenshotIndex ? 'bg-white w-4 shadow' : 'bg-white/60 w-1.5'
+                  i === pairIndex ? 'bg-white w-4' : 'bg-white/60 w-1.5'
                 }`}
               />
             ))}
@@ -219,16 +236,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
           </div>
         </div>
  
-        <p className="text-cultiva-secondary text-sm leading-relaxed mb-4">{app.desc}</p>
- 
-        <ul className="space-y-1.5 mb-5">
-          {app.features.map((f) => (
-            <li key={f} className="flex items-center gap-2 text-cultiva-muted text-sm">
-              <Check className="w-3.5 h-3.5 text-cultiva-green flex-shrink-0" aria-hidden="true" />
-              {f}
-            </li>
-          ))}
-        </ul>
+        <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">{app.desc}</p>
  
         <a
           href={app.link}
