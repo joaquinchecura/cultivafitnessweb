@@ -9,15 +9,15 @@ gsap.registerPlugin(ScrollTrigger);
 
 const apps = [
   {
-    name: 'RECKON',
-    tag: 'WELLNESS',
-    tagColor: '#D97706',
-    gradient: 'from-amber-500 to-amber-700',
-    desc: 'Plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico y/o rehabilitación.',
-    features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
-    link: 'https://reckon.cultivafitness.app',
-    icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
-    screenshots: ['/images/screenshots/mandash1.jpg', '/images/screenshots/mandash2.png'] as string[], // ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
+    name: 'BIOMATCH',
+    tag: 'BIOMECANICA',
+    tagColor: '#7C3AED',
+    gradient: 'from-purple-500 to-purple-700',
+    desc: 'Plataforma de examen biométrico que detecta 33 puntos anatómicos en 3D para calcular ángulos, simetría y riesgos de ejecución en tiempo real.',
+    features: ['Análisis biomecánico 3D', 'Rango de movimiento óptimo', 'Recomendaciones IA'],
+    link: 'https://biomatch.cultivafitness.app',
+    icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
+    screenshots: [] as string[],
   },
   {
     name: 'SUPPLY',
@@ -31,6 +31,17 @@ const apps = [
     screenshots: [] as string[],
   },
   {
+    name: 'RECKON',
+    tag: 'WELLNESS',
+    tagColor: '#D97706',
+    gradient: 'from-amber-500 to-amber-700',
+    desc: 'Plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico y/o rehabilitación.',
+    features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
+    link: 'https://reckon.cultivafitness.app',
+    icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
+    screenshots: ['/images/screenshots/mandash1.jpg', '/images/screenshots/mandash2.png'] as string[], // ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
+  },
+  {
     name: 'NEURA',
     tag: 'NEUROCIENCIA',
     tagColor: '#0D9488',
@@ -42,14 +53,14 @@ const apps = [
     screenshots: [] as string[],
   },
   {
-    name: 'BODYMIND',
-    tag: 'FITNESS',
-    tagColor: '#16A34A',
-    gradient: 'from-cultiva-green to-cultiva-green-dark',
-    desc: 'App de bienestar integral que combina entrenamiento, nutrición y neurociencia para mejorar tu rendimiento físico y mental.',
-    features: ['Tracking de progreso', 'Planes adaptativos', 'Biblioteca de ejercicios'],
-    link: 'https://bodymind.cultivafitness.app/',
-    icon: <img src="/images/logobodymind.png" alt="Bodymind" className="w-15 h-15 object-contain" />,
+    name: 'RUNNING',
+    tag: 'RUNNING',
+    tagColor: '#DC2626',
+    gradient: 'from-red-500 to-red-700',
+    desc: 'App de Running con un plan personalizado acorde a tu perfil y objetivos específicos. Análisis de pie con IA y un GPS con streetmaps para guardar tu recorrido.',
+    features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
+    link: 'https://running.cultivafitness.app',
+    icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
     screenshots: [] as string[],
   },
   {
@@ -116,17 +127,6 @@ const apps = [
     features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
     link: 'https://running.cultivafitness.app',
     icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
-  },
-  {
-    name: 'BIOMATCH',
-    tag: 'BIOMECANICA',
-    tagColor: '#7C3AED',
-    gradient: 'from-purple-500 to-purple-700',
-    desc: 'Plataforma de examen biométrico que detecta 33 puntos anatómicos en 3D para calcular ángulos, simetría y riesgos de ejecución en tiempo real.',
-    features: ['Análisis biomecánico 3D', 'Rango de movimiento óptimo', 'Recomendaciones IA'],
-    link: 'https://biomatch.cultivafitness.app',
-    icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
     screenshots: [] as string[],
   },
   {
