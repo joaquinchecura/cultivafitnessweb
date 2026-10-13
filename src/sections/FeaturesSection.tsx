@@ -34,8 +34,8 @@ const features: {
       'Alta de clientes por link o QR propio',
     ],
     shots: [
-      // { src: '/images/screenshots/manager-clientes.webp', alt: 'Listado de clientes' },
-      // { src: '/images/screenshots/manager-cliente-ficha.webp', alt: 'Ficha de un cliente' },
+      { src: '/images/screenshots/mandash1.jpg', alt: 'Listado de clientes' },
+      { src: '/images/screenshots/mandash2.png', alt: 'Ficha de un cliente' },
     ],
   },
   {
