@@ -17,7 +17,7 @@ const apps = [
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
-    screenshots: ['/images/screenshots/2.hiit-vs-sit.jpeg', '/images/screenshots/7.sueño-rendimiento.jpeg'] as string[], // ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
+    screenshots: ['/images/screenshots/mandash1.jpg', '/images/screenshots/mandash2.png'] as string[], // ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
   },
   {
     name: 'SUPPLY',
