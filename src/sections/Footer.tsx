@@ -154,7 +154,7 @@ export function Footer() {
     <footer className="relative bg-cultiva-bg border-t border-cultiva-border">
       {/* CTA Banner - MANAGER */}
       <div className="border-b border-cultiva-border">
-        <div className="max-w-[1280px] mx-auto px-6 py-16">
+        <div className="site-container px-6 py-16">
           <div className="rounded-3xl bg-gradient-to-br from-cultiva-green to-cultiva-green-dark px-8 py-12 sm:px-16 sm:py-16 text-center">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 tracking-tight">
               ¿Sos profesional de salud, fitness o deporte?
@@ -177,7 +177,7 @@ export function Footer() {
 
       {/* Footer content */}
       <div className="pt-16 pb-8 px-6">
-        <div className="max-w-[1280px] mx-auto">
+        <div className="site-container">
           <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
             {/* Brand + Social */}
             <div className="max-w-[280px]">

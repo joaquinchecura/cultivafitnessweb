@@ -72,12 +72,12 @@ export function SocialSection() {
     <section
       id="comunidad"
       ref={sectionRef}
-      className="relative py-28 lg:py-36 px-6"
+      className="relative py-20 lg:py-24 px-6"
       style={{
         background: 'linear-gradient(135deg, #F1F5EF 0%, #E8F0FB 50%, #F1F5EF 100%)',
       }}
     >
-      <div className="max-w-[1280px] mx-auto">
+      <div className="site-container">
         {/* Header */}
         <div className="text-center max-w-[640px] mx-auto mb-16">
           <span className="font-mono-label text-cultiva-yellow tracking-[0.2em] block mb-4">

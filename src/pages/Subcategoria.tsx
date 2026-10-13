@@ -25,7 +25,7 @@ export default function Subcategoria() {
     <div className="min-h-screen bg-cultiva-bg text-cultiva-text">
       {/* Header */}
 <header className="border-b border-cultiva-green/10 bg-cultiva-bg/80 backdrop-blur-md sticky top-0 z-50">
-  <div className="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
+  <div className="site-container px-6 h-16 flex items-center justify-between">
     <Link to="/" className="flex items-center gap-2">
       <span className="text-cultiva-text font-bold text-lg">CULTIVA</span>
       <span className="text-cultiva-muted font-mono text-sm">FITNESS</span>
@@ -56,7 +56,7 @@ export default function Subcategoria() {
   </div>
 </header>
 
-      <main className="max-w-[1280px] mx-auto px-6 py-12">
+      <main className="site-container px-6 py-12">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-cultiva-secondary mb-8">
           <Link to="/ejercicios" className="hover:text-cultiva-green">Ejercicios</Link>

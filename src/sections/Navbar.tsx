@@ -73,7 +73,7 @@ export function Navbar() {
         }`}
         style={{ height: 72 }}
       >
-        <div className="max-w-[1280px] mx-auto px-6 h-full flex items-center justify-between">
+        <div className="site-container px-6 h-full flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
             <div className="w-8 h-8 flex items-center justify-center">

@@ -36,7 +36,7 @@ export function HeroSection() {
       <div className="absolute top-1/3 -right-32 w-[480px] h-[480px] rounded-full bg-cultiva-blue/15 blur-[120px]" />
       <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] rounded-full bg-cultiva-yellow/10 blur-[100px]" />
 
-      <div className="relative z-10 w-full max-w-[1100px] mx-auto px-6 text-center">
+      <div className="relative z-10 w-full site-container px-6 text-center">
         <div className="max-w-[900px] mx-auto">
           <div ref={labelRef} className="opacity-0 translate-y-5 mb-6">
             <span className="inline-flex items-center gap-2 font-mono-label text-cultiva-green-dark tracking-[0.2em] bg-cultiva-green/10 px-4 py-2 rounded-full">
@@ -47,7 +47,7 @@ export function HeroSection() {
 
           <h1
             ref={titleRef}
-            className="opacity-0 translate-y-10 text-5xl sm:text-6xl lg:text-7xl font-extrabold text-cultiva-text leading-tight tracking-tight mb-6"
+            className="opacity-0 translate-y-10 text-5xl sm:text-6xl lg:text-6xl font-extrabold text-cultiva-text leading-tight tracking-tight mb-6"
           >
             Gestioná tu negocio.{' '}
             <span className="gradient-text">Cultiva</span> a tus clientes.
@@ -102,7 +102,7 @@ export function HeroSection() {
         </div>
 
         {/* Carrusel de capturas de MANAGER */}
-        <div ref={mockupRef} className="opacity-0 translate-y-8 mt-16">
+        <div ref={mockupRef} className="opacity-0 translate-y-8 mt-16 max-w-[1280px] mx-auto">
           <ManagerCarousel />
         </div>
       </div>

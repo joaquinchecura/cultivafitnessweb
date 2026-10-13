@@ -44,9 +44,9 @@ export function BlogSection() {
     <section
       id="blog"
       ref={sectionRef}
-      className="relative py-28 lg:py-36 px-6 bg-cultiva-bg"
+      className="relative py-20 lg:py-24 px-6 bg-cultiva-bg"
     >
-      <div className="max-w-[1280px] mx-auto">
+      <div className="site-container">
         {/* Header */}
         <div className="text-center max-w-[800px] mx-auto mb-16">
           <span className="font-mono-label text-cultiva-teal tracking-[0.2em] block mb-4">

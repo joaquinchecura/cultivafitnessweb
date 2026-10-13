@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Check } from 'lucide-react';
+import { useRotatingIndex } from '../components/useRotatingIndex';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -142,25 +144,10 @@ const apps = [
 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
   const [hovered, setHovered] = useState(false);
-  const [screenshotIndex, setScreenshotIndex] = useState(0);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
   const hasScreenshots = app.screenshots.length > 0;
-
-  useEffect(() => {
-    if (hovered && hasScreenshots) {
-      intervalRef.current = setInterval(() => {
-        setScreenshotIndex((i) => (i + 1) % app.screenshots.length);
-      }, 2500);
-    } else {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      setScreenshotIndex(0);
-    }
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [hovered, hasScreenshots, app.screenshots.length]);
-
+  const screenshotIndex = useRotatingIndex(app.screenshots.length, hovered && hasScreenshots);
+  const external = app.link.startsWith('http');
+ 
   // Precarga las capturas en el primer hover para evitar parpadeos
   useEffect(() => {
     if (!hovered || !hasScreenshots) return;
@@ -169,88 +156,90 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
       img.src = src;
     });
   }, [hovered, hasScreenshots, app.screenshots]);
-
+ 
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group relative bg-cultiva-surface border border-cultiva-border rounded-[20px] p-8 transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_40px_rgba(22,163,74,0.06)] overflow-hidden"
+      className="group relative flex h-full flex-col bg-cultiva-surface border border-cultiva-border rounded-[20px] overflow-hidden transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_40px_rgba(22,163,74,0.06)]"
     >
-      {/* Carrusel de capturas al hover: toda la superficie lleva a la app */}
-      {hovered && hasScreenshots && (
-        <a
-          href={app.link}
-          target={app.link.startsWith('http') ? '_blank' : undefined}
-          rel={app.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-          aria-label={`Probar ${app.name}`}
-          className="absolute inset-0 z-10 block bg-cultiva-surface"
-        >
-         <img
-           key={screenshotIndex}
-           src={app.screenshots[screenshotIndex]}
-           alt={`Captura de pantalla de ${app.name}`}
-           className="w-full h-full object-cover animate-[fadeIn_0.6s_ease-out]"
-            />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-          <span className="absolute top-4 left-4 text-white font-semibold text-sm drop-shadow">
-            {app.name}
+      {/* Zona visual 16:9: toda ella lleva a la app */}
+      <a
+        href={app.link}
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noopener noreferrer' : undefined}
+        aria-label={`Probar ${app.name}`}
+        tabIndex={-1}
+        className={`relative block aspect-video overflow-hidden bg-gradient-to-br ${app.gradient}`}
+      >
+        {hasScreenshots ? (
+          <img
+            key={screenshotIndex}
+            src={app.screenshots[screenshotIndex]}
+            alt={`Captura de pantalla de ${app.name}`}
+            loading="lazy"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover animate-[fadeIn_0.6s_ease-out]"
+          />
+        ) : (
+          <span className="absolute inset-0 flex items-center justify-center text-white">
+            {app.icon}
           </span>
-
-          <span className="absolute bottom-10 left-1/2 -translate-x-1/2 inline-flex items-center gap-1 px-4 py-2 rounded-full bg-white text-cultiva-text text-sm font-semibold shadow-md">
-            Probar ahora
-            <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
-          </span>
-
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+        )}
+ 
+        {hasScreenshots && app.screenshots.length > 1 && (
+          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5" aria-hidden="true">
             {app.screenshots.map((_, i) => (
               <span
                 key={i}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === screenshotIndex ? 'bg-white w-4' : 'bg-white/40 w-1.5'
+                  i === screenshotIndex ? 'bg-white w-4 shadow' : 'bg-white/60 w-1.5'
                 }`}
               />
             ))}
-          </div>
-        </a>
-      )}
-
-      {/* Contenido normal de la card */}
-      <div
-        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-white mb-5 transition-transform duration-300 group-hover:scale-105`}
-      >
-        {app.icon}
-      </div>
-
-      <span
-        className="inline-block px-3 py-1 rounded-full text-[11px] font-mono tracking-wider uppercase mb-3"
-        style={{ backgroundColor: `${app.tagColor}15`, color: app.tagColor }}
-      >
-        {app.tag}
-      </span>
-
-      <h3 className="text-xl font-semibold text-cultiva-text mb-3">{app.name}</h3>
-
-      <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">{app.desc}</p>
-
-      <ul className="space-y-2 mb-6">
-        {app.features.map((f) => (
-          <li key={f} className="flex items-center gap-2 text-cultiva-muted text-sm">
-            <Check className="w-3.5 h-3.5 text-cultiva-green flex-shrink-0" />
-            {f}
-          </li>
-        ))}
-      </ul>
-
-      <a
-        href={app.link}
-        target={app.link.startsWith('http') ? '_blank' : undefined}
-        rel={app.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-        className="inline-flex items-center gap-1 text-sm font-medium text-cultiva-green-dark hover:translate-x-1 transition-transform duration-300"
-      >
-        {app.link === '#' ? 'Próximamente' : 'Probar Ahora'}
-        {app.link !== '#' && <ExternalLink className="w-3.5 h-3.5" />}
+          </span>
+        )}
       </a>
+ 
+      <div className="flex flex-1 flex-col p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <div
+            className={`w-11 h-11 shrink-0 rounded-xl bg-gradient-to-br ${app.gradient} flex items-center justify-center text-white [&_img]:w-8 [&_img]:h-8`}
+          >
+            {app.icon}
+          </div>
+          <div className="min-w-0">
+            <h3 className="text-lg font-semibold text-cultiva-text leading-tight">{app.name}</h3>
+            <span
+              className="inline-block mt-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-wider uppercase"
+              style={{ backgroundColor: `${app.tagColor}15`, color: app.tagColor }}
+            >
+              {app.tag}
+            </span>
+          </div>
+        </div>
+ 
+        <p className="text-cultiva-secondary text-sm leading-relaxed mb-4">{app.desc}</p>
+ 
+        <ul className="space-y-1.5 mb-5">
+          {app.features.map((f) => (
+            <li key={f} className="flex items-center gap-2 text-cultiva-muted text-sm">
+              <Check className="w-3.5 h-3.5 text-cultiva-green flex-shrink-0" aria-hidden="true" />
+              {f}
+            </li>
+          ))}
+        </ul>
+ 
+        <a
+          href={app.link}
+          target={external ? '_blank' : undefined}
+          rel={external ? 'noopener noreferrer' : undefined}
+          className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-cultiva-green-dark hover:translate-x-1 transition-transform duration-300"
+        >
+          {app.link === '#' ? 'Próximamente' : 'Probar Ahora'}
+          {app.link !== '#' && <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />}
+        </a>
+      </div>
     </div>
   );
 }
@@ -285,8 +274,8 @@ export function AppsSection() {
   }, []);
 
   return (
-    <section id="apps" ref={sectionRef} className="relative py-28 lg:py-36 px-6 bg-cultiva-bg">
-      <div className="max-w-[1280px] mx-auto">
+    <section id="apps" ref={sectionRef} className="relative py-20 lg:py-24 px-6 bg-cultiva-bg">
+      <div className="site-container">
         <div className="text-center max-w-[800px] mx-auto mb-16">
           <span className="font-mono-label text-cultiva-green-dark tracking-[0.2em] block mb-4">
             PARA TUS CLIENTES
@@ -300,7 +289,7 @@ export function AppsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
           {apps.map((app, i) => (
             <div key={app.name} ref={(el) => { if (el) cardsRef.current[i] = el; }}>
               <AppCard app={app} />

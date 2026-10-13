@@ -199,3 +199,9 @@
     color: #4C5E51;
   }
 }
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-[1600px];
+  }
+}

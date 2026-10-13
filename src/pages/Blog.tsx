@@ -44,7 +44,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-cultiva-bg">
       <div className="bg-cultiva-surface border-b border-cultiva-green/10">
-        <div className="max-w-[1280px] mx-auto px-6 py-8">
+        <div className="site-container px-6 py-8">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-cultiva-muted hover:text-cultiva-text text-sm mb-6 transition-colors"
@@ -62,7 +62,7 @@ export default function Blog() {
         </div>
       </div>
 
-      <div className="max-w-[1280px] mx-auto px-6 py-8">
+      <div className="site-container px-6 py-8">
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <div className="relative flex-1 max-w-md">
   <label htmlFor="blog-search" className="sr-only">

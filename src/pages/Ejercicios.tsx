@@ -29,7 +29,7 @@ export default function Ejercicios() {
     <div className="min-h-screen bg-cultiva-bg text-cultiva-text">
       {/* Header */}
       <header className="border-b border-cultiva-border bg-cultiva-bg/80 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="site-container px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <span className="text-cultiva-text font-bold text-lg">CULTIVA</span>
             <span className="text-cultiva-muted font-mono text-sm">FITNESS</span>
@@ -51,7 +51,7 @@ export default function Ejercicios() {
         </div>
       </header>
 
-      <main className="max-w-[1280px] mx-auto px-6 py-12">
+      <main className="site-container px-6 py-12">
         <h1 className="text-4xl font-bold mb-2">Biblioteca de Ejercicios</h1>
         <p className="text-cultiva-secondary mb-8 text-lg">
           Selecciona una categoría para explorar los ejercicios.

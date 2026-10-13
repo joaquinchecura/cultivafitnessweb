@@ -155,7 +155,7 @@ export default function BlogPost() {
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
         <div className="bg-cultiva-surface border-t border-cultiva-green/10">
-          <div className="max-w-[1280px] mx-auto px-6 py-16">
+          <div className="site-container px-6 py-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-cultiva-text mb-8">
               Artículos relacionados
             </h2>
