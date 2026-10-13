@@ -34,7 +34,7 @@ const features: {
       'Alta de clientes por link o QR propio',
     ],
     shots: [
-      { src: '/images/screenshots/mandash1.jpg', alt: 'Listado de clientes' },
+      { src: '/images/screenshots/manclientes1.png', alt: 'Listado de clientes' },
       { src: '/images/screenshots/mandash2.png', alt: 'Ficha de un cliente' },
     ],
   },
