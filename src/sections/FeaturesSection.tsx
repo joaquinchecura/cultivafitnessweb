@@ -35,7 +35,7 @@ const features: {
     ],
     shots: [
       { src: '/images/screenshots/manclientes1.png', alt: 'Listado de clientes' },
-      { src: '/images/screenshots/mandash2.png', alt: 'Ficha de un cliente' },
+      
     ],
   },
   {
@@ -61,10 +61,12 @@ const features: {
     desc: 'Planes, membresías y pagos en un mismo panel. Sabé quién debe, quién está al día y cuándo vence cada membresía, sin planillas de Excel paralelas.',
     bullets: [
       'Planes mensuales, trimestrales y anuales',
-      'Efectivo, transferencia, Mercado Pago y tarjeta',
+      'Efectivo, transferencia y tarjetas',
       'Caja diaria y alertas de vencimiento',
     ],
-    shots: [],
+    shots: [
+      { src: '/images/screenshots/manpagos1.png', alt: 'Gestión de pagos' },
+    ],
   },
   {
     icon: CalendarClock,
@@ -78,7 +80,9 @@ const features: {
       'Reservas con cupo y lista de espera',
       'Control de acceso por QR',
     ],
-    shots: [],
+    shots: [
+      { src: '/images/screenshots/managenda1.png', alt: 'Agenda de clases' },
+    ],
   },
 ];
 

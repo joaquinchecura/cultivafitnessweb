@@ -286,13 +286,13 @@ export function AppsSection() {
       <div className="site-container">
         <div className="text-center max-w-[800px] mx-auto mb-16">
           <span className="font-mono-label text-cultiva-green-dark tracking-[0.2em] block mb-4">
-            PARA TUS CLIENTES
+            PARA TUS CLIENTES Y ALUMNOS
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cultiva-text mb-4 tracking-tight">
-            Sumale el ecosistema completo a tu servicio
+            Sumale el ecosistema completo de apps a tu servicio
           </h2>
           <p className="text-cultiva-secondary text-base sm:text-lg">
-            Estas apps ya están disponibles para cualquier persona — y como profesional en MANAGER
+            Estas apps ya están disponibles y como profesional en MANAGER
             podés integrarlas al trabajo con tus clientes, sin costo extra.
           </p>
         </div>
