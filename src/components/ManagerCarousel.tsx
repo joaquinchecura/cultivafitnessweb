@@ -15,11 +15,6 @@ const slides: ManagerSlide[] = [
     caption: 'Dashboard',
   },
   {
-    src: '/images/screenshots/mandash2.png',
-    alt: 'Dashboard de MANAGER con el resumen del negocio',
-    caption: 'Dashboard',
-  },
-  {
     src: '/images/screenshots/manager-clientes.webp',
     alt: 'Panel de clientes en MANAGER',
     caption: 'Clientes',

@@ -49,7 +49,7 @@ export function HeroSection() {
             ref={titleRef}
             className="opacity-0 translate-y-10 text-5xl sm:text-6xl lg:text-6xl font-extrabold text-cultiva-text leading-tight tracking-tight mb-6"
           >
-            Gestioná tu negocio.{' '}
+            Gestión para tu negocio.{' '}
             <span className="gradient-text">Cultiva</span> a tus clientes.
           </h1>
 
@@ -57,8 +57,8 @@ export function HeroSection() {
             ref={subtitleRef}
             className="opacity-0 translate-y-5 text-cultiva-secondary text-lg sm:text-xl max-w-[640px] mx-auto mb-10 leading-relaxed"
           >
-            MANAGER es la plataforma todo en uno para gestionar clientes, rutinas, pagos y agendas —
-            y sumarles a tus clientes un ecosistema de 12+ apps de bienestar, todo en un solo lugar.
+            MANAGER es la plataforma todo en uno para gestionar clientes, entrenamientos, pagos y agendas.
+            Incluido un ecosistema de 12+ apps, todo en un solo lugar.
           </p>
 
           <div
