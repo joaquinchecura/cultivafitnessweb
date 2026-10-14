@@ -35,7 +35,7 @@ const features: {
     ],
     shots: [
       { src: '/images/screenshots/manclientes1.png', alt: 'Listado de clientes' },
-      
+      { src: '/images/screenshots/manclientes2.png', alt: 'Listado de clientes' }
     ],
   },
   {
@@ -52,6 +52,7 @@ const features: {
     ],
     shots: [
       { src: '/images/screenshots/manrutinas1.png', alt: 'Rutinas y ejercicios' },
+      { src: '/images/screenshots/manejercocios1.png', alt: 'Rutinas y ejercicios' },
     ],
   },
   {
