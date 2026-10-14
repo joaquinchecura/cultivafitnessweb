@@ -49,7 +49,7 @@ export function HeroSection() {
             ref={titleRef}
             className="opacity-0 translate-y-10 text-5xl sm:text-6xl lg:text-6xl font-extrabold text-cultiva-text leading-tight tracking-tight mb-6"
           >
-            Gestión integral para tu negocio.{' '}
+            Gestión integral para tu negocio profesional.{' '}
             <span className="gradient-text">Cultiva</span> a tus clientes y alumnos.
           </h1>
 

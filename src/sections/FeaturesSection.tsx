@@ -44,7 +44,7 @@ const features: {
     iconColor: '#2563EB',
     tag: 'RUTINAS & EJERCICIOS',
     title: 'Armá rutinas en minutos, no en horas',
-    desc: 'Biblioteca de más de 780 ejercicios con generador automático de rutinas. Asigná, duplicá y ajustá programas de entrenamiento sin volver a escribir todo de cero.',
+    desc: 'Biblioteca de más de 800 ejercicios con generador automático de rutinas. Asigná, duplicá y ajustá programas de entrenamiento sin volver a escribir todo de cero.',
     bullets: [
       'Generador automático según el objetivo del cliente',
       'Plantillas para asignar y duplicar',
@@ -70,6 +70,7 @@ const features: {
     ],
     shots: [
       { src: '/images/screenshots/manpagos1.png', alt: 'Gestión de pagos' },
+      { src: '/images/screenshots/manestadisticas1.png', alt: 'Estadisticas' },
     ],
   },
   {
