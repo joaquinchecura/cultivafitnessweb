@@ -50,7 +50,9 @@ const features: {
       'Plantillas para asignar y duplicar',
       'Seguimiento de cargas por sesión',
     ],
-    shots: [],
+    shots: [
+      { src: '/images/screenshots/manrutinas1.png', alt: 'Rutinas y ejercicios' },
+    ],
   },
   {
     icon: CreditCard,
