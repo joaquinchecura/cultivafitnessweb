@@ -51,8 +51,9 @@ const features: {
       'Seguimiento de cargas por sesión',
     ],
     shots: [
-      { src: '/images/screenshots/manrutinas1.png', alt: 'Rutinas y ejercicios' },
-      { src: '/images/screenshots/manejercocios1.png', alt: 'Rutinas y ejercicios' },
+      { src: '/images/screenshots/manrutinas1.png', alt: 'Rutinas' },
+      { src: '/images/screenshots/manejercicios1.png', alt: 'Ejercicios' },
+      { src: '/images/screenshots/manejercicios2.png', alt: 'Ejercicios' },
     ],
   },
   {
@@ -85,6 +86,7 @@ const features: {
     ],
     shots: [
       { src: '/images/screenshots/managenda1.png', alt: 'Agenda de clases' },
+      { src: '/images/screenshots/manactividades1.png', alt: 'Agenda de clases' },
     ],
   },
 ];

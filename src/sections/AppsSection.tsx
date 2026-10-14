@@ -7,6 +7,8 @@ import { useRotatingIndex } from '../components/useRotatingIndex';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
+
 const apps = [
   {
     name: 'BIOMATCH',
@@ -39,7 +41,7 @@ const apps = [
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
-    screenshots: ['/images/screenshots/mandash1.jpg', '/images/screenshots/mandash2.png'] as string[], // ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
+    screenshots: [] as string[],  
   },
   {
     name: 'NEURA',
