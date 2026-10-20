@@ -40,7 +40,7 @@ const apps = [
     icon: <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />,
     screenshots: [
       '/images/screenshots/supply/1.png',
-      '/images/screenshots/supply/1.png',
+      '/images/screenshots/supply/2.png',
 
     ],
   },
