@@ -41,7 +41,7 @@ const apps = [
     screenshots: [
       '/images/screenshots/supply/1.png',
       '/images/screenshots/supply/2.png',
-
+      '/images/screenshots/supply/3.png',
     ],
   },
   {
