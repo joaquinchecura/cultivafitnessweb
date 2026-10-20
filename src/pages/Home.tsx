@@ -8,6 +8,7 @@ import { FeaturesSection } from '../sections/FeaturesSection';
 import { AppsSection } from '../sections/AppsSection';
 import { BlogSection } from '../sections/BlogSection';
 import { SocialSection } from '../sections/SocialSection';
+import { FaqSection } from '../sections/FaqSection';
 import { Footer } from '../sections/Footer';
 import { SeoHead } from '../components/SeoHead';
 
@@ -50,6 +51,7 @@ export default function Home() {
         <AppsSection />
         <BlogSection />
         <SocialSection />
+        <FaqSection />
       </main>
       <Footer />
     </div>
