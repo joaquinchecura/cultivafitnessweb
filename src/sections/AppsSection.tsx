@@ -27,7 +27,9 @@ const apps = [
     features: ['Análisis biomecánico 3D', 'Rango de movimiento óptimo', 'Recomendaciones IA'],
     link: 'https://biomatch.cultivafitness.app',
     icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/biomatch/1.png', '/images/screenshots/biomatch/2.png', '/images/screenshots/biomatch/3.png',
+
+    ] as string[],
   },
   {
     name: 'SUPPLY',
