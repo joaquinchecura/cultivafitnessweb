@@ -7,7 +7,15 @@ import { useRotatingIndex } from '../components/useRotatingIndex';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ej: ['/images/screenshots/reckon-1.jpg', '/images/screenshots/reckon-2.jpg']
+/*
+  CARRUSEL DE CAPTURAS
+  Cada string de `screenshots` es UN slide del carrusel. Cada slide es una
+  imagen ya armada (collage de 2-3 capturas del celu pegadas una al lado
+  de la otra) en formato 18:16 (ej: 1080x960), el mismo aspect que la zona
+  visual de la card.
+  ej: ['/images/screenshots/supply-1.webp', '/images/screenshots/supply-2.webp']
+*/
+const SLIDE_ASPECT = 'aspect-[1/1]';
 
 const apps = [
   {
@@ -30,7 +38,11 @@ const apps = [
     features: ['Registro de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: 'https://supply.cultivafitness.app',
     icon: <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: [
+      '/images/screenshots/suppl/1.png',
+      '/images/screenshots/suppl/1.png',
+
+    ],
   },
   {
     name: 'RECKON',
@@ -41,7 +53,7 @@ const apps = [
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],  
+    screenshots: [] as string[],
   },
   {
     name: 'NEURA',
@@ -121,17 +133,6 @@ const apps = [
     screenshots: [] as string[],
   },
   {
-    name: 'RUNNING',
-    tag: 'RUNNING',
-    tagColor: '#DC2626',
-    gradient: 'from-red-500 to-red-700',
-    desc: 'App de Running con un plan personalizado acorde a tu perfil y objetivos específicos. Análisis de pie con IA y un GPS con streetmaps para guardar tu recorrido.',
-    features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
-    link: 'https://running.cultivafitness.app',
-    icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
-  },
-  {
     name: 'TIMER',
     tag: 'UTILIDAD',
     tagColor: '#DB2777',
@@ -144,82 +145,97 @@ const apps = [
   },
 ];
 
-function chunkPairs(list: string[]): string[][] {
-  const pairs: string[][] = [];
-  for (let i = 0; i < list.length; i += 2) pairs.push(list.slice(i, i + 2));
-  return pairs;
-}
- 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
   const [hovered, setHovered] = useState(false);
-  const pairs = chunkPairs(app.screenshots);
-  const hasScreenshots = pairs.length > 0;
-  const pairIndex = useRotatingIndex(pairs.length, hovered && hasScreenshots);
+  const [inView, setInView] = useState(false);
+  const [touchOnly, setTouchOnly] = useState(false);
+  const visualRef = useRef<HTMLAnchorElement>(null);
+
+  const slides = app.screenshots;
+  const hasSlides = slides.length > 0;
   const external = app.link.startsWith('http');
- 
-  // Precarga todas las capturas en el primer hover para evitar parpadeos
+
+  // En celular no hay hover: el carrusel corre solo mientras la card está a la vista.
+  const autoplay = hasSlides && (hovered || (touchOnly && inView));
+  const slideIndex = useRotatingIndex(slides.length, autoplay);
+
   useEffect(() => {
-    if (!hovered || !hasScreenshots) return;
-    app.screenshots.forEach((src) => {
+    setTouchOnly(window.matchMedia('(hover: none)').matches);
+  }, []);
+
+  useEffect(() => {
+    const el = visualRef.current;
+    if (!el || !hasSlides) return;
+    const io = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), {
+      threshold: 0.6,
+    });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [hasSlides]);
+
+  // Precarga todos los slides la primera vez que se activa, para evitar parpadeos
+  useEffect(() => {
+    if (!autoplay) return;
+    slides.forEach((src) => {
       const img = new Image();
       img.src = src;
     });
-  }, [hovered, hasScreenshots, app.screenshots]);
- 
+  }, [autoplay, slides]);
+
   return (
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className="group relative flex h-full flex-col bg-cultiva-surface border border-cultiva-border rounded-[20px] overflow-hidden transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_40px_rgba(22,163,74,0.06)]"
     >
-      {/* Zona visual 18:16 = dos capturas 9:16 pegadas. Toda ella lleva a la app */}
+      {/* Zona visual 18:16. Cada slide es un collage de 2-3 capturas. Toda ella lleva a la app */}
       <a
+        ref={visualRef}
         href={app.link}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
         aria-label={`Probar ${app.name}`}
         tabIndex={-1}
-        className={`relative block aspect-[18/16] overflow-hidden bg-gradient-to-br ${app.gradient}`}
+        className={`relative block ${SLIDE_ASPECT} overflow-hidden bg-gradient-to-br ${app.gradient}`}
       >
-        {hasScreenshots ? (
-          <div
-            key={pairIndex}
-            className="absolute inset-0 grid grid-cols-2 gap-px bg-white/70 animate-[fadeIn_0.6s_ease-out]"
-          >
-            {pairs[pairIndex].map((src, i) => (
-              <img
-                key={src}
-                src={src}
-                alt={`Captura ${pairIndex * 2 + i + 1} de ${app.name}`}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-top"
-              />
-            ))}
-          </div>
+        {hasSlides ? (
+          // Todos los slides apilados; el activo se muestra con fundido cruzado
+          slides.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt={`Captura ${i + 1} de ${app.name}`}
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+              aria-hidden={i !== slideIndex}
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out ${
+                i === slideIndex ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          ))
         ) : (
           <span className="absolute inset-0 flex items-center justify-center text-white [&_img]:w-28 [&_img]:h-28 [&_img]:object-contain">
             {app.icon}
           </span>
         )}
- 
-        {pairs.length > 1 && (
+
+        {slides.length > 1 && (
           <span
             className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 rounded-full bg-black/30 px-2 py-1"
             aria-hidden="true"
           >
-            {pairs.map((_, i) => (
+            {slides.map((_, i) => (
               <span
                 key={i}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === pairIndex ? 'bg-white w-4' : 'bg-white/60 w-1.5'
+                  i === slideIndex ? 'bg-white w-4' : 'bg-white/60 w-1.5'
                 }`}
               />
             ))}
           </span>
         )}
       </a>
- 
+
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-center gap-3 mb-4">
           <div
@@ -237,9 +253,9 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             </span>
           </div>
         </div>
- 
+
         <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">{app.desc}</p>
- 
+
         <a
           href={app.link}
           target={external ? '_blank' : undefined}
