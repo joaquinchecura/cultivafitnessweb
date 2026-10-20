@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect, useId } from 'react';
-import { Leaf, Heart, ArrowRight, Youtube, Instagram, Music, Mail, Check, Globe, ChevronDown } from 'lucide-react';
+import { useState, useId } from 'react';
+import { Leaf, Heart, ArrowRight, Youtube, Instagram, Music, Mail, Check } from 'lucide-react';
 
 const CTA_URL = "https://wa.me/5491123970926?text=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER";
 
@@ -8,6 +8,8 @@ const productLinks = [
   { label: 'Apps', href: '#apps' },
   { label: 'Blog', href: '/blog' },
   { label: 'Ejercicios', href: '/ejercicios' },
+  { label: 'Precios', href: '/precios' },
+  { label: 'Preguntas', href: '#faq' },
 ];
 
 const socials = [
@@ -71,102 +73,28 @@ function NewsletterForm() {
   );
 }
 
-function LanguageSelector() {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const englishRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const onClickOutside = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    };
-    document.addEventListener('mousedown', onClickOutside);
-    return () => document.removeEventListener('mousedown', onClickOutside);
-  }, []);
-
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && open) {
-        setOpen(false);
-        buttonRef.current?.focus();
-      }
-    };
-    document.addEventListener('keydown', onKeyDown);
-    return () => document.removeEventListener('keydown', onKeyDown);
-  }, [open]);
-
-  // Al abrir con teclado, el foco salta directo a la primera opción real
-  // (Español está seleccionado, así que English es lo primero navegable)
-  useEffect(() => {
-    if (open) englishRef.current?.focus();
-  }, [open]);
-
-  return (
-    <div ref={ref} className="relative">
-      <button
-        ref={buttonRef}
-        onClick={() => setOpen((v) => !v)}
-        aria-haspopup="menu"
-        aria-expanded={open}
-        className="inline-flex items-center gap-1.5 text-cultiva-muted hover:text-cultiva-text text-sm transition-colors"
-      >
-        <Globe className="w-4 h-4" aria-hidden="true" />
-        Español
-        <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
-      </button>
-
-      {open && (
-        <div
-          role="menu"
-          aria-label="Seleccionar idioma"
-          className="absolute bottom-[calc(100%+8px)] left-0 w-44 bg-cultiva-surface border border-cultiva-border rounded-xl shadow-[0_12px_32px_rgba(0,0,0,0.1)] p-1.5 overflow-hidden"
-        >
-          <button
-            type="button"
-            role="menuitemradio"
-            aria-checked="true"
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg bg-cultiva-elevated text-sm text-cultiva-text font-medium"
-          >
-            Español
-            <Check className="w-3.5 h-3.5 text-cultiva-green" aria-hidden="true" />
-          </button>
-          <button
-            ref={englishRef}
-            type="button"
-            role="menuitemradio"
-            aria-checked="false"
-            disabled
-            aria-disabled="true"
-            className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm text-cultiva-muted cursor-not-allowed disabled:opacity-70"
-          >
-            English
-            <span className="text-[10px] font-mono uppercase tracking-wider">Próx.</span>
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
+// El selector de idioma ahora vive en el Navbar.
 
 export function Footer() {
   return (
     <footer className="relative bg-cultiva-bg border-t border-cultiva-border">
-      {/* CTA Banner - MANAGER */}
+      {/* CTA Banner - MANAGER (compacto: texto a la izquierda, botón a la derecha) */}
       <div className="border-b border-cultiva-border">
-        <div className="site-container px-6 py-16">
-          <div className="rounded-3xl bg-gradient-to-br from-cultiva-green to-cultiva-green-dark px-8 py-12 sm:px-16 sm:py-16 text-center">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 tracking-tight">
-              ¿Sos profesional de salud, fitness o deporte?
-            </h2>
-            <p className="text-white/85 text-base sm:text-lg max-w-[560px] mx-auto mb-8">
-              Gestioná tu negocio y sumale a tus clientes un ecosistema completo de apps, todo con MANAGER.
-            </p>
+        <div className="site-container px-6 py-10">
+          <div className="rounded-2xl bg-gradient-to-br from-cultiva-green to-cultiva-green-dark px-6 py-6 sm:px-10 sm:py-8 flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10 text-center lg:text-left">
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-1.5 tracking-tight">
+                ¿Sos profesional de salud, fitness o deporte?
+              </h2>
+              <p className="text-white/85 text-sm sm:text-base max-w-[560px]">
+                Gestioná tu negocio y sumale a tus clientes un ecosistema completo de apps, todo con MANAGER.
+              </p>
+            </div>
             <a
               href={CTA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-cultiva-green-dark font-semibold text-sm hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300"
+              className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-cultiva-green-dark font-semibold text-sm hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300"
             >
               Solicitar acceso anticipado
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -289,12 +217,9 @@ export function Footer() {
 
           {/* Bottom Row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cultiva-border">
-            <div className="flex items-center gap-6">
-              <p className="text-cultiva-muted text-sm">
-                © 2026 Cultiva Fitness. Todos los derechos reservados.
-              </p>
-              <LanguageSelector />
-            </div>
+            <p className="text-cultiva-muted text-sm">
+              © 2026 Cultiva Fitness. Todos los derechos reservados.
+            </p>
             <p className="text-cultiva-muted text-sm flex items-center gap-1.5">
               Hecho con <Heart className="w-3.5 h-3.5 text-cultiva-green fill-cultiva-green" aria-hidden="true" /> y ciencia
             </p>
