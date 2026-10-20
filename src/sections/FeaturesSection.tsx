@@ -13,8 +13,9 @@ interface Shot {
 
 const features: {
   icon: typeof Users;
-  iconBg: string;
   iconColor: string;
+  cardBg: string; // fondo pastel de la card (tono suave del color del ícono)
+  cardBorder: string; // borde pastel un poco más marcado
   tag: string;
   title: string;
   desc: string;
@@ -23,8 +24,9 @@ const features: {
 }[] = [
   {
     icon: Users,
-    iconBg: 'bg-cultiva-green/10',
     iconColor: '#16A34A',
+    cardBg: '#F0FDF4',
+    cardBorder: '#BBF7D0',
     tag: 'CLIENTES',
     title: 'Toda tu cartera, en un solo lugar',
     desc: 'Fichas de clientes, historial, evolución y notas. Dejá las planillas sueltas y los chats dispersos: cada cliente tiene su perfil completo, siempre a mano.',
@@ -40,8 +42,9 @@ const features: {
   },
   {
     icon: Dumbbell,
-    iconBg: 'bg-cultiva-blue/10',
     iconColor: '#2563EB',
+    cardBg: '#EFF6FF',
+    cardBorder: '#BFDBFE',
     tag: 'RUTINAS & EJERCICIOS',
     title: 'Armá rutinas en minutos, no en horas',
     desc: 'Biblioteca de más de 800 ejercicios con generador automático de rutinas. Asigná, duplicá y ajustá programas de entrenamiento sin volver a escribir todo de cero.',
@@ -58,8 +61,9 @@ const features: {
   },
   {
     icon: CreditCard,
-    iconBg: 'bg-cultiva-purple/10',
     iconColor: '#7C3AED',
+    cardBg: '#F5F3FF',
+    cardBorder: '#DDD6FE',
     tag: 'PAGOS & MEMBRESÍAS',
     title: 'Cobrá sin perseguir a nadie',
     desc: 'Planes, membresías y pagos en un mismo panel. Sabé quién debe, quién está al día y cuándo vence cada membresía, sin planillas de Excel paralelas.',
@@ -75,8 +79,9 @@ const features: {
   },
   {
     icon: CalendarClock,
-    iconBg: 'bg-cultiva-yellow/10',
     iconColor: '#D97706',
+    cardBg: '#FFFBEB',
+    cardBorder: '#FDE68A',
     tag: 'AGENDA & TURNOS',
     title: 'Tu agenda y la de tu equipo, sincronizadas',
     desc: 'Clases, turnos y reservas en tiempo real. Cada coach de tu equipo ve su propia agenda, y vos ves todo el panorama del negocio.',
@@ -120,12 +125,16 @@ function FeatureCard({
       onMouseLeave={() => setActive(false)}
       onFocus={() => setActive(true)}
       onBlur={() => setActive(false)}
-      className="feature-card group flex flex-col p-6 lg:p-8 rounded-2xl bg-cultiva-surface border border-cultiva-border hover:border-cultiva-green/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] transition-all duration-300"
+      style={{
+        backgroundColor: feature.cardBg,
+        borderColor: active ? `${feature.iconColor}66` : feature.cardBorder,
+      }}
+      className="feature-card group flex flex-col p-6 lg:p-8 rounded-2xl border hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] transition-all duration-300"
     >
       {/* Encabezado: ícono a la izquierda, etiqueta y título a la derecha */}
       <div className="flex items-start gap-4 mb-4">
         <div
-          className={`w-12 h-12 shrink-0 rounded-xl ${feature.iconBg} flex items-center justify-center`}
+          className="w-12 h-12 shrink-0 rounded-xl bg-white/80 flex items-center justify-center"
         >
           <Icon className="w-6 h-6" style={{ color: feature.iconColor }} aria-hidden="true" />
         </div>
@@ -146,7 +155,8 @@ function FeatureCard({
 
       {/* Captura 16:9 siempre visible; al pasar el mouse rota */}
       {hasShots && (
-        <figure className="relative aspect-video rounded-xl overflow-hidden border border-cultiva-border bg-cultiva-elevated mb-5">
+        <figure className="relative aspect-video rounded-xl overflow-hidden border bg-white mb-5"
+          style={{ borderColor: feature.cardBorder }}>
           <img
             key={index}
             src={feature.shots[index].src}
