@@ -14,6 +14,40 @@ const CATEGORY_STYLES = [
   { color: '#7C3AED', icon: Activity },  // purple
 ];
 
+/*
+  FONDO DE LAS CARDS DE CATEGORÍA (para probar)
+  - Las imágenes de cada card se definen en CATEGORY_IMAGES (más abajo).
+    Si una no existe, la card queda con su tinte pastel, sin ícono de imagen rota.
+  - BG_IMAGE_OPACITY: transparencia de la imagen (0 = invisible, 1 = plena).
+    Probá entre 0.10 y 0.25.
+  - BG_TINT: tinte pastel del color de la categoría, siempre debajo de la imagen.
+*/
+const BG_IMAGE_OPACITY = 0.18;
+
+/*
+  ACÁ PEGÁS LAS URLs DE LAS IMÁGENES, una por categoría.
+  Pueden ser rutas de tu proyecto (archivos dentro de /public) o links https://.
+  Si dejás una vacía (''), esa card queda solo con el tinte pastel.
+*/
+const CATEGORY_IMAGES = {
+  movilidad: '/images/ejercicios/movilidad.webp',
+  fuerza: '/images/ejercicios/fuerza.webp',
+  metabolico: '/images/ejercicios/metabolico.webp',
+  regulacion: '/images/ejercicios/regulacion.webp',
+  rehabilitacion: '/images/ejercicios/rehabilitacion.webp',
+};
+
+function getCategoryImage(titulo: string): string {
+  const t = titulo.toLowerCase();
+  if (t.includes('movilidad')) return CATEGORY_IMAGES.movilidad;
+  if (t.includes('fuerza')) return CATEGORY_IMAGES.fuerza;
+  if (t.includes('metaból') || t.includes('metabol')) return CATEGORY_IMAGES.metabolico;
+  if (t.includes('regulaci')) return CATEGORY_IMAGES.regulacion;
+  if (t.includes('rehabilit')) return CATEGORY_IMAGES.rehabilitacion;
+  return '';
+}
+const BG_TINT = '12'; // alfa hex del color de la categoría (12 ≈ 7%)
+
 function getCategoryStyle(titulo: string, index: number) {
   const t = titulo.toLowerCase();
   if (t.includes('movilidad')) return { color: '#16A34A', icon: Move };
@@ -65,11 +99,11 @@ export default function Ejercicios() {
             </div>
             <div>
               <h3 className="text-cultiva-text font-semibold text-base mb-1">
-                ¿Sos profesional de salud, fitness o deporte?
+                ¿Sos profesional de la salud, el fitness o el deporte?
               </h3>
               <p className="text-cultiva-secondary text-sm max-w-[480px]">
-                Estos mismos ejercicios alimentan el generador automático de rutinas de MANAGER —
-                armá programas para tus clientes en minutos, no en horas.
+                Estos mismos ejercicios alimentan el generador automático de rutinas de MANAGER.
+                Armá programas para tus clientes en minutos, no en horas.
               </p>
             </div>
           </div>
@@ -99,13 +133,33 @@ export default function Ejercicios() {
               <Link
                 key={cat.slug}
                 to={`/ejercicios/${cat.slug}`}
-                className="group relative bg-cultiva-surface rounded-2xl border border-cultiva-border overflow-hidden hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
+                className="group relative isolate bg-cultiva-surface rounded-2xl border border-cultiva-border overflow-hidden hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
                 style={{ borderTopColor: color, borderTopWidth: 3 }}
               >
-                <div className="p-8">
+                {/* Capa 1: tinte pastel del color de la categoría */}
+                <div
+                  className="absolute inset-0 -z-20"
+                  style={{ backgroundColor: `${color}${BG_TINT}` }}
+                  aria-hidden="true"
+                />
+                {/* Capa 2: imagen de fondo con transparencia baja */}
+                <div
+                  className="absolute inset-0 -z-10 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{
+                    backgroundImage: getCategoryImage(cat.titulo) ? `url(${getCategoryImage(cat.titulo)})` : 'none',
+                    opacity: BG_IMAGE_OPACITY,
+                  }}
+                  aria-hidden="true"
+                />
+                {/* Capa 3: degradado a blanco abajo para que el texto se lea bien */}
+                <div
+                  className="absolute inset-0 -z-10 bg-gradient-to-t from-white/70 via-white/20 to-transparent"
+                  aria-hidden="true"
+                />
+                <div className="relative p-8">
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                    style={{ backgroundColor: `${color}15` }}
+                    style={{ backgroundColor: 'rgba(255,255,255,0.75)' }}
                   >
                     <Icon className="w-6 h-6" style={{ color }} />
                   </div>
