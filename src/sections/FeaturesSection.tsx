@@ -36,8 +36,8 @@ const features: {
       'Alta de clientes por link o QR propio',
     ],
     shots: [
-      { src: '/images/screenshots/manclientes1.png', alt: 'Listado de clientes' },
-      { src: '/images/screenshots/manclientes2.png', alt: 'Listado de clientes' }
+      { src: '/images/screenshots/manclientes1.webp', alt: 'Listado de clientes' },
+      { src: '/images/screenshots/manclientes2.webp', alt: 'Listado de clientes' }
     ],
   },
   {
@@ -54,9 +54,9 @@ const features: {
       'Seguimiento de cargas por sesión',
     ],
     shots: [
-      { src: '/images/screenshots/manrutinas1.png', alt: 'Rutinas' },
-      { src: '/images/screenshots/manejercicios1.png', alt: 'Ejercicios' },
-      { src: '/images/screenshots/manejercicios2.png', alt: 'Ejercicios' },
+      { src: '/images/screenshots/manrutinas1.webp', alt: 'Rutinas' },
+      { src: '/images/screenshots/manejercicios1.webp', alt: 'Ejercicios' },
+      { src: '/images/screenshots/manejercicios2.webp', alt: 'Ejercicios' },
     ],
   },
   {
@@ -73,8 +73,8 @@ const features: {
       'Caja diaria y alertas de vencimiento',
     ],
     shots: [
-      { src: '/images/screenshots/manpagos1.png', alt: 'Gestión de pagos' },
-      { src: '/images/screenshots/manestadisticas1.png', alt: 'Estadisticas' },
+      { src: '/images/screenshots/manpagos1.webp', alt: 'Gestión de pagos' },
+      { src: '/images/screenshots/manestadisticas1.webp', alt: 'Estadisticas' },
     ],
   },
   {
@@ -91,8 +91,8 @@ const features: {
       'Control de acceso por QR',
     ],
     shots: [
-      { src: '/images/screenshots/managenda1.png', alt: 'Agenda de clases' },
-      { src: '/images/screenshots/manactividades1.png', alt: 'Agenda de clases' },
+      { src: '/images/screenshots/managenda1.webp', alt: 'Agenda de clases' },
+      { src: '/images/screenshots/manactividades1.webp', alt: 'Agenda de clases' },
     ],
   },
 ];

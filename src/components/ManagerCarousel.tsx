@@ -10,14 +10,19 @@ interface ManagerSlide {
 // Capturas 16:9 (ej: 1600×900). Las rutas empiezan con "/" y están dentro de /public.
 const slides: ManagerSlide[] = [
   {
-    src: '/images/screenshots/mandashboard1.png',
+    src: '/images/screenshots/mandashboard1.webp',
     alt: 'Dashboard de MANAGER con el resumen del negocio',
     caption: 'Dashboard',
   },
   {
-    src: '/images/screenshots/manclientes1.png',
+    src: '/images/screenshots/manclientes1.webp',
     alt: 'Panel de clientes en MANAGER',
     caption: 'Clientes',
+  },
+  {
+    src: '/images/screenshots/manejercicios1.webp',
+    alt: 'Panel de clientes en MANAGER',
+    caption: 'Ejercicios',
   },
 ];
 

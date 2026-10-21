@@ -41,9 +41,9 @@ const apps = [
     link: 'https://supply.cultivafitness.app',
     icon: <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />,
     screenshots: [
-      '/images/screenshots/supply/1.png',
-      '/images/screenshots/supply/2.png',
-      '/images/screenshots/supply/3.png',
+      '/images/screenshots/supply/1.webp',
+      '/images/screenshots/supply/2.webp',
+      '/images/screenshots/supply/3.webp',
     ],
   },
   {
