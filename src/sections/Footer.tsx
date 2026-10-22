@@ -84,7 +84,7 @@ export function Footer() {
           <div className="rounded-2xl bg-gradient-to-br from-cultiva-green to-cultiva-green-dark px-6 py-6 sm:px-10 sm:py-8 flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10 text-center lg:text-left">
             <div>
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-1.5 tracking-tight">
-                ¿Sos profesional de salud, fitness o deporte?
+                ¿Sos profesional de la salud, el fitness o el deporte?
               </h2>
               <p className="text-white/85 text-sm sm:text-base max-w-[560px]">
                 Gestioná tu negocio y sumale a tus clientes un ecosistema completo de apps, todo con MANAGER.
