@@ -27,9 +27,7 @@ const apps = [
     features: ['Análisis biomecánico 3D', 'Rango de movimiento óptimo', 'Recomendaciones IA'],
     link: 'https://biomatch.cultivafitness.app',
     icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
-    screenshots: ['/images/screenshots/biomatch/1.webp', '/images/screenshots/biomatch/2.webp', '/images/screenshots/biomatch/3.webp',
-
-    ] as string[],
+    screenshots: ['/images/screenshots/biomatch/1.webp', '/images/screenshots/biomatch/2.webp', '/images/screenshots/biomatch/3.webp',] as string[],
   },
   {
     name: 'SUPPLY',
@@ -40,11 +38,7 @@ const apps = [
     features: ['Registro de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: 'https://supply.cultivafitness.app',
     icon: <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />,
-    screenshots: [
-      '/images/screenshots/supply/1.webp',
-      '/images/screenshots/supply/2.webp',
-      '/images/screenshots/supply/3.webp',
-    ],
+    screenshots: ['/images/screenshots/supply/1.webp', '/images/screenshots/supply/2.webp', '/images/screenshots/supply/3.webp',],
   },
   {
     name: 'RECKON',
@@ -55,7 +49,7 @@ const apps = [
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/reckon/1.webp', '/images/screenshots/reckon/2.webp', '/images/screenshots/reckon/3.webp'] as string[],
   },
   {
     name: 'NEURA',
