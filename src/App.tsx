@@ -11,6 +11,7 @@ const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Privacidad = lazy(() => import('./pages/privacidad'));
 const Terminos = lazy(() => import('./pages/terminos'));
 const Cookies = lazy(() => import('./pages/cookies'));
+const Precios = lazy(() => import('./pages/Precios'));
 
 function PageFallback() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/ejercicios/:categoriaSlug/:subcategoriaSlug" element={<Subcategoria />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/precios" element={<Precios />} />
         <Route path="/privacidad" element={<Privacidad />} />
         <Route path="/terminos" element={<Terminos />} />
         <Route path="/cookies" element={<Cookies />} />

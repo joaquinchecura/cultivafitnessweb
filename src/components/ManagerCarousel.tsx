@@ -21,8 +21,13 @@ const slides: ManagerSlide[] = [
   },
   {
     src: '/images/screenshots/manejercicios1.webp',
-    alt: 'Panel de clientes en MANAGER',
+    alt: 'Panel de ejercicios en MANAGER',
     caption: 'Ejercicios',
+  },
+  {
+    src: '/images/screenshots/managenda1.webp',
+    alt: 'Agenda de clases grupales en MANAGER',
+    caption: 'Agenda',
   },
 ];
 

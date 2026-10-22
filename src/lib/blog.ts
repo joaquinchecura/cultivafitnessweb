@@ -35,7 +35,11 @@ export function getCategoryLabel(category: string): string {
 }
 
 export function parseMarkdownPost(content: string, slug: string): BlogPost {
-  const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  // Soporta archivos con saltos de Windows (\r\n) y BOM invisible
+  content = content.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
+
+  const frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  // ...el resto queda igual
   
   if (!frontmatterMatch) {
     throw new Error(`Invalid markdown format for ${slug}`);
@@ -73,10 +77,13 @@ export function getAllPosts(): BlogPost[] {
   
   Object.entries(blogModules).forEach(([path, content]) => {
     const slug = path.replace('/src/content/blog/', '').replace('.md', '');
-    const post = parseMarkdownPost(content as string, slug);
-    posts.push(post);
+    try {
+      posts.push(parseMarkdownPost(content as string, slug));
+    } catch (err) {
+      console.warn(`[blog] Se omitió "${slug}":`, err);
+    }
   });
-
+  
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 

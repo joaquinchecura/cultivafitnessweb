@@ -54,9 +54,9 @@ const features: {
       'Seguimiento de cargas por sesión',
     ],
     shots: [
-      { src: '/images/screenshots/manrutinas1.webp', alt: 'Rutinas' },
       { src: '/images/screenshots/manejercicios1.webp', alt: 'Ejercicios' },
       { src: '/images/screenshots/manejercicios2.webp', alt: 'Ejercicios' },
+      { src: '/images/screenshots/manrutinas1.webp', alt: 'Rutinas' },
     ],
   },
   {
