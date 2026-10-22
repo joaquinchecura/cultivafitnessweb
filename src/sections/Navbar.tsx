@@ -1,4 +1,4 @@
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
 import { Menu, X, ChevronDown, MessageCircle, Mail, Globe } from 'lucide-react';
 
@@ -61,6 +61,8 @@ const mainLinksAfter: NavItem[] = [
 
 export function Navbar() {
   const t = THEMES[NAVBAR_THEME];
+  const { pathname, hash } = useLocation();
+  const navigate = useNavigate();
 
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -116,8 +118,28 @@ export function Navbar() {
   const scrollTo = (href: string) => {
     setMobileOpen(false);
     setResOpen(false);
+    if (pathname !== '/') {
+      // Estamos en otra página (ej: /precios): volvemos al home con el ancla
+      navigate(`/${href}`);
+      return;
+    }
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Al llegar al home con un ancla (/#apps), bajar hasta esa sección
+  useEffect(() => {
+    if (pathname !== '/' || !hash) return;
+    const id = window.setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' });
+    }, 150);
+    return () => window.clearTimeout(id);
+  }, [pathname, hash]);
+
+  // Logo: ir al home (o subir al inicio si ya estamos ahí)
+  const goHome = () => {
+    setMobileOpen(false);
+    if (pathname === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const desktopItem = (link: NavItem) =>
@@ -164,8 +186,8 @@ export function Navbar() {
       >
         <div className="site-container px-6 h-full flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <img src="images/logo2.png" alt="Cultiva Fitness" className="w-11 h-11 object-contain" />
+          <Link to="/" onClick={goHome} aria-label="Cultiva Fitness, ir al inicio" className="flex items-center gap-2 group">
+            <img src="/images/logo2.png" alt="Cultiva Fitness" className="w-11 h-11 object-contain" />
             <div className="flex flex-col">
               <span className={`${t.brand} font-bold text-lg leading-none tracking-tight`}>
                 CULTIVA
@@ -174,7 +196,7 @@ export function Navbar() {
                 FITNESS
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop: links + idioma + contacto + CTA */}
           <div className="hidden lg:flex items-center gap-6">
