@@ -10,6 +10,7 @@ const productLinks = [
   { label: 'Ejercicios', href: '/ejercicios' },
   { label: 'Precios', href: '/precios' },
   { label: 'Preguntas', href: '#faq' },
+  { label: 'Desarrollo a medida', href: '/desarrollo' },
 ];
 
 const socials = [

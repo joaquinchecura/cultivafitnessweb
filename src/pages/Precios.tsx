@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router';
 import {
   Check,
@@ -12,6 +13,7 @@ import {
   LayoutGrid,
   LifeBuoy,
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { Navbar } from '../sections/Navbar';
 import { Footer } from '../sections/Footer';
 import { SeoHead } from '../components/SeoHead';
@@ -19,76 +21,108 @@ import { SeoHead } from '../components/SeoHead';
 /* ============================================================
    PRECIOS: editá todo desde acá
    ============================================================ */
-const MONTHLY_USD = 20;
-const ANNUAL_USD = 200;
+
+/*
+  Escalera por cantidad de clientes activos, inspirada en TrueCoach
+  (5 clientes $20 · 20 clientes $53 · 50 clientes $107, según una comparativa de 2026).
+  VERIFICÁ los valores actuales en su web antes de publicar, y ajustá los tuyos.
+  El anual = 10 meses (2 meses gratis), igual que tu idea original de $200 vs $240.
+*/
+const TIERS = [
+  { clients: 10, monthly: 20, annual: 200 },
+  { clients: 25, monthly: 40, annual: 400 },
+  { clients: 50, monthly: 80, annual: 800 },
+];
+
 const TRIAL_DAYS = 14; // competidores dan 14-30 días; 7 es poco para cargar clientes reales
 
-const yearlyIfMonthly = MONTHLY_USD * 12; // 240
-const savingUsd = yearlyIfMonthly - ANNUAL_USD; // 40
-const monthsFree = Math.round(savingUsd / MONTHLY_USD); // 2
-const annualPerMonth = (ANNUAL_USD / 12).toFixed(2).replace('.', ','); // 16,67
-
+const WHATSAPP_NUMBER = '5491123970926';
 const waUrl = (msg: string) =>
-  `https://wa.me/5491123970926?text=${encodeURIComponent(msg)}`;
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 
-const plans = [
-  {
-    id: 'trial',
-    name: 'Prueba gratis',
-    icon: Gift,
-    tagline: 'Probá todo el ecosistema sin compromiso.',
-    price: '$0',
-    unit: `por ${TRIAL_DAYS} días`,
-    note: 'Sin tarjeta de crédito',
-    features: [
-      'MANAGER completo',
-      'Acceso a todas las apps',
-      'Sin tarjeta de crédito',
-      'Sin compromiso al terminar',
-    ],
-    cta: 'Empezar prueba gratis',
-    href: waUrl('Hola! Quiero empezar la prueba gratis de MANAGER'),
-    featured: false,
-  },
-  {
-    id: 'monthly',
-    name: 'Mensual',
-    icon: CalendarDays,
-    tagline: 'Flexibilidad total, mes a mes.',
-    price: `$${MONTHLY_USD}`,
-    unit: 'USD por mes',
-    note: 'Cancelás cuando quieras',
-    features: [
-      'MANAGER completo',
-      'Todas las apps incluidas',
-      'Soporte directo',
-      'Sin permanencia',
-    ],
-    cta: 'Elegir plan mensual',
-    href: waUrl('Hola! Quiero contratar el plan mensual de MANAGER'),
-    featured: false,
-  },
-  {
-    id: 'annual',
-    name: 'Anual',
-    icon: Sparkles,
-    tagline: 'El mejor precio para tu negocio.',
-    price: `$${ANNUAL_USD}`,
-    unit: 'USD por año',
-    note: `Equivale a $${annualPerMonth} por mes`,
-    badge: `${monthsFree} meses gratis`,
-    savings: `Ahorrás $${savingUsd} USD al año`,
-    features: [
-      'Todo lo del plan mensual',
-      `${monthsFree} meses gratis`,
-      'Precio fijo por 12 meses',
-      'Soporte directo',
-    ],
-    cta: 'Elegir plan anual',
-    href: waUrl('Hola! Quiero contratar el plan anual de MANAGER'),
-    featured: true,
-  },
-];
+const usd = (n: number) => `$${n.toLocaleString('es-AR')}`;
+
+interface Plan {
+  id: string;
+  name: string;
+  icon: LucideIcon;
+  tagline: string;
+  price: string;
+  unit: string;
+  note: string;
+  badge?: string;
+  savings?: string;
+  features: string[];
+  cta: string;
+  href: string;
+  featured: boolean;
+}
+
+function getPlans(tier: (typeof TIERS)[number]): Plan[] {
+  const savingUsd = tier.monthly * 12 - tier.annual;
+  const monthsFree = Math.round(savingUsd / tier.monthly);
+  const annualPerMonth = (tier.annual / 12).toFixed(2).replace('.', ',');
+  const clientsLabel = `Hasta ${tier.clients} clientes activos`;
+
+  return [
+    {
+      id: 'trial',
+      name: 'Prueba gratis',
+      icon: Gift,
+      tagline: 'Probá todo el ecosistema sin compromiso.',
+      price: '$0',
+      unit: `por ${TRIAL_DAYS} días`,
+      note: 'Sin tarjeta de crédito',
+      features: [
+        'MANAGER completo',
+        'Acceso a todas las apps',
+        'Sin tarjeta de crédito',
+        'Sin compromiso al terminar',
+      ],
+      cta: 'Empezar prueba gratis',
+      href: waUrl('Hola! Quiero empezar la prueba gratis de MANAGER'),
+      featured: false,
+    },
+    {
+      id: 'monthly',
+      name: 'Mensual',
+      icon: CalendarDays,
+      tagline: 'Flexibilidad total, mes a mes.',
+      price: usd(tier.monthly),
+      unit: 'USD por mes',
+      note: 'Cancelás cuando quieras',
+      features: [
+        clientsLabel,
+        'MANAGER completo + todas las apps',
+        'Soporte directo',
+        'Sin permanencia',
+      ],
+      cta: 'Elegir plan mensual',
+      href: waUrl(`Hola! Quiero contratar el plan mensual de MANAGER (hasta ${tier.clients} clientes)`),
+      featured: false,
+    },
+    {
+      id: 'annual',
+      name: 'Anual',
+      icon: Sparkles,
+      tagline: 'El mejor precio para tu negocio.',
+      price: usd(tier.annual),
+      unit: 'USD por año',
+      note: `Equivale a $${annualPerMonth} por mes`,
+      badge: `${monthsFree} meses gratis`,
+      savings: `Ahorrás ${usd(savingUsd)} USD al año`,
+      features: [
+        clientsLabel,
+        'Todo lo del plan mensual',
+        `${monthsFree} meses gratis`,
+        'Precio fijo por 12 meses',
+      ],
+      cta: 'Elegir plan anual',
+      href: waUrl(`Hola! Quiero contratar el plan anual de MANAGER (hasta ${tier.clients} clientes)`),
+      featured: true,
+    },
+  ];
+}
 
 // Mismos colores pastel que las cards de FeaturesSection
 const included = [
@@ -102,8 +136,7 @@ const included = [
 
 /*
   TEXTO DE EJEMPLO: revisá cada respuesta antes de publicar.
-  OJO con "¿Hay límite de clientes?": la competencia (TrueCoach, Trainerize)
-  cobra según cantidad de clientes. Confirmá qué vas a ofrecer vos.
+  Definí qué es un "cliente activo" (ej: con membresía vigente o con rutina asignada).
 */
 const faqs = [
   {
@@ -111,8 +144,12 @@ const faqs = [
     a: 'No. Empezás la prueba sin cargar ningún medio de pago y decidís al final si seguís.',
   },
   {
-    q: '¿Hay un límite de clientes?',
-    a: 'Por el momento el límite de clientes por plan es de 100.',
+    q: '¿Cómo funciona el límite de clientes?',
+    a: 'Cada plan incluye hasta cierta cantidad de clientes activos (10, 25 o 50). Todos los planes tienen las mismas funciones y las mismas apps: solo cambia cuántos clientes gestionás. Si crecés, pasás al plan siguiente cuando quieras.',
+  },
+  {
+    q: '¿Y si tengo más de 50 clientes o un centro con varios profesionales?',
+    a: 'Escribinos y armamos un plan a tu medida.',
   },
   {
     q: '¿Puedo pasar del plan mensual al anual?',
@@ -128,7 +165,7 @@ const faqs = [
   },
 ];
 
-function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
+function PlanCard({ plan }: { plan: Plan }) {
   const Icon = plan.icon;
   const f = plan.featured;
 
@@ -140,7 +177,7 @@ function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
           : 'bg-cultiva-surface border border-cultiva-border hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]'
       }`}
     >
-      {'badge' in plan && plan.badge && (
+      {plan.badge && (
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-amber-400 px-4 py-1 text-xs font-bold uppercase tracking-wide text-amber-950 shadow">
           Mejor valor · {plan.badge}
         </span>
@@ -164,9 +201,7 @@ function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
         <span className={`text-sm ${f ? 'text-white/75' : 'text-cultiva-muted'}`}>{plan.unit}</span>
       </div>
       <p className={`text-sm mb-1 ${f ? 'text-white/85' : 'text-cultiva-muted'}`}>{plan.note}</p>
-      {'savings' in plan && plan.savings && (
-        <p className="text-sm font-semibold text-amber-300">{plan.savings}</p>
-      )}
+      {plan.savings && <p className="text-sm font-semibold text-amber-300">{plan.savings}</p>}
 
       <ul className="mt-6 mb-8 space-y-3">
         {plan.features.map((feat) => (
@@ -198,28 +233,64 @@ function PlanCard({ plan }: { plan: (typeof plans)[number] }) {
 }
 
 export default function Precios() {
+  const [tierIdx, setTierIdx] = useState(0);
+  const tier = TIERS[tierIdx];
+  const plans = getPlans(tier);
+
   return (
     <div className="relative bg-cultiva-bg min-h-screen text-cultiva-text">
       <SeoHead
         title="Precios de MANAGER | Cultiva Fitness"
-        description={`Probá MANAGER gratis ${TRIAL_DAYS} días. Después $${MONTHLY_USD} USD por mes o $${ANNUAL_USD} USD por año, con todas las apps y soporte incluidos.`}
+        description={`Probá MANAGER gratis ${TRIAL_DAYS} días. Planes desde ${usd(TIERS[0].monthly)} USD por mes según tu cantidad de clientes, con todas las apps y soporte incluidos.`}
       />
       <Navbar />
 
       <main className="pt-32 pb-20 px-6">
         <div className="site-container">
           {/* Encabezado */}
-          <div className="text-center max-w-[760px] mx-auto mb-16">
+          <div className="text-center max-w-[760px] mx-auto mb-10">
             <span className="font-mono-label text-cultiva-green-dark tracking-[0.2em] block mb-4">
               PRECIOS
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              Un solo precio. Todo el ecosistema.
+              Elegí según tus clientes. Todo el ecosistema incluido.
             </h1>
             <p className="text-cultiva-secondary text-lg">
-              MANAGER y todas las apps de Cultiva incluidas, con soporte directo. Sin límites de funciones
-              ni planes escondidos.
+              MANAGER y todas las apps de Cultiva, con soporte directo. Todos los planes tienen las mismas
+              funciones: solo cambia la cantidad de clientes activos.
             </p>
+          </div>
+
+          {/* Selector de cantidad de clientes */}
+          <div className="max-w-[560px] mx-auto mb-14 text-center">
+            <p id="tier-label" className="text-sm font-medium text-cultiva-text mb-3">
+              ¿Cuántos clientes activos gestionás?
+            </p>
+            <div
+              role="radiogroup"
+              aria-labelledby="tier-label"
+              className="inline-flex rounded-full border border-cultiva-border bg-cultiva-surface p-1 shadow-sm"
+            >
+              {TIERS.map((t, i) => {
+                const selected = i === tierIdx;
+                return (
+                  <button
+                    key={t.clients}
+                    type="button"
+                    role="radio"
+                    aria-checked={selected}
+                    onClick={() => setTierIdx(i)}
+                    className={`rounded-full px-4 sm:px-6 py-2.5 text-sm font-semibold transition-all duration-300 ${
+                      selected
+                        ? 'bg-[#166534] text-white shadow'
+                        : 'text-cultiva-secondary hover:text-cultiva-text'
+                    }`}
+                  >
+                    Hasta {t.clients}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Las 3 columnas */}
@@ -230,7 +301,15 @@ export default function Precios() {
           </div>
 
           <p className="text-center text-cultiva-muted text-sm mt-8">
-            Precios en dólares estadounidenses (USD). Cancelás cuando quieras.
+            Precios en dólares estadounidenses (USD). Cancelás cuando quieras.{' '}
+            <a
+              href={waUrl('Hola! Tengo más de 50 clientes / un centro con varios profesionales y quiero un plan a medida de MANAGER')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cultiva-green-dark font-medium hover:underline"
+            >
+              ¿Más de 50 clientes? Escribinos.
+            </a>
           </p>
 
           {/* Qué incluye */}
@@ -240,7 +319,8 @@ export default function Precios() {
                 Todo incluido en cualquier plan
               </h2>
               <p className="text-cultiva-secondary">
-                No hay versiones recortadas: la prueba y los dos planes tienen exactamente lo mismo.
+                Las mismas funciones y las mismas apps en todos los planes: solo cambia la cantidad de
+                clientes activos.
               </p>
             </div>
 
