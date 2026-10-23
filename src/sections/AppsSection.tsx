@@ -60,7 +60,7 @@ const apps = [
     features: ['Control del sistema nervioso', 'Técnicas emocionales guiadas', 'Juegos para entrenar tu cerebro'],
     link: 'https://neura.cultivafitness.app',
     icon: <img src="/images/logoneura.png" alt="Neura" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/neura/1.webp', '/images/screenshots/neura/2.webp', '/images/screenshots/neura/3.webp'] as string[],
   },
   {
     name: 'RUNNING',
