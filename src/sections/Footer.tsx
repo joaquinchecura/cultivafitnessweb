@@ -1,4 +1,5 @@
 import { useState, useId } from 'react';
+import { Link } from 'react-router';
 import { Leaf, Heart, ArrowRight, Youtube, Instagram, Music, Mail, Check } from 'lucide-react';
 
 const CTA_URL = "https://wa.me/5491123970926?text=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER";
@@ -91,15 +92,23 @@ export function Footer() {
                 Gestioná tu negocio y sumale a tus clientes un ecosistema completo de apps, todo con MANAGER.
               </p>
             </div>
-            <a
-              href={CTA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-cultiva-green-dark font-semibold text-sm hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300"
-            >
-              Solicitar acceso anticipado
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </a>
+            <div className="shrink-0 flex flex-col items-center lg:items-end gap-2.5">
+              <a
+                href={CTA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-cultiva-green-dark font-semibold text-sm hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300"
+              >
+                Solicitar acceso anticipado
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </a>
+              <Link
+                to="/desarrollo"
+                className="text-sm text-white/85 hover:text-white underline-offset-4 hover:underline transition-colors"
+              >
+                ¿Necesitás una app a medida? Conocé el servicio →
+              </Link>
+            </div>
           </div>
         </div>
       </div>

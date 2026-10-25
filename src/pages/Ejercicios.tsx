@@ -99,11 +99,11 @@ export default function Ejercicios() {
             </div>
             <div>
               <h3 className="text-cultiva-text font-semibold text-base mb-1">
-                ¿Sos profesional de la salud, el fitness o el deporte?
+                ¿Sos profesional de salud, fitness o deporte?
               </h3>
               <p className="text-cultiva-secondary text-sm max-w-[480px]">
-                Estos mismos ejercicios alimentan el generador automático de rutinas de MANAGER.
-                Armá programas para tus clientes en minutos, no en horas.
+                Estos mismos ejercicios alimentan el generador automático de rutinas de MANAGER —
+                armá programas para tus clientes en minutos, no en horas.
               </p>
             </div>
           </div>
@@ -123,6 +123,12 @@ export default function Ejercicios() {
             >
               o escribinos a cultivafitness@gmail.com
             </a>
+            <Link
+              to="/desarrollo"
+              className="text-cultiva-green-dark text-xs font-medium hover:underline"
+            >
+              ¿Querés tu propia app? Desarrollo a medida →
+            </Link>
           </div>
         </div>
 

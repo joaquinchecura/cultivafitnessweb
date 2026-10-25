@@ -53,7 +53,8 @@ const resourceLinks: NavItem[] = [
   { label: 'Comunidad', href: '#comunidad' },
 ];
 const mainLinksAfter: NavItem[] = [
-  { label: 'Precios', href: '/precios', isRoute: true }, // página a crear
+  { label: 'Precios', href: '/precios', isRoute: true },
+  { label: 'Desarrollo', href: '/desarrollo', isRoute: true },
   { label: 'Preguntas', href: '#faq' },                  // sección a crear, antes del footer
 ];
 
@@ -199,7 +200,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop: links + idioma + contacto + CTA */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {mainLinksBefore.map(desktopItem)}
 
             {/* Recursos (dropdown) */}

@@ -93,7 +93,7 @@ const apps = [
     features: ['Rutinas de 2-5 min', 'Modo discreto', 'Alertas de sedentarismo'],
     link: 'https://deskout.cultivafitness.app',
     icon: <img src="/images/logodeskout.png" alt="Deskout" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/deskout/1.webp', '/images/screenshots/deskout/2.webp', '/images/screenshots/deskout/3.webp'] as string[],
   },
   {
     name: 'SILVER',
@@ -126,7 +126,7 @@ const apps = [
     features: ['Rutinas médicamente validadas', 'Suelo pélvico', 'Bienestar por trimestre'],
     link: 'https://prenatal.cultivafitness.app',
     icon: <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/prenatal/1.webp', '/images/screenshots/prenatal/2.webp', '/images/screenshots/prenatal/3.webp'] as string[],
   },
   {
     name: 'TIMER',
