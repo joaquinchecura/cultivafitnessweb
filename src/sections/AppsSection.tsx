@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink } from 'lucide-react';
@@ -104,7 +104,7 @@ const apps = [
     features: ['Navegación accesible', 'Rutinas guiadas', 'Conexión familiar'],
     link: 'https://silver.cultivafitness.app',
     icon: <img src="/images/logosilver.png" alt="Silver" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/silver/1.webp', '/images/screenshots/silver/2.webp'] as string[],
   },
   {
     name: 'JUNIOR',
@@ -115,7 +115,7 @@ const apps = [
     features: ['Gamificación', 'Aprendizaje cooperativo', 'Hábitos saludables'],
     link: 'https://junior.cultivafitness.app',
     icon: <img src="/images/logojunior.png" alt="Junior" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/junior/1.webp', '/images/screenshots/junior/2.webp', '/images/screenshots/junior/3.webp'] as string[],
   },
   {
     name: 'PRENATAL',
@@ -182,7 +182,9 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group relative flex h-full flex-col bg-cultiva-surface border border-cultiva-border rounded-[20px] overflow-hidden transition-all duration-500 hover:border-cultiva-green/30 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_40px_rgba(22,163,74,0.06)]"
+      // Fondo pastel = el color de la app (tagColor) mezclado con blanco. Ajustá los % para más/menos color.
+      style={{ '--tone': app.tagColor } as CSSProperties}
+      className="group relative flex h-full flex-col bg-[color-mix(in_srgb,var(--tone)_10%,white)] border border-[color-mix(in_srgb,var(--tone)_25%,white)] rounded-[20px] overflow-hidden transition-all duration-500 hover:border-[color:var(--tone)] hover:-translate-y-1.5 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
     >
       {/* Zona visual 18:16. Cada slide es un collage de 2-3 capturas. Toda ella lleva a la app */}
       <a
