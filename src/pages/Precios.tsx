@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import type { CSSProperties } from 'react';
 import { Link } from 'react-router';
 import {
   Check,
@@ -165,16 +166,38 @@ const faqs = [
   },
 ];
 
+// ============================================================
+// Reemplazá la función PlanCard de Precios.tsx por este bloque.
+// Además, en los imports de React agregá:  import type { CSSProperties } from 'react';
+// (el resto del archivo, incluidos TIERS y getPlans, queda como lo tenés)
+// ============================================================
+
+// Colores pastel de "Prueba gratis" y "Mensual". La anual sigue en verde oscuro.
+const TONES: Record<string, { bg: string; border: string; accent: string }> = {
+  trial: { bg: '#F0FDF4', border: '#BBF7D0', accent: '#16A34A' },   // verde
+  monthly: { bg: '#EFF6FF', border: '#BFDBFE', accent: '#2563EB' }, // azul
+};
+
 function PlanCard({ plan }: { plan: Plan }) {
   const Icon = plan.icon;
   const f = plan.featured;
+  const tone = TONES[plan.id] ?? TONES.trial;
+
+  const cardStyle = f
+    ? undefined
+    : ({
+        backgroundColor: tone.bg,
+        borderColor: tone.border,
+        '--accent': tone.accent,
+      } as CSSProperties);
 
   return (
     <div
+      style={cardStyle}
       className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 ${
         f
           ? 'bg-[#166534] text-white shadow-[0_24px_60px_rgba(22,101,52,0.35)] md:-my-4 md:py-12 order-first md:order-none'
-          : 'bg-cultiva-surface border border-cultiva-border hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]'
+          : 'border hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)]'
       }`}
     >
       {plan.badge && (
@@ -186,10 +209,14 @@ function PlanCard({ plan }: { plan: Plan }) {
       <div className="flex items-center gap-3 mb-4">
         <div
           className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-            f ? 'bg-white/15' : 'bg-cultiva-green/10'
+            f ? 'bg-white/15' : 'bg-white/80'
           }`}
         >
-          <Icon className={`w-5 h-5 ${f ? 'text-white' : 'text-cultiva-green-dark'}`} aria-hidden="true" />
+          <Icon
+            className={`w-5 h-5 ${f ? 'text-white' : ''}`}
+            style={f ? undefined : { color: tone.accent }}
+            aria-hidden="true"
+          />
         </div>
         <h3 className="text-xl font-semibold">{plan.name}</h3>
       </div>
@@ -207,7 +234,8 @@ function PlanCard({ plan }: { plan: Plan }) {
         {plan.features.map((feat) => (
           <li key={feat} className="flex items-start gap-2.5 text-[15px]">
             <Check
-              className={`w-4 h-4 mt-1 shrink-0 ${f ? 'text-amber-300' : 'text-cultiva-green'}`}
+              className={`w-4 h-4 mt-1 shrink-0 ${f ? 'text-amber-300' : ''}`}
+              style={f ? undefined : { color: tone.accent }}
               aria-hidden="true"
             />
             <span className={f ? 'text-white/95' : 'text-cultiva-secondary'}>{feat}</span>
@@ -222,7 +250,7 @@ function PlanCard({ plan }: { plan: Plan }) {
         className={`mt-auto inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all duration-300 ${
           f
             ? 'bg-white text-[#166534] hover:bg-green-50 hover:shadow-[0_8px_24px_rgba(0,0,0,0.2)]'
-            : 'border border-cultiva-green/40 text-cultiva-green-dark hover:bg-cultiva-green hover:text-white'
+            : 'border border-[color:var(--accent)] text-[color:var(--accent)] hover:bg-[color:var(--accent)] hover:text-white'
         }`}
       >
         {plan.cta}
