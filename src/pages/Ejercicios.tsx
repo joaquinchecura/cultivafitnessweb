@@ -99,7 +99,7 @@ export default function Ejercicios() {
             </div>
             <div>
               <h3 className="text-cultiva-text font-semibold text-base mb-1">
-                ¿Sos profesional de salud, fitness o deporte?
+                ¿Sos profesional de la salud, el fitness o el deporte?
               </h3>
               <p className="text-cultiva-secondary text-sm max-w-[480px]">
                 Estos mismos ejercicios alimentan el generador automático de rutinas de MANAGER —

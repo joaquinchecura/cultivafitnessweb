@@ -137,7 +137,7 @@ const apps = [
     features: ['4 modos', '4 Sonidos', 'Modo oscuro'],
     link: 'https://timer.cultivafitness.app',
     icon: <img src="/images/logotimer.png" alt="Timer" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/timer/1.webp', '/images/screenshots/timer/2.webp'] as string[],
   },
 ];
 
