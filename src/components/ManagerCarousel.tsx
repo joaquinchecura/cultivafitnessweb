@@ -11,27 +11,27 @@ interface ManagerSlide {
 const slides: ManagerSlide[] = [
   {
     src: '/images/screenshots/mandashboard1.webp',
-    alt: 'Dashboard de MANAGER con el resumen del negocio',
+    alt: 'Dashboard con el resumen del negocio',
     caption: 'Dashboard',
   },
   {
     src: '/images/screenshots/manclientes1.webp',
-    alt: 'Panel de clientes en MANAGER',
+    alt: 'Panel de clientes',
     caption: 'Clientes',
   },
   {
     src: '/images/screenshots/manejercicios1.webp',
-    alt: 'Panel de ejercicios en MANAGER',
+    alt: 'Panel de ejercicios',
     caption: 'Ejercicios',
   },
   {
     src: '/images/screenshots/managenda1.webp',
-    alt: 'Agenda de clases grupales en MANAGER',
+    alt: 'Agenda de clases grupales',
     caption: 'Agenda',
   },
 ];
 
-const AUTOPLAY_MS = 4500;
+const AUTOPLAY_MS = 3500;
 
 export function ManagerCarousel() {
   const [index, setIndex] = useState(0);
