@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Lock } from 'lucide-react';
 
 interface ManagerSlide {
   src: string;
@@ -37,6 +37,7 @@ const slides: ManagerSlide[] = [
   ];
 
 const AUTOPLAY_MS = 3500;
+const BROWSER_URL = 'cultivafitness.app'; // texto que se ve en la barra del marco
 
 export function ManagerCarousel() {
   const [index, setIndex] = useState(0);
@@ -71,8 +72,24 @@ export function ManagerCarousel() {
       aria-roledescription="carrusel"
       aria-label="Capturas de la plataforma MANAGER"
     >
-      {/* Sin marco: la captura 16:9 va directo, con bordes redondeados y sombra */}
-      <div className="group relative aspect-video rounded-2xl overflow-hidden bg-cultiva-elevated border border-cultiva-border shadow-[0_30px_80px_rgba(16,28,20,0.15)]">
+      {/* Marco tipo ventana de navegador: barra superior con puntos y dirección */}
+      <div className="group relative overflow-hidden rounded-2xl bg-[#0F172A] ring-1 ring-black/30 shadow-[0_30px_80px_rgba(16,28,20,0.25)]">
+        {/* Barra del navegador */}
+        <div className="flex items-center gap-3 bg-[#1E293B] px-4 py-2.5">
+          <div className="flex gap-1.5" aria-hidden="true">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+          </div>
+          <div className="mx-auto flex w-full max-w-[420px] items-center justify-center gap-1.5 rounded-md bg-[#0F172A]/70 px-3 py-1 text-[11px] text-slate-400">
+            <Lock className="h-3 w-3" aria-hidden="true" />
+            {BROWSER_URL}
+          </div>
+          <div className="hidden w-[54px] sm:block" aria-hidden="true" />
+        </div>
+
+        {/* Pantalla (captura 16:9) */}
+        <div className="relative aspect-video bg-cultiva-elevated">
         {slides.map((slide, i) => (
           <img
             key={slide.src}
@@ -107,6 +124,7 @@ export function ManagerCarousel() {
             </button>
           </>
         )}
+        </div>
       </div>
 
       {/* Descripción visible de la captura actual (siempre debajo, nunca tapada) */}

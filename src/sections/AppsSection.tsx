@@ -71,7 +71,7 @@ const apps = [
     features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
     link: 'https://running.cultivafitness.app',
     icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/running/1.webp', '/images/screenshots/running/2.webp', '/images/screenshots/running/3.webp'] as string[],
   },
   {
     name: 'MICROFIT',
