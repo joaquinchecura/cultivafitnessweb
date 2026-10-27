@@ -137,7 +137,7 @@ export function HeroSection() {
               ref={subtitleRef}
               className="opacity-0 translate-y-5 text-cultiva-secondary text-lg max-w-[560px] mx-auto lg:mx-0 mb-7 leading-relaxed"
             >
-              MANAGER organiza clientes, agenda, pagos y planes de entrenamiento, y le suma a cada uno
+              MANAGER organiza clientes, agenda, pagos y planes de entrenamiento o rehabilitación, y le suma a cada uno
               un ecosistema de 12 apps para que sigan su progreso entre sesiones.
             </p>
 

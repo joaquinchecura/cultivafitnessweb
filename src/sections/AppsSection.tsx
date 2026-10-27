@@ -23,7 +23,7 @@ const apps = [
     tag: 'BIOMECANICA',
     tagColor: '#7C3AED',
     gradient: 'from-purple-500 to-purple-700',
-    desc: 'Plataforma de examen biométrico que detecta 33 puntos anatómicos en 3D para calcular ángulos, simetría y riesgos de ejecución en tiempo real.',
+    desc: 'Plataforma de examen biométrico que detecta puntos anatómicos en 3D para calcular ángulos, simetría y riesgos de ejecución en tiempo real.',
     features: ['Análisis biomecánico 3D', 'Rango de movimiento óptimo', 'Recomendaciones IA'],
     link: 'https://biomatch.cultivafitness.app',
     icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
@@ -45,7 +45,7 @@ const apps = [
     tag: 'WELLNESS',
     tagColor: '#D97706',
     gradient: 'from-amber-500 to-amber-700',
-    desc: 'Plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico y/o rehabilitación.',
+    desc: 'Plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico o rehabilitación.',
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
@@ -78,11 +78,11 @@ const apps = [
     tag: 'EFICIENCIA',
     tagColor: '#EA580C',
     gradient: 'from-orange-500 to-orange-700',
-    desc: 'Entrenamientos eficientes para vidas atareadas. Rutinas personalizadas de 5, 10 o 15 minutos adaptadas a tu horario, energía y equipo disponible.',
+    desc: 'Entrenamientos eficientes para vidas atareadas. Rutinas personalizadas de 3, 5, 10 o 15 minutos adaptadas a tu horario, energía y equipo disponible.',
     features: ['Rutinas de 5-15 min', 'Adaptación por energía', 'Sin equipo necesario'],
     link: 'https://microfit.cultivafitness.app',
     icon: <img src="/images/logomicrofit.png" alt="Microfit" className="w-15 h-15 object-contain" />,
-    screenshots: [] as string[],
+    screenshots: ['/images/screenshots/microfit/1.webp', '/images/screenshots/microfit/2.webp', '/images/screenshots/microfit/3.webp'] as string[],
   },
   {
     name: 'DESKOUT',
@@ -309,7 +309,7 @@ export function AppsSection() {
           </h2>
           <p className="text-cultiva-secondary text-base sm:text-lg">
             Estas apps ya están disponibles y como profesional en MANAGER
-            podés integrarlas al trabajo con tus clientes, sin costo extra.
+            podés integrarlas al trabajo con tus clientes y alumnos, sin costo extra.
           </p>
         </div>
 

@@ -20,16 +20,21 @@ const slides: ManagerSlide[] = [
     caption: 'Clientes',
   },
   {
+    src: '/images/screenshots/managenda1.webp',
+    alt: 'Agenda de clases grupales',
+    caption: 'Agenda',
+  },
+  {
     src: '/images/screenshots/manejercicios1.webp',
     alt: 'Panel de ejercicios',
     caption: 'Ejercicios',
   },
   {
-    src: '/images/screenshots/managenda1.webp',
-    alt: 'Agenda de clases grupales',
-    caption: 'Agenda',
-  },
-];
+    src: '/images/screenshots/miplanrutina.webp',
+    alt: 'Rutina en la App del cliente',
+    caption: 'Rutina',
+  }
+  ];
 
 const AUTOPLAY_MS = 3500;
 
