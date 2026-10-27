@@ -1,9 +1,8 @@
 import { Link, useLocation, useNavigate } from 'react-router';
 import { useEffect, useRef, useState } from 'react';
 import { Menu, X, ChevronDown, MessageCircle, Mail, Globe } from 'lucide-react';
-
-const WHATSAPP_URL = "https://wa.me/5491123970926?text=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER";
-const EMAIL_URL = "mailto:cultivafitness@gmail.com?subject=Acceso%20anticipado%20a%20MANAGER&body=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER.";
+import { useLanguage } from '../i18n/LanguageContext';
+import { waLink, type TranslationKey } from '../i18n/translations';
 
 /*
   ====== PRUEBA DE COLOR DEL NAVBAR ======
@@ -40,28 +39,31 @@ const THEMES = {
   },
 } as const;
 
-type NavItem = { label: string; href: string; isRoute?: boolean };
+type NavItem = { label: TranslationKey; href: string; isRoute?: boolean };
 
 // Orden: MANAGER · Apps · Recursos (Ejercicios, Blog, Comunidad) · Precios · Preguntas
 const mainLinksBefore: NavItem[] = [
-  { label: 'MANAGER', href: '#features' },
-  { label: 'Apps', href: '#apps' },
+  { label: 'nav.manager', href: '#features' },
+  { label: 'nav.apps', href: '#apps' },
 ];
 const resourceLinks: NavItem[] = [
-  { label: 'Ejercicios', href: '/ejercicios', isRoute: true },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Comunidad', href: '#comunidad' },
+  { label: 'nav.exercises', href: '/ejercicios', isRoute: true },
+  { label: 'nav.blog', href: '#blog' },
+  { label: 'nav.community', href: '#comunidad' },
 ];
 const mainLinksAfter: NavItem[] = [
-  { label: 'Precios', href: '/precios', isRoute: true },
-  { label: 'Desarrollo', href: '/desarrollo', isRoute: true },
-  { label: 'Preguntas', href: '#faq' },                  // sección a crear, antes del footer
+  { label: 'nav.pricing', href: '/precios', isRoute: true },
+  { label: 'nav.custom', href: '/desarrollo', isRoute: true },
+  { label: 'nav.faq', href: '#faq' },                  // sección a crear, antes del footer
 ];
 
 
 
 export function Navbar() {
-  const t = THEMES[NAVBAR_THEME];
+  const th = THEMES[NAVBAR_THEME];
+  const { lang, setLang, t } = useLanguage();
+  const WHATSAPP_URL = waLink(t('nav.waText'));
+  const EMAIL_URL = `mailto:cultivafitness@gmail.com?subject=${encodeURIComponent(t('nav.emailSubject'))}&body=${encodeURIComponent(t('nav.emailBody'))}`;
   const { pathname, hash } = useLocation();
   const navigate = useNavigate();
 
@@ -69,8 +71,6 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [ctaOpen, setCtaOpen] = useState(false);
   const [resOpen, setResOpen] = useState(false);
-  // Selector de idioma: por ahora solo visual, sin traducción real
-  const [lang, setLang] = useState<'es' | 'en'>('es');
 
   const ctaRef = useRef<HTMLDivElement>(null);
   const ctaButtonRef = useRef<HTMLButtonElement>(null);
@@ -148,17 +148,17 @@ export function Navbar() {
       <Link
         key={link.href}
         to={link.href}
-        className={`${t.link} text-sm font-medium transition-colors duration-300`}
+        className={`${th.link} text-sm font-medium transition-colors duration-300`}
       >
-        {link.label}
+        {t(link.label)}
       </Link>
     ) : (
       <button
         key={link.href}
         onClick={() => scrollTo(link.href)}
-        className={`${t.link} text-sm font-medium transition-colors duration-300`}
+        className={`${th.link} text-sm font-medium transition-colors duration-300`}
       >
-        {link.label}
+        {t(link.label)}
       </button>
     );
 
@@ -168,11 +168,11 @@ export function Navbar() {
       : 'text-cultiva-text text-lg font-medium text-left hover:text-cultiva-green-dark transition-colors';
     return link.isRoute ? (
       <Link key={link.href} to={link.href} onClick={() => setMobileOpen(false)} className={cls}>
-        {link.label}
+        {t(link.label)}
       </Link>
     ) : (
       <button key={link.href} onClick={() => scrollTo(link.href)} className={cls}>
-        {link.label}
+        {t(link.label)}
       </button>
     );
   };
@@ -180,20 +180,20 @@ export function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 border-b transition-shadow duration-300 ${t.bar} ${
+        className={`fixed top-0 left-0 right-0 z-50 border-b transition-shadow duration-300 ${th.bar} ${
           scrolled ? 'shadow-[0_4px_20px_rgba(0,0,0,0.12)]' : ''
         }`}
         style={{ height: 72 }}
       >
         <div className="site-container px-6 h-full flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" onClick={goHome} aria-label="Cultiva Fitness, ir al inicio" className="flex items-center gap-2 group">
+          <Link to="/" onClick={goHome} aria-label={t('nav.homeAria')} className="flex items-center gap-2 group">
             <img src="/images/logo2.png" alt="Cultiva Fitness" className="w-11 h-11 object-contain" />
             <div className="flex flex-col">
-              <span className={`${t.brand} font-bold text-lg leading-none tracking-tight`}>
+              <span className={`${th.brand} font-bold text-lg leading-none tracking-tight`}>
                 CULTIVA
               </span>
-              <span className={`${t.brandSub} font-mono text-[16px] leading-none tracking-widest`}>
+              <span className={`${th.brandSub} font-mono text-[16px] leading-none tracking-widest`}>
                 FITNESS
               </span>
             </div>
@@ -210,9 +210,9 @@ export function Navbar() {
                 onClick={() => setResOpen((v) => !v)}
                 aria-haspopup="menu"
                 aria-expanded={resOpen}
-                className={`${t.link} inline-flex items-center gap-1 text-sm font-medium transition-colors duration-300`}
+                className={`${th.link} inline-flex items-center gap-1 text-sm font-medium transition-colors duration-300`}
               >
-                Recursos
+                {t('nav.resources')}
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${resOpen ? 'rotate-180' : ''}`}
                   aria-hidden="true"
@@ -222,7 +222,7 @@ export function Navbar() {
               {resOpen && (
                 <div
                   role="menu"
-                  aria-label="Recursos"
+                  aria-label={t('nav.resources')}
                   className="absolute left-0 top-[calc(100%+12px)] w-48 bg-cultiva-surface border border-cultiva-border rounded-2xl shadow-[0_12px_32px_rgba(0,0,0,0.12)] p-2"
                 >
                   {resourceLinks.map((link) =>
@@ -234,7 +234,7 @@ export function Navbar() {
                         onClick={() => setResOpen(false)}
                         className="block px-3 py-2.5 rounded-xl text-sm text-cultiva-text hover:bg-cultiva-elevated transition-colors"
                       >
-                        {link.label}
+                        {t(link.label)}
                       </Link>
                     ) : (
                       <button
@@ -243,7 +243,7 @@ export function Navbar() {
                         onClick={() => scrollTo(link.href)}
                         className="block w-full text-left px-3 py-2.5 rounded-xl text-sm text-cultiva-text hover:bg-cultiva-elevated transition-colors"
                       >
-                        {link.label}
+                        {t(link.label)}
                       </button>
                     )
                   )}
@@ -253,14 +253,14 @@ export function Navbar() {
 
             {mainLinksAfter.map(desktopItem)}
 
-            <div className={`flex items-center gap-4 ml-2 pl-4 border-l ${t.divider}`}>
-              {/* Selector de idioma (sin funcionamiento por ahora) */}
+            <div className={`flex items-center gap-4 ml-2 pl-4 border-l ${th.divider}`}>
+              {/* Selector de idioma */}
               <div
                 role="group"
-                aria-label="Idioma"
-                className={`flex items-center gap-1 rounded-full border p-0.5 ${t.langWrap}`}
+                aria-label={t('nav.language')}
+                className={`flex items-center gap-1 rounded-full border p-0.5 ${th.langWrap}`}
               >
-                <Globe className={`w-3.5 h-3.5 ml-1.5 ${t.link}`} aria-hidden="true" />
+                <Globe className={`w-3.5 h-3.5 ml-1.5 ${th.link}`} aria-hidden="true" />
                 {(['es', 'en'] as const).map((code) => (
                   <button
                     key={code}
@@ -268,7 +268,7 @@ export function Navbar() {
                     onClick={() => setLang(code)}
                     aria-pressed={lang === code}
                     className={`px-2 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wide transition-colors ${
-                      lang === code ? t.langActive : t.langIdle
+                      lang === code ? th.langActive : th.langIdle
                     }`}
                   >
                     {code}
@@ -285,9 +285,9 @@ export function Navbar() {
                 onClick={() => setCtaOpen((v) => !v)}
                 aria-haspopup="menu"
                 aria-expanded={ctaOpen}
-                className={`inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-sm font-semibold hover:-translate-y-0.5 transition-all duration-300 ${t.cta}`}
+                className={`inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-sm font-semibold hover:-translate-y-0.5 transition-all duration-300 ${th.cta}`}
               >
-                Solicitar acceso
+                {t('nav.cta')}
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${ctaOpen ? 'rotate-180' : ''}`}
                   aria-hidden="true"
@@ -297,7 +297,7 @@ export function Navbar() {
               {ctaOpen && (
                 <div
                   role="menu"
-                  aria-label="Opciones de contacto"
+                  aria-label={t('nav.ctaMenu')}
                   className="absolute right-0 top-[calc(100%+12px)] w-56 bg-cultiva-surface border border-cultiva-border rounded-2xl shadow-[0_12px_32px_rgba(0,0,0,0.12)] p-2 overflow-hidden"
                 >
                   <a
@@ -309,7 +309,7 @@ export function Navbar() {
                     className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-cultiva-text hover:bg-cultiva-elevated transition-colors"
                   >
                     <MessageCircle className="w-4 h-4 text-cultiva-green" aria-hidden="true" />
-                    Por WhatsApp
+                    {t('nav.byWhatsapp')}
                   </a>
                   <a
                     href={EMAIL_URL}
@@ -318,7 +318,7 @@ export function Navbar() {
                     className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-cultiva-text hover:bg-cultiva-elevated transition-colors"
                   >
                     <Mail className="w-4 h-4 text-cultiva-blue" aria-hidden="true" />
-                    Por Email
+                    {t('nav.byEmail')}
                   </a>
                 </div>
               )}
@@ -328,9 +328,9 @@ export function Navbar() {
           {/* Mobile Hamburger */}
           <button
             ref={hamburgerRef}
-            className={`lg:hidden ${t.hamburger}`}
+            className={`lg:hidden ${th.hamburger}`}
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+            aria-label={mobileOpen ? t('nav.closeMenu') : t('nav.openMenu')}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu-drawer"
           >
@@ -345,7 +345,7 @@ export function Navbar() {
           id="mobile-menu-drawer"
           role="dialog"
           aria-modal="true"
-          aria-label="Menú de navegación"
+          aria-label={t('nav.menuLabel')}
           className="fixed inset-0 z-40 lg:hidden"
         >
           <div className="absolute inset-0 bg-cultiva-bg/95 backdrop-blur-xl" onClick={() => setMobileOpen(false)} />
@@ -360,7 +360,7 @@ export function Navbar() {
                 className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-cultiva-green text-white text-sm font-semibold shadow-[0_4px_14px_rgba(22,163,74,0.25)]"
               >
                 <MessageCircle className="w-4 h-4" aria-hidden="true" />
-                Solicitar acceso por WhatsApp
+                {t('nav.mobileWhatsapp')}
               </a>
               <a
                 href={EMAIL_URL}
@@ -368,7 +368,7 @@ export function Navbar() {
                 className="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full border border-cultiva-border text-cultiva-text text-sm font-semibold"
               >
                 <Mail className="w-4 h-4" aria-hidden="true" />
-                Por Email
+                {t('nav.byEmail')}
               </a>
             </div>
 
@@ -376,7 +376,7 @@ export function Navbar() {
 
             {/* Recursos: grupo siempre desplegado en mobile */}
             <div className="flex flex-col gap-3">
-              <span className="text-cultiva-text text-lg font-medium">Recursos</span>
+              <span className="text-cultiva-text text-lg font-medium">{t('nav.resources')}</span>
               <div className="flex flex-col gap-3 pl-4 border-l border-cultiva-border">
                 {resourceLinks.map((l) => mobileItem(l, true))}
               </div>
@@ -384,8 +384,8 @@ export function Navbar() {
 
             {mainLinksAfter.map((l) => mobileItem(l))}
 
-            {/* Idioma (sin funcionamiento por ahora) */}
-            <div role="group" aria-label="Idioma" className="flex items-center gap-2">
+            {/* Idioma */}
+            <div role="group" aria-label={t('nav.language')} className="flex items-center gap-2">
               <Globe className="w-4 h-4 text-cultiva-muted" aria-hidden="true" />
               {(['es', 'en'] as const).map((code) => (
                 <button

@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ArrowRight, Layers, Play, Check } from 'lucide-react';
 import { ManagerCarousel } from '../components/ManagerCarousel';
+import { useLanguage } from '../i18n/LanguageContext';
+import { waLink } from '../i18n/translations';
 
 /*
   VIDEO DEL HERO
@@ -18,13 +20,11 @@ const VIDEO = {
 };
 const hasVideo = Boolean(VIDEO.mp4 || VIDEO.webm);
 
-const WHATSAPP_URL =
-  'https://wa.me/5491123970926?text=Hola!%20Quiero%20probar%20MANAGER%20gratis%2014%20d%C3%ADas';
-
-const highlights = ['Clientes, agenda y pagos', 'Rutinas y planes', '12 apps para tus clientes'];
+const highlightKeys = ['hero.h1', 'hero.h2', 'hero.h3'] as const;
 
 /* Marco de laptop moderna: tapa con bisel fino, cámara, y base de aluminio */
 function LaptopFrame() {
+  const { t } = useLanguage();
   return (
     <div className="relative mx-auto w-full max-w-[680px]">
       {/* Resplandor detrás */}
@@ -47,7 +47,7 @@ function LaptopFrame() {
               playsInline
               preload="metadata"
               poster={VIDEO.poster || undefined}
-              aria-label="Demostración de MANAGER"
+              aria-label={t('hero.videoAria')}
             >
               {VIDEO.webm && <source src={VIDEO.webm} type="video/webm" />}
               {VIDEO.mp4 && <source src={VIDEO.mp4} type="video/mp4" />}
@@ -59,7 +59,7 @@ function LaptopFrame() {
                 <Play className="ml-1 h-7 w-7 text-cultiva-green" aria-hidden="true" />
               </span>
               <span className="font-mono-label text-[11px] tracking-[0.2em] text-cultiva-muted">
-                VIDEO DE MANAGER
+                {t('hero.videoSoon')}
               </span>
             </div>
           )}
@@ -78,6 +78,8 @@ function LaptopFrame() {
 }
 
 export function HeroSection() {
+  const { t } = useLanguage();
+  const WHATSAPP_URL = waLink(t('hero.waText'));
   const sectionRef = useRef<HTMLDivElement>(null);
   const labelRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -121,36 +123,35 @@ export function HeroSection() {
             <div ref={labelRef} className="opacity-0 translate-y-5 mb-6">
               <span className="inline-flex items-center gap-2 font-mono-label text-cultiva-green-dark tracking-[0.2em] bg-cultiva-green/10 px-4 py-2 rounded-full text-[11px] sm:text-xs">
                 <Layers className="w-3.5 h-3.5 shrink-0" />
-                PARA PROFESIONALES DE LA SALUD, EL FITNESS Y EL DEPORTE
+                {t('hero.label')}
               </span>
             </div>
 
             <h1
               ref={titleRef}
-              className="opacity-0 translate-y-10 text-4xl sm:text-5xl xl:text-[3.25rem] font-extrabold text-cultiva-text leading-[1.08] tracking-tight mb-6"
+              className="opacity-0 translate-y-10 text-4xl sm:text-5xl xl:text-[3.5rem] font-extrabold text-cultiva-text leading-[1.08] tracking-tight mb-6"
             >
-              Tu consultorio, tu gimnasio o tu estudio,{' '}
-              <span className="gradient-text">en una sola app.</span>
+              {t('hero.title')}{' '}
+              <span className="gradient-text">{t('hero.titleAccent')}</span>
             </h1>
 
             <p
               ref={subtitleRef}
               className="opacity-0 translate-y-5 text-cultiva-secondary text-lg max-w-[560px] mx-auto lg:mx-0 mb-7 leading-relaxed"
             >
-              MANAGER organiza clientes, agenda, pagos y planes de entrenamiento o rehabilitación, y le suma a cada uno
-              un ecosistema de 12 apps para que sigan su progreso entre sesiones.
+              {t('hero.subtitle')}
             </p>
 
             <ul
               ref={listRef}
               className="opacity-0 translate-y-5 mb-9 flex flex-col items-center gap-2.5 lg:items-start"
             >
-              {highlights.map((h) => (
+              {highlightKeys.map((h) => (
                 <li key={h} className="flex items-center gap-2.5 text-[15px] font-medium text-cultiva-text">
                   <span className="flex h-5 w-5 items-center justify-center rounded-full bg-cultiva-green/15">
                     <Check className="h-3 w-3 text-cultiva-green-dark" aria-hidden="true" />
                   </span>
-                  {h}
+                  {t(h)}
                 </li>
               ))}
             </ul>
@@ -165,20 +166,20 @@ export function HeroSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-cultiva-green text-white font-semibold text-sm shadow-[0_8px_24px_rgba(22,163,74,0.3)] hover:shadow-[0_12px_32px_rgba(22,163,74,0.4)] hover:-translate-y-0.5 transition-all duration-300"
               >
-                Probar 14 días gratis
+                {t('hero.ctaPrimary')}
                 <ArrowRight className="w-4 h-4" />
               </a>
               <Link
                 to="/precios"
                 className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-cultiva-border bg-white/60 text-cultiva-text font-semibold text-sm hover:bg-white transition-all duration-300"
               >
-                Ver precios
+                {t('hero.ctaPricing')}
               </Link>
               <a
                 href="#apps"
                 className="px-3 py-3 text-sm font-semibold text-cultiva-green-dark underline-offset-4 hover:underline"
               >
-                Conocer las apps
+                {t('hero.ctaApps')}
               </a>
             </div>
 
@@ -188,15 +189,15 @@ export function HeroSection() {
             >
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-cultiva-green" />
-                Sin tarjeta de crédito
+                {t('hero.trust1')}
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-cultiva-blue" />
-                Datos aislados por profesional
+                {t('hero.trust2')}
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-cultiva-yellow" />
-                Funciona en el celu, sin instalar
+                {t('hero.trust3')}
               </span>
             </div>
           </div>

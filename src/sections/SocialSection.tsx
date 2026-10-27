@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Youtube, Instagram, Music, Radio, ArrowUpRight } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,7 +12,7 @@ const socials = [
     handle: '@cultivafitness',
     icon: Youtube,
     iconColor: '#FF0000',
-    cta: 'Suscribirse',
+    cta: 'social.subscribe' as const,
     url: 'https://www.youtube.com/@CULTIVAFITNESS',
   },
   {
@@ -19,7 +20,7 @@ const socials = [
     handle: '@cultivafitness',
     icon: Instagram,
     iconColor: '#E4405F',
-    cta: 'Seguir',
+    cta: 'social.follow' as const,
     url: 'https://www.instagram.com/cultivafitness/',
   },
   {
@@ -27,7 +28,7 @@ const socials = [
     handle: '@cultivafitness',
     icon: Music,
     iconColor: '#111827', // antes #F4F7F3 (casi blanco): el ícono no se veía sobre el fondo claro
-    cta: 'Seguir',
+    cta: 'social.follow' as const,
     // url: pendiente
   },
   {
@@ -35,12 +36,13 @@ const socials = [
     handle: 'Cultiva Podcast',
     icon: Radio,
     iconColor: '#1DB954',
-    cta: 'Escuchar',
+    cta: 'social.listen' as const,
     // url: pendiente
   },
 ];
 
 export function SocialSection() {
+  const { t } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -85,13 +87,13 @@ export function SocialSection() {
         {/* Header compacto */}
         <div className="text-center max-w-[560px] mx-auto mb-8">
           <span className="font-mono-label text-cultiva-yellow tracking-[0.2em] block mb-2">
-            COMUNIDAD
+            {t('social.label')}
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-cultiva-text mb-2 tracking-tight">
-            Crecemos juntos
+            {t('social.title')}
           </h2>
           <p className="text-cultiva-secondary text-sm sm:text-base">
-            Síguenos para contenido diario y una dosis de ciencia aplicada a tu bienestar.
+            {t('social.subtitle')}
           </p>
         </div>
 
@@ -118,7 +120,7 @@ export function SocialSection() {
                   />
                 ) : (
                   <span className="shrink-0 text-[10px] font-mono uppercase tracking-wider text-cultiva-muted">
-                    Pronto
+                    {t('social.soon')}
                   </span>
                 )}
               </>
@@ -131,7 +133,7 @@ export function SocialSection() {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${social.cta} en ${social.name}`}
+                    aria-label={`${t(social.cta)} ${t('social.on')} ${social.name}`}
                     className={`${chipBase} hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]`}
                   >
                     {inner}

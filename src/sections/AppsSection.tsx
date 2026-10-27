@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink } from 'lucide-react';
 import { useRotatingIndex } from '../components/useRotatingIndex';
+import { useLanguage } from '../i18n/LanguageContext';
+import type { TranslationKey } from '../i18n/translations';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,13 +19,15 @@ gsap.registerPlugin(ScrollTrigger);
 */
 const SLIDE_ASPECT = 'aspect-[1/1]';
 
+/*
+  Los textos de cada app (etiqueta y descripción) viven en translations.ts:
+  apps.<nombre en minúscula>.tag y apps.<nombre en minúscula>.desc
+*/
 const apps = [
   {
     name: 'BIOMATCH',
-    tag: 'BIOMECANICA',
     tagColor: '#7C3AED',
     gradient: 'from-purple-500 to-purple-700',
-    desc: 'Plataforma de examen biométrico que detecta puntos anatómicos en 3D para calcular ángulos, simetría y riesgos de ejecución en tiempo real.',
     features: ['Análisis biomecánico 3D', 'Rango de movimiento óptimo', 'Recomendaciones IA'],
     link: 'https://biomatch.cultivafitness.app',
     icon: <img src="/images/logobiomatch.png" alt="Biomatch" className="w-15 h-15 object-contain" />,
@@ -31,10 +35,8 @@ const apps = [
   },
   {
     name: 'SUPPLY',
-    tag: 'NUTRICIÓN',
     tagColor: '#2563EB',
     gradient: 'from-blue-500 to-blue-700',
-    desc: 'Asistente de nutrición inteligente que combina registro diario de alimentos, planes personalizados, y recetas saludables en una experiencia motivadora.',
     features: ['Registro de macros y Calorías', 'Plan personalizado', 'Lista de super y recetas IA'],
     link: 'https://supply.cultivafitness.app',
     icon: <img src="/images/logosupply.png" alt="Supply" className="w-15 h-15 object-contain" />,
@@ -42,10 +44,8 @@ const apps = [
   },
   {
     name: 'RECKON',
-    tag: 'WELLNESS',
     tagColor: '#D97706',
     gradient: 'from-amber-500 to-amber-700',
-    desc: 'Plataforma inteligente que sintetiza evaluaciones de salud y datos biométricos para generar programas personalizados de acondicionamiento físico o rehabilitación.',
     features: ['Salud y mente', 'Cuerpo y dieta', 'Rendimiento'],
     link: 'https://reckon.cultivafitness.app',
     icon: <img src="/images/logoreckon.png" alt="Reckon" className="w-15 h-15 object-contain" />,
@@ -53,10 +53,8 @@ const apps = [
   },
   {
     name: 'NEURA',
-    tag: 'NEUROCIENCIA',
     tagColor: '#0D9488',
     gradient: 'from-teal-500 to-teal-700',
-    desc: 'App que te ayuda a entender tu estado sensorial interno, regular tu sistema nervioso y conectar emociones con hábitos saludables.',
     features: ['Control del sistema nervioso', 'Técnicas emocionales guiadas', 'Juegos para entrenar tu cerebro'],
     link: 'https://neura.cultivafitness.app',
     icon: <img src="/images/logoneura.png" alt="Neura" className="w-15 h-15 object-contain" />,
@@ -64,10 +62,8 @@ const apps = [
   },
   {
     name: 'RUNNING',
-    tag: 'RUNNING',
     tagColor: '#DC2626',
     gradient: 'from-red-500 to-red-700',
-    desc: 'App de Running con un plan personalizado acorde a tu perfil y objetivos específicos. Análisis de pie con IA y un GPS con streetmaps para guardar tu recorrido.',
     features: ['Planificación total', 'Calendario semanal', 'Análisis de pie'],
     link: 'https://running.cultivafitness.app',
     icon: <img src="/images/logorunning.png" alt="Running" className="w-15 h-15 object-contain" />,
@@ -75,10 +71,8 @@ const apps = [
   },
   {
     name: 'MICROFIT',
-    tag: 'EFICIENCIA',
     tagColor: '#EA580C',
     gradient: 'from-orange-500 to-orange-700',
-    desc: 'Entrenamientos eficientes para vidas atareadas. Rutinas personalizadas de 3, 5, 10 o 15 minutos adaptadas a tu horario, energía y equipo disponible.',
     features: ['Rutinas de 5-15 min', 'Adaptación por energía', 'Sin equipo necesario'],
     link: 'https://microfit.cultivafitness.app',
     icon: <img src="/images/logomicrofit.png" alt="Microfit" className="w-15 h-15 object-contain" />,
@@ -86,10 +80,8 @@ const apps = [
   },
   {
     name: 'DESKOUT',
-    tag: 'PRODUCTIVIDAD',
     tagColor: '#4F46E5',
     gradient: 'from-indigo-500 to-indigo-700',
-    desc: 'Microrutinas de movimiento de 2 a 5 minutos diseñadas para integrarse discretamente en tu jornada laboral. Mantente activo sin abandonar tu escritorio.',
     features: ['Rutinas de 2-5 min', 'Modo discreto', 'Alertas de sedentarismo'],
     link: 'https://deskout.cultivafitness.app',
     icon: <img src="/images/logodeskout.png" alt="Deskout" className="w-15 h-15 object-contain" />,
@@ -97,10 +89,8 @@ const apps = [
   },
   {
     name: 'SILVER',
-    tag: 'LONGEVIDAD',
     tagColor: '#475569',
     gradient: 'from-slate-500 to-slate-700',
-    desc: 'Rutinas guiadas de bienestar físico pensadas para adultos mayores, con navegación ultra accesible y apoyo familiar para mantenerse activos con confianza.',
     features: ['Navegación accesible', 'Rutinas guiadas', 'Conexión familiar'],
     link: 'https://silver.cultivafitness.app',
     icon: <img src="/images/logosilver.png" alt="Silver" className="w-15 h-15 object-contain" />,
@@ -108,10 +98,8 @@ const apps = [
   },
   {
     name: 'JUNIOR',
-    tag: 'EDUCACIÓN',
     tagColor: '#65A30D',
     gradient: 'from-lime-600 to-lime-800',
-    desc: 'Plataforma interactiva de Educación Física Integral para niños y jóvenes. Cultiva hábitos saludables y movimiento consciente mediante gamificación y aprendizaje cooperativo.',
     features: ['Gamificación', 'Aprendizaje cooperativo', 'Hábitos saludables'],
     link: 'https://junior.cultivafitness.app',
     icon: <img src="/images/logojunior.png" alt="Junior" className="w-15 h-15 object-contain" />,
@@ -119,10 +107,8 @@ const apps = [
   },
   {
     name: 'PRENATAL',
-    tag: 'MATERNIDAD',
     tagColor: '#DB2777',
     gradient: 'from-pink-500 to-pink-700',
-    desc: 'Compañero digital para un embarazo activo y saludable. Rutinas validadas médicamente, ejercicios de suelo pélvico y bienestar emocional adaptado a cada trimestre.',
     features: ['Rutinas médicamente validadas', 'Suelo pélvico', 'Bienestar por trimestre'],
     link: 'https://prenatal.cultivafitness.app',
     icon: <img src="/images/logoprenatal.png" alt="Prenatal" className="w-15 h-15 object-contain" />,
@@ -130,10 +116,8 @@ const apps = [
   },
   {
     name: 'TIMER',
-    tag: 'UTILIDAD',
     tagColor: '#DB2777',
     gradient: 'from-cultiva-pink to-pink-700',
-    desc: 'Un temporizador inteligente para tu entrenamiento físico, que ofrece ajustes preestablecidos personalizables y seguimiento de progreso.',
     features: ['4 modos', '4 Sonidos', 'Modo oscuro'],
     link: 'https://timer.cultivafitness.app',
     icon: <img src="/images/logotimer.png" alt="Timer" className="w-15 h-15 object-contain" />,
@@ -142,6 +126,10 @@ const apps = [
 ];
 
 function AppCard({ app }: { app: (typeof apps)[number] }) {
+  const { t } = useLanguage();
+  const appKey = app.name.toLowerCase();
+  const tagText = t(`apps.${appKey}.tag` as TranslationKey);
+  const descText = t(`apps.${appKey}.desc` as TranslationKey);
   const [hovered, setHovered] = useState(false);
   const [inView, setInView] = useState(false);
   const [touchOnly, setTouchOnly] = useState(false);
@@ -192,7 +180,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
         href={app.link}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
-        aria-label={`Probar ${app.name}`}
+        aria-label={`${t('apps.tryAria')} ${app.name}`}
         tabIndex={-1}
         className={`relative block ${SLIDE_ASPECT} overflow-hidden bg-gradient-to-br ${app.gradient}`}
       >
@@ -202,7 +190,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
             <img
               key={src}
               src={src}
-              alt={`Captura ${i + 1} de ${app.name}`}
+              alt={`${t('apps.screenshot')} ${i + 1} · ${app.name}`}
               loading={i === 0 ? 'eager' : 'lazy'}
               decoding="async"
               aria-hidden={i !== slideIndex}
@@ -247,12 +235,12 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
               className="inline-block mt-1 px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-wider uppercase"
               style={{ backgroundColor: `${app.tagColor}15`, color: app.tagColor }}
             >
-              {app.tag}
+              {tagText}
             </span>
           </div>
         </div>
 
-        <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">{app.desc}</p>
+        <p className="text-cultiva-secondary text-sm leading-relaxed mb-5">{descText}</p>
 
         <a
           href={app.link}
@@ -260,7 +248,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
           rel={external ? 'noopener noreferrer' : undefined}
           className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-cultiva-green-dark hover:translate-x-1 transition-transform duration-300"
         >
-          {app.link === '#' ? 'Próximamente' : 'Probar Ahora'}
+          {app.link === '#' ? t('apps.soon') : t('apps.tryNow')}
           {app.link !== '#' && <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />}
         </a>
       </div>
@@ -269,6 +257,7 @@ function AppCard({ app }: { app: (typeof apps)[number] }) {
 }
 
 export function AppsSection() {
+  const { t } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -302,14 +291,13 @@ export function AppsSection() {
       <div className="site-container">
         <div className="text-center max-w-[800px] mx-auto mb-16">
           <span className="font-mono-label text-cultiva-green-dark tracking-[0.2em] block mb-4">
-            PARA TUS CLIENTES Y ALUMNOS
+            {t('apps.label')}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cultiva-text mb-4 tracking-tight">
-            Sumale el ecosistema completo de apps a tu servicio
+            {t('apps.title')}
           </h2>
           <p className="text-cultiva-secondary text-base sm:text-lg">
-            Estas apps ya están disponibles y como profesional en MANAGER
-            podés integrarlas al trabajo con tus clientes y alumnos, sin costo extra.
+            {t('apps.subtitle')}
           </p>
         </div>
 

@@ -1,17 +1,17 @@
 import { useState, useId } from 'react';
 import { Link } from 'react-router';
 import { Leaf, Heart, ArrowRight, Youtube, Instagram, Music, Mail, Check } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
+import { waLink, type TranslationKey } from '../i18n/translations';
 
-const CTA_URL = "https://wa.me/5491123970926?text=Hola!%20Quiero%20acceso%20anticipado%20a%20MANAGER";
-
-const productLinks = [
-  { label: 'MANAGER', href: '#features' },
-  { label: 'Apps', href: '#apps' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Ejercicios', href: '/ejercicios' },
-  { label: 'Precios', href: '/precios' },
-  { label: 'Preguntas', href: '#faq' },
-  { label: 'Desarrollo a medida', href: '/desarrollo' },
+const productLinks: { label: TranslationKey; href: string }[] = [
+  { label: 'nav.manager', href: '#features' },
+  { label: 'nav.apps', href: '#apps' },
+  { label: 'nav.blog', href: '/blog' },
+  { label: 'nav.exercises', href: '/ejercicios' },
+  { label: 'nav.pricing', href: '/precios' },
+  { label: 'nav.faq', href: '#faq' },
+  { label: 'footer.customDev', href: '/desarrollo' },
 ];
 
 const socials = [
@@ -21,6 +21,7 @@ const socials = [
 ];
 
 function NewsletterForm() {
+  const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
   const inputId = useId();
@@ -45,7 +46,7 @@ function NewsletterForm() {
     return (
       <div role="status" className="flex items-center gap-2 text-cultiva-green text-sm font-medium">
         <Check className="w-4 h-4" aria-hidden="true" />
-        ¡Listo! Ya estás suscripto.
+        {t('footer.subscribed')}
       </div>
     );
   }
@@ -53,7 +54,7 @@ function NewsletterForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 w-full max-w-sm">
       <label htmlFor={inputId} className="sr-only">
-        Tu email para recibir el blog
+        {t('footer.emailLabel')}
       </label>
       <input
         id={inputId}
@@ -61,7 +62,7 @@ function NewsletterForm() {
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="tu@email.com"
+        placeholder={t('footer.emailPlaceholder')}
         className="flex-1 px-4 py-2.5 bg-cultiva-bg border border-cultiva-border rounded-xl text-sm text-cultiva-text placeholder:text-cultiva-muted focus:outline-none focus:border-cultiva-green/40 transition-colors"
       />
       <button
@@ -69,7 +70,7 @@ function NewsletterForm() {
         disabled={status === 'sending'}
         className="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-cultiva-green text-white text-sm font-semibold hover:bg-cultiva-green-dark transition-colors disabled:opacity-60"
       >
-        {status === 'sending' ? 'Enviando...' : 'Suscribirme'}
+        {status === 'sending' ? t('footer.sending') : t('footer.subscribe')}
       </button>
     </form>
   );
@@ -78,6 +79,8 @@ function NewsletterForm() {
 // El selector de idioma ahora vive en el Navbar.
 
 export function Footer() {
+  const { t } = useLanguage();
+  const CTA_URL = waLink(t('nav.waText'));
   return (
     <footer className="relative bg-cultiva-bg border-t border-cultiva-border">
       {/* CTA Banner - MANAGER (compacto: texto a la izquierda, botón a la derecha) */}
@@ -86,10 +89,10 @@ export function Footer() {
           <div className="rounded-2xl bg-gradient-to-br from-cultiva-green to-cultiva-green-dark px-6 py-6 sm:px-10 sm:py-8 flex flex-col lg:flex-row items-center justify-between gap-5 lg:gap-10 text-center lg:text-left">
             <div>
               <h2 className="text-xl sm:text-2xl font-bold text-white mb-1.5 tracking-tight">
-                ¿Sos profesional de la salud, el fitness o el deporte?
+                {t('footer.ctaTitle')}
               </h2>
               <p className="text-white/85 text-sm sm:text-base max-w-[560px]">
-                Gestioná tu negocio y sumale a tus clientes un ecosistema completo de apps, todo con MANAGER.
+                {t('footer.ctaText')}
               </p>
             </div>
             <div className="shrink-0 flex flex-col items-center lg:items-end gap-2.5">
@@ -99,14 +102,14 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-cultiva-green-dark font-semibold text-sm hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.15)] transition-all duration-300"
               >
-                Solicitar acceso anticipado
+                {t('footer.ctaButton')}
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </a>
               <Link
                 to="/desarrollo"
                 className="text-sm text-white/85 hover:text-white underline-offset-4 hover:underline transition-colors"
               >
-                ¿Necesitás una app a medida? Conocé el servicio →
+                {t('footer.customLink')}
               </Link>
             </div>
           </div>
@@ -133,7 +136,7 @@ export function Footer() {
                 </div>
               </div>
               <p className="text-cultiva-muted text-sm leading-relaxed mb-5">
-                Cultivando cuerpo y mente, una app a la vez.
+                {t('footer.tagline')}
               </p>
               <div className="flex items-center gap-3">
                 {socials.map((social) => {
@@ -164,7 +167,7 @@ export function Footer() {
             {/* Links: Producto + Legal + Contacto */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:gap-16">
               <div>
-                <h4 className="text-cultiva-text text-sm font-semibold mb-4">Producto</h4>
+                <h4 className="text-cultiva-text text-sm font-semibold mb-4">{t('footer.product')}</h4>
                 <ul className="space-y-3">
                   {productLinks.map((link) => (
                     <li key={link.label}>
@@ -172,34 +175,34 @@ export function Footer() {
                         href={link.href}
                         className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300"
                       >
-                        {link.label}
+                        {t(link.label)}
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 className="text-cultiva-text text-sm font-semibold mb-4">Legal</h4>
+                <h4 className="text-cultiva-text text-sm font-semibold mb-4">{t('footer.legal')}</h4>
                 <ul className="space-y-3">
                   <li>
                     <a href="/privacidad" className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300">
-                      Privacidad
+                      {t('footer.privacy')}
                     </a>
                   </li>
                   <li>
                     <a href="/terminos" className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300">
-                      Términos
+                      {t('footer.terms')}
                     </a>
                   </li>
                   <li>
                     <a href="/cookies" className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300">
-                      Cookies
+                      {t('footer.cookies')}
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-cultiva-text text-sm font-semibold mb-4">Contacto</h4>
+                <h4 className="text-cultiva-text text-sm font-semibold mb-4">{t('footer.contact')}</h4>
                 <ul className="space-y-3">
                   <li>
                     <a href="mailto:cultivafitness@gmail.com" className="text-cultiva-muted text-sm hover:text-cultiva-secondary transition-colors duration-300">
@@ -217,9 +220,9 @@ export function Footer() {
 
             {/* Newsletter */}
             <div className="max-w-[320px]">
-              <h4 className="text-cultiva-text text-sm font-semibold mb-2">Recibí lo último del blog</h4>
+              <h4 className="text-cultiva-text text-sm font-semibold mb-2">{t('footer.newsletterTitle')}</h4>
               <p className="text-cultiva-muted text-sm mb-4">
-                Ciencia aplicada a tu bienestar, directo a tu email.
+                {t('footer.newsletterText')}
               </p>
               <NewsletterForm />
             </div>
@@ -228,10 +231,10 @@ export function Footer() {
           {/* Bottom Row */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cultiva-border">
             <p className="text-cultiva-muted text-sm">
-              © 2026 Cultiva Fitness. Todos los derechos reservados.
+              {t('footer.copyright')}
             </p>
             <p className="text-cultiva-muted text-sm flex items-center gap-1.5">
-              Hecho con <Heart className="w-3.5 h-3.5 text-cultiva-green fill-cultiva-green" aria-hidden="true" /> y ciencia
+              {t('footer.madeWith')} <Heart className="w-3.5 h-3.5 text-cultiva-green fill-cultiva-green" aria-hidden="true" /> {t('footer.andScience')}
             </p>
           </div>
         </div>

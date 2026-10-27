@@ -1,38 +1,40 @@
 import { useCallback, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Lock } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
+import type { TranslationKey } from '../i18n/translations';
 
 interface ManagerSlide {
   src: string;
-  alt: string;      // descripción: se muestra como texto visible debajo de la imagen
-  caption: string;  // texto corto de la pestaña: "Clientes", "Rutinas", etc.
+  alt: TranslationKey;      // clave en translations.ts: descripción visible debajo de la imagen
+  caption: TranslationKey;  // clave en translations.ts: texto corto de la pestaña
 }
 
 // Capturas 16:9 (ej: 1600×900). Las rutas empiezan con "/" y están dentro de /public.
 const slides: ManagerSlide[] = [
   {
     src: '/images/screenshots/mandashboard1.webp',
-    alt: 'Dashboard con el resumen del negocio',
-    caption: 'Dashboard',
+    alt: 'mgr.dashboard.alt',
+    caption: 'mgr.dashboard.caption',
   },
   {
     src: '/images/screenshots/manclientes1.webp',
-    alt: 'Panel de clientes',
-    caption: 'Clientes',
+    alt: 'mgr.clients.alt',
+    caption: 'mgr.clients.caption',
   },
   {
     src: '/images/screenshots/managenda1.webp',
-    alt: 'Agenda de clases grupales',
-    caption: 'Agenda',
+    alt: 'mgr.agenda.alt',
+    caption: 'mgr.agenda.caption',
   },
   {
     src: '/images/screenshots/manejercicios1.webp',
-    alt: 'Panel de ejercicios',
-    caption: 'Ejercicios',
+    alt: 'mgr.exercises.alt',
+    caption: 'mgr.exercises.caption',
   },
   {
     src: '/images/screenshots/miplanrutina.webp',
-    alt: 'Rutina en la App del cliente',
-    caption: 'Rutina',
+    alt: 'mgr.routine.alt',
+    caption: 'mgr.routine.caption',
   }
   ];
 
@@ -40,6 +42,7 @@ const AUTOPLAY_MS = 3500;
 const BROWSER_URL = 'cultivafitness.app'; // texto que se ve en la barra del marco
 
 export function ManagerCarousel() {
+  const { t } = useLanguage();
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const count = slides.length;
@@ -69,8 +72,8 @@ export function ManagerCarousel() {
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
       role="region"
-      aria-roledescription="carrusel"
-      aria-label="Capturas de la plataforma MANAGER"
+      aria-roledescription={t('mgr.roledesc')}
+      aria-label={t('mgr.region')}
     >
       {/* Marco tipo ventana de navegador: barra superior con puntos y dirección */}
       <div className="group relative overflow-hidden rounded-2xl bg-[#0F172A] ring-1 ring-black/30 shadow-[0_30px_80px_rgba(16,28,20,0.25)]">
@@ -94,7 +97,7 @@ export function ManagerCarousel() {
           <img
             key={slide.src}
             src={slide.src}
-            alt={slide.alt}
+            alt={t(slide.alt)}
             loading={i === 0 ? 'eager' : 'lazy'}
             decoding="async"
             aria-hidden={i !== index}
@@ -109,7 +112,7 @@ export function ManagerCarousel() {
             <button
               type="button"
               onClick={() => go(index - 1)}
-              aria-label="Captura anterior"
+              aria-label={t('mgr.prev')}
               className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-cultiva-text opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
             >
               <ChevronLeft className="w-5 h-5" aria-hidden="true" />
@@ -117,7 +120,7 @@ export function ManagerCarousel() {
             <button
               type="button"
               onClick={() => go(index + 1)}
-              aria-label="Captura siguiente"
+              aria-label={t('mgr.next')}
               className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md flex items-center justify-center text-cultiva-text opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
             >
               <ChevronRight className="w-5 h-5" aria-hidden="true" />
@@ -132,7 +135,7 @@ export function ManagerCarousel() {
         className="mt-5 text-center text-sm sm:text-base text-cultiva-secondary min-h-[1.5rem]"
         aria-live="polite"
       >
-        {slides[index].alt}
+        {t(slides[index].alt)}
       </p>
 
       {/* Pestañas con el nombre de cada pantalla */}
@@ -150,7 +153,7 @@ export function ManagerCarousel() {
                   : 'border border-cultiva-border text-cultiva-secondary hover:bg-cultiva-elevated'
               }`}
             >
-              {slide.caption}
+              {t(slide.caption)}
             </button>
           ))}
         </div>
