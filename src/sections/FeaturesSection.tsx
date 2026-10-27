@@ -3,96 +3,71 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Users, Dumbbell, CreditCard, CalendarClock, Check } from 'lucide-react';
 import { useRotatingIndex } from '../components/useRotatingIndex';
+import { useLanguage } from '../i18n/LanguageContext';
+import type { TranslationKey } from '../i18n/translations';
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface Shot {
   src: string;
-  alt: string;
+  alt: TranslationKey; // clave en translations.ts (features.alt.*)
 }
 
+/*
+  Los textos (etiqueta, título, descripción, puntos y alt de capturas) viven en translations.ts
+  con claves features.<id>.tag / .title / .desc / .b1 / .b2 / .b3 y features.alt.*
+*/
 const features: {
+  id: 'clients' | 'routines' | 'payments' | 'agenda';
   icon: typeof Users;
   iconColor: string;
   cardBg: string; // fondo pastel de la card (tono suave del color del ícono)
   cardBorder: string; // borde pastel un poco más marcado
-  tag: string;
-  title: string;
-  desc: string;
-  bullets: string[];
   shots: Shot[]; // capturas 16:9: la primera se ve siempre, al pasar el mouse rotan
 }[] = [
   {
+    id: 'clients',
     icon: Users,
     iconColor: '#16A34A',
     cardBg: '#F0FDF4',
     cardBorder: '#BBF7D0',
-    tag: 'CLIENTES',
-    title: 'Toda tu cartera, en un solo lugar',
-    desc: 'Fichas de clientes, historial, evolución y notas. Dejá las planillas sueltas y los chats dispersos: cada cliente tiene su perfil completo, siempre a mano.',
-    bullets: [
-      'Ficha con notas y certificado médico con vencimiento',
-      'Composición corporal y evolución en el tiempo',
-      'Alta de clientes por link o QR propio',
-    ],
     shots: [
-      { src: '/images/screenshots/manclientes1.webp', alt: 'Listado de clientes' },
-      { src: '/images/screenshots/manclientes2.webp', alt: 'Listado de clientes' }
+      { src: '/images/screenshots/manclientes1.webp', alt: 'features.alt.clients' },
+      { src: '/images/screenshots/manclientes2.webp', alt: 'features.alt.clients' }
     ],
   },
   {
+    id: 'routines',
     icon: Dumbbell,
     iconColor: '#2563EB',
     cardBg: '#EFF6FF',
     cardBorder: '#BFDBFE',
-    tag: 'RUTINAS & EJERCICIOS',
-    title: 'Armá rutinas en minutos, no en horas',
-    desc: 'Biblioteca de más de 800 ejercicios con generador automático de rutinas. Asigná, duplicá y ajustá programas de entrenamiento sin volver a escribir todo de cero.',
-    bullets: [
-      'Generador automático según el objetivo del cliente',
-      'Plantillas para asignar y duplicar',
-      'Seguimiento de cargas por sesión',
-    ],
     shots: [
-      { src: '/images/screenshots/manejercicios1.webp', alt: 'Ejercicios' },
-      { src: '/images/screenshots/manejercicios2.webp', alt: 'Ejercicios' },
-      { src: '/images/screenshots/manrutinas1.webp', alt: 'Rutinas' },
+      { src: '/images/screenshots/manejercicios1.webp', alt: 'features.alt.exercises' },
+      { src: '/images/screenshots/manejercicios2.webp', alt: 'features.alt.exercises' },
+      { src: '/images/screenshots/manrutinas1.webp', alt: 'features.alt.routines' },
     ],
   },
   {
+    id: 'payments',
     icon: CreditCard,
     iconColor: '#7C3AED',
     cardBg: '#F5F3FF',
     cardBorder: '#DDD6FE',
-    tag: 'PAGOS & MEMBRESÍAS',
-    title: 'Cobrá sin perseguir a nadie',
-    desc: 'Planes, membresías y pagos en un mismo panel. Sabé quién debe, quién está al día y cuándo vence cada membresía, sin planillas de Excel paralelas.',
-    bullets: [
-      'Planes mensuales, trimestrales y anuales',
-      'Efectivo, transferencia y tarjetas',
-      'Caja diaria y alertas de vencimiento',
-    ],
     shots: [
-      { src: '/images/screenshots/manpagos1.webp', alt: 'Gestión de pagos' },
-      { src: '/images/screenshots/manestadisticas1.webp', alt: 'Estadisticas' },
+      { src: '/images/screenshots/manpagos1.webp', alt: 'features.alt.payments' },
+      { src: '/images/screenshots/manestadisticas1.webp', alt: 'features.alt.stats' },
     ],
   },
   {
+    id: 'agenda',
     icon: CalendarClock,
     iconColor: '#D97706',
     cardBg: '#FFFBEB',
     cardBorder: '#FDE68A',
-    tag: 'AGENDA & TURNOS',
-    title: 'Tu agenda y la de tu equipo, sincronizadas',
-    desc: 'Clases, turnos y reservas en tiempo real. Cada coach de tu equipo ve su propia agenda, y vos ves todo el panorama del negocio.',
-    bullets: [
-      'Clases grupales y personal training',
-      'Reservas con cupo y lista de espera',
-      'Control de acceso por QR',
-    ],
     shots: [
-      { src: '/images/screenshots/managenda1.webp', alt: 'Agenda de clases' },
-      { src: '/images/screenshots/manactividades1.webp', alt: 'Agenda de clases' },
+      { src: '/images/screenshots/managenda1.webp', alt: 'features.alt.agenda' },
+      { src: '/images/screenshots/manactividades1.webp', alt: 'features.alt.agenda' },
     ],
   },
 ];
@@ -104,6 +79,7 @@ function FeatureCard({
   feature: (typeof features)[number];
   cardRef: (el: HTMLDivElement | null) => void;
 }) {
+  const { t } = useLanguage();
   const [active, setActive] = useState(false);
   const Icon = feature.icon;
   const hasShots = feature.shots.length > 0;
@@ -143,15 +119,15 @@ function FeatureCard({
             className="block text-[11px] font-mono tracking-wider uppercase mb-1"
             style={{ color: feature.iconColor }}
           >
-            {feature.tag}
+            {t(`features.${feature.id}.tag` as TranslationKey)}
           </span>
           <h3 className="text-xl lg:text-2xl font-semibold text-cultiva-text leading-snug">
-            {feature.title}
+            {t(`features.${feature.id}.title` as TranslationKey)}
           </h3>
         </div>
       </div>
 
-      <p className="text-cultiva-secondary text-base leading-relaxed mb-5">{feature.desc}</p>
+      <p className="text-cultiva-secondary text-base leading-relaxed mb-5">{t(`features.${feature.id}.desc` as TranslationKey)}</p>
 
       {/* Captura 16:9 siempre visible; al pasar el mouse rota */}
       {hasShots && (
@@ -160,7 +136,7 @@ function FeatureCard({
           <img
             key={index}
             src={feature.shots[index].src}
-            alt={feature.shots[index].alt}
+            alt={t(feature.shots[index].alt)}
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover object-top animate-[fadeIn_0.6s_ease-out]"
@@ -181,14 +157,14 @@ function FeatureCard({
       )}
 
       <ul className="space-y-2.5 mt-auto">
-        {feature.bullets.map((b) => (
-          <li key={b} className="flex items-start gap-2.5 text-cultiva-secondary text-[15px]">
+        {(['b1', 'b2', 'b3'] as const).map((n) => (
+          <li key={n} className="flex items-start gap-2.5 text-cultiva-secondary text-[15px]">
             <Check
               className="w-4 h-4 mt-0.5 shrink-0"
               style={{ color: feature.iconColor }}
               aria-hidden="true"
             />
-            {b}
+            {t(`features.${feature.id}.${n}` as TranslationKey)}
           </li>
         ))}
       </ul>
@@ -197,6 +173,7 @@ function FeatureCard({
 }
 
 export function FeaturesSection() {
+  const { t } = useLanguage();
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
@@ -227,17 +204,17 @@ export function FeaturesSection() {
       <div className="site-container">
         <div className="text-center max-w-[800px] mx-auto mb-14">
           <span className="font-mono-label text-cultiva-blue tracking-[0.2em] block mb-4">
-            LA PLATAFORMA MANAGER
+            {t('features.label')}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cultiva-text tracking-tight">
-            Todo lo que necesitás para manejar tu negocio profesional
+            {t('features.title')}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {features.map((feature, i) => (
             <FeatureCard
-              key={feature.title}
+              key={feature.id}
               feature={feature}
               cardRef={(el) => { if (el) cardsRef.current[i] = el; }}
             />
