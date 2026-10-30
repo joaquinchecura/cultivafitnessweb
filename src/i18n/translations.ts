@@ -34,7 +34,7 @@ const es = {
   'hero.subtitle':
     'MANAGER organiza clientes, agenda, pagos y planes de entrenamiento, y le suma a cada uno un ecosistema de 12 apps para que sigan su progreso entre sesiones.',
   'hero.h1': 'Clientes, agenda y pagos',
-  'hero.h2': 'Rutinas y planes con IA',
+  'hero.h2': 'Rutinas y planes',
   'hero.h3': '12 apps para tus clientes',
   'hero.ctaPrimary': 'Probar 14 días gratis',
   'hero.ctaPricing': 'Ver precios',
@@ -213,7 +213,7 @@ const en: Record<TranslationKey, string> = {
   'hero.subtitle':
     'MANAGER organizes clients, schedules, payments and training plans, and gives each client an ecosystem of 12 apps to track their progress between sessions.',
   'hero.h1': 'Clients, schedule and payments',
-  'hero.h2': 'Workouts and AI-powered plans',
+  'hero.h2': 'Workouts and plans',
   'hero.h3': '12 apps for your clients',
   'hero.ctaPrimary': 'Try free for 14 days',
   'hero.ctaPricing': 'See pricing',

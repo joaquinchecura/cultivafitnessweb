@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div className="relative bg-cultiva-bg min-h-screen">
       <SeoHead
-        title="Cultiva Fitness MANAGER para profesionales de salud, fitness y deporte"
+        title="Cultiva Fitness"
         description="Gestioná clientes, rutinas, pagos y agenda con MANAGER, y sumale a tus clientes un ecosistema de 12+ apps de bienestar."
       />
       <Navbar />
