@@ -34,7 +34,7 @@ const features: {
     shots: [
       { src: '/images/screenshots/manclientes1.webp', alt: 'features.alt.clients' },
       { src: '/images/screenshots/manclientes2.webp', alt: 'features.alt.clients' },
-      { src: '/images/screenshots/manestadisticas1.webp', alt: 'features.alt.stats' },
+      { src: '/images/screenshots/cliente3.webp', alt: 'features.alt.clients' },
     ],
   },
   {
@@ -59,6 +59,7 @@ const features: {
     shots: [
       { src: '/images/screenshots/manpagos1.webp', alt: 'features.alt.payments' },
       { src: '/images/screenshots/mandashboard1.webp', alt: 'features.alt.clients' },
+      { src: '/images/screenshots/memb.webp', alt: 'features.alt.clients' },
     ],
   },
   {
@@ -70,6 +71,7 @@ const features: {
     shots: [
       { src: '/images/screenshots/managenda1.webp', alt: 'features.alt.agenda' },
       { src: '/images/screenshots/manactividades1.webp', alt: 'features.alt.agenda' },
+      { src: '/images/screenshots/manestadisticas1.webp', alt: 'features.alt.stats' },
     ],
   },
 ];
