@@ -29,7 +29,7 @@ const es = {
 
   // ---------- Hero ----------
   'hero.label': 'PARA PROFESIONALES DE LA SALUD, EL FITNESS Y EL DEPORTE',
-  'hero.title': 'Tu consultorio, tu gimnasio o tu estudio,',
+  'hero.title': 'Tu gimnasio, tu consultorio o tu estudio,',
   'hero.titleAccent': 'en una sola app.',
   'hero.subtitle':
     'MANAGER organiza clientes, agenda, pagos y planes de entrenamiento, y le suma a cada uno un ecosistema de 12 apps para que sigan su progreso entre sesiones.',
@@ -208,7 +208,7 @@ const en: Record<TranslationKey, string> = {
 
   // ---------- Hero ----------
   'hero.label': 'FOR HEALTH, FITNESS AND SPORTS PROFESSIONALS',
-  'hero.title': 'Your practice, your gym or your studio,',
+  'hero.title': 'Your gym, your practice or your studio,',
   'hero.titleAccent': 'in a single app.',
   'hero.subtitle':
     'MANAGER organizes clients, schedules, payments and training plans, and gives each client an ecosystem of 12 apps to track their progress between sessions.',

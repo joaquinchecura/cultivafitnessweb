@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import gsap from 'gsap';
 import { ArrowRight, Layers, Play, Check } from 'lucide-react';
-import { ManagerCarousel } from '../components/ManagerCarousel';
+
 import { useLanguage } from '../i18n/LanguageContext';
 import { waLink } from '../i18n/translations';
 
@@ -14,9 +14,9 @@ import { waLink } from '../i18n/translations';
   - Formato recomendado: 1280x800 (16:10), sin audio, < 3 MB
 */
 const VIDEO = {
-  webm: '', // ej: '/videos/manager-demo.webm'
-  mp4: '', // ej: '/videos/manager-demo.mp4'
-  poster: '', // ej: '/images/manager-demo-poster.webp'
+  webm: '/videos/herovideo2.webm', // ej: '/videos/manager-demo.webm'
+  mp4: '/videos/herovideo2.mp4', // ej: '/videos/manager-demo.mp4'
+  poster: '/images/LOGOhero.webp', // ej: '/images/manager-demo-poster.webp'
 };
 const hasVideo = Boolean(VIDEO.mp4 || VIDEO.webm);
 
@@ -88,7 +88,7 @@ export function HeroSection() {
   const ctaRef = useRef<HTMLDivElement>(null);
   const trustRef = useRef<HTMLDivElement>(null);
   const laptopRef = useRef<HTMLDivElement>(null);
-  const carouselRef = useRef<HTMLDivElement>(null);
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -99,8 +99,7 @@ export function HeroSection() {
         .to(listRef.current, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.4')
         .to(ctaRef.current, { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, '-=0.4')
         .to(trustRef.current, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.3')
-        .fromTo(laptopRef.current, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out' }, 0.5)
-        .to(carouselRef.current, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.2');
+        .fromTo(laptopRef.current, { opacity: 0, x: 40 }, { opacity: 1, x: 0, duration: 1, ease: 'power3.out' }, 0.5);
     }, sectionRef);
 
     return () => ctx.revert();
@@ -206,11 +205,6 @@ export function HeroSection() {
           <div ref={laptopRef} className="opacity-0">
             <LaptopFrame />
           </div>
-        </div>
-
-        {/* Carrusel de capturas de MANAGER (podés quitarlo cuando el video esté listo) */}
-        <div ref={carouselRef} className="opacity-0 translate-y-8 mt-20 max-w-[1280px] mx-auto">
-          <ManagerCarousel />
         </div>
       </div>
     </section>

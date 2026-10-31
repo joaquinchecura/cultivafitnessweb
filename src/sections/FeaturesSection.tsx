@@ -33,7 +33,8 @@ const features: {
     cardBorder: '#BBF7D0',
     shots: [
       { src: '/images/screenshots/manclientes1.webp', alt: 'features.alt.clients' },
-      { src: '/images/screenshots/manclientes2.webp', alt: 'features.alt.clients' }
+      { src: '/images/screenshots/manclientes2.webp', alt: 'features.alt.clients' },
+      { src: '/images/screenshots/manestadisticas1.webp', alt: 'features.alt.stats' },
     ],
   },
   {
@@ -46,6 +47,7 @@ const features: {
       { src: '/images/screenshots/manejercicios1.webp', alt: 'features.alt.exercises' },
       { src: '/images/screenshots/manejercicios2.webp', alt: 'features.alt.exercises' },
       { src: '/images/screenshots/manrutinas1.webp', alt: 'features.alt.routines' },
+      { src: '/images/screenshots/miplanrutina.webp', alt: 'features.alt.routines' },
     ],
   },
   {
@@ -56,7 +58,7 @@ const features: {
     cardBorder: '#DDD6FE',
     shots: [
       { src: '/images/screenshots/manpagos1.webp', alt: 'features.alt.payments' },
-      { src: '/images/screenshots/manestadisticas1.webp', alt: 'features.alt.stats' },
+      { src: '/images/screenshots/mandashboard1.webp', alt: 'features.alt.clients' },
     ],
   },
   {
