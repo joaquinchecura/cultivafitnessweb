@@ -24,6 +24,7 @@ const THEMES = {
     langWrap: 'border-white/30',
     langActive: 'bg-white text-[#166534]',
     langIdle: 'text-white/80 hover:text-white',
+    highlight: 'border-white/40 bg-white/10 hover:bg-white/20 text-white',
   },
   pastel: {
     bar: 'bg-[#DCFCE7] border-[#BBF7D0]',
@@ -36,10 +37,11 @@ const THEMES = {
     langWrap: 'border-[#14532d]/25',
     langActive: 'bg-[#166534] text-white',
     langIdle: 'text-[#052E16]/70 hover:text-[#052E16]',
+    highlight: 'border-[#166534]/30 bg-[#166534]/10 hover:bg-[#166534]/20 text-[#166534]',
   },
 } as const;
 
-type NavItem = { label: TranslationKey; href: string; isRoute?: boolean };
+type NavItem = { label: TranslationKey; href: string; isRoute?: boolean; highlight?: boolean };
 
 // Orden: MANAGER · Apps · Recursos (Ejercicios, Blog, Comunidad) · Precios · Preguntas
 const mainLinksBefore: NavItem[] = [
@@ -53,7 +55,7 @@ const resourceLinks: NavItem[] = [
 ];
 const mainLinksAfter: NavItem[] = [
   { label: 'nav.pricing', href: '/precios', isRoute: true },
-  { label: 'nav.custom', href: '/desarrollo', isRoute: true },
+  { label: 'nav.custom', href: '/desarrollo', isRoute: true, highlight: true }, // <-- ACÁ
   { label: 'nav.faq', href: '#faq' },                  // sección a crear, antes del footer
 ];
 
@@ -143,12 +145,20 @@ export function Navbar() {
     if (pathname === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const desktopItem = (link: NavItem) =>
-    link.isRoute ? (
+  const desktopItem = (link: NavItem) => {
+    // Clases base para todos los links
+    const baseClass = `${th.link} text-sm font-medium transition-all duration-300`;
+    
+    // Clases especiales si es el link destacado (Desarrollo)
+    const highlightClass = link.highlight
+      ? 'px-3 py-1.5 rounded-full border border-white/40 bg-white/10 hover:bg-white/20 text-white shadow-sm'
+      : '';
+
+    return link.isRoute ? (
       <Link
         key={link.href}
         to={link.href}
-        className={`${th.link} text-sm font-medium transition-colors duration-300`}
+        className={`${baseClass} ${highlightClass}`}
       >
         {t(link.label)}
       </Link>
@@ -156,16 +166,21 @@ export function Navbar() {
       <button
         key={link.href}
         onClick={() => scrollTo(link.href)}
-        className={`${th.link} text-sm font-medium transition-colors duration-300`}
+        className={`${baseClass} ${highlightClass}`}
       >
         {t(link.label)}
       </button>
     );
+  };
 
   const mobileItem = (link: NavItem, nested = false) => {
-    const cls = nested
-      ? 'text-cultiva-secondary text-base font-medium text-left hover:text-cultiva-green-dark transition-colors'
-      : 'text-cultiva-text text-lg font-medium text-left hover:text-cultiva-green-dark transition-colors';
+    // Si está destacado, usamos el color verde principal y un poco de bold
+    const cls = link.highlight 
+      ? 'text-cultiva-green-dark text-lg font-bold text-left hover:text-cultiva-green transition-colors'
+      : nested
+        ? 'text-cultiva-secondary text-base font-medium text-left hover:text-cultiva-green-dark transition-colors'
+        : 'text-cultiva-text text-lg font-medium text-left hover:text-cultiva-green-dark transition-colors';
+        
     return link.isRoute ? (
       <Link key={link.href} to={link.href} onClick={() => setMobileOpen(false)} className={cls}>
         {t(link.label)}
