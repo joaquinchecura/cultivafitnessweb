@@ -47,7 +47,7 @@ const apps = [
     tagColor: '#059669',
     gradient: 'from-emerald-500 to-emerald-700',
     features: ['Evaluación física completa', 'Edad funcional', 'Informe en PDF'],
-    link: 'https://fitcheck.vercel.app', // poné acá la URL real de tu deploy
+    link: 'https://fitcheck.cultivafitness.app', // poné acá la URL real de tu deploy
     icon: <img src="/images/logofitcheck.png" alt="Fitcheck" className="w-15 h-15 object-contain" />,
     screenshots: ['/images/screenshots/fitcheck/1.webp', '/images/screenshots/fitcheck/2.webp', '/images/screenshots/fitcheck/3.webp'] as string[],
   },
