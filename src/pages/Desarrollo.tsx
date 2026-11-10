@@ -51,6 +51,7 @@ const pwa = [
 ];
 
 const examples = [
+  { name: 'FITCHECK', tag: 'Evaluación', color: '#059669', desc: 'Evaluación de la edad funcional', url: 'https://fitcheck.cultivafitness.app' },
   { name: 'BIOMATCH', tag: 'Biomecánica', color: '#7C3AED', desc: 'Análisis biomecánico en 3D con 33 puntos anatómicos.', url: 'https://biomatch.cultivafitness.app' },
   { name: 'SUPPLY', tag: 'Nutrición', color: '#2563EB', desc: 'Registro de macros, plan personalizado y lista de compras.', url: 'https://supply.cultivafitness.app' },
   { name: 'RECKON', tag: 'Wellness', color: '#D97706', desc: 'Evaluaciones de salud que generan programas personalizados.', url: 'https://reckon.cultivafitness.app' },
