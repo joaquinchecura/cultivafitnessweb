@@ -30,12 +30,12 @@ import { SeoHead } from '../components/SeoHead';
   El anual = 10 meses (2 meses gratis), igual que tu idea original de $200 vs $240.
 */
 const TIERS = [
-  { clients: 10, monthly: 20, annual: 200 },
-  { clients: 25, monthly: 40, annual: 400 },
-  { clients: 50, monthly: 80, annual: 800 },
+  { clients: 10, monthly: 19, annual: 190 },
+  { clients: 25, monthly: 39, annual: 390 },
+  { clients: 50, monthly: 79, annual: 790 },
 ];
 
-const TRIAL_DAYS = 14; // competidores dan 14-30 días; 7 es poco para cargar clientes reales
+const TRIAL_DAYS = 30; // competidores dan 14-30 días; 7 es poco para cargar clientes reales
 
 const WHATSAPP_NUMBER = '5491123970926';
 const waUrl = (msg: string) =>
