@@ -43,6 +43,15 @@ const apps = [
     screenshots: ['/images/screenshots/supply/1.webp', '/images/screenshots/supply/2.webp', '/images/screenshots/supply/3.webp',],
   },
   {
+    name: 'FITCHECK',
+    tagColor: '#059669',
+    gradient: 'from-emerald-500 to-emerald-700',
+    features: ['Evaluación física completa', 'Edad funcional', 'Informe en PDF'],
+    link: 'https://fitcheck.vercel.app', // poné acá la URL real de tu deploy
+    icon: <img src="/images/logofitcheck.png" alt="Fitcheck" className="w-15 h-15 object-contain" />,
+    screenshots: ['/images/screenshots/fitcheck/1.webp', '/images/screenshots/fitcheck/2.webp', '/images/screenshots/fitcheck/3.webp'] as string[],
+  },
+  {
     name: 'RECKON',
     tagColor: '#D97706',
     gradient: 'from-amber-500 to-amber-700',
